@@ -10,5 +10,20 @@ module.exports = {
     '@chakra-ui/gatsby-plugin',
     'gatsby-plugin-eslint',
     'gatsby-plugin-sass',
+    'gatsby-transformer-remark',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/images/`,
+      },
+    },
   ],
+  siteMetadata: {
+    title: 'AFI - Apresiasi Film Indonesia',
+    description: 'Untuk mengapresiasi film Indonesia seluas-luasnya, perlu diusahakan berbagai cara untuk memperkenalkan keragamannya. APRESIASI FILM INDONESIA 2022 adalah upaya untuk menelusuri akar dan ranting budaya perfilman di Indonesia melalui kolaborasi pendataan dan kuratorial. Program ini dirintis oleh Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi dan dikelola oleh Cinema Poetica dan Rangkai.',
+  },
 };

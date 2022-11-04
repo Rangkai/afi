@@ -2,9 +2,10 @@ import React from 'react';
 import {
   Box, Container, Flex, Link,
 } from '@chakra-ui/react';
-import { Link as LinkGatsby } from 'gatsby';
+import { graphql, Link as LinkGatsby, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const navList = [
   {
@@ -118,7 +119,7 @@ const StyledListItemChild = styled.li`
   background-color: var(--chakra-colors-brandBlue-500);
   list-style: none;
   transform-origin: top center;
-  animation: ${slideDown} 150ms ${(p) => +p.idx * 60}ms ease-in forwards;
+  animation: ${slideDown} 200ms ${(p) => +p.idx * 60}ms ease-in forwards;
   display: none;
   color: #FFFFFF;
   opacity: 0;
@@ -138,13 +139,24 @@ const StyledListItemChild = styled.li`
 `;
 
 function Header() {
+  const data = useStaticQuery(graphql`
+    query NavbarQuery {
+      file(relativePath: {eq: "afi_logo.png"}) {
+        name
+        childImageSharp {
+          gatsbyImageData(width: 200, placeholder: BLURRED)
+        }
+      }
+    }
+  `);
+
+  const afiLogo = getImage(data.file);
+
   return (
     <Box as="header" mt={[null, '32px']} mb={[null, '56px']}>
       <Container>
         <Flex alignItems="center">
-          <p>
-            AFI
-          </p>
+          <GatsbyImage image={afiLogo} alt={data.file.name} />
           <Flex
             as="nav"
             justifyContent="flex-end"
@@ -199,3 +211,14 @@ function Header() {
 }
 
 export default Header;
+
+// export const query = graphql`
+//   query MyQuery {
+//     file(relativePath: {eq: "afi_logo.png"}) {
+//       name
+//       childImageSharp {
+//         gatsbyImageData(width: 200)
+//       }
+//     }
+//   }
+// `;
