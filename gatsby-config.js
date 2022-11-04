@@ -7,16 +7,8 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    {
-      resolve: '@chakra-ui/gatsby-plugin',
-      options: {
-        /**
-         * @property {boolean} [resetCSS=true]
-         * if false, this plugin will not use `<CSSReset />
-         */
-        resetCSS: true,
-      },
-    },
+    '@chakra-ui/gatsby-plugin',
     'gatsby-plugin-eslint',
+    'gatsby-plugin-sass',
   ],
 };
