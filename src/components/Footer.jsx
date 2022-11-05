@@ -4,7 +4,7 @@ import {
 } from '@chakra-ui/react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import useLayoutFormatter from '../hooks/layoutFormatter';
+import useLayoutFormatter from '../hooks/useLayout';
 
 function Footer() {
   const { getCol } = useLayoutFormatter();

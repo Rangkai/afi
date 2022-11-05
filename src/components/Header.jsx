@@ -180,20 +180,23 @@ function Header() {
     }
   `);
 
-  const afiLogo = getImage(isMd ? data.desktop : data.mobile);
+  const afiLogoDesktop = getImage(data.desktop);
+  const afiLogoMobile = getImage(data.mobile);
 
   return (
     <Box as="header" mt={[null, '24px']} mb={[null, '48px']} py="12px">
       <Container>
         <Flex alignItems="center" justifyContent={['space-between', null, 'flex-start']}>
           <Box width={['130px', null, '200px']} minW={['130px', null, '200px']}>
-            <GatsbyImage image={afiLogo} alt={data.desktop.name} width="100%" />
+            <Box as={GatsbyImage} image={afiLogoDesktop} display={['none', null, 'block']} alt={data.desktop.name} width="100%" />
+            <Box as={GatsbyImage} image={afiLogoMobile} display={['block', null, 'none']} alt={data.desktop.name} width="100%" />
           </Box>
           {isMd ? (
             <Flex
               as="nav"
               justifyContent="flex-end"
               width="100%"
+              display={['none', null, 'flex']}
             >
               <Flex
                 as="ul"
@@ -207,8 +210,9 @@ function Header() {
                     hasChild={!!nav.children?.length}
                   >
                     <Link
-                      as={LinkGatsby}
+                      as={nav.external ? 'a' : LinkGatsby}
                       to={nav.link}
+                      href={nav.link}
                       color="brandBlue.500"
                       fontWeight="700"
                       p="10px"
@@ -244,6 +248,7 @@ function Header() {
               colorScheme="gray"
               p="16px"
               height="max-content"
+              display={['block', null, 'none']}
             >
               <HamburgerIcon />
             </Button>

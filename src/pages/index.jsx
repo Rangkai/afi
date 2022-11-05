@@ -7,7 +7,7 @@ import { graphql, Link as LinkGatsby } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
-import useLayoutFormatter from '../hooks/layoutFormatter';
+import useLayoutFormatter from '../hooks/useLayout';
 import '../styles/global.scss';
 
 const cities = [
@@ -50,7 +50,10 @@ const cities = [
 export default function Home({ data }) {
   const [selectedCity, setSelectedCity] = useState({});
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [isMd] = useMediaQuery('(min-width: 768px)');
+  const [isMd] = useMediaQuery('(min-width: 768px)', {
+    ssr: true,
+    fallback: false,
+  });
   const { getCol } = useLayoutFormatter();
 
   const onOpenModal = (key) => {
@@ -73,7 +76,8 @@ export default function Home({ data }) {
 
   return (
     <Layout>
-      <GatsbyImage image={isMd ? banner : bannerMobile} alt="home_banner" />
+      <Box as={GatsbyImage} image={banner} display={['none', null, 'block']} alt="home_banner" />
+      <Box as={GatsbyImage} image={bannerMobile} display={['block', null, 'none']} alt="home_banner" />
       <Container>
         <Box as="section" my="48px" textAlign="center" display="flex" justifyContent="center">
           <Box width={['100%', null, getCol(10)]}>
@@ -165,7 +169,8 @@ export default function Home({ data }) {
       </Box>
       <Container>
         <Box position="relative">
-          <GatsbyImage image={isMd ? thumbnailBanner : thumbnailBannerMobile} alt="thumbnail banner" />
+          <Box as={GatsbyImage} display={['none', null, 'block']} image={thumbnailBanner} alt="thumbnail banner" />
+          <Box as={GatsbyImage} display={['block', null, 'none']} image={thumbnailBannerMobile} alt="thumbnail banner" />
           <Box
             w={300}
             position="absolute"
