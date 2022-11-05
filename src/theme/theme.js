@@ -15,11 +15,13 @@ const theme = {
   colors: {
     brandBlue: {
       500: '#1C50D6', // background color
-      600: '#1740a8', // hover color
-      700: '#1740a8', // active color
+      600: '#ff3c00', // hover color
+      700: '#ff3c00', // active color
     },
     brandRed: {
       500: '#ff3c00', // background color
+      600: '#1C50D6',
+      700: '#1C50D6',
     },
   },
   components: {

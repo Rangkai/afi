@@ -37,13 +37,13 @@ function Footer() {
   return (
     <Box as="footer" py="48px">
       <Container>
-        <Flex justifyContent="space-between" alignItems="center">
-          <Box width="50%" h="max-content">
+        <Flex justifyContent="space-between" alignItems="center" flexDirection={['column', null, 'row']}>
+          <Box width={['100%', null, '50%']} h="max-content">
             <Text mb={0} color="brandBlue.500" fontSize="16px" fontWeight="600">
               Apresiasi Film Indonesia © 2022
             </Text>
           </Box>
-          <Flex w={getCol(2)} justifyContent="flex-end" alignItems="center">
+          <Flex w={[getCol(12), null, getCol(2)]} justifyContent={[null, null, 'flex-end']} alignItems="center">
             <Text
               mb={0}
               color="brandBlue.500"
@@ -57,7 +57,7 @@ function Footer() {
             </Text>
             <GatsbyImage image={dikbudLogo} alt={data.file.name} />
           </Flex>
-          <Flex w={getCol(4)} alignItems="center" justifyContent="center">
+          <Flex w={[getCol(12), null, getCol(4)]} alignItems="center" justifyContent={[null, null, 'center']}>
             <Text
               mb={0}
               color="brandBlue.500"
@@ -74,7 +74,6 @@ function Footer() {
                 key={collaborator.name}
                 image={collaborator.img}
                 alt={collaborator.name}
-                minWidth={60}
                 mr="8px"
               />
             ))}

@@ -89,6 +89,7 @@ const StyledListItem = styled.li`
     left: 0;
     width: 100%;
     perspective: 1000px;
+    z-index: 2;
   }
   ${(p) => p.hasChild && (
     `
@@ -164,7 +165,6 @@ function Header() {
           >
             <Flex
               as="ul"
-              mb="20px"
               px="10px"
               borderBottom="2px solid"
               borderColor="brandRed.500"
@@ -211,14 +211,3 @@ function Header() {
 }
 
 export default Header;
-
-// export const query = graphql`
-//   query MyQuery {
-//     file(relativePath: {eq: "afi_logo.png"}) {
-//       name
-//       childImageSharp {
-//         gatsbyImageData(width: 200)
-//       }
-//     }
-//   }
-// `;
