@@ -50,7 +50,7 @@ const cities = [
 export default function Home({ data }) {
   const [selectedCity, setSelectedCity] = useState({});
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [isLargerThan768] = useMediaQuery('(min-width: 768px)');
+  const [isMd] = useMediaQuery('(min-width: 768px)');
   const { getCol } = useLayoutFormatter();
 
   const onOpenModal = (key) => {
@@ -73,7 +73,7 @@ export default function Home({ data }) {
 
   return (
     <Layout>
-      <GatsbyImage image={isLargerThan768 ? banner : bannerMobile} alt="home_banner" />
+      <GatsbyImage image={isMd ? banner : bannerMobile} alt="home_banner" />
       <Container>
         <Box as="section" my="48px" textAlign="center" display="flex" justifyContent="center">
           <Box width={['100%', null, getCol(10)]}>
@@ -123,14 +123,13 @@ export default function Home({ data }) {
               </Box>
             </Flex>
             <Box mb="48px" position="relative">
-              {/* <GatsbyImage image={maps} alt="maps" /> */}
-              <img src="../../map.svg" alt="maps" />
+              <img src="../../map.svg" alt="maps" width="100%" height="auto" />
               {cities.map((city) => (
                 <Box
                   key={city.key}
                   as="button"
-                  w="30px"
-                  h="30px"
+                  w={isMd ? '30px' : '10px'}
+                  h={isMd ? '30px' : '10px'}
                   borderRadius="50%"
                   bg="#FFFFFF"
                   position="absolute"
@@ -166,7 +165,7 @@ export default function Home({ data }) {
       </Box>
       <Container>
         <Box position="relative">
-          <GatsbyImage image={isLargerThan768 ? thumbnailBanner : thumbnailBannerMobile} alt="thumbnail banner" />
+          <GatsbyImage image={isMd ? thumbnailBanner : thumbnailBannerMobile} alt="thumbnail banner" />
           <Box
             w={300}
             position="absolute"

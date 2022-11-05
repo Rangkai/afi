@@ -38,8 +38,8 @@ function Footer() {
     <Box as="footer" py="48px">
       <Container>
         <Flex justifyContent="space-between" alignItems="center" flexDirection={['column', null, 'row']}>
-          <Box width={['100%', null, '50%']} h="max-content">
-            <Text mb={0} color="brandBlue.500" fontSize="16px" fontWeight="600">
+          <Box width={['100%', null, '50%']} h="max-content" mb={['20px', null, 0]}>
+            <Text mb={0} textAlign={['center', null, 'start']} color="brandBlue.500" fontSize="16px" fontWeight="600">
               Apresiasi Film Indonesia © 2022
             </Text>
           </Box>

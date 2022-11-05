@@ -1,11 +1,25 @@
 import React from 'react';
 import {
-  Box, Container, Flex, Link,
+  Box,
+  Button,
+  Container,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerHeader,
+  DrawerOverlay,
+  Flex,
+  Link,
+  useMediaQuery,
+  Text,
+  useDisclosure,
 } from '@chakra-ui/react';
 import { graphql, Link as LinkGatsby, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { HamburgerIcon } from '@chakra-ui/icons';
 
 const navList = [
   {
@@ -140,56 +154,75 @@ const StyledListItemChild = styled.li`
 `;
 
 function Header() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [isMd] = useMediaQuery('(min-width: 768px)');
+
   const data = useStaticQuery(graphql`
     query NavbarQuery {
-      file(relativePath: {eq: "afi_logo.png"}) {
+      desktop: file(relativePath: {eq: "afi_logo.png"}) {
         name
         childImageSharp {
-          gatsbyImageData(width: 200, placeholder: BLURRED)
+          gatsbyImageData(
+            placeholder: BLURRED
+            width: 200
+          )
+        }
+      }
+      mobile: file(relativePath: {eq: "afi_logo.png"}) {
+        name
+        childImageSharp {
+          gatsbyImageData(
+            placeholder: BLURRED
+            width: 130
+          )
         }
       }
     }
   `);
 
-  const afiLogo = getImage(data.file);
+  const afiLogo = getImage(isMd ? data.desktop : data.mobile);
 
   return (
-    <Box as="header" mt={[null, '32px']} mb={[null, '56px']}>
+    <Box as="header" mt={[null, '24px']} mb={[null, '48px']} py="12px">
       <Container>
-        <Flex alignItems="center">
-          <GatsbyImage image={afiLogo} alt={data.file.name} />
-          <Flex
-            as="nav"
-            justifyContent="flex-end"
-            width="100%"
-          >
+        <Flex alignItems="center" justifyContent={['space-between', null, 'flex-start']}>
+          <Box width={['130px', null, '200px']} minW={['130px', null, '200px']}>
+            <GatsbyImage image={afiLogo} alt={data.desktop.name} width="100%" />
+          </Box>
+          {isMd ? (
             <Flex
-              as="ul"
-              px="10px"
-              borderBottom="2px solid"
-              borderColor="brandRed.500"
+              as="nav"
+              justifyContent="flex-end"
+              width="100%"
             >
-              {navList.map((nav) => (
-                <StyledListItem
-                  key={nav.id}
-                  hasChild={!!nav.children?.length}
-                >
-                  <Link
-                    as={LinkGatsby}
-                    to={nav.link}
-                    color="brandBlue.500"
-                    fontWeight="700"
-                    p="10px"
-                    display="block"
-                    _hover={{
-                      color: 'var(--chakra-colors-brandRed-500) !important',
-                      textDecoration: 'none',
-                    }}
-                    target={nav?.external ? '_blank' : ''}
+              <Flex
+                as="ul"
+                px="10px"
+                borderBottom="2px solid"
+                borderColor="brandRed.500"
+              >
+                {navList.map((nav) => (
+                  <StyledListItem
+                    key={nav.id}
+                    hasChild={!!nav.children?.length}
                   >
-                    {nav.text}
-                  </Link>
-                  {!!nav.children?.length && (
+                    <Link
+                      as={LinkGatsby}
+                      to={nav.link}
+                      color="brandBlue.500"
+                      fontWeight="700"
+                      p="10px"
+                      display="block"
+                      fontSize="15px"
+                      _hover={{
+                        color: 'var(--chakra-colors-brandRed-500) !important',
+                        textDecoration: 'none',
+                      }}
+                      target={nav?.external ? '_blank' : ''}
+                    >
+                      {nav.text}
+                    </Link>
+                    {!!nav.children?.length && (
                     <ul>
                       {nav.children.map((child, i) => (
                         <StyledListItemChild key={child.id} idx={i + 1}>
@@ -199,13 +232,79 @@ function Header() {
                         </StyledListItemChild>
                       ))}
                     </ul>
-                  )}
-                </StyledListItem>
-              ))}
+                    )}
+                  </StyledListItem>
+                ))}
+              </Flex>
             </Flex>
-          </Flex>
+          ) : (
+            <Button
+              onClick={onOpen}
+              variant="ghost"
+              colorScheme="gray"
+              p="16px"
+              height="max-content"
+            >
+              <HamburgerIcon />
+            </Button>
+          )}
         </Flex>
       </Container>
+      <Drawer isOpen={isOpen} onClose={onClose} placement="right" size="full">
+        <DrawerOverlay />
+        <DrawerContent maxW="calc(100vw - 12px)">
+          <DrawerCloseButton />
+          <DrawerHeader pt="10px">
+            <Text color="brandRed.500" fontWeight="700" fontSize="20px">
+              Apresiasi Film Indonesia
+            </Text>
+          </DrawerHeader>
+          <DrawerBody>
+            <Box
+              as="ul"
+              borderBottom="2px solid"
+              borderColor="brandRed.500"
+              pb="20px"
+            >
+              {navList.map((nav) => (
+                <Box as="li" listStyleType="none" key={nav.id}>
+                  <Link
+                    as={LinkGatsby}
+                    to={nav.link}
+                    target={nav?.external ? '_blank' : ''}
+                    p="10px"
+                    color="brandRed.500"
+                    fontWeight="600"
+                    display="block"
+                  >
+                    {nav.text}
+                  </Link>
+                  {!!nav.children?.length && (
+                    <ul>
+                      {nav.children.map((child) => (
+                        <Box key={child.id} listStyleType="none">
+                          <Link
+                            as={LinkGatsby}
+                            to={child.link}
+                            target={child?.external ? '_blank' : ''}
+                            p="10px"
+                            pl="25px"
+                            color="brandBlue.500"
+                            fontWeight="600"
+                            display="block"
+                          >
+                            {child.text}
+                          </Link>
+                        </Box>
+                      ))}
+                    </ul>
+                  )}
+                </Box>
+              ))}
+            </Box>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
     </Box>
   );
 }
