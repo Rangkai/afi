@@ -14,6 +14,7 @@ import {
   useMediaQuery,
   Text,
   useDisclosure,
+  LinkBox,
 } from '@chakra-ui/react';
 import { graphql, Link as LinkGatsby, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
@@ -187,46 +188,45 @@ function Header() {
     <Box as="header" mt={[null, '24px']} mb={[null, '48px']} py="12px">
       <Container>
         <Flex alignItems="center" justifyContent={['space-between', null, 'flex-start']}>
-          <Box width={['130px', null, '200px']} minW={['130px', null, '200px']}>
+          <LinkBox as={LinkGatsby} to="/" width={['130px', null, '200px']} minW={['130px', null, '200px']}>
             <Box as={GatsbyImage} image={afiLogoDesktop} display={['none', null, 'block']} alt={data.desktop.name} width="100%" />
             <Box as={GatsbyImage} image={afiLogoMobile} display={['block', null, 'none']} alt={data.desktop.name} width="100%" />
-          </Box>
-          {isMd ? (
+          </LinkBox>
+          <Flex
+            as="nav"
+            justifyContent="flex-end"
+            width="100%"
+            display={['none', null, 'flex']}
+          >
             <Flex
-              as="nav"
-              justifyContent="flex-end"
-              width="100%"
-              display={['none', null, 'flex']}
+              as="ul"
+              px="10px"
+              borderBottom="2px solid"
+              borderColor="brandRed.500"
             >
-              <Flex
-                as="ul"
-                px="10px"
-                borderBottom="2px solid"
-                borderColor="brandRed.500"
-              >
-                {navList.map((nav) => (
-                  <StyledListItem
-                    key={nav.id}
-                    hasChild={!!nav.children?.length}
+              {navList.map((nav) => (
+                <StyledListItem
+                  key={nav.id}
+                  hasChild={!!nav.children?.length}
+                >
+                  <Link
+                    as={nav.external ? 'a' : LinkGatsby}
+                    to={nav.link}
+                    href={nav.link}
+                    color="brandBlue.500"
+                    fontWeight="700"
+                    p="10px"
+                    display="block"
+                    fontSize="15px"
+                    _hover={{
+                      color: 'var(--chakra-colors-brandRed-500) !important',
+                      textDecoration: 'none',
+                    }}
+                    target={nav?.external ? '_blank' : ''}
                   >
-                    <Link
-                      as={nav.external ? 'a' : LinkGatsby}
-                      to={nav.link}
-                      href={nav.link}
-                      color="brandBlue.500"
-                      fontWeight="700"
-                      p="10px"
-                      display="block"
-                      fontSize="15px"
-                      _hover={{
-                        color: 'var(--chakra-colors-brandRed-500) !important',
-                        textDecoration: 'none',
-                      }}
-                      target={nav?.external ? '_blank' : ''}
-                    >
-                      {nav.text}
-                    </Link>
-                    {!!nav.children?.length && (
+                    {nav.text}
+                  </Link>
+                  {!!nav.children?.length && (
                     <ul>
                       {nav.children.map((child, i) => (
                         <StyledListItemChild key={child.id} idx={i + 1}>
@@ -236,80 +236,80 @@ function Header() {
                         </StyledListItemChild>
                       ))}
                     </ul>
-                    )}
-                  </StyledListItem>
-                ))}
-              </Flex>
+                  )}
+                </StyledListItem>
+              ))}
             </Flex>
-          ) : (
-            <Button
-              onClick={onOpen}
-              variant="ghost"
-              colorScheme="gray"
-              p="16px"
-              height="max-content"
-              display={['block', null, 'none']}
-            >
-              <HamburgerIcon />
-            </Button>
-          )}
+          </Flex>
+          <Button
+            onClick={onOpen}
+            variant="ghost"
+            colorScheme="gray"
+            p="16px"
+            height="max-content"
+            display={['block', null, 'none']}
+          >
+            <HamburgerIcon />
+          </Button>
         </Flex>
       </Container>
-      <Drawer isOpen={isOpen} onClose={onClose} placement="right" size="full">
-        <DrawerOverlay />
-        <DrawerContent maxW="calc(100vw - 12px)">
-          <DrawerCloseButton />
-          <DrawerHeader pt="10px">
-            <Text color="brandRed.500" fontWeight="700" fontSize="20px">
-              Apresiasi Film Indonesia
-            </Text>
-          </DrawerHeader>
-          <DrawerBody>
-            <Box
-              as="ul"
-              borderBottom="2px solid"
-              borderColor="brandRed.500"
-              pb="20px"
-            >
-              {navList.map((nav) => (
-                <Box as="li" listStyleType="none" key={nav.id}>
-                  <Link
-                    as={LinkGatsby}
-                    to={nav.link}
-                    target={nav?.external ? '_blank' : ''}
-                    p="10px"
-                    color="brandRed.500"
-                    fontWeight="600"
-                    display="block"
-                  >
-                    {nav.text}
-                  </Link>
-                  {!!nav.children?.length && (
-                    <ul>
-                      {nav.children.map((child) => (
-                        <Box key={child.id} listStyleType="none">
-                          <Link
-                            as={LinkGatsby}
-                            to={child.link}
-                            target={child?.external ? '_blank' : ''}
-                            p="10px"
-                            pl="25px"
-                            color="brandBlue.500"
-                            fontWeight="600"
-                            display="block"
-                          >
-                            {child.text}
-                          </Link>
-                        </Box>
-                      ))}
-                    </ul>
-                  )}
-                </Box>
-              ))}
-            </Box>
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
+      {!isMd && (
+        <Drawer isOpen={isOpen} onClose={onClose} placement="right" size="full">
+          <DrawerOverlay />
+          <DrawerContent maxW="calc(100vw - 12px)">
+            <DrawerCloseButton />
+            <DrawerHeader pt="10px">
+              <Text color="brandRed.500" fontWeight="700" fontSize="20px">
+                Apresiasi Film Indonesia
+              </Text>
+            </DrawerHeader>
+            <DrawerBody>
+              <Box
+                as="ul"
+                borderBottom="2px solid"
+                borderColor="brandRed.500"
+                pb="20px"
+              >
+                {navList.map((nav) => (
+                  <Box as="li" listStyleType="none" key={nav.id}>
+                    <Link
+                      as={LinkGatsby}
+                      to={nav.link}
+                      target={nav?.external ? '_blank' : ''}
+                      p="10px"
+                      color="brandRed.500"
+                      fontWeight="600"
+                      display="block"
+                    >
+                      {nav.text}
+                    </Link>
+                    {!!nav.children?.length && (
+                      <ul>
+                        {nav.children.map((child) => (
+                          <Box key={child.id} listStyleType="none">
+                            <Link
+                              as={LinkGatsby}
+                              to={child.link}
+                              target={child?.external ? '_blank' : ''}
+                              p="10px"
+                              pl="25px"
+                              color="brandBlue.500"
+                              fontWeight="600"
+                              display="block"
+                            >
+                              {child.text}
+                            </Link>
+                          </Box>
+                        ))}
+                      </ul>
+                    )}
+                  </Box>
+                ))}
+              </Box>
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
+      )}
     </Box>
   );
 }
