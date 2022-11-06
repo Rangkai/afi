@@ -21,6 +21,13 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'cities',
+        path: `${__dirname}/src/cities/`,
+      },
+    },
   ],
   siteMetadata: {
     title: 'AFI - Apresiasi Film Indonesia',
