@@ -8,7 +8,8 @@ const buttonTheme = defineStyleConfig({
   sizes: {
     md: {
       fontSize: '22px',
-      height: '65px',
+      minHeight: '65px',
+      height: 'max-content',
       px: '40px',
       py: '15px',
     },

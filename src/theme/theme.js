@@ -24,6 +24,9 @@ const theme = {
       700: '#1C50D6',
     },
   },
+  lineHeights: {
+    base: 1.2,
+  },
   components: {
     Button: buttonTheme,
     Container: containerTheme,

@@ -1,5 +1,5 @@
 import {
-  Box, Button, Container, Flex, Text, useDimensions,
+  Box, Button, Container, Flex, SimpleGrid, Text, useDimensions,
 } from '@chakra-ui/react';
 import { graphql, Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
@@ -17,11 +17,16 @@ function About({ data }) {
 
   return (
     <Layout>
-      <GatsbyImage image={aboutBanner} alt={data.file.name} />
+      <Box as={GatsbyImage} height={['220px', null, 'auto']} objectFit={['cover', null, 'unset']} image={aboutBanner} alt={data.file.name} />
       <Container my="48px">
         <Flex justifyContent="center">
           <Box width={getCol(10)} textAlign="center">
-            <Text as="h3" color="brandRed.500" fontWeight="700" fontSize="40px">
+            <Text
+              as="h3"
+              color="brandRed.500"
+              fontWeight="700"
+              fontSize={['28px', null, '40px']}
+            >
               Ximus repra doluptat in erum facest
             </Text>
             <Text color="brandBlue.500" fontSize="20px" fontWeight="600">
@@ -32,13 +37,11 @@ function About({ data }) {
             <Flex justifyContent="center">
               <Box width={getCol(10)} textAlign="center">
                 <Box mb="48px">
-                  <Flex justifyContent="center">
+                  <SimpleGrid columns={[1, null, 3]} spacingX="24px" spacingY="48px">
                     {[1, 2, 3].map((item) => (
                       <Box
                         key={item}
-                        width={getCol(4)}
                         textAlign="center"
-                        px="12px"
                         ref={ref}
                       >
                         <Box
@@ -51,10 +54,10 @@ function About({ data }) {
                         </Box>
                       </Box>
                     ))}
-                  </Flex>
+                  </SimpleGrid>
                 </Box>
                 <Flex justifyContent="center">
-                  <Box width={getCol(6)}>
+                  <Box width={['100%', null, getCol(6)]}>
                     <Button as={Link} to="/what" colorScheme="brandBlue" w="100%">
                       Apa dan Siapa
                     </Button>
@@ -71,7 +74,12 @@ function About({ data }) {
 
         <Flex justifyContent="center">
           <Box width={getCol(10)} textAlign="center">
-            <Text as="h3" color="brandRed.500" fontWeight="700" fontSize="40px">
+            <Text
+              as="h3"
+              color="brandRed.500"
+              fontWeight="700"
+              fontSize={['28px', null, '40px']}
+            >
               Aque voluptiant que qui con conseceste
             </Text>
             <Text color="brandBlue.500" fontSize="20px" fontWeight="600">
@@ -82,13 +90,11 @@ function About({ data }) {
             <Flex justifyContent="center">
               <Box width={getCol(10)} textAlign="center">
                 <Box mb="48px">
-                  <Flex justifyContent="center">
+                  <SimpleGrid columns={[1, null, 3]} spacingX="24px" spacingY="48px">
                     {[1, 2, 3].map((item) => (
                       <Box
                         key={item}
-                        width={getCol(4)}
                         textAlign="center"
-                        px="12px"
                         ref={ref}
                       >
                         <Box
@@ -101,11 +107,17 @@ function About({ data }) {
                         </Box>
                       </Box>
                     ))}
-                  </Flex>
+                  </SimpleGrid>
                 </Box>
                 <Flex justifyContent="center">
-                  <Box width={getCol(6)}>
-                    <Button as={Link} to="/how" colorScheme="brandBlue" w="100%">
+                  <Box width={['100%', null, getCol(6)]}>
+                    <Button
+                      as={Link}
+                      to="/how"
+                      colorScheme="brandBlue"
+                      w="100%"
+                      whiteSpace="break-spaces"
+                    >
                       Mengapa dan Bagaimana
                     </Button>
                   </Box>
@@ -130,7 +142,7 @@ export const query = graphql`
     file(relativePath: {eq: "about/about_banner.jpg"}) {
       name
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+        gatsbyImageData(placeholder: BLURRED)
       }
     }
     default: file(relativePath: {eq: "default.jpg"}) {

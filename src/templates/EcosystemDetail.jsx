@@ -1,11 +1,11 @@
 import {
   Box,
-  Container, Flex, Grid, GridItem, Text,
+  Container, Flex, Grid, GridItem, Text, useDimensions,
 } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import React from 'react';
+import React, { useRef } from 'react';
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import useLayout from '../hooks/useLayout';
@@ -27,21 +27,45 @@ const Content = styled.div`
 `;
 
 function EcosystemDetail({ data }) {
-  const { title, desc, banner } = data.detail.frontmatter;
+  const {
+    title, desc, banner, thumb,
+  } = data.detail.frontmatter;
   const { getCol } = useLayout();
   const cityBanner = getImage(banner);
+  const cityThumb = getImage(thumb);
+  const ref = useRef();
+  const dimensions = useDimensions(ref);
+
   return (
     <Layout>
-      <GatsbyImage image={cityBanner} alt={title} />
+      <Box as={GatsbyImage} height={['220px', null, 'auto']} objectFit={['cover', null, 'unset']} image={cityBanner} alt={title} />
       <Container my="48px">
         <Flex justifyContent="center">
           <Box w={getCol(10)}>
-            <Grid templateColumns="4fr 7fr" gap="92px">
+            <Grid templateColumns={['1fr', null, '4fr 7fr']} gap={['24px', null, '92px']}>
               <GridItem>
-                <Flex>
-                  <Text as="h2" fontSize="32px" fontWeight="600" color="brandRed.500">
+                <Flex flexDirection="column" justifyContent="space-between" h="100%">
+                  <Text
+                    as="h2"
+                    fontSize={['24px', null, '32px']}
+                    fontWeight="600"
+                    color="brandRed.500"
+                  >
                     {desc}
                   </Text>
+                  <Box
+                    textAlign="center"
+                    ref={ref}
+                  >
+                    <Box
+                      w="100%"
+                      h={dimensions?.contentBox?.width}
+                      border="2px solid"
+                      borderColor="brandRed.500"
+                    >
+                      <Box as={GatsbyImage} image={cityThumb} alt="default" objectFit="cover" h="100%" w="100%" />
+                    </Box>
+                  </Box>
                 </Flex>
               </GridItem>
               <GridItem>
@@ -71,6 +95,11 @@ export const query = graphql`
         desc
         title
         banner {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+        thumb {
           childImageSharp {
             gatsbyImageData(placeholder: BLURRED)
           }

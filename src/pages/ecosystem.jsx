@@ -17,11 +17,16 @@ function Ecosystem({ data }) {
 
   return (
     <Layout>
-      <GatsbyImage image={ecosystemBanner} alt={data.file.name} />
+      <Box as={GatsbyImage} height={['220px', null, 'auto']} objectFit={['cover', null, 'unset']} image={ecosystemBanner} alt={data.file.name} />
       <Container my="48px">
         <Flex justifyContent="center" mb="48px">
-          <Box w={getCol(10)} textAlign="center">
-            <Text as="h3" fontSize="40px" fontWeight="700" color="brandRed.500">
+          <Box w={['100%', null, getCol(10)]} textAlign="center">
+            <Text
+              as="h3"
+              fontSize={['28px', null, '40px']}
+              fontWeight="700"
+              color="brandRed.500"
+            >
               Nemporest Estruptatus Minum et Latiaep Eribus
             </Text>
             <Text fontSize="20px" fontWeight="600" color="brandBlue.500" mb="24px">
@@ -33,12 +38,13 @@ function Ecosystem({ data }) {
         </Flex>
         <SimpleGrid columns={[1, null, 2]} spacingX="20px" spacingY="48px">
           {cities.map((city) => (
-            <Flex key={city.id}>
+            <Flex key={city.id} flexWrap="wrap">
               <Box
-                width={getCol(5)}
+                width={['100%', null, getCol(5)]}
                 textAlign="center"
-                pr="24px"
+                pr={[0, null, '24px']}
                 ref={ref}
+                mb={['16px', null, 0]}
               >
                 <Box
                   w="100%"
@@ -56,11 +62,11 @@ function Ecosystem({ data }) {
                   />
                 </Box>
               </Box>
-              <Box w={getCol(6)} pl="12px">
-                <Text fontSize="32px" fontWeight="700" color="brandRed.500">
+              <Box w={['100%', null, getCol(6)]} pl={[0, null, '12px']}>
+                <Text fontSize={['24px', null, '32px']} fontWeight="700" color="brandRed.500">
                   {city.frontmatter.title}
                 </Text>
-                <Text fontSize="16px" fontWeight="600" color="brandBlue.500">
+                <Text fontSize="16px" fontWeight="600" color="brandBlue.500" mb="16px">
                   {city.frontmatter.desc}
                 </Text>
                 <Button as={LinkGatsby} to={`/${city.frontmatter.slug}`} colorScheme="brandRed">
@@ -86,7 +92,7 @@ export const query = graphql`
     file(relativePath: {eq: "ecosystem/ecosystem_banner.jpg"}) {
       name
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+        gatsbyImageData(placeholder: BLURRED)
       }
     }
     default: file(relativePath: {eq: "default.jpg"}) {

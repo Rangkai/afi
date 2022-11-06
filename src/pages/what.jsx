@@ -18,7 +18,7 @@ function What({ data }) {
 
   return (
     <Layout>
-      <GatsbyImage image={whatBanner} alt="what banner" />
+      <Box as={GatsbyImage} height={['220px', null, 'auto']} objectFit={['cover', null, 'unset']} image={whatBanner} alt="what banner" />
       <Container mt="48px">
         {[1, 2, 3].map((item, i) => (
           <Flex
@@ -27,11 +27,13 @@ function What({ data }) {
             borderBottom={i < 2 ? '1px solid' : 'none'}
             borderColor="brandRed.500"
             mb="48px"
+            flexWrap="wrap"
           >
             <Box
-              width={getCol(4)}
+              width={['100%', null, getCol(4)]}
               textAlign="center"
-              pr="60px"
+              pr={[0, null, '60px']}
+              mb={['24px', null, 0]}
               ref={ref}
             >
               <Box
@@ -43,8 +45,13 @@ function What({ data }) {
                 <Box as={GatsbyImage} image={defaultImage} alt="default" objectFit="cover" h="100%" w="100%" />
               </Box>
             </Box>
-            <Box width={getCol(7)} pl="48px">
-              <Text as="h3" color="brandRed.500" fontWeight={700} fontSize="28px">
+            <Box width={['100%', null, getCol(7)]} pl={[0, null, '48px']}>
+              <Text
+                as="h3"
+                color="brandRed.500"
+                fontWeight={700}
+                fontSize={['22px', null, '28px']}
+              >
                 Aque voluptiant que qui con conseceste
               </Text>
               <Text fontSize="16px">
@@ -83,7 +90,7 @@ export const query = graphql`
     file(relativePath: {eq: "what/what_banner.jpg"}) {
       name
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+        gatsbyImageData(placeholder: BLURRED)
       }
     }
     default: file(relativePath: {eq: "default.jpg"}) {

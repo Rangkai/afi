@@ -61,12 +61,12 @@ export default function Home({ data }) {
             <Heading
               as="h3"
               color="brandRed.500"
-              fontSize="40px"
+              fontSize={['28px', null, '40px']}
               marginBottom="8px"
             >
               Tentang Program
             </Heading>
-            <Text color="brandBlue.500" fontWeight="600">
+            <Text color="brandBlue.500" fontWeight="600" mb="24px">
               Untuk mengapresiasi film Indonesia seluas-luasnya, perlu diusahakan berbagai cara
               untuk memperkenalkan keragamannya. APRESIASI FILM INDONESIA 2022 adalah upaya untuk
               menelusuri akar dan ranting budaya perfilman di Indonesia melalui kolaborasi pendataan
@@ -94,7 +94,11 @@ export default function Home({ data }) {
           <Box as="section">
             <Flex textAlign="center" justifyContent="center">
               <Box w={['100%', null, getCol(8)]}>
-                <Text color="#FFFFFF" fontSize={40} fontWeight={700}>
+                <Text
+                  color="#FFFFFF"
+                  fontSize={['28px', null, '40px']}
+                  fontWeight={700}
+                >
                   Ekosistem Perfilman Lokal
                 </Text>
                 <Text color="#FFFFFF" fontSize={20} fontWeight={600}>
@@ -166,21 +170,23 @@ export default function Home({ data }) {
               as={LinkGatsby}
               to="https://rangkai.id/"
               target="_blank"
-              w="100%"
+              w={['max-content', null, '100%']}
               display="block"
               padding="20px"
               bg="#FFFFFF"
               borderRadius={15}
               color="brandBlue.500"
               fontWeight={700}
-              fontSize={32}
+              fontSize={[24, null, 32]}
               _hover={{
                 textDecoration: 'none',
                 background: 'brandRed.500',
                 color: '#FFFFFF',
               }}
             >
-              Tonton Gratis di Rangkai
+              Tonton Gratis
+              <br />
+              di Rangkai
             </Link>
           </Box>
         </Box>
