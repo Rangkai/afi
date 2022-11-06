@@ -7,6 +7,7 @@ import { graphql, Link as LinkGatsby } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
+import SEO from '../components/Seo';
 import useLayoutFormatter from '../hooks/useLayout';
 import '../styles/global.scss';
 
@@ -210,6 +211,10 @@ export default function Home({ data }) {
   );
 }
 
+export function Head() {
+  return <SEO />;
+}
+
 export const query = graphql`
   query HomepageQuery {
     allFile(filter: {relativeDirectory: {eq: "homepage"}}) {
@@ -236,6 +241,7 @@ export const query = graphql`
             }
           }
         }
+        id
       }
     }
   }

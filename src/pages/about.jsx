@@ -5,6 +5,7 @@ import { graphql, Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React, { useRef } from 'react';
 import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 import useLayout from '../hooks/useLayout';
 
 function About({ data }) {
@@ -119,6 +120,10 @@ function About({ data }) {
 }
 
 export default About;
+
+export function Head() {
+  return <SEO title="Tentang AFI - Apresiasi Film Indonesia" />;
+}
 
 export const query = graphql`
   query AboutPageQuery {

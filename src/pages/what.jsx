@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React, { useRef } from 'react';
 import Layout from '../components/Layout';
+import SEO from '../components/Seo';
 import useLayout from '../hooks/useLayout';
 
 function What({ data }) {
@@ -72,6 +73,10 @@ function What({ data }) {
 }
 
 export default What;
+
+export function Head() {
+  return <SEO />;
+}
 
 export const query = graphql`
   query WhatPageQuery {

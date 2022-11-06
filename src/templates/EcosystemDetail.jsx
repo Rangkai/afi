@@ -7,6 +7,7 @@ import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 import Layout from '../components/Layout';
+import SEO from '../components/Seo';
 import useLayout from '../hooks/useLayout';
 
 const Content = styled.div`
@@ -57,6 +58,11 @@ function EcosystemDetail({ data }) {
 }
 
 export default EcosystemDetail;
+
+export function Head({ data }) {
+  const { title } = data.detail.frontmatter;
+  return <SEO title={`${title} - Apresiasi Film Indonesia`} />;
+}
 
 export const query = graphql`
   query CityDetail($slug: String) {

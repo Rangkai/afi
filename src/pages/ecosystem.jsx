@@ -5,6 +5,7 @@ import { Link as LinkGatsby, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React, { useRef } from 'react';
 import Layout from '../components/Layout';
+import SEO from '../components/Seo';
 import useLayout from '../hooks/useLayout';
 
 function Ecosystem({ data }) {
@@ -12,7 +13,6 @@ function Ecosystem({ data }) {
   const ref = useRef();
   const dimensions = useDimensions(ref);
   const ecosystemBanner = getImage(data.file);
-  const defaultImage = getImage(data.default);
   const cities = data.cities.nodes;
 
   return (
@@ -76,6 +76,10 @@ function Ecosystem({ data }) {
 }
 
 export default Ecosystem;
+
+export function Head() {
+  return <SEO title="Ekosistem AFI - Apresiasi Film Indonesia" />;
+}
 
 export const query = graphql`
   query EcosystemPageQuery {

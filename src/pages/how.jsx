@@ -8,6 +8,7 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import Layout from '../components/Layout';
 import useLayout from '../hooks/useLayout';
+import SEO from '../components/Seo';
 
 function How({ data }) {
   const { getCol } = useLayout();
@@ -66,6 +67,10 @@ function How({ data }) {
 }
 
 export default How;
+
+export function Head() {
+  return <SEO />;
+}
 
 export const query = graphql`
   query HowPageQuery {
