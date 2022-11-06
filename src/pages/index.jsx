@@ -183,6 +183,7 @@ export default function Home({ data }) {
                 background: 'brandRed.500',
                 color: '#FFFFFF',
               }}
+              mx="auto"
             >
               Tonton Gratis
               <br />
