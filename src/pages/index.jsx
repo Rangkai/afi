@@ -10,43 +10,6 @@ import Layout from '../components/Layout';
 import useLayoutFormatter from '../hooks/useLayout';
 import '../styles/global.scss';
 
-const cities = [
-  {
-    key: 'aceh',
-    left: '3%',
-    bottom: '88%',
-    title: 'Aceh',
-    desc: 'Aceh Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, quasi.',
-  },
-  {
-    key: 'palembang',
-    left: '8%',
-    bottom: '80%',
-    title: 'Palembang',
-    desc: 'Palembang Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, quasi.',
-  },
-  {
-    key: 'jakarta',
-    left: '27%',
-    bottom: '21%',
-    title: 'Jakarta',
-    desc: 'Jakarta Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, quasi.',
-  },
-  {
-    key: 'bali',
-    left: '42.5%',
-    bottom: '13%',
-    title: 'Bali',
-    desc: 'Bali Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, quasi.',
-  },
-  {
-    key: 'ntb',
-    left: '62%',
-    bottom: '3%',
-    title: 'NTB',
-    desc: 'NTB Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, quasi.',
-  },
-];
 export default function Home({ data }) {
   const [selectedCity, setSelectedCity] = useState({});
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -55,6 +18,19 @@ export default function Home({ data }) {
     fallback: false,
   });
   const { getCol } = useLayoutFormatter();
+  const cities = data.cities.nodes.map((node) => {
+    const {
+      title, position, desc, thumb, slug,
+    } = node.frontmatter;
+    return {
+      key: node.id,
+      title,
+      desc,
+      thumb: getImage(thumb),
+      slug,
+      ...position,
+    };
+  });
 
   const onOpenModal = (key) => {
     const filteredCity = cities.find((city) => city.key === key);
@@ -208,24 +184,25 @@ export default function Home({ data }) {
           </Box>
         </Box>
       </Container>
-      <Modal isOpen={isOpen} onClose={onCloseModal} size="4xl">
+      <Modal isOpen={isOpen} onClose={onCloseModal} size="4xl" isCentered>
         <ModalOverlay />
         <ModalContent w={['calc(100% - 16px)', null, '800px']}>
           <ModalCloseButton />
           <ModalBody py="48px">
-            <Flex>
-              <Box w="50%">
+            <SimpleGrid columns={[1, null, 2]} gap="24px">
+              <GatsbyImage image={selectedCity.thumb} alt={selectedCity.title} />
+              <Box>
                 <Text color="brandRed.500" fontSize="32px" fontWeight="700" mb="8px">
                   {selectedCity?.title}
                 </Text>
                 <Text color="brandBlue.500" fontSize="20px" fontWeight="600" mb="16px">
                   {selectedCity?.desc}
                 </Text>
-                <Button as={LinkGatsby} to={`/${selectedCity.key}`} colorScheme="brandRed">
+                <Button as={LinkGatsby} to={`/${selectedCity.slug}`} colorScheme="brandRed">
                   Explore More
                 </Button>
               </Box>
-            </Flex>
+            </SimpleGrid>
           </ModalBody>
         </ModalContent>
       </Modal>
@@ -240,6 +217,24 @@ export const query = graphql`
         name
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+    }
+    cities: allMarkdownRemark {
+      nodes {
+        frontmatter {
+          desc
+          slug
+          title
+          position {
+            bottom
+            left
+          }
+          thumb {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
+          }
         }
       }
     }

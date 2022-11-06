@@ -4,6 +4,10 @@ slug: city-balikpapan
 desc: Balikpapan Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, rerum.
 banner: '../images/ecosystem/cities/balikpapan/banner.jpg'
 thumb: '../images/ecosystem/cities/balikpapan/thumb.jpg'
+position: {
+  left: 46%,
+  bottom: 58%
+}
 ---
 
 ## Dolorehentis mo Dolores Quos Volorestis

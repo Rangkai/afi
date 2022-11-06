@@ -22,64 +22,6 @@ import { keyframes } from '@emotion/react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { HamburgerIcon } from '@chakra-ui/icons';
 
-const navList = [
-  {
-    id: 1,
-    text: 'Beranda',
-    link: '/',
-  },
-  {
-    id: 2,
-    text: 'Tentang Program',
-    link: '/about',
-    children: [
-      {
-        id: 1,
-        text: 'Apa dan Siapa',
-        link: '/what',
-      },
-      {
-        id: 2,
-        text: 'Mengapa dan Bagaimana',
-        link: '/how',
-      },
-    ],
-  },
-  {
-    id: 3,
-    text: 'Ekosistem Perfilman Lokal',
-    link: '/ecosystem',
-    children: [
-      {
-        id: 1,
-        text: 'Balikpapan',
-        link: '/city-balikpapan',
-      },
-      {
-        id: 2,
-        text: 'Banda Aceh',
-        link: '/city-banda-aceh',
-      },
-      {
-        id: 3,
-        text: 'Purbalingga',
-        link: '/city-banda-aceh',
-      },
-    ],
-  },
-  {
-    id: 4,
-    text: 'Tonton di Rangkai',
-    link: 'https://rangkai.id/',
-    external: true,
-  },
-  {
-    id: 5,
-    text: 'Hubungi',
-    link: '/contact',
-  },
-];
-
 const slideDown = keyframes`
   0% { 
     opacity: 0;
@@ -178,8 +120,63 @@ function Header() {
           )
         }
       }
+      cities: allMarkdownRemark {
+        nodes {
+          frontmatter {
+            slug
+            title
+          }
+          id
+        }
+      }
     }
   `);
+
+  const navList = [
+    {
+      id: 1,
+      text: 'Beranda',
+      link: '/',
+    },
+    {
+      id: 2,
+      text: 'Tentang Program',
+      link: '/about',
+      children: [
+        {
+          id: 1,
+          text: 'Apa dan Siapa',
+          link: '/what',
+        },
+        {
+          id: 2,
+          text: 'Mengapa dan Bagaimana',
+          link: '/how',
+        },
+      ],
+    },
+    {
+      id: 3,
+      text: 'Ekosistem Perfilman Lokal',
+      link: '/ecosystem',
+      children: data.cities.nodes.map((node) => ({
+        id: node.id,
+        text: node.frontmatter.title,
+        link: `/${node.frontmatter.slug}`,
+      })),
+    },
+    {
+      id: 4,
+      text: 'Tonton di Rangkai',
+      link: 'https://rangkai.id/',
+      external: true,
+    },
+    {
+      id: 5,
+      text: 'Hubungi',
+      link: '/contact',
+    },
+  ];
 
   const afiLogoDesktop = getImage(data.desktop);
   const afiLogoMobile = getImage(data.mobile);

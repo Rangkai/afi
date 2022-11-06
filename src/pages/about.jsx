@@ -1,7 +1,7 @@
 import {
   Box, Button, Container, Flex, Text, useDimensions,
 } from '@chakra-ui/react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React, { useRef } from 'react';
 import Layout from '../components/Layout';
@@ -54,7 +54,7 @@ function About({ data }) {
                 </Box>
                 <Flex justifyContent="center">
                   <Box width={getCol(6)}>
-                    <Button colorScheme="brandBlue" w="100%">
+                    <Button as={Link} to="/what" colorScheme="brandBlue" w="100%">
                       Apa dan Siapa
                     </Button>
                   </Box>
@@ -104,7 +104,7 @@ function About({ data }) {
                 </Box>
                 <Flex justifyContent="center">
                   <Box width={getCol(6)}>
-                    <Button colorScheme="brandBlue" w="100%">
+                    <Button as={Link} to="/how" colorScheme="brandBlue" w="100%">
                       Mengapa dan Bagaimana
                     </Button>
                   </Box>

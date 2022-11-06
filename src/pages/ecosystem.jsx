@@ -13,6 +13,7 @@ function Ecosystem({ data }) {
   const dimensions = useDimensions(ref);
   const ecosystemBanner = getImage(data.file);
   const defaultImage = getImage(data.default);
+  const cities = data.cities.nodes;
 
   return (
     <Layout>
@@ -30,65 +31,44 @@ function Ecosystem({ data }) {
             </Text>
           </Box>
         </Flex>
-        <SimpleGrid columns={[1, null, 2]}>
-          <Flex>
-            <Box
-              width={getCol(5)}
-              textAlign="center"
-              pr="24px"
-              ref={ref}
-            >
+        <SimpleGrid columns={[1, null, 2]} spacingX="20px" spacingY="48px">
+          {cities.map((city) => (
+            <Flex key={city.id}>
               <Box
-                w="100%"
-                h={dimensions?.contentBox?.width}
-                border="2px solid"
-                borderColor="brandRed.500"
+                width={getCol(5)}
+                textAlign="center"
+                pr="24px"
+                ref={ref}
               >
-                <Box as={GatsbyImage} image={defaultImage} alt="default" objectFit="cover" h="100%" w="100%" />
+                <Box
+                  w="100%"
+                  h={dimensions?.contentBox?.width}
+                  border="2px solid"
+                  borderColor="brandRed.500"
+                >
+                  <Box
+                    as={GatsbyImage}
+                    image={getImage(city.frontmatter.thumb)}
+                    alt={city.frontmatter.title}
+                    objectFit="cover"
+                    h="100%"
+                    w="100%"
+                  />
+                </Box>
               </Box>
-            </Box>
-            <Box w={getCol(6)} pl="12px">
-              <Text fontSize="32px" fontWeight="700" color="brandRed.500">
-                Balikpapan
-              </Text>
-              <Text fontSize="16px" fontWeight="600" color="brandBlue.500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Cum dolorem perspiciatis pariatur voluptate?
-              </Text>
-              <Button as={LinkGatsby} to="/balikpapan" colorScheme="brandRed">
-                Explore More
-              </Button>
-            </Box>
-          </Flex>
-          <Flex>
-            <Box
-              width={getCol(5)}
-              textAlign="center"
-              pr="24px"
-              ref={ref}
-            >
-              <Box
-                w="100%"
-                h={dimensions?.contentBox?.width}
-                border="2px solid"
-                borderColor="brandRed.500"
-              >
-                <Box as={GatsbyImage} image={defaultImage} alt="default" objectFit="cover" h="100%" w="100%" />
+              <Box w={getCol(6)} pl="12px">
+                <Text fontSize="32px" fontWeight="700" color="brandRed.500">
+                  {city.frontmatter.title}
+                </Text>
+                <Text fontSize="16px" fontWeight="600" color="brandBlue.500">
+                  {city.frontmatter.desc}
+                </Text>
+                <Button as={LinkGatsby} to={`/${city.frontmatter.slug}`} colorScheme="brandRed">
+                  Explore More
+                </Button>
               </Box>
-            </Box>
-            <Box w={getCol(6)} pl="12px">
-              <Text fontSize="32px" fontWeight="700" color="brandRed.500">
-                Balikpapan
-              </Text>
-              <Text fontSize="16px" fontWeight="600" color="brandBlue.500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Cum dolorem perspiciatis pariatur voluptate?
-              </Text>
-              <Button as={LinkGatsby} to="/balikpapan" colorScheme="brandRed">
-                Explore More
-              </Button>
-            </Box>
-          </Flex>
+            </Flex>
+          ))}
         </SimpleGrid>
       </Container>
     </Layout>
@@ -109,6 +89,21 @@ export const query = graphql`
       name
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED)
+      }
+    }
+    cities: allMarkdownRemark {
+      nodes {
+        frontmatter {
+          slug
+          title
+          thumb {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
+          }
+          desc
+        }
+        id
       }
     }
   }
