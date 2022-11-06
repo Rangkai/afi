@@ -19,11 +19,11 @@ function What({ data }) {
     <Layout>
       <GatsbyImage image={whatBanner} alt="what banner" />
       <Container mt="48px">
-        {[1, 2, 3].map((item) => (
+        {[1, 2, 3].map((item, i) => (
           <Flex
             key={item}
             pb="48px"
-            borderBottom="1px solid"
+            borderBottom={i < 2 ? '1px solid' : 'none'}
             borderColor="brandRed.500"
             mb="48px"
           >
