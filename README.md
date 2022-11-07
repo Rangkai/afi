@@ -10,6 +10,8 @@
 
 Untuk mengapresiasi film Indonesia seluas-luasnya, perlu diusahakan berbagai cara untuk memperkenalkan keragamannya. APRESIASI FILM INDONESIA 2022 adalah upaya untuk menelusuri akar dan ranting budaya perfilman di Indonesia melalui kolaborasi pendataan dan kuratorial. Program ini dirintis oleh Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi dan dikelola oleh Cinema Poetica dan Rangkai.
 
+Demo: [AFI - Apresiasi Film Indonesia 2022](https://afi2022.netlify.app/)
+
 ## 🚀 Quick start
 
 1.  **NPM Install.**
