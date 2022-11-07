@@ -40,6 +40,7 @@ const StyledListItem = styled.li`
   border-radius: 10px 10px 0 0;
   position: relative;
   height: max-content;
+  margin: 0 10px;
   ul {
     position: absolute;
     top: 100%;
@@ -200,6 +201,7 @@ function Header() {
               px="10px"
               borderBottom="2px solid"
               borderColor="brandRed.500"
+              pb="20px"
             >
               {navList.map((nav) => (
                 <StyledListItem
@@ -254,8 +256,8 @@ function Header() {
         <Drawer isOpen={isOpen} onClose={onClose} placement="right" size="full">
           <DrawerOverlay />
           <DrawerContent maxW="calc(100vw - 12px)">
-            <DrawerCloseButton />
-            <DrawerHeader pt="10px">
+            <DrawerCloseButton color="brandRed.500" />
+            <DrawerHeader pt="16px">
               <Text color="brandRed.500" fontWeight="700" fontSize="20px">
                 Apresiasi Film Indonesia
               </Text>
