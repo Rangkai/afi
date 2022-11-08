@@ -38,12 +38,12 @@ function Footer() {
     <Box as="footer" py="48px">
       <Container>
         <Flex justifyContent="space-between" alignItems="center" flexDirection={['column', null, 'row']}>
-          <Box width={['100%', null, '50%']} h="max-content" mb={['20px', null, 0]}>
+          <Box width={['100%', null, '50%']} h="max-content" mb={['48px', null, 0]}>
             <Text mb={0} textAlign={['center', null, 'start']} color="brandBlue.500" fontSize="16px" fontWeight="600">
               Apresiasi Film Indonesia © 2022
             </Text>
           </Box>
-          <Flex w={[getCol(12), null, getCol(2)]} justifyContent={[null, null, 'flex-end']} alignItems="center">
+          <Flex w={[getCol(12), null, getCol(2)]} mb={['16px', null, 0]} justifyContent={[null, null, 'flex-end']} alignItems="center">
             <Text
               mb={0}
               color="brandBlue.500"
@@ -70,7 +70,8 @@ function Footer() {
               dengan
             </Text>
             {collaborators.map((collaborator) => (
-              <GatsbyImage
+              <Box
+                as={GatsbyImage}
                 key={collaborator.name}
                 image={collaborator.img}
                 alt={collaborator.name}
