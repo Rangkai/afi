@@ -37,6 +37,10 @@ const theme = {
       },
     },
   },
+  fonts: {
+    body: 'Raleway',
+    heading: 'Raleway',
+  },
 };
 
 export default extendTheme(theme);
