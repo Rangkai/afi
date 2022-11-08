@@ -1,5 +1,5 @@
 import {
-  Box, Button, Container, Flex, SimpleGrid, Text, useDimensions,
+  Box, Button, Container, Flex, Heading, SimpleGrid, Text, useDimensions,
 } from '@chakra-ui/react';
 import { graphql, Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
@@ -21,14 +21,14 @@ function About({ data }) {
       <Container my="48px">
         <Flex justifyContent="center">
           <Box width={getCol(10)} textAlign="center">
-            <Text
+            <Heading
               as="h3"
               color="brandRed.500"
               fontWeight="700"
               fontSize={['28px', null, '40px']}
             >
               Ximus repra doluptat in erum facest
-            </Text>
+            </Heading>
             <Text color="brandBlue.500" fontSize="20px" fontWeight="600">
               Olor sumqui andis nonserum fugia sererit, ulla verum inctusda quam, inus, tem nonsero
               reptaspidel id eatem intin nonemposanda sapisimus volesciis saped unt essequam net
@@ -74,14 +74,14 @@ function About({ data }) {
 
         <Flex justifyContent="center">
           <Box width={getCol(10)} textAlign="center">
-            <Text
+            <Heading
               as="h3"
               color="brandRed.500"
               fontWeight="700"
               fontSize={['28px', null, '40px']}
             >
               Aque voluptiant que qui con conseceste
-            </Text>
+            </Heading>
             <Text color="brandBlue.500" fontSize="20px" fontWeight="600">
               Olor sumqui andis nonserum fugia sererit, ulla verum inctusda quam, inus, tem nonsero
               reptaspidel id eatem intin nonemposanda sapisimus volesciis saped unt essequam net

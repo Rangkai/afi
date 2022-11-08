@@ -100,13 +100,14 @@ export default function Home({ data }) {
           <Box as="section">
             <Flex textAlign="center" justifyContent="center">
               <Box w={['100%', null, getCol(8)]}>
-                <Text
+                <Heading
+                  as="h3"
                   color="#FFFFFF"
                   fontSize={['28px', null, '40px']}
                   fontWeight={700}
                 >
                   Ekosistem Perfilman Lokal
-                </Text>
+                </Heading>
                 <Text color="#FFFFFF" fontSize={20} fontWeight={600}>
                   Sepuluh kota yang menjadi lokasi penelitian ditentukan berdasarkan
                   volume kegiatan produksi dan ekshibisi lokal selama tiga tahun terakhir

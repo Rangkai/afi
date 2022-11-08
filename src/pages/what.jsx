@@ -1,5 +1,5 @@
 import {
-  Box, Container, Flex, Text, useDimensions,
+  Box, Container, Flex, Heading, Text, useDimensions,
 } from '@chakra-ui/react';
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
@@ -46,14 +46,14 @@ function What({ data }) {
               </Box>
             </Box>
             <Box width={['100%', null, getCol(7)]} pl={[0, null, '48px']}>
-              <Text
+              <Heading
                 as="h3"
                 color="brandRed.500"
                 fontWeight={700}
                 fontSize={['22px', null, '28px']}
               >
                 Aque voluptiant que qui con conseceste
-              </Text>
+              </Heading>
               <Text fontSize="16px">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus maxime
                 tempora aspernatur hic officiis voluptas accusantium, cumque, sit ad consequuntur

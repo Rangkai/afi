@@ -1,6 +1,6 @@
 import {
   Box,
-  Container, Flex, Grid, GridItem, Text, useDimensions,
+  Container, Flex, Grid, GridItem, Heading, useDimensions,
 } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 import { graphql } from 'gatsby';
@@ -16,9 +16,12 @@ const Content = styled.div`
     font-weight: 700;
     color: var(--chakra-colors-brandRed-500);
     margin-bottom: 8px;
+    line-height: var(--chakra-lineHeights-shorter);
   }
   p {
+    font-family: 'Raleway';
     margin-bottom: 16px;
+    line-height: var(--chakra-lineHeights-tall);
     em {
       color: var(--chakra-colors-brandBlue-500);
       font-weight: 600;
@@ -45,14 +48,14 @@ function EcosystemDetail({ data }) {
             <Grid templateColumns={['1fr', null, '4fr 7fr']} gap={['24px', null, '92px']}>
               <GridItem>
                 <Flex flexDirection="column" justifyContent="space-between" h="100%">
-                  <Text
+                  <Heading
                     as="h2"
                     fontSize={['24px', null, '32px']}
                     fontWeight="600"
                     color="brandRed.500"
                   >
                     {desc}
-                  </Text>
+                  </Heading>
                   <Box
                     textAlign="center"
                     ref={ref}

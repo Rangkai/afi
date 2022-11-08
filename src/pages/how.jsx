@@ -1,5 +1,5 @@
 import {
-  Box, Container, Flex, Text,
+  Box, Container, Flex, Heading, Text,
 } from '@chakra-ui/react';
 import {
   GatsbyImage, getImage,
@@ -23,7 +23,7 @@ function How({ data }) {
           <Box w={getCol(10)}>
             <Flex justifyContent="flex-end" borderBottom="1px solid" borderColor="brandRed.500" pb="48px" my="48px">
               <Box w={['100%', null, getCol(8)]}>
-                <Text
+                <Heading
                   as="h3"
                   fontSize={['28px', null, '40px']}
                   fontWeight="600"
@@ -32,7 +32,7 @@ function How({ data }) {
                   Lis ab ilitatur ad qui berum cor simus. Aximpor poreper ferenec atiossi
                   ommoluptur mos a simus el ius atur modit, ut optatur, con eum et.
                   Giae et laturit quae erorem fugitem sunt.
-                </Text>
+                </Heading>
               </Box>
             </Flex>
             <Flex justifyContent="flex-end">

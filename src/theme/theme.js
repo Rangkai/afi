@@ -25,7 +25,9 @@ const theme = {
     },
   },
   lineHeights: {
-    base: 1.2,
+    shorter: 1.2,
+    base: 1.5,
+    tall: 1.7,
   },
   components: {
     Button: buttonTheme,
@@ -34,6 +36,14 @@ const theme = {
       baseStyle: {
         marginBottom: '8px',
         fontSize: '20px',
+        lineHeight: 'tall',
+        color: 'colors.blue',
+      },
+    },
+    Heading: {
+      baseStyle: {
+        lineHeight: 'shorter',
+        marginBottom: '12px',
       },
     },
   },

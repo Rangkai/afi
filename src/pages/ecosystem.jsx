@@ -1,5 +1,5 @@
 import {
-  Box, Container, Flex, SimpleGrid, Text, Button, useDimensions,
+  Box, Container, Flex, SimpleGrid, Text, Button, useDimensions, Heading,
 } from '@chakra-ui/react';
 import { Link as LinkGatsby, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
@@ -21,14 +21,14 @@ function Ecosystem({ data }) {
       <Container my="48px">
         <Flex justifyContent="center" mb="48px">
           <Box w={['100%', null, getCol(10)]} textAlign="center">
-            <Text
+            <Heading
               as="h3"
               fontSize={['28px', null, '40px']}
               fontWeight="700"
               color="brandRed.500"
             >
               Nemporest Estruptatus Minum et Latiaep Eribus
-            </Text>
+            </Heading>
             <Text fontSize="20px" fontWeight="600" color="brandBlue.500" mb="24px">
               Apresiasi Film Indonesia 2022 hendak menyasar realitas material dari ekosistem
               perfilman lokal di sepuluh kota. Realitas material yang dimaksud meliputi ragam
