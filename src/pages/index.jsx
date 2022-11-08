@@ -194,7 +194,7 @@ export default function Home({ data }) {
       </Container>
       <Modal isOpen={isOpen} onClose={onCloseModal} size="4xl" isCentered>
         <ModalOverlay />
-        <ModalContent w={['calc(100% - 16px)', null, '800px']}>
+        <ModalContent w={['calc(100% - 16px)', null, '800px']} borderRadius="15px">
           <ModalCloseButton />
           <ModalBody py="48px">
             <SimpleGrid columns={[1, null, 2]} gap="24px">
