@@ -3,6 +3,7 @@ import {
   Heading, Link, Modal, ModalBody, ModalCloseButton,
   ModalContent, ModalOverlay, SimpleGrid, Text, useDisclosure, useMediaQuery,
 } from '@chakra-ui/react';
+import styled from '@emotion/styled';
 import { graphql, Link as LinkGatsby } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React, { useState } from 'react';
@@ -10,6 +11,11 @@ import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import useLayoutFormatter from '../hooks/useLayout';
 import '../styles/global.scss';
+
+const MapsImg = styled.img`
+  width: 100%;
+  height: auto;
+`;
 
 export default function Home({ data }) {
   const [selectedCity, setSelectedCity] = useState({});
@@ -108,11 +114,10 @@ export default function Home({ data }) {
               </Box>
             </Flex>
             <Box mb="48px" position="relative">
-              <img src="../../map.svg" alt="maps" width="100%" height="auto" />
+              <MapsImg src="../../map.svg" alt="maps" width="100%" height="auto" />
               {cities.map((city) => (
                 <Box
                   key={city.key}
-                  as="button"
                   w={isMd ? '30px' : '10px'}
                   h={isMd ? '30px' : '10px'}
                   borderRadius="50%"
@@ -121,6 +126,9 @@ export default function Home({ data }) {
                   left={city.left}
                   bottom={city.bottom}
                   onClick={() => onOpenModal(city.key)}
+                  _hover={{
+                    cursor: 'pointer',
+                  }}
                 />
               ))}
             </Box>
