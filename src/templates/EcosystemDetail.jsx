@@ -1,22 +1,34 @@
 import {
   Box,
-  Container, Flex, Grid, GridItem, Heading, useDimensions,
+  Container,
 } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import React, { useRef } from 'react';
+import React from 'react';
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
-import useLayout from '../hooks/useLayout';
 
 const Content = styled.div`
-  h2, h3 {
+  h2 {
     font-size: 28px;
     font-weight: 700;
     color: var(--chakra-colors-brandRed-500);
+    margin-bottom: 16px;
+    line-height: var(--chakra-lineHeights-shorter);
+    @media screen and (min-width: 768px) {
+      font-size: 40px;
+    }
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--chakra-colors-brandBlue-500);
     margin-bottom: 8px;
     line-height: var(--chakra-lineHeights-shorter);
+    @media screen and (min-width: 768px) {
+      font-size: 28px;
+    }
   }
   p {
     font-family: 'Raleway';
@@ -26,59 +38,42 @@ const Content = styled.div`
       color: var(--chakra-colors-brandBlue-500);
       font-weight: 600;
     }
+    &.caption {
+      font-size: 16px;
+      line-height: var(--chakra-lineHeights-shorter);
+      color: var(--chakra-colors-brandBlue-500);
+      font-weight: 700;
+      font-style: italic;
+    }
+    &.info {
+      font-size: 28px;
+      line-height: var(--chakra-lineHeights-shorter);
+      color: var(--chakra-colors-brandRed-500);
+      font-weight: 700;
+
+    }
+  }
+
+  hr {
+    border-color: var(--chakra-colors-brandRed-500);
+    margin-bottom: 36px;
+    margin-top: 16px;
   }
 `;
 
-function EcosystemDetail({ data }) {
+function EcosystemDetail({ data, children }) {
   const {
-    title, desc, banner, thumb,
+    title, banner,
   } = data.detail.frontmatter;
-  const { getCol } = useLayout();
   const cityBanner = getImage(banner);
-  const cityThumb = getImage(thumb);
-  const ref = useRef();
-  const dimensions = useDimensions(ref);
 
   return (
     <Layout>
       <Box as={GatsbyImage} height={['220px', null, 'auto']} objectFit={['cover', null, 'unset']} image={cityBanner} alt={title} />
       <Container my="48px">
-        <Flex justifyContent="center">
-          <Box w={getCol(10)}>
-            <Grid templateColumns={['1fr', null, '4fr 7fr']} gap={['24px', null, '92px']}>
-              <GridItem>
-                <Flex flexDirection="column" justifyContent="space-between" h="100%">
-                  <Heading
-                    as="h2"
-                    fontSize={['24px', null, '32px']}
-                    fontWeight="600"
-                    color="brandRed.500"
-                  >
-                    {desc}
-                  </Heading>
-                  <Box
-                    textAlign="center"
-                    ref={ref}
-                  >
-                    <Box
-                      w="100%"
-                      h={dimensions?.contentBox?.width}
-                      border="2px solid"
-                      borderColor="brandRed.500"
-                    >
-                      <Box as={GatsbyImage} image={cityThumb} alt="default" objectFit="cover" h="100%" w="100%" />
-                    </Box>
-                  </Box>
-                </Flex>
-              </GridItem>
-              <GridItem>
-                <Content>
-                  <Box dangerouslySetInnerHTML={{ __html: data.detail.html }} />
-                </Content>
-              </GridItem>
-            </Grid>
-          </Box>
-        </Flex>
+        <Content>
+          {children}
+        </Content>
       </Container>
     </Layout>
   );
@@ -92,8 +87,8 @@ export function Head({ data }) {
 }
 
 export const query = graphql`
-  query CityDetail($slug: String) {
-    detail: markdownRemark(frontmatter: {slug: {eq: $slug}}) {
+  query EcosystemDetailQuery($slug: String, $relativeDir: String) {
+    detail: mdx(frontmatter: {slug: {eq: $slug}}) {
       frontmatter {
         desc
         title
@@ -108,7 +103,15 @@ export const query = graphql`
           }
         }
       }
-      html
+      body
+    }
+    gallery: allFile(filter: {relativeDirectory: {eq: $relativeDir}}) {
+      nodes {
+        name
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
     }
   }
 `;

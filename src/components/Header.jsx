@@ -121,7 +121,7 @@ function Header() {
           )
         }
       }
-      cities: allMarkdownRemark {
+      cities: allMdx {
         nodes {
           frontmatter {
             slug

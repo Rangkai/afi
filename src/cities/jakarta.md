@@ -8,6 +8,7 @@ position: {
   left: 27%,
   bottom: 21%
 }
+galleryDir: 'ecosystem/cities/bandung'
 ---
 
 ## Dolorehentis mo Dolores Quos Volorestis

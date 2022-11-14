@@ -28,6 +28,20 @@ module.exports = {
         path: `${__dirname}/src/cities/`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        extensions: ['.mdx', '.md'],
+        mdxOptions: {
+          remarkPlugins: [
+            {
+              resolve: 'gatsby-remark-images',
+              options: {},
+            },
+          ],
+        },
+      },
+    },
   ],
   siteMetadata: {
     title: 'AFI - Apresiasi Film Indonesia',

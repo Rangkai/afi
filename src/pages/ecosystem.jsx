@@ -101,7 +101,7 @@ export const query = graphql`
         gatsbyImageData(placeholder: BLURRED)
       }
     }
-    cities: allMarkdownRemark {
+    cities: allMdx {
       nodes {
         frontmatter {
           slug

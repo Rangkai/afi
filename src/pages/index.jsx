@@ -241,7 +241,7 @@ export const query = graphql`
         }
       }
     }
-    cities: allMarkdownRemark {
+    cities: allMdx {
       nodes {
         frontmatter {
           desc
