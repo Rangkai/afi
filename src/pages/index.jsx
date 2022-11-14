@@ -10,7 +10,6 @@ import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import useLayoutFormatter from '../hooks/useLayout';
-import '../styles/global.scss';
 
 const MapsImg = styled.img`
   width: 100%;

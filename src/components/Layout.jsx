@@ -3,6 +3,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import Footer from './Footer';
 import Header from './Header';
 import theme from '../theme/theme';
+import '../styles/global.scss';
 
 function Layout({ children }) {
   return (
