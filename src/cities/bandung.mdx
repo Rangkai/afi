@@ -15,6 +15,7 @@ import { GridItem, Text, Box, SimpleGrid } from '@chakra-ui/react';
 import GridContainer, { GridItemLeftContent } from '../components/GridContainer';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import SquareImage from '../components/SquareImage';
+import Lightbox from '../components/Lightbox';
 
 <GridContainer>
   <GridItemLeftContent />
@@ -80,7 +81,9 @@ import SquareImage from '../components/SquareImage';
 
 <GridContainer>
   <GridItemLeftContent>
-    <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'bandung1')} alt={'default'} mb="16px" />
+    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'bandung1')} alt={'bandung1'}>
+      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'bandung1')} alt={'bandung1'} mb="16px" />
+    </Lightbox>
     <p className="caption">Indicinema Bandung<br/>(Obrolan Minggu 1 Perempuan dan Dirinya)</p>
   </GridItemLeftContent>
   <GridItem>
@@ -164,7 +167,9 @@ import SquareImage from '../components/SquareImage';
 </GridContainer>
 <GridContainer>
   <GridItemLeftContent>
-    <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'bandung2')} alt={'default'} mb="16px" />
+    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'bandung2')} alt={'bandung2'}>
+      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'bandung2')} alt={'bandung2'} mb="16px" />
+    </Lightbox>
     <p className="caption">Sebs Cine Club<br/>(Shooting Maybe Someday Another Day But Not Today)</p>
   </GridItemLeftContent>
   <GridItem>
@@ -204,7 +209,9 @@ import SquareImage from '../components/SquareImage';
 
 <GridContainer>
   <GridItemLeftContent>
-    <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'bandung3')} alt={'default'} mb="16px" />
+    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'bandung3')} alt={'bandung3'} mb="16px">
+      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'bandung3')} alt={'bandung3'} />
+    </Lightbox>
     <p className="caption">Cinemora<br/>Shooting The Boy With Moving Image</p>
   </GridItemLeftContent>
   <GridItem>
@@ -345,7 +352,9 @@ import SquareImage from '../components/SquareImage';
 
 <GridContainer>
   <GridItemLeftContent>
-    <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'bandung4')} alt={'default'} mb="16px" />
+    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'bandung4')} alt={'bandung4'} mb="16px">
+      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'bandung4')} alt={'bandung4'} />
+    </Lightbox>
     <p className="caption">4 GA Production<br/>(Shooting Words)</p>
   </GridItemLeftContent>
   <GridItem>
@@ -419,7 +428,9 @@ import SquareImage from '../components/SquareImage';
 <GridContainer>
   <GridItemLeftContent>
     <p className="info">Rentang Mitra<br/>Ekshibisi / Festival</p>
-    <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'bandung5')} alt={'default'} mb="16px" noBorder />
+    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'bandung5')} alt={'bandung5'} mb="16px">
+      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'bandung5')} alt={'bandung5'} noBorder />
+    </Lightbox>
     <p className="caption">Dari 10 kota, survei menemukan komunitas 
       yang berfokus pada aktivitas ekshibisi 
       berhasil menggaet beragam institusi di 
@@ -485,7 +496,9 @@ import SquareImage from '../components/SquareImage';
 <GridContainer>
   <GridItemLeftContent>
     <p className="info">Strategi Komunikasi</p>
-    <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'bandung6')} alt={'default'} mb="16px" noBorder />
+    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'bandung6')} alt={'bandung6'} mb="16px">
+      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'bandung6')} alt={'bandung6'} noBorder />
+    </Lightbox>
     <p className="caption">Seiring dengan tingginya penetrasi media 
       digital di Indonesia dalam kehidupan sehari-hari, media sosial dan aplikasi pesan singkat 
       menjadi dua medium utama yang digunakan 
@@ -535,6 +548,20 @@ import SquareImage from '../components/SquareImage';
 <Text as="h3" mt={["40px", null, "60px"]} mb={["20px !important", null, "32px !important"]}> Karya-karya pilihan Kota Bandung </Text>
 
 <SimpleGrid columns={[1, null, 2]} spacingX={34} spacingY={10}>
-  <Box as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'bandung_thumb1'))} alt={'default'} border="2px solid" borderColor="brandRed.500" />
-  <Box as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'bandung_thumb2'))} alt={'default'} border="2px solid" borderColor="brandRed.500" />
+  <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'bandung_thumb1')} alt={'bandung_thumb1'}>
+    <Box 
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'bandung_thumb1'))}
+      alt={'bandung_thumb1'}
+      border="2px solid"
+      borderColor="brandRed.500"
+    />
+  </Lightbox>
+  <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'bandung_thumb2')} alt={'bandung_thumb2'}>
+    <Box 
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'bandung_thumb2'))}
+      alt={'bandung_thumb2'}
+      border="2px solid"
+      borderColor="brandRed.500"
+    />
+  </Lightbox>
 </SimpleGrid>

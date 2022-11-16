@@ -1,17 +1,17 @@
 import {
-  Box, Container, Flex, SimpleGrid, Text, Button, useDimensions, Heading,
+  Box, Button, Container, Flex, Heading, SimpleGrid, Text,
 } from '@chakra-ui/react';
-import { Link as LinkGatsby, graphql } from 'gatsby';
+import { graphql, Link as LinkGatsby } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import React, { useRef } from 'react';
+import React from 'react';
 import Layout from '../components/Layout';
+import Lightbox from '../components/Lightbox';
 import SEO from '../components/Seo';
+import SquareImage from '../components/SquareImage';
 import useLayout from '../hooks/useLayout';
 
 function Ecosystem({ data }) {
   const { getCol } = useLayout();
-  const ref = useRef();
-  const dimensions = useDimensions(ref);
   const ecosystemBanner = getImage(data.file);
   const cities = data.cities.nodes;
 
@@ -39,29 +39,18 @@ function Ecosystem({ data }) {
         <SimpleGrid columns={[1, null, 2]} spacingX="20px" spacingY="48px">
           {cities.map((city) => (
             <Flex key={city.id} flexWrap="wrap">
-              <Box
-                width={['100%', null, getCol(5)]}
-                textAlign="center"
-                pr={[0, null, '24px']}
-                ref={ref}
+              <Lightbox
+                image={city.frontmatter.thumb}
+                alt={city.frontmatter.title}
+                mr={[0, null, '24px']}
                 mb={['16px', null, 0]}
+                width={['100%', null, getCol(5)]}
               >
-                <Box
-                  w="100%"
-                  h={dimensions?.contentBox?.width}
-                  border="2px solid"
-                  borderColor="brandRed.500"
-                >
-                  <Box
-                    as={GatsbyImage}
-                    image={getImage(city.frontmatter.thumb)}
-                    alt={city.frontmatter.title}
-                    objectFit="cover"
-                    h="100%"
-                    w="100%"
-                  />
-                </Box>
-              </Box>
+                <SquareImage
+                  image={city.frontmatter.thumb}
+                  alt={city.frontmatter.title}
+                />
+              </Lightbox>
               <Box w={['100%', null, getCol(6)]} pl={[0, null, '12px']}>
                 <Text fontSize={['24px', null, '32px']} fontWeight="700" color="brandRed.500">
                   {city.frontmatter.title}

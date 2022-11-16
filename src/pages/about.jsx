@@ -1,19 +1,18 @@
 import {
-  Box, Button, Container, Flex, Heading, SimpleGrid, Text, useDimensions,
+  Box, Button, Container, Flex, Heading, SimpleGrid, Text,
 } from '@chakra-ui/react';
 import { graphql, Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import React, { useRef } from 'react';
+import React from 'react';
 import Layout from '../components/Layout';
+import Lightbox from '../components/Lightbox';
 import SEO from '../components/SEO';
+import SquareImage from '../components/SquareImage';
 import useLayout from '../hooks/useLayout';
 
 function About({ data }) {
   const { getCol } = useLayout();
   const aboutBanner = getImage(data.file);
-  const defaultImage = getImage(data.default);
-  const ref = useRef();
-  const dimensions = useDimensions(ref);
 
   return (
     <Layout>
@@ -39,20 +38,17 @@ function About({ data }) {
                 <Box mb="48px">
                   <SimpleGrid columns={[1, null, 3]} spacingX="24px" spacingY="48px">
                     {[1, 2, 3].map((item) => (
-                      <Box
+                      <Lightbox
+                        image={data.default}
+                        alt={data.default.name}
                         key={item}
-                        textAlign="center"
-                        ref={ref}
                       >
-                        <Box
-                          w="100%"
-                          h={dimensions?.contentBox?.width}
-                          border="2px solid"
-                          borderColor="brandRed.500"
-                        >
-                          <Box as={GatsbyImage} image={defaultImage} alt="default" objectFit="cover" h="100%" w="100%" />
-                        </Box>
-                      </Box>
+                        <SquareImage
+                          image={data.default}
+                          alt="default"
+                          mb="16px"
+                        />
+                      </Lightbox>
                     ))}
                   </SimpleGrid>
                 </Box>
@@ -92,20 +88,17 @@ function About({ data }) {
                 <Box mb="48px">
                   <SimpleGrid columns={[1, null, 3]} spacingX="24px" spacingY="48px">
                     {[1, 2, 3].map((item) => (
-                      <Box
+                      <Lightbox
+                        image={data.default}
+                        alt={data.default.name}
                         key={item}
-                        textAlign="center"
-                        ref={ref}
                       >
-                        <Box
-                          w="100%"
-                          h={dimensions?.contentBox?.width}
-                          border="2px solid"
-                          borderColor="brandRed.500"
-                        >
-                          <Box as={GatsbyImage} image={defaultImage} alt="default" objectFit="cover" h="100%" w="100%" />
-                        </Box>
-                      </Box>
+                        <SquareImage
+                          image={data.default}
+                          alt="default"
+                          mb="16px"
+                        />
+                      </Lightbox>
                     ))}
                   </SimpleGrid>
                 </Box>
