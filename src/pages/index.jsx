@@ -17,7 +17,13 @@ const MapsImg = styled.img`
 `;
 
 export default function Home({ data }) {
-  const [selectedCity, setSelectedCity] = useState({});
+  const initialSelectedCity = {
+    title: 'default',
+    desc: '',
+    thumb: getImage(data.defaultImg),
+    slug: '',
+  };
+  const [selectedCity, setSelectedCity] = useState(initialSelectedCity);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [isMd] = useMediaQuery('(min-width: 768px)', {
     ssr: true,
@@ -46,7 +52,7 @@ export default function Home({ data }) {
 
   const onCloseModal = () => {
     onClose();
-    setSelectedCity({});
+    setSelectedCity(initialSelectedCity);
   };
 
   const imageData = (name) => data.allFile.nodes.find((node) => node.name === name);
@@ -257,6 +263,12 @@ export const query = graphql`
           }
         }
         id
+      }
+    }
+    defaultImg: file(relativePath: {eq: "default.jpg"}) {
+      name
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED)
       }
     }
   }
