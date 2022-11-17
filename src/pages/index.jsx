@@ -8,7 +8,7 @@ import { graphql, Link as LinkGatsby } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
-import SEO from '../components/Seo';
+import SEO from '../components/SEO';
 import useLayoutFormatter from '../hooks/useLayout';
 
 const MapsImg = styled.img`

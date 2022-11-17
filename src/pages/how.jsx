@@ -8,7 +8,7 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import Layout from '../components/Layout';
 import useLayout from '../hooks/useLayout';
-import SEO from '../components/Seo';
+import SEO from '../components/SEO';
 
 function How({ data }) {
   const { getCol } = useLayout();

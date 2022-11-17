@@ -6,7 +6,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 import Layout from '../components/Layout';
 import Lightbox from '../components/Lightbox';
-import SEO from '../components/Seo';
+import SEO from '../components/SEO';
 import SquareImage from '../components/SquareImage';
 import useLayout from '../hooks/useLayout';
 

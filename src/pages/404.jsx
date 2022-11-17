@@ -4,7 +4,7 @@ import {
 import { Link } from 'gatsby';
 import React from 'react';
 import Layout from '../components/Layout';
-import SEO from '../components/Seo';
+import SEO from '../components/SEO';
 
 function NotFound404() {
   return (
