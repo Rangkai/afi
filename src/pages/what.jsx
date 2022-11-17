@@ -18,7 +18,14 @@ function What({ data }) {
 
   return (
     <Layout>
-      <Box as={GatsbyImage} height={['220px', null, 'auto']} objectFit={['cover', null, 'unset']} image={whatBanner} alt="what banner" />
+      <Box
+        as={GatsbyImage}
+        height={['220px', null, 'auto']}
+        objectFit={['cover', null, 'unset']}
+        image={whatBanner}
+        alt="what banner"
+        w="100vw"
+      />
       <Container mt="48px">
         {[1, 2, 3].map((item, i) => (
           <Flex

@@ -17,7 +17,14 @@ function Ecosystem({ data }) {
 
   return (
     <Layout>
-      <Box as={GatsbyImage} height={['220px', null, 'auto']} objectFit={['cover', null, 'unset']} image={ecosystemBanner} alt={data.file.name} />
+      <Box
+        as={GatsbyImage}
+        height={['220px', null, 'auto']}
+        objectFit={['cover', null, 'unset']}
+        image={ecosystemBanner}
+        alt={data.file.name}
+        w="100vw"
+      />
       <Container my="48px">
         <Flex justifyContent="center" mb="48px">
           <Box w={['100%', null, getCol(10)]} textAlign="center">

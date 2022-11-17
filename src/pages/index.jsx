@@ -64,8 +64,8 @@ export default function Home({ data }) {
 
   return (
     <Layout>
-      <Box as={GatsbyImage} image={banner} display={['none', null, 'block']} alt="home_banner" />
-      <Box as={GatsbyImage} image={bannerMobile} display={['block', null, 'none']} alt="home_banner" />
+      <Box as={GatsbyImage} image={banner} display={['none', null, 'block']} alt="home_banner" w="100vw" />
+      <Box as={GatsbyImage} image={bannerMobile} display={['block', null, 'none']} alt="home_banner" w="100vw" />
       <Container>
         <Box as="section" my="48px" textAlign="center" display="flex" justifyContent="center">
           <Box width={['100%', null, getCol(10)]}>

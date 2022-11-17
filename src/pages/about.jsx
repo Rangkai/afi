@@ -16,7 +16,14 @@ function About({ data }) {
 
   return (
     <Layout>
-      <Box as={GatsbyImage} height={['220px', null, 'auto']} objectFit={['cover', null, 'unset']} image={aboutBanner} alt={data.file.name} />
+      <Box
+        as={GatsbyImage}
+        height={['220px', null, 'auto']}
+        objectFit={['cover', null, 'unset']}
+        image={aboutBanner}
+        alt={data.file.name}
+        w="100vw"
+      />
       <Container my="48px">
         <Flex justifyContent="center">
           <Box width={getCol(10)} textAlign="center">

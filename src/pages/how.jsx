@@ -17,7 +17,14 @@ function How({ data }) {
 
   return (
     <Layout>
-      <Box as={GatsbyImage} height={['220px', null, 'auto']} objectFit={['cover', null, 'unset']} image={howBanner} alt={data.file.name} />
+      <Box
+        as={GatsbyImage}
+        height={['220px', null, 'auto']}
+        objectFit={['cover', null, 'unset']}
+        image={howBanner}
+        alt={data.file.name}
+        w="100vw"
+      />
       <Container>
         <Flex justifyContent="center">
           <Box w={getCol(10)}>

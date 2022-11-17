@@ -69,7 +69,14 @@ function EcosystemDetail({ data, children }) {
 
   return (
     <Layout>
-      <Box as={GatsbyImage} height={['220px', null, 'auto']} objectFit={['cover', null, 'unset']} image={cityBanner} alt={title} />
+      <Box
+        as={GatsbyImage}
+        height={['220px', null, 'auto']}
+        objectFit={['cover', null, 'unset']}
+        image={cityBanner}
+        alt={title}
+        w="100vw"
+      />
       <Container my="48px">
         <Content>
           {children}
