@@ -1,24 +1,29 @@
-import { useDimensions, Box } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import React, { useRef } from 'react';
+import React from 'react';
 
 function SquareImage(props) {
   const {
     image, alt, noBorder, ...resProps
   } = props;
-  const ref = useRef();
-  const dimensions = useDimensions(ref);
   const imageThumb = getImage(image);
 
   return (
     <Box
       textAlign="center"
-      ref={ref}
+      position="relative"
+      w="100%"
+      _after={{
+        content: '""',
+        display: 'block',
+        paddingBottom: '100%',
+      }}
       {...resProps}
     >
       <Box
         w="100%"
-        h={dimensions?.contentBox?.width}
+        h="100%"
+        position="absolute"
         border={noBorder ? 'unset' : '2px solid'}
         borderColor="brandRed.500"
       >
