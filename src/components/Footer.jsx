@@ -34,13 +34,17 @@ function Footer() {
 
   const dikbudLogo = getImage(data.file);
 
+  const currYear = new Date().getFullYear();
+
   return (
     <Box as="footer" py="48px">
       <Container>
         <Flex justifyContent="space-between" alignItems="center" flexDirection={['column', null, 'row']}>
           <Box width={['100%', null, '50%']} h="max-content" mb={['48px', null, 0]}>
             <Text mb={0} textAlign={['center', null, 'start']} color="brandBlue.500" fontSize="16px" fontWeight="600">
-              Apresiasi Film Indonesia © 2022
+              Apresiasi Film Indonesia ©
+              {' '}
+              {currYear}
             </Text>
           </Box>
           <Flex w={[getCol(12), null, getCol(2)]} mb={['16px', null, 0]} justifyContent={[null, null, 'flex-end']} alignItems="center">
