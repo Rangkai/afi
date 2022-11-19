@@ -9,6 +9,7 @@ function Lightbox({
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const img = getImage(image);
+
   return (
     <Box {...props}>
       <Box onClick={() => onOpen()} cursor="pointer">
@@ -16,10 +17,17 @@ function Lightbox({
           <Box as={GatsbyImage} image={img} alt={alt || 'default'} />
         )}
       </Box>
-      <Modal isOpen={isOpen} isCentered size="full" onClose={onClose}>
+      <Modal isOpen={isOpen} isCentered size="5xl" onClose={onClose}>
         <ModalOverlay />
         <ModalContent bg="transparent" maxH="100vh">
-          <ModalCloseButton color="white" w="60px" h="60px" size={60} zIndex={99} />
+          <ModalCloseButton
+            color="white"
+            w="60px"
+            h="60px"
+            size={60}
+            top={0}
+            position="fixed"
+          />
           <ModalBody p={0} display="flex" justifyContent="center" alignItems="center">
             <Box>
               <Box
