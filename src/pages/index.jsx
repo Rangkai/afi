@@ -242,7 +242,7 @@ export const query = graphql`
       nodes {
         name
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
+          gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
         }
       }
     }

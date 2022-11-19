@@ -22,7 +22,6 @@ function About({ data }) {
         objectFit={['cover', null, 'unset']}
         image={aboutBanner}
         alt={data.file.name}
-        w="100vw"
       />
       <Container my="48px">
         <Flex justifyContent="center">
@@ -142,7 +141,7 @@ export const query = graphql`
     file(relativePath: {eq: "about/about_banner.jpg"}) {
       name
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED)
+        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
       }
     }
     default: file(relativePath: {eq: "default.jpg"}) {

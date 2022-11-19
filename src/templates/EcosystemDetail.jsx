@@ -75,7 +75,6 @@ function EcosystemDetail({ data, children }) {
         objectFit={['cover', null, 'unset']}
         image={cityBanner}
         alt={title}
-        w="100vw"
       />
       <Container my="48px">
         <Content>
@@ -101,7 +100,7 @@ export const query = graphql`
         title
         banner {
           childImageSharp {
-            gatsbyImageData(placeholder: BLURRED)
+            gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
           }
         }
         thumb {

@@ -23,7 +23,6 @@ function Ecosystem({ data }) {
         objectFit={['cover', null, 'unset']}
         image={ecosystemBanner}
         alt={data.file.name}
-        w="100vw"
       />
       <Container my="48px">
         <Flex justifyContent="center" mb="48px">
@@ -88,7 +87,7 @@ export const query = graphql`
     file(relativePath: {eq: "ecosystem/ecosystem_banner.jpg"}) {
       name
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED)
+        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
       }
     }
     default: file(relativePath: {eq: "default.jpg"}) {

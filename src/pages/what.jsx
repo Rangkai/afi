@@ -24,7 +24,6 @@ function What({ data }) {
         objectFit={['cover', null, 'unset']}
         image={whatBanner}
         alt="what banner"
-        w="100vw"
       />
       <Container mt="48px">
         {[1, 2, 3].map((item, i) => (
@@ -97,7 +96,7 @@ export const query = graphql`
     file(relativePath: {eq: "what/what_banner.jpg"}) {
       name
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED)
+        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
       }
     }
     default: file(relativePath: {eq: "default.jpg"}) {

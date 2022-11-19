@@ -23,7 +23,6 @@ function How({ data }) {
         objectFit={['cover', null, 'unset']}
         image={howBanner}
         alt={data.file.name}
-        w="100vw"
       />
       <Container>
         <Flex justifyContent="center">
@@ -89,7 +88,7 @@ export const query = graphql`
     file(relativePath: {eq: "how/how_banner.jpg"}) {
       name
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED)
+        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
       }
     }
     default: file(relativePath: {eq: "default.jpg"}) {
