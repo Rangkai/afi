@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 
 function Lightbox({
-  image, alt, children, ...props
+  image, alt, children, size = '3xl', ...props
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const img = getImage(image);
@@ -17,9 +17,9 @@ function Lightbox({
           <Box as={GatsbyImage} image={img} alt={alt || 'default'} />
         )}
       </Box>
-      <Modal isOpen={isOpen} isCentered size="5xl" onClose={onClose}>
+      <Modal isOpen={isOpen} isCentered size={size} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent bg="transparent" maxH="100vh">
+        <ModalContent bg="transparent" maxH="100vh" w="max-content" my={0}>
           <ModalCloseButton
             color="white"
             w="60px"

@@ -34,10 +34,6 @@ const Content = styled.div`
     font-family: 'Raleway';
     margin-bottom: 16px;
     line-height: var(--chakra-lineHeights-tall);
-    em {
-      color: var(--chakra-colors-brandBlue-500);
-      font-weight: 600;
-    }
     &.caption {
       font-size: 16px;
       line-height: var(--chakra-lineHeights-shorter);
