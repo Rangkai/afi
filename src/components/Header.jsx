@@ -121,7 +121,7 @@ function Header() {
           )
         }
       }
-      cities: allMdx {
+      cities: allMdx(sort: {fields: frontmatter___title, order: ASC}) {
         nodes {
           frontmatter {
             slug
