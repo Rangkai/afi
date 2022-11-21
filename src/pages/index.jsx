@@ -117,9 +117,7 @@ export default function Home({ data }) {
               <StaticImage
                 src="../images/map.svg"
                 alt="maps"
-                width="100%"
-                height="max-content"
-                layout="full_width"
+                layout="fullWidth"
                 placeholder="blurred"
               />
               {cities.map((city) => (
@@ -182,7 +180,6 @@ export default function Home({ data }) {
               Tonton karya-karya pilihan Apresiasi Film Indonesia 2022
             </Text>
             <Link
-              as="a"
               href="https://rangkai.id/"
               target="_blank"
               w={['max-content', null, '100%']}
