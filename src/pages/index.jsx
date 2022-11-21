@@ -3,18 +3,12 @@ import {
   Heading, Link, Modal, ModalBody, ModalCloseButton,
   ModalContent, ModalOverlay, SimpleGrid, Text, useDisclosure, useMediaQuery,
 } from '@chakra-ui/react';
-import styled from '@emotion/styled';
 import { graphql, Link as LinkGatsby } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import useLayoutFormatter from '../hooks/useLayout';
-
-const MapsImg = styled.img`
-  width: 100%;
-  height: auto;
-`;
 
 export default function Home({ data }) {
   const initialSelectedCity = {
@@ -64,8 +58,8 @@ export default function Home({ data }) {
 
   return (
     <Layout>
-      <Box as={GatsbyImage} image={banner} display={['none', null, 'block']} alt="home_banner" w="100vw" />
-      <Box as={GatsbyImage} image={bannerMobile} display={['block', null, 'none']} alt="home_banner" w="100vw" />
+      <Box as={GatsbyImage} image={banner} display={['none', null, 'block']} alt="home_banner" w="100vw" layout="full_width" />
+      <Box as={GatsbyImage} image={bannerMobile} display={['block', null, 'none']} alt="home_banner" w="100vw" layout="full_width" />
       <Container>
         <Box as="section" my="48px" textAlign="center" display="flex" justifyContent="center">
           <Box width={['100%', null, getCol(10)]}>
@@ -120,7 +114,14 @@ export default function Home({ data }) {
               </Box>
             </Flex>
             <Box mb="48px" position="relative">
-              <MapsImg src="../../map.svg" alt="maps" width="100%" height="auto" />
+              <StaticImage
+                src="../images/map.svg"
+                alt="maps"
+                width="100%"
+                height="max-content"
+                layout="full_width"
+                placeholder="blurred"
+              />
               {cities.map((city) => (
                 <Box
                   key={city.key}
@@ -181,8 +182,8 @@ export default function Home({ data }) {
               Tonton karya-karya pilihan Apresiasi Film Indonesia 2022
             </Text>
             <Link
-              as={LinkGatsby}
-              to="https://rangkai.id/"
+              as="a"
+              href="https://rangkai.id/"
               target="_blank"
               w={['max-content', null, '100%']}
               display="block"
@@ -242,7 +243,7 @@ export const query = graphql`
       nodes {
         name
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+          gatsbyImageData(placeholder: BLURRED)
         }
       }
     }

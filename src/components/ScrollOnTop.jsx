@@ -8,10 +8,7 @@ function ScrollOnTop() {
   const {
     isOpen, onOpen, onClose,
   } = useDisclosure();
-  const [isMd] = useMediaQuery('(min-width: 768px)', {
-    ssr: true,
-    fallback: false,
-  });
+  const [isMd] = useMediaQuery('(min-width: 768px)');
 
   const scrollToTop = () => {
     window.scrollTo({
