@@ -16,6 +16,7 @@ import GridContainer, { GridItemLeftContent } from '../components/GridContainer'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import SquareImage from '../components/SquareImage';
 import Lightbox from '../components/Lightbox';
+import ImagePlay from '../components/ImagePlay';
 
 <GridContainer>
   <GridItemLeftContent />
@@ -434,52 +435,36 @@ import Lightbox from '../components/Lightbox';
 <Text as="h3" mt={["40px", null, "60px"]} mb={["20px !important", null, "32px !important"]}> Karya-karya pilihan Kota Semarang </Text>
 
 <SimpleGrid columns={[1, null, 2]} spacingX={34} spacingY={10}>
-  <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'selected1')} alt={'wind'}>
+  <ImagePlay href="https://rangkai.id/?browse=301">
     <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'selected1'))}
-      alt={'wind'}
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'JBSS_ISI_1920-1080-Semesta K.S'))}
+      alt={'JBSS_ISI_1920-1080-Semesta K.S'}
       border="2px solid"
       borderColor="brandRed.500"
     />
-  </Lightbox>
-  <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'selected2')} alt={'the human voice'}>
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=303">
     <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'selected2'))}
-      alt={'the human voice'}
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'Kata_Rupiah_1920-1080- Emilio Wiwanda'))}
+      alt={'Kata_Rupiah_1920-1080- Emilio Wiwanda'}
       border="2px solid"
       borderColor="brandRed.500"
     />
-  </Lightbox>
-  <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'selected3')} alt={'in my room'}>
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=305">
     <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'selected3'))}
-      alt={'in my room'}
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'bersepeda-ke-bulan-thumbnail-master'))}
+      alt={'bersepeda-ke-bulan-thumbnail-master'}
       border="2px solid"
       borderColor="brandRed.500"
     />
-  </Lightbox>
-  <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'selected4')} alt={'the recorder exam'}>
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=237">
     <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'selected4'))}
-      alt={'the recorder exam'}
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'the-last-sunset-thumbnail-master'))}
+      alt={'the-last-sunset-thumbnail-master'}
       border="2px solid"
       borderColor="brandRed.500"
     />
-  </Lightbox>
-  <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'selected5')} alt={'play it save'}>
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'selected5'))}
-      alt={'play it save'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </Lightbox>
-  <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'selected6')} alt={'solo, solitude'}>
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'selected6'))}
-      alt={'solo, solitude'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </Lightbox>
+  </ImagePlay>
 </SimpleGrid>
