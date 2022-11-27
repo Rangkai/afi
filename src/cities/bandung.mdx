@@ -16,6 +16,7 @@ import GridContainer, { GridItemLeftContent } from '../components/GridContainer'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import SquareImage from '../components/SquareImage';
 import Lightbox from '../components/Lightbox';
+import ImagePlay from '../components/ImagePlay';
 
 <GridContainer>
   <GridItemLeftContent />
@@ -548,20 +549,44 @@ import Lightbox from '../components/Lightbox';
 <Text as="h3" mt={["40px", null, "60px"]} mb={["20px !important", null, "32px !important"]}> Karya-karya pilihan Kota Bandung </Text>
 
 <SimpleGrid columns={[1, null, 2]} spacingX={34} spacingY={10}>
-  <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'bandung_thumb1')} alt={'bandung_thumb1'}>
+  <ImagePlay href="https://rangkai.id/?browse=279">
     <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'bandung_thumb1'))}
-      alt={'bandung_thumb1'}
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ai-kamu-ai-aku-thumbnail-master'))}
+      alt={'ai-kamu-ai-aku-thumbnail-master'}
       border="2px solid"
       borderColor="brandRed.500"
     />
-  </Lightbox>
-  <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'bandung_thumb2')} alt={'bandung_thumb2'}>
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=290">
     <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'bandung_thumb2'))}
-      alt={'bandung_thumb2'}
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ronda-thumbnail-master'))}
+      alt={'ronda-thumbnail-master'}
       border="2px solid"
       borderColor="brandRed.500"
     />
-  </Lightbox>
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=292">
+    <Box 
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'sang-penyulut-api-thumbnail-master'))}
+      alt={'sang-penyulut-api-thumbnail-master'}
+      border="2px solid"
+      borderColor="brandRed.500"
+    />
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=276">
+    <Box 
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'the-sun-never-set-thumbnail-master'))}
+      alt={'the-sun-never-set-thumbnail-master'}
+      border="2px solid"
+      borderColor="brandRed.500"
+    />
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=273">
+    <Box 
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'A Matter of Time_ISI_1920-1280 - Roufy Nasution'))}
+      alt={'A Matter of Time_ISI_1920-1280 - Roufy Nasution'}
+      border="2px solid"
+      borderColor="brandRed.500"
+    />
+  </ImagePlay>
 </SimpleGrid>

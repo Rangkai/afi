@@ -16,6 +16,7 @@ import GridContainer, { GridItemLeftContent } from '../components/GridContainer'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import SquareImage from '../components/SquareImage';
 import Lightbox from '../components/Lightbox';
+import ImagePlay from '../components/ImagePlay';
 
 <GridContainer>
   <GridItemLeftContent />
@@ -353,20 +354,28 @@ import Lightbox from '../components/Lightbox';
 <Text as="h3" mt={["40px", null, "60px"]} mb={["20px !important", null, "32px !important"]}> Karya-karya pilihan Kota Balikpapan </Text>
 
 <SimpleGrid columns={[1, null, 2]} spacingX={34} spacingY={10}>
-  <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'selected1')} alt={'Love Story Not'}>
+  <ImagePlay href="https://rangkai.id/?browse=296">
     <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'selected1'))}
-      alt={'Love Story Not'}
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'stay-strong-thumbnail-master'))}
+      alt={'stay-strong-thumbnail-master'}
       border="2px solid"
       borderColor="brandRed.500"
     />
-  </Lightbox>
-  <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'selected2')} alt={'The Sons'}>
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=278">
     <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'selected2'))}
-      alt={'The Sons'}
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'the-netral-thumbnail master'))}
+      alt={'the-netral-thumbnail master'}
       border="2px solid"
       borderColor="brandRed.500"
     />
-  </Lightbox>
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=277">
+    <Box 
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'Candu_ISI_1920-1280 - Haediqal'))}
+      alt={'Candu_ISI_1920-1280 - Haediqal'}
+      border="2px solid"
+      borderColor="brandRed.500"
+    />
+  </ImagePlay>
 </SimpleGrid>
