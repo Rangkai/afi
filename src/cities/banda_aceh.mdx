@@ -4,7 +4,7 @@ slug: city-aceh
 desc: 'Siasat Untuk Maslahat: Legalitas Komunitas di Aceh'
 banner: '../images/cities/banda_aceh/banner.jpg'
 thumb: '../images/cities/banda_aceh/default.jpg'
-galleryDir: 'cities/bandung'
+galleryDir: 'cities/banda_aceh'
 position: {
   left: 1%,
   bottom: 92%
@@ -16,6 +16,7 @@ import GridContainer, { GridItemLeftContent } from '../components/GridContainer'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import SquareImage from '../components/SquareImage';
 import Lightbox from '../components/Lightbox';
+import ImagePlay from '../components/ImagePlay';
 
 <GridContainer>
   <GridItemLeftContent />
@@ -54,8 +55,8 @@ import Lightbox from '../components/Lightbox';
 
 <GridContainer>
   <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'bandung1')} alt={'bandung1'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'bandung1')} alt={'bandung1'} mb="16px" />
+    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'default')} alt={'default'}>
+      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'default')} alt={'default'} mb="16px" />
     </Lightbox>
     <p className="caption">Indicinema Bandung<br/>(Obrolan Minggu 1 Perempuan dan Dirinya)</p>
   </GridItemLeftContent>
@@ -172,8 +173,8 @@ import Lightbox from '../components/Lightbox';
 </GridContainer>
 <GridContainer>
   <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'bandung2')} alt={'bandung2'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'bandung2')} alt={'bandung2'} mb="16px" />
+    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'default')} alt={'default'}>
+      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'default')} alt={'default'} mb="16px" />
     </Lightbox>
     <p className="caption">Sebs Cine Club<br/>(Shooting Maybe Someday Another Day But Not Today)</p>
   </GridItemLeftContent>
@@ -306,8 +307,8 @@ import Lightbox from '../components/Lightbox';
 
 <GridContainer>
   <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'bandung3')} alt={'bandung3'} mb="16px">
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'bandung3')} alt={'bandung3'} />
+    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'default')} alt={'default'} mb="16px">
+      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'default')} alt={'default'} />
     </Lightbox>
     <p className="caption">Cinemora<br/>Shooting The Boy With Moving Image</p>
   </GridItemLeftContent>
@@ -354,20 +355,44 @@ import Lightbox from '../components/Lightbox';
 <Text as="h3" mt={["40px", null, "60px"]} mb={["20px !important", null, "32px !important"]}> Karya-karya pilihan Kota Banda Aceh </Text>
 
 <SimpleGrid columns={[1, null, 2]} spacingX={34} spacingY={10}>
-  <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'bandung_thumb1')} alt={'bandung_thumb1'}>
+  <ImagePlay href="https://rangkai.id/?browse=280">
     <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'bandung_thumb1'))}
-      alt={'bandung_thumb1'}
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'canggih-thumbnail-master'))}
+      alt={'canggih-thumbnail-master'}
       border="2px solid"
       borderColor="brandRed.500"
     />
-  </Lightbox>
-  <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'bandung_thumb2')} alt={'bandung_thumb2'}>
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=284">
     <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'bandung_thumb2'))}
-      alt={'bandung_thumb2'}
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'haba-paleh-thumbnail-master'))}
+      alt={'haba-paleh-thumbnail-master'}
       border="2px solid"
       borderColor="brandRed.500"
     />
-  </Lightbox>
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=283">
+    <Box 
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'kroeng-pade-thumbnail-master'))}
+      alt={'kroeng-pade-thumbnail-master'}
+      border="2px solid"
+      borderColor="brandRed.500"
+    />
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=285">
+    <Box 
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'mengejar-koin-thumbnail-master'))}
+      alt={'mengejar-koin-thumbnail-master'}
+      border="2px solid"
+      borderColor="brandRed.500"
+    />
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=274">
+    <Box 
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'POSTER FILM PLASTIC BOTTLES 1920X1280.JPG - Andri Saputra'))}
+      alt={'POSTER FILM PLASTIC BOTTLES 1920X1280.JPG - Andri Saputra'}
+      border="2px solid"
+      borderColor="brandRed.500"
+    />
+  </ImagePlay>
 </SimpleGrid>

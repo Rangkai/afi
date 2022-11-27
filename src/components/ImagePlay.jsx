@@ -37,8 +37,6 @@ function ImagePlay({
             alt="play circle"
             layout="fixed"
             placeholder="blurred"
-            width={80}
-            height={80}
           />
         </LinkOverlay>
       </LinkBox>
