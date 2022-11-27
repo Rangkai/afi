@@ -16,6 +16,7 @@ import GridContainer, { GridItemLeftContent } from '../components/GridContainer'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import SquareImage from '../components/SquareImage';
 import Lightbox from '../components/Lightbox';
+import ImagePlay from '../components/ImagePlay';
 
 <GridContainer>
   <GridItemLeftContent />
@@ -432,20 +433,36 @@ import Lightbox from '../components/Lightbox';
 <Text as="h3" mt={["40px", null, "60px"]} mb={["20px !important", null, "32px !important"]}> Karya-karya pilihan Kota Surabaya </Text>
 
 <SimpleGrid columns={[1, null, 2]} spacingX={34} spacingY={10}>
-  <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'selected1')} alt={'hotel chavelier'}>
+  <ImagePlay href="https://rangkai.id/?browse=271">
     <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'selected1'))}
-      alt={'hotel chavelier'}
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === '7-deadly-sins-thumbnail-master'))}
+      alt={'7-deadly-sins-thumbnail-master'}
       border="2px solid"
       borderColor="brandRed.500"
     />
-  </Lightbox>
-  <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'selected2')} alt={'house of hummingbird'}>
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=306">
     <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'selected2'))}
-      alt={'house of hummingbird'}
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'bapak-tidak-pulang-hari-ini-thumbnail-master'))}
+      alt={'bapak-tidak-pulang-hari-ini-thumbnail-master'}
       border="2px solid"
       borderColor="brandRed.500"
     />
-  </Lightbox>
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=286">
+    <Box 
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ora-katon-thumbnail-master'))}
+      alt={'ora-katon-thumbnail-master'}
+      border="2px solid"
+      borderColor="brandRed.500"
+    />
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=304">
+    <Box 
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ronda-alhaj-thumbnail-master'))}
+      alt={'ronda-alhaj-thumbnail-master'}
+      border="2px solid"
+      borderColor="brandRed.500"
+    />
+  </ImagePlay>
 </SimpleGrid>
