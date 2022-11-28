@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Container, Flex, Text, Box,
+  Container, Flex, Text, Box, LinkOverlay, LinkBox,
 } from '@chakra-ui/react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
@@ -27,9 +27,15 @@ function Footer() {
     }
   `);
 
+  const links = {
+    poetica_logo: 'https://cinemapoetica.com/en/',
+    rangkai_logo: 'https://rangkai/id',
+  };
+
   const collaborators = data.allFile.nodes?.map((collaborator) => ({
     name: collaborator.name,
     img: getImage(collaborator),
+    link: links[collaborator.name],
   }));
 
   const dikbudLogo = getImage(data.file);
@@ -59,7 +65,14 @@ function Footer() {
               <br />
               Oleh
             </Text>
-            <GatsbyImage image={dikbudLogo} alt={data.file.name} />
+            <LinkBox>
+              <LinkOverlay
+                href="https://www.kemdikbud.go.id/main/"
+                isExternal
+              >
+                <GatsbyImage image={dikbudLogo} alt={data.file.name} />
+              </LinkOverlay>
+            </LinkBox>
           </Flex>
           <Flex w={[getCol(12), null, getCol(4)]} alignItems="center" justifyContent={[null, null, 'center']}>
             <Text
@@ -74,13 +87,20 @@ function Footer() {
               dengan
             </Text>
             {collaborators.map((collaborator) => (
-              <Box
-                as={GatsbyImage}
+              <LinkBox
                 key={collaborator.name}
-                image={collaborator.img}
-                alt={collaborator.name}
                 mr="8px"
-              />
+              >
+                <LinkOverlay
+                  href={collaborator.link}
+                  isExternal
+                >
+                  <GatsbyImage
+                    image={collaborator.img}
+                    alt={collaborator.name}
+                  />
+                </LinkOverlay>
+              </LinkBox>
             ))}
           </Flex>
         </Flex>
