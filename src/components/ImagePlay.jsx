@@ -31,12 +31,17 @@ function ImagePlay({
           href={href}
           target="_blank"
           isExternal
+          w="80px"
+          h="80px"
         >
           <StaticImage
             src="../images/play_circle.svg"
             alt="play circle"
-            layout="fixed"
+            layout="fullWidth"
             placeholder="blurred"
+            style={{
+              filter: 'invert(1)',
+            }}
           />
         </LinkOverlay>
       </LinkBox>
