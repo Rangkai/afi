@@ -34,19 +34,21 @@ const Content = styled.div`
     font-family: 'Raleway';
     margin-bottom: 16px;
     line-height: var(--chakra-lineHeights-tall);
+    text-align: justify;
     &.caption {
       font-size: 16px;
       line-height: var(--chakra-lineHeights-shorter);
       color: var(--chakra-colors-brandBlue-500);
       font-weight: 700;
       font-style: italic;
+      text-align: left;
     }
     &.info {
       font-size: 28px;
       line-height: var(--chakra-lineHeights-shorter);
       color: var(--chakra-colors-brandRed-500);
       font-weight: 700;
-
+      text-align: left;
     }
   }
 
