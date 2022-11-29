@@ -29,7 +29,7 @@ function Footer() {
 
   const links = {
     poetica_logo: 'https://cinemapoetica.com/en/',
-    rangkai_logo: 'https://rangkai/id',
+    rangkai_logo: 'https://rangkai.id',
   };
 
   const collaborators = data.allFile.nodes?.map((collaborator) => ({
