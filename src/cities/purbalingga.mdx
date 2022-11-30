@@ -593,34 +593,3 @@ import ImagePlay from '../components/ImagePlay';
 
   </GridItem>
 </GridContainer>
-
-<hr />
-
-<Text as="h3" mt={["40px", null, "60px"]} mb={["20px !important", null, "32px !important"]}> Karya-karya pilihan Kota Purbalingga </Text>
-
-<SimpleGrid columns={[1, null, 2]} spacingX={34} spacingY={10}>
-  <ImagePlay href="https://rangkai.id/?browse=294">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'gugat-pegat-thumbnail-master'))}
-      alt={'gugat-pegat-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=297">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'izinkan-saya-menikahinya-thumbnail-master'))}
-      alt={'izinkan-saya-menikahinya-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=302">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'kami-hanya-menjalankan-perintah-jenderal-thumbnail-master'))}
-      alt={'kami-hanya-menjalankan-perintah-jenderal-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-</SimpleGrid>
