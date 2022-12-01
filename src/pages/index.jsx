@@ -169,7 +169,7 @@ export default function Home({ data }) {
             w={300}
             position="absolute"
             bg="brandBlue.500"
-            p="10% 20px"
+            p={['10% 20px', null, '5% 20px']}
             top="50%"
             left="50%"
             borderRadius="20px"
