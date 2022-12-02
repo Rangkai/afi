@@ -1,19 +1,18 @@
 import {
-  Box, Container, Flex, Grid, GridItem, Heading, SimpleGrid, Text,
+  Box, Container, GridItem, Heading, Text,
 } from '@chakra-ui/react';
+import { graphql } from 'gatsby';
 import {
   GatsbyImage, getImage,
 } from 'gatsby-plugin-image';
-import { graphql } from 'gatsby';
 import React from 'react';
+import GridContainer, { GridItemLeftContent } from '../components/GridContainer';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import GridContainer, { GridItemLeftContent } from '../components/GridContainer';
 import SquareImage from '../components/SquareImage';
 
 function How({ data }) {
   const howBanner = getImage(data.file);
-  const defaultImage = getImage(data.default);
 
   return (
     <Layout>
