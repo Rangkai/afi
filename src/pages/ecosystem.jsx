@@ -65,7 +65,7 @@ function Ecosystem({ data }) {
                   {city.frontmatter.desc}
                 </Text>
                 <Button as={LinkGatsby} to={`/${city.frontmatter.slug}`} colorScheme="brandRed">
-                  Explore More
+                  Selengkapnya
                 </Button>
               </Box>
             </Flex>
