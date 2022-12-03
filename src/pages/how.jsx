@@ -1,19 +1,18 @@
 import {
-  Box, Container, Flex, Heading, Text,
+  Box, Container, GridItem, Heading, Text,
 } from '@chakra-ui/react';
+import { graphql } from 'gatsby';
 import {
   GatsbyImage, getImage,
 } from 'gatsby-plugin-image';
-import { graphql } from 'gatsby';
 import React from 'react';
+import GridContainer, { GridItemLeftContent } from '../components/GridContainer';
 import Layout from '../components/Layout';
-import useLayout from '../hooks/useLayout';
 import SEO from '../components/SEO';
+import SquareImage from '../components/SquareImage';
 
 function How({ data }) {
-  const { getCol } = useLayout();
   const howBanner = getImage(data.file);
-  const defaultImage = getImage(data.default);
 
   return (
     <Layout>
@@ -24,54 +23,54 @@ function How({ data }) {
         image={howBanner}
         alt={data.file.name}
       />
-      <Container>
-        <Flex justifyContent="center">
-          <Box w={getCol(10)}>
-            <Flex justifyContent="flex-end" borderBottom="1px solid" borderColor="brandRed.500" pb="48px" my="48px">
-              <Box w={['100%', null, getCol(8)]}>
-                <Heading
-                  as="h3"
-                  fontSize={['28px', null, '40px']}
-                  fontWeight="600"
-                  color="brandRed.500"
-                >
-                  Lis ab ilitatur ad qui berum cor simus. Aximpor poreper ferenec atiossi
-                  ommoluptur mos a simus el ius atur modit, ut optatur, con eum et.
-                  Giae et laturit quae erorem fugitem sunt.
-                </Heading>
-              </Box>
-            </Flex>
-            <Flex justifyContent="flex-end">
-              <Box w={['100%', null, getCol(8)]}>
-                <Text fontSize={['22px', null, '28px']} fontWeight="700" color="brandRed.500">
-                  Dolorehentis mo Dolores Quos Volorestis
-                </Text>
-                <Text fontSize="16px" mb="16px">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores harum inventore
-                  at asperiores laudantium! Quis ea accusantium sapiente quaerat, quos illo,
-                  aperiam quibusdam, maxime quam nam fugit. Non, aut magni. Lorem ipsum dolor sit
-                  amet consectetur adipisicing elit. A qui, optio, animi iure, labore in beatae
-                  recusandae harum iusto magni esse veniam. Obcaecati distinctio voluptatibus
-                  doloribus unde ipsa ex est!
-                </Text>
-                <Box as={GatsbyImage} image={defaultImage} alt={data.default.name} my="16px" />
-                <Text mb="16px">
-                  <Text as="em" fontSize="12px" fontWeight="600" fontStyle="italic" color="brandBlue.500">
-                    Debis quidenite laborum aspid etur, conse illabo. Aperat.
-                  </Text>
-                </Text>
-                <Text fontSize="16px">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores harum inventore
-                  at asperiores laudantium! Quis ea accusantium sapiente quaerat, quos illo,
-                  aperiam quibusdam, maxime quam nam fugit. Non, aut magni. Lorem ipsum dolor sit
-                  amet consectetur adipisicing elit. A qui, optio, animi iure, labore in beatae
-                  recusandae harum iusto magni esse veniam. Obcaecati distinctio voluptatibus
-                  doloribus unde ipsa ex est!
-                </Text>
-              </Box>
-            </Flex>
-          </Box>
-        </Flex>
+      <Container mt="44px">
+        <GridContainer>
+          <GridItemLeftContent />
+          <GridItem>
+            <Heading
+              as="h3"
+              fontSize={['28px', null, '40px']}
+              fontWeight="600"
+              color="brandRed.500"
+            >
+              Giaecatque exero blaborum,
+              quo ea atectatiat. Equi opta pero
+              eos moluptiatur, ut omni aute
+              doluptatem etur. Ceris nonsed mo
+              te veriatem aut inveni.
+            </Heading>
+          </GridItem>
+        </GridContainer>
+        <GridContainer>
+          <GridItemLeftContent>
+            <SquareImage image={data.default} alt={data.default.name} mb="16px" />
+            <Text fontStyle="italic" fontSize="16px" lineHeight="shorter" color="brandBlue.500" fontWeight={700}>
+              Mo beaquat dessin cones seque volut vent
+              aute sitat.
+            </Text>
+          </GridItemLeftContent>
+          <GridItem>
+            <Text fontSize="16px" mb="36px">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores harum inventore
+              at asperiores laudantium! Quis ea accusantium sapiente quaerat, quos illo,
+              aperiam quibusdam, maxime quam nam fugit. Non, aut magni. Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. A qui, optio, animi iure, labore in beatae
+              recusandae harum iusto magni esse veniam. Obcaecati distinctio voluptatibus
+              doloribus unde ipsa ex est!
+            </Text>
+            <Text fontSize={['18px', null, '24px']} fontWeight="700" color="brandBlue.500">
+              El in coremquias magniatem qui
+            </Text>
+            <Text fontSize="16px">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores harum inventore
+              at asperiores laudantium! Quis ea accusantium sapiente quaerat, quos illo,
+              aperiam quibusdam, maxime quam nam fugit. Non, aut magni. Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. A qui, optio, animi iure, labore in beatae
+              recusandae harum iusto magni esse veniam. Obcaecati distinctio voluptatibus
+              doloribus unde ipsa ex est!
+            </Text>
+          </GridItem>
+        </GridContainer>
       </Container>
     </Layout>
   );

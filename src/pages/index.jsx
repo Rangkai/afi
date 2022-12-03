@@ -219,7 +219,7 @@ export default function Home({ data }) {
                   {selectedCity?.desc}
                 </Text>
                 <Button as={LinkGatsby} to={`/${selectedCity.slug}`} colorScheme="brandRed">
-                  Explore More
+                  Selengkapnya
                 </Button>
               </Box>
             </SimpleGrid>
