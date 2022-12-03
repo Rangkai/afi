@@ -57,7 +57,12 @@ function Ecosystem({ data }) {
                 />
               </Lightbox>
               <Box w={['100%', null, getCol(6)]} pl={[0, null, '12px']}>
-                <Text fontSize={['24px', null, '32px']} fontWeight="700" color="brandRed.500">
+                <Text
+                  fontSize={['24px', null, '32px']}
+                  fontWeight="700"
+                  color="brandRed.500"
+                  mb="0px"
+                >
                   {city.frontmatter.title}
                 </Text>
                 <Text fontSize="16px" fontWeight="600" color="brandBlue.500" mb="16px">
