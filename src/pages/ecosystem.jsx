@@ -26,19 +26,18 @@ function Ecosystem({ data }) {
       />
       <Container my="48px">
         <Flex justifyContent="center" mb="48px">
-          <Box w={['100%', null, getCol(10)]} textAlign="center">
+          <Box w={['100%', null, getCol(8)]} textAlign="center">
             <Heading
               as="h3"
               fontSize={['28px', null, '40px']}
               fontWeight="700"
               color="brandRed.500"
             >
-              Nemporest Estruptatus Minum et Latiaep Eribus
+              Sepuluh Kota, Beragam Sinema
             </Heading>
             <Text fontSize="20px" fontWeight="600" color="brandBlue.500" mb="24px">
-              Apresiasi Film Indonesia 2022 hendak menyasar realitas material dari ekosistem
-              perfilman lokal di sepuluh kota. Realitas material yang dimaksud meliputi ragam
-              wujud dan tingkat intensitas kegiatan produksi dan/atau ekshibisi film di setiap kota.
+              Sinema, layaknya sejarah, tidak pernah tunggal. Setiap kota punya dinamika tersendiri,
+              yang tercermin dalam corak karya dan kegiatan sinemanya sehari-hari.
             </Text>
           </Box>
         </Flex>
@@ -65,7 +64,7 @@ function Ecosystem({ data }) {
                   {city.frontmatter.desc}
                 </Text>
                 <Button as={LinkGatsby} to={`/${city.frontmatter.slug}`} colorScheme="brandRed">
-                  Explore More
+                  Selengkapnya
                 </Button>
               </Box>
             </Flex>

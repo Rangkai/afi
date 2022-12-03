@@ -27,7 +27,7 @@ function Contact({ data }) {
               columns={[1, null, 2]}
               spacingX="40px"
               spacingY="32px"
-              py={['20px', null, '40px']}
+              py={['20px', null, '200px']}
             >
               <Flex
                 flexDirection="column"
