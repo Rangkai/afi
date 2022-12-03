@@ -432,6 +432,7 @@ function What({ data }) {
               pendataan yang komprehensif bagi pembuat film di berbagai layar
             </Text>
 
+            <Divider opacity={1} borderColor="brandRed.500" mb="52px" />
           </GridItem>
         </GridContainer>
       </Container>
