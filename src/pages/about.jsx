@@ -26,103 +26,80 @@ function About({ data }) {
       <Container my="48px">
         <Flex justifyContent="center">
           <Box width={getCol(10)} textAlign="center">
-            <Heading
-              as="h3"
-              color="brandRed.500"
-              fontWeight="700"
-              fontSize={['28px', null, '40px']}
-            >
-              Ximus repra doluptat in erum facest
-            </Heading>
-            <Text color="brandBlue.500" fontSize="20px" fontWeight="600">
-              Olor sumqui andis nonserum fugia sererit, ulla verum inctusda quam, inus, tem nonsero
-              reptaspidel id eatem intin nonemposanda sapisimus volesciis saped unt essequam net
-              a sent quaest auta ex et officiam eate pos adis ut pelest qui.
-            </Text>
-            <Flex justifyContent="center">
-              <Box width={getCol(10)} textAlign="center">
-                <Box mb="48px">
-                  <SimpleGrid columns={[1, null, 3]} spacingX="24px" spacingY="48px">
-                    {[1, 2, 3].map((item) => (
-                      <Lightbox
-                        image={data.default}
-                        alt={data.default.name}
-                        key={item}
-                      >
-                        <SquareImage
-                          image={data.default}
-                          alt="default"
-                          mb="16px"
-                        />
-                      </Lightbox>
-                    ))}
-                  </SimpleGrid>
+            <SimpleGrid columns={[1, null, 2]} gap="60px">
+              <Flex alignItems="center" flexDirection="column">
+                <Box width={getCol(11)}>
+                  <Heading
+                    as="h3"
+                    color="brandRed.500"
+                    fontWeight="700"
+                    fontSize={['28px', null, '40px']}
+                  >
+                    Apresiasi Film Indonesia
+                  </Heading>
+                  <Text width={getCol(10)} mx="auto" color="brandBlue.500" fontSize="20px" fontWeight="600">
+                    Tak kenal maka tak tayang. Untuk mengapresiasi film Indonesia
+                    seluas-luasnya, perlu diupayakan berbagai cara untuk mengenali
+                    dan mewadahi keragamannya.
+                  </Text>
+                  <Lightbox
+                    image={data.whatImg}
+                    alt={data.whatImg.name}
+                    width={getCol(10)}
+                    mx="auto"
+                  >
+                    <SquareImage
+                      image={data.whatImg}
+                      alt={data.whatImg.name}
+                      mb="32px"
+                      mt="54px"
+                    />
+                  </Lightbox>
                 </Box>
-                <Flex justifyContent="center">
-                  <Box width={['100%', null, getCol(6)]}>
-                    <Button as={Link} to="/what" colorScheme="brandBlue" w="100%">
-                      Apa dan Siapa
-                    </Button>
-                  </Box>
-                </Flex>
-              </Box>
-            </Flex>
-          </Box>
-        </Flex>
-
-        <Flex justifyContent="center">
-          <Box as="hr" width={getCol(10)} borderTop="1px solid" borderColor="brandRed.500" my="48px" />
-        </Flex>
-
-        <Flex justifyContent="center">
-          <Box width={getCol(10)} textAlign="center">
-            <Heading
-              as="h3"
-              color="brandRed.500"
-              fontWeight="700"
-              fontSize={['28px', null, '40px']}
-            >
-              Aque voluptiant que qui con conseceste
-            </Heading>
-            <Text color="brandBlue.500" fontSize="20px" fontWeight="600">
-              Olor sumqui andis nonserum fugia sererit, ulla verum inctusda quam, inus, tem nonsero
-              reptaspidel id eatem intin nonemposanda sapisimus volesciis saped unt essequam net
-              a sent quaest auta ex et officiam eate pos adis ut pelest qui.
-            </Text>
-            <Flex justifyContent="center">
-              <Box width={getCol(10)} textAlign="center">
-                <Box mb="48px">
-                  <SimpleGrid columns={[1, null, 3]} spacingX="24px" spacingY="48px">
-                    {[1, 2, 3].map((item) => (
-                      <Lightbox
-                        image={data.default}
-                        alt={data.default.name}
-                        key={item}
-                      >
-                        <SquareImage
-                          image={data.default}
-                          alt="default"
-                          mb="16px"
-                        />
-                      </Lightbox>
-                    ))}
-                  </SimpleGrid>
+                <Button as={Link} to="/what" colorScheme="brandBlue" w="100%">
+                  Apa dan Siapa
+                </Button>
+              </Flex>
+              <Flex alignItems="center" flexDirection="column">
+                <Box width={getCol(11)}>
+                  <Heading
+                    as="h3"
+                    color="brandRed.500"
+                    fontWeight="700"
+                    fontSize={['28px', null, '40px']}
+                  >
+                    Kolaborasi Pendataan dan Penayangan
+                  </Heading>
+                  <Text color="brandBlue.500" fontSize="20px" fontWeight="600">
+                    Perfilman Indonesia tumbuh dan berkembang lewat
+                    kegiatan komunitas. Di sepuluh kota, Apresiasi
+                    Film Indonesia menelusuri berbagi bentuk budaya
+                    sinema lewat kolaborasi lintas batas.
+                  </Text>
+                  <Lightbox
+                    image={data.howImg}
+                    alt={data.howImg.name}
+                    width={getCol(10)}
+                    mx="auto"
+                  >
+                    <SquareImage
+                      image={data.howImg}
+                      alt={data.howImg.name}
+                      mb="32px"
+                    />
+                  </Lightbox>
                 </Box>
-                <Flex justifyContent="center">
-                  <Box width={['100%', null, getCol(6)]}>
-                    <Button
-                      as={Link}
-                      to="/how"
-                      colorScheme="brandBlue"
-                      w="100%"
-                      whiteSpace="break-spaces"
-                    >
-                      Mengapa dan Bagaimana
-                    </Button>
-                  </Box>
-                </Flex>
-              </Box>
-            </Flex>
+                <Button
+                  as={Link}
+                  to="/how"
+                  colorScheme="brandBlue"
+                  w="100%"
+                  whiteSpace="break-spaces"
+                >
+                  Mengapa dan Bagaimana
+                </Button>
+              </Flex>
+            </SimpleGrid>
           </Box>
         </Flex>
       </Container>
@@ -145,6 +122,18 @@ export const query = graphql`
       }
     }
     default: file(relativePath: {eq: "default.jpg"}) {
+      name
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED)
+      }
+    }
+    whatImg: file(relativePath: {eq: "about/AFI_Program Apa.jpg"}) {
+      name
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED)
+      }
+    }
+    howImg: file(relativePath: {eq: "about/AFI_Program Mengapa.jpg"}) {
       name
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED)
