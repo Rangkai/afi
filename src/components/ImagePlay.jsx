@@ -31,8 +31,8 @@ function ImagePlay({
           href={href}
           target="_blank"
           isExternal
-          w="80px"
-          h="80px"
+          w="55px"
+          h="55px"
         >
           <StaticImage
             src="../images/play_circle.svg"
