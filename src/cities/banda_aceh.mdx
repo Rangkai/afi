@@ -33,6 +33,23 @@ import ImagePlay from '../components/ImagePlay';
     yang punya keahlian mengoperasi kamera, atau _jago_ editing. Komunitas film
     muncul untuk berbagi _resources_ yang dimiliki setiap individu; 
 
+  </GridItem>
+</GridContainer>
+
+<GridContainer>
+  <GridItemLeftContent>
+    <p className="info">Jenis Komunitas Terdata</p>
+    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Jenis-Komunitas-Terdata-')} alt={'Jenis-Komunitas-Terdata-'} mb="16px" size="2xl">
+      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Jenis-Komunitas-Terdata-thumb'))} alt={'Jenis-Komunitas-Terdata-thumb'} noBorder />
+    </Lightbox>
+    <p className="caption">Sebagian besar komunitas yang terdata
+      hanya berfokus pada satu lini kegiatan.
+      Namun, ada pula beberapa komunitas yang
+      menjalankan program produksi dan ekshibisi
+      secara bersamaan.</p>
+  </GridItemLeftContent>
+  <GridItem>
+
     Namun, keberlanjutan sumber dana produksi film dari individu dalam komunitas
     film di Aceh ternyata tidak bisa menyokong keberlangsungan aktivitas mereka
     dalam skala besar. Ini kemudian membawa komunitas film di Aceh untuk melihat
@@ -90,6 +107,23 @@ import ImagePlay from '../components/ImagePlay';
     25.000,-. Salah satu yang paling terkenal dan berhasil diproduksi sampai 14
     volume adalah film _Eumpang Breuh_ yang diproduksi berkala dari tahun 2006
     hingga 2018.
+
+  </GridItem>
+</GridContainer>
+
+<GridContainer>
+  <GridItemLeftContent>
+    <p className="info">Dukungan untuk Komunitas Produksi (%)</p>
+    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Dukungan-untuk-Komunitas-Produksi')} alt={'Dukungan-untuk-Komunitas-Produksi'} mb="16px" size="2xl">
+      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Dukungan-untuk-Komunitas-Produksi-thumb'))} alt={'Dukungan-untuk-Komunitas-Produksi-thumb'} noBorder />
+    </Lightbox>
+    <p className="caption">Sekitar 45% dari 69 komunitas mengaku
+      bahwa mereka mendapatkan dukungan
+      dari pemerintah. Bentuk yang paling banyak
+      disebutkan adalah dana (59%), dukungan
+      fasilitas (44%) dan program kerja sama (31%). </p>
+  </GridItemLeftContent>
+  <GridItem>
 
     Dua tujuan produksi film ini, advokasi dan komersial, terus mengisi cerita
     perfilman di Aceh sampai sekarang. Film advokasi yang dimaksud adalah yang
@@ -197,6 +231,22 @@ import ImagePlay from '../components/ImagePlay';
     Documentary serta mencari sumber dana, serta mengerjakan hal-hal yang
     bersifat administratif, misalnya laporan keuangan.
 
+  </GridItem>
+</GridContainer>
+
+<GridContainer>
+  <GridItemLeftContent>
+    <p className="info">Bentuk Legalitas (%)</p>
+    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Bentuk-Legalitas')} alt={'Bentuk-Legalitas'} mb="16px" size="2xl">
+      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Bentuk-Legalitas-thumb'))} alt={'Bentuk-Legalitas-thumb'} noBorder />
+    </Lightbox>
+    <p className="caption">Istilah komunitas acap kali sulit didefinisikan
+      secara tegas lantaran basis hukum bukan
+      merupakan suatu kebutuhan dalam
+      menjalankan program mereka.</p>
+  </GridItemLeftContent>
+  <GridItem>
+
     Anggota lain bertanggung jawab untuk menjalankan program Aceh Documentary
     Competition, yang terbagi ke dua cabang yaitu pendidikan seperti pengajaran
     penulisan naskah dan penyutradaraan, dan produksi yang berupa pengajaran
@@ -213,19 +263,8 @@ import ImagePlay from '../components/ImagePlay';
     beberapa dosen di Fakultas Dakwah dan Komunikasi, tetapi tidak mendapatkan
     dana rutin dari kampus. Menurut Refanda, yang menjadi ketua Komunitas Trieng
     dari tahun 2019 sampai dengan 2021, “Komunitas Trieng baru diresmikan sebagai
-    UKM kampus Fakultas Dakwah dan Komunikasi pada bulan September 2022”
+    UKM kampus Fakultas Dakwah dan Komunikasi pada bulan September 2022”.
 
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'AFI_Ekosistem Banda Aceh Produksi Film')} alt={'AFI_Ekosistem Banda Aceh Produksi Film'} mb="16px">
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'AFI_Ekosistem Banda Aceh Produksi Film')} alt={'AFI_Ekosistem Banda Aceh Produksi Film'} />
-    </Lightbox>
-    <p className="caption">Produksi Film Aceh Documentary 2014. <br/>Sumber_ Aceh Documentary</p>
-  </GridItemLeftContent>
-  <GridItem>
     Untuk produksi film, Komunitas Trieng biasanya bermodal dari hasil urunan.
     Trieng bisa memproduksi dua hingga tiga film dalam setahun dan mengadakan
     ekshibisi mandiri dengan memanfaatkan ruang sekretariat di kampus. Fasilitas
@@ -240,6 +279,18 @@ import ImagePlay from '../components/ImagePlay';
     Aceh Documentary; Muhammad Fauzi, Muhammad Hendri, dan Irza Ulya. Aceh
     Menonton fokus pada pemutaran film-film yang diproduksi oleh komunitas film di
     Aceh.
+
+  </GridItem>
+</GridContainer>
+
+<GridContainer>
+  <GridItemLeftContent>
+    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'AFI_Ekosistem Banda Aceh Produksi Film')} alt={'AFI_Ekosistem Banda Aceh Produksi Film'} mb="16px">
+      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'AFI_Ekosistem Banda Aceh Produksi Film')} alt={'AFI_Ekosistem Banda Aceh Produksi Film'} />
+    </Lightbox>
+    <p className="caption">Produksi Film Aceh Documentary 2014. <br/>Sumber_ Aceh Documentary</p>
+  </GridItemLeftContent>
+  <GridItem>
 
     Aceh Menonton melakukan pemutaran film dua kali dalam sebulan. Karena
     durasi pemutaran yang lumayan banyak itu, jumlah film Aceh tidak cukup
@@ -317,6 +368,25 @@ import ImagePlay from '../components/ImagePlay';
     <hr />
 
     ### Harmoni Dengan Pemerintah Sebagai Siasat Keberlanjutan
+
+  </GridItem>
+</GridContainer>
+
+<GridContainer>
+  <GridItemLeftContent>
+    <p className="info">Bentuk Dukungan Pemerintah untuk Ekshibisi (%)</p>
+    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Bentuk-Dukungan-Pemerintah-untuk-Ekshibisi')} alt={'Bentuk-Dukungan-Pemerintah-untuk-Ekshibisi'} mb="16px" size="2xl">
+      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Bentuk-Dukungan-Pemerintah-untuk-Ekshibisi.-thumb'))} alt={'Bentuk-Dukungan-Pemerintah-untuk-Ekshibisi.-thumb'} noBorder />
+    </Lightbox>
+    <p className="caption">Sebagian komunitas dalam survei
+      menyatakan bahwa komunitas mereka
+      pernah mendapat dukungan dari
+      pemerintah dalam bentuk yang beragam.
+      Jenis dukungan paling banyak berupa
+      penggunaan fasilitas tempat (77%) dan
+      pendanaan (54%).</p>
+  </GridItemLeftContent>
+  <GridItem>
 
     Komunitas film di Aceh menyadari bahwa sumber dana dari pemerintah sangat
     bisa dimanfaatkan untuk melaksanakan kegiatan komunitas, selain ada juga
