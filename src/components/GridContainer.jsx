@@ -4,7 +4,7 @@ import React from 'react';
 
 export const GridItemLeftContent = styled(GridItem)`
   @media screen and (min-width: 768px) {
-    padding-right: 40px;
+    padding-right: 76px;
   }
 `;
 
