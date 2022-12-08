@@ -196,6 +196,25 @@ import ImagePlay from '../components/ImagePlay';
     menyesuaikan dengan momen dan isu tertentu dalam satu atau dua tahun
     sebelumnya.
 
+  </GridItem>
+</GridContainer>
+
+<GridContainer>
+  <GridItemLeftContent>
+    <p className="info">Total Dana yang Terhimpun (sejak 2019) Berdasarkan Sumbernya</p>
+    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Total-Dana-yang-Terhimpun')} alt={'Total-Dana-yang-Terhimpun'} mb="16px" size="2xl">
+      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Total-Dana-yang-Terhimpun-thumb'))} alt={'Total-Dana-yang-Terhimpun-thumb'} noBorder />
+    </Lightbox>
+    <p className="caption">Tak berbeda dengan temuan-temuan riset
+      terdahulu tentang komunitas film dan data
+      kualitatif di pendataan ini, pendanaan
+      aktivitas komunitas masih bersifat swadaya.
+      Sejak 2019, berdasarkan data terhadap
+      26 komunitas, total pendanaan mandiri
+      mencapai lebih dari Rp 6 miliar.</p>
+  </GridItemLeftContent>
+  <GridItem>
+
     Ketika ekosistem film Surabaya sudah mulai terbentuk, corak produksi filmnya
     mulai tampak. Dari amatan Kukuh Karnanta, pengajar Fakultas Ilmu Budaya
     Universitas Airlangga yang juga pengkaji film, tampak bahwa sebagian besar
