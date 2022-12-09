@@ -1,22 +1,22 @@
 import {
-  Box, Container, Divider, GridItem, Heading, List, ListItem, SimpleGrid, Text, useDimensions,
+  Box, Container, Divider, GridItem, Heading, List, ListItem, SimpleGrid, Text,
 } from '@chakra-ui/react';
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import React, { useRef } from 'react';
+import React from 'react';
 import GridContainer, { GridItemLeftContent } from '../components/GridContainer';
 import Layout from '../components/Layout';
 import Lightbox from '../components/Lightbox';
 import SEO from '../components/SEO';
 import SquareImage from '../components/SquareImage';
-import useLayout from '../hooks/useLayout';
 
 const teams = [
   {
     division: 'Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi',
     people: [
+      'Hilmar Farid',
       'Ahmad Mahendra',
-      'Marlina Yulianti',
+      'Marlina Yulianty Machfud',
       'Pandu Pradana',
       'Tim Direktorat Perfilman, Musik, dan Media',
     ],
@@ -29,7 +29,7 @@ const teams = [
       'Alexander Matius',
       'Dwi Arieska',
       'Levriana Yustriani',
-      'Mazda Radita',
+      'Mazda Radita Roromari',
     ],
   },
   {
@@ -38,10 +38,10 @@ const teams = [
       'Abidzar Ghifary',
       'Brigita Sekar',
       'Muhammad Abraham',
-      'Redemptus Rangga',
+      'Redemptus Rangga Raditya',
       'Sastha Sunu',
       'Trisha Amanda',
-      'Valensia Edgina',
+      'Valensia Harumi Edgina',
     ],
   },
   {
@@ -144,29 +144,49 @@ function What({ data }) {
 
   const people = [
     {
-      image: getImage(images.find((image) => image.name === 'AFI_Apa Adinda')),
-      name: 'Adinda Zakiah',
-      division: 'Field Researcher',
+      image: getImage(images.find((image) => image.name === 'AFI_Apa Hilmar')),
+      name: 'Hilmar Farid',
+      division: 'Dirjen Kebudayaan',
+    },
+    {
+      image: getImage(images.find((image) => image.name === 'AFI_Apa Ahmad')),
+      name: 'Ahmad Mahendra',
+      division: 'Direktur Perfilman, Musik dan Media Baru',
+    },
+    {
+      image: getImage(images.find((image) => image.name === 'AFI_Apa Marlina')),
+      name: 'Marlina Yulianty Machfud',
+      division: 'Pamong Budaya Bidang Perfilman',
+    },
+    {
+      image: getImage(images.find((image) => image.name === 'AFI_Apa Pandu')),
+      name: 'Pandu Pradana',
+      division: 'Kasubag Tata Usaha/Pamong Budaya Bidang Perfilman',
+    },
+    {
+      image: getImage(images.find((image) => image.name === 'AFI_Apa Sastha')),
+      name: 'Sastha Sunu',
+      division: 'Research Advisor',
+    },
+    {
+      image: getImage(images.find((image) => image.name === 'AFI_Apa Muhammad')),
+      name: 'Muhammad Abraham',
+      division: 'Tech & Data Advisor',
     },
     {
       image: getImage(images.find((image) => image.name === 'AFI_Apa Adrian')),
-      name: 'Adrian Jonathan',
+      name: 'Adrian Jonathan Pasaribu',
       division: 'Research Director',
     },
     {
-      image: getImage(images.find((image) => image.name === 'AFI_Apa Alex')),
-      name: 'Alexander Mathius',
-      division: 'Film Curator',
+      image: getImage(images.find((image) => image.name === 'AFI_Apa Redemptus')),
+      name: 'Redemptus Rangga Raditya',
+      division: 'Program Director',
     },
     {
-      image: getImage(images.find((image) => image.name === 'AFI_Apa Ardhi')),
-      name: 'Ardhi Yudho',
-      division: 'Web & Design',
-    },
-    {
-      image: getImage(images.find((image) => image.name === 'AFI_Apa Dwi')),
-      name: 'Dwi Arieska',
-      division: 'Field Researcher',
+      image: getImage(images.find((image) => image.name === 'AFI_Apa Adinda')),
+      name: 'Adinda Zakiah',
+      division: 'Research Coordinator',
     },
     {
       image: getImage(images.find((image) => image.name === 'AFI_Apa Levri')),
@@ -175,28 +195,28 @@ function What({ data }) {
     },
     {
       image: getImage(images.find((image) => image.name === 'AFI_Apa Mazda')),
-      name: 'Mazda Radita',
-      division: 'Peneliti & Manajer Pemutaran',
+      name: 'Mazda Radita Roromari',
+      division: 'Screening Director & Researcher',
     },
     {
-      image: getImage(images.find((image) => image.name === 'AFI_Apa Muhammad')),
-      name: 'Muhammad Abraham',
-      division: 'Tech & Data Advisor',
+      image: getImage(images.find((image) => image.name === 'AFI_Apa Alex')),
+      name: 'Alexander Mathius',
+      division: 'Film Curator',
     },
     {
-      image: getImage(images.find((image) => image.name === 'AFI_Apa Redemptus')),
-      name: 'Redemptus Rangga',
-      division: 'Program Director',
+      image: getImage(images.find((image) => image.name === 'AFI_Apa Dwi')),
+      name: 'Dwi Arieska',
+      division: 'Researcher',
+    },
+    {
+      image: getImage(images.find((image) => image.name === 'AFI_Apa Ardhi')),
+      name: 'Ardhi Yudho',
+      division: 'Web & Design',
     },
     {
       image: getImage(images.find((image) => image.name === 'AFI_Apa Roeliman')),
       name: 'Nurul Iman',
       division: 'Web & Design',
-    },
-    {
-      image: getImage(images.find((image) => image.name === 'AFI_Apa Sastha')),
-      name: 'Sastha Sunu',
-      division: 'Research Advisor',
     },
   ];
 
@@ -222,6 +242,36 @@ function What({ data }) {
               Apresiasi Film Indonesia 2022
             </Heading>
 
+          </GridItem>
+        </GridContainer>
+
+        <GridContainer>
+          <GridItemLeftContent>
+            <Lightbox
+              image={images.find((item) => item.name === 'AFI_Apa Marlina Yulianty Memberi')}
+              alt="AFI_Apa Marlina Yulianty Memberi"
+              mb="16px"
+              size="2xl"
+            >
+              <SquareImage
+                image={getImage(images.find((item) => item.name === 'AFI_Apa Marlina Yulianty Memberi'))}
+                alt="AFI_Apa Marlina Yulianty Memberi"
+              />
+            </Lightbox>
+            <Text
+              fontSize="16px"
+              lineHeight="shorter"
+              color="brandBlue.500"
+              fontWeight={700}
+              fontStyle="italic"
+              textAlign="left"
+            >
+              Marlina Yulianty Machfud (Pamong Budaya
+              Bidang Perfilman) memberi tanggapan
+              terhadap paparan hasil riset
+            </Text>
+          </GridItemLeftContent>
+          <GridItem>
             <Text fontSize="16px" mb="24px">
               Sinema, layaknya sejarah, tidak pernah tunggal. Kehadirannya tidak terbatas
               di karpet merah dan panggung para pemenang sebagaimana yang populer
@@ -255,6 +305,36 @@ function What({ data }) {
               hanya terwadahi lewat festival film dan inisiatif layar mandiri.
             </Text>
 
+          </GridItem>
+        </GridContainer>
+
+        <GridContainer>
+          <GridItemLeftContent>
+            <Lightbox
+              image={images.find((item) => item.name === 'AFI_Apa Presentasi publik')}
+              alt="AFI_Apa Presentasi publik"
+              mb="16px"
+              size="2xl"
+            >
+              <SquareImage
+                image={getImage(images.find((item) => item.name === 'AFI_Apa Presentasi publik'))}
+                alt="AFI_Apa Presentasi publik"
+              />
+            </Lightbox>
+            <Text
+              fontSize="16px"
+              lineHeight="shorter"
+              color="brandBlue.500"
+              fontWeight={700}
+              fontStyle="italic"
+              textAlign="left"
+              mb="30px"
+            >
+              Presentasi publik Apresiasi Film Indonesia
+              2022 di Semarang
+            </Text>
+          </GridItemLeftContent>
+          <GridItem>
             <Text fontSize="16px" mb="24px">
               Sepuluh kota menjadi sasaran penelitian: Banda Aceh, Bandung, Balikpapan,
               Denpasar, Kupang Makassar, Medan, Purbalingga, Semarang, dan Surabaya.
@@ -359,7 +439,7 @@ function What({ data }) {
                 fontWeight="700"
                 color="brandRed.500"
                 mb="0px"
-                lineHeight={1}
+                lineHeight="shorter"
               >
                 {person.name}
                 {' -'}
@@ -367,6 +447,7 @@ function What({ data }) {
               <Text
                 fontSize={['14px', null, '16px']}
                 mb="0px"
+                lineHeight="shorter"
               >
                 {person.division}
               </Text>
