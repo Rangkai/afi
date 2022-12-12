@@ -67,7 +67,7 @@ function Footer() {
             </Text>
             <LinkBox>
               <LinkOverlay
-                href="https://www.kemdikbud.go.id/main/"
+                href="https://kebudayaan.kemdikbud.go.id/ditpmmb/"
                 isExternal
               >
                 <GatsbyImage image={dikbudLogo} alt={data.file.name} />
