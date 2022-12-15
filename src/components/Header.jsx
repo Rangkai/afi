@@ -1,4 +1,4 @@
-import React from 'react';
+import { HamburgerIcon } from '@chakra-ui/icons';
 import {
   Box,
   Button,
@@ -10,17 +10,14 @@ import {
   DrawerHeader,
   DrawerOverlay,
   Flex,
-  Link,
-  useMediaQuery,
-  Text,
-  useDisclosure,
-  LinkBox,
+  Link, LinkBox, Text,
+  useDisclosure, useMediaQuery,
 } from '@chakra-ui/react';
-import { graphql, Link as LinkGatsby, useStaticQuery } from 'gatsby';
-import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { HamburgerIcon } from '@chakra-ui/icons';
+import styled from '@emotion/styled';
+import { graphql, Link as LinkGatsby, useStaticQuery } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
+import React from 'react';
 
 const slideDown = keyframes`
   0% { 
@@ -103,24 +100,6 @@ function Header() {
 
   const data = useStaticQuery(graphql`
     query NavbarQuery {
-      desktop: file(relativePath: {eq: "afi_logo.png"}) {
-        name
-        childImageSharp {
-          gatsbyImageData(
-            placeholder: BLURRED
-            width: 200
-          )
-        }
-      }
-      mobile: file(relativePath: {eq: "afi_logo.png"}) {
-        name
-        childImageSharp {
-          gatsbyImageData(
-            placeholder: BLURRED
-            width: 130
-          )
-        }
-      }
       cities: allMdx(sort: {fields: frontmatter___title, order: ASC}) {
         nodes {
           frontmatter {
@@ -179,16 +158,17 @@ function Header() {
     },
   ];
 
-  const afiLogoDesktop = getImage(data.desktop);
-  const afiLogoMobile = getImage(data.mobile);
-
   return (
     <Box as="header" mt={[null, '24px']} mb={[null, '48px']} py="12px">
       <Container>
         <Flex alignItems="center" justifyContent={['space-between', null, 'flex-start']}>
           <LinkBox as={LinkGatsby} to="/" width={['130px', null, '200px']} minW={['130px', null, '200px']}>
-            <Box as={GatsbyImage} image={afiLogoDesktop} display={['none', null, 'block']} alt={data.desktop.name} width="100%" />
-            <Box as={GatsbyImage} image={afiLogoMobile} display={['block', null, 'none']} alt={data.desktop.name} width="100%" />
+            <StaticImage
+              src="../images/afi_logo.svg"
+              alt="afi_logo"
+              placeholder="blurred"
+              quality={100}
+            />
           </LinkBox>
           <Flex
             as="nav"

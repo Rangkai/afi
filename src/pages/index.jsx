@@ -58,8 +58,8 @@ export default function Home({ data }) {
 
   return (
     <Layout>
-      <Box as={GatsbyImage} image={banner} display={['none', null, 'block']} alt="home_banner" w="100vw" layout="full_width" />
-      <Box as={GatsbyImage} image={bannerMobile} display={['block', null, 'none']} alt="home_banner" w="100vw" layout="full_width" />
+      <Box as={GatsbyImage} quality={100} image={banner} display={['none', null, 'block']} alt="home_banner" w="100vw" layout="full_width" />
+      <Box as={GatsbyImage} quality={100} image={bannerMobile} display={['block', null, 'none']} alt="home_banner" w="100vw" layout="full_width" />
       <Container>
         <Box as="section" my="48px" textAlign="center" display="flex" justifyContent="center">
           <Box width={['100%', null, getCol(10)]}>
@@ -240,7 +240,7 @@ export const query = graphql`
       nodes {
         name
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
+          gatsbyImageData(placeholder: BLURRED, quality: 100, jpgOptions: {quality: 100})
         }
       }
     }
