@@ -1,0 +1,571 @@
+---
+title: Medan
+slug: city-medan
+desc: Semangat Personal dan Kerja Komersial di Sinema Bali.
+banner: '../images/cities/medan/banner.jpg'
+thumb: '../images/cities/medan/thumb.jpg'
+galleryDir: 'cities/medan'
+position: {
+  left: 8%,
+  bottom: 79%
+}
+---
+
+import { GridItem, Text, Box, SimpleGrid } from '@chakra-ui/react';
+import GridContainer, { GridItemLeftContent } from '../components/GridContainer';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import SquareImage from '../components/SquareImage';
+import Lightbox from '../components/Lightbox';
+import ImagePlay from '../components/ImagePlay';
+
+<GridContainer>
+  <GridItemLeftContent />
+  <GridItem>
+    ## Komunitas Film Sumatera Utara: Modal Nekat yang Eksis dan Dipertahankan.
+
+    <p className="caption">Immanuel Ginting</p>
+
+    Sejarah perfilman dan komunitas film di Sumatera Utara bisa dikatakan punya
+    latar belakang yang nyaris sama. Keberadaan panggung teater yang lebih dulu
+    eksis mengiringi langkah geliat kegiatan perfilman yang membentuk embrio
+    industri perfilman era Bachtiar Siagian pada medio 1950an di Kota Medan.
+    
+    Hal ini seolah terulang kembali dengan tambahan detail yang sedikit berbeda
+    sekitar 2004, ketika perfilman perlahan bangkit dengan generasi baru film
+    Indonesia setelah krisis ekonomi pada dekade sebelumnya. Meski begitu, harus
+    diakui juga bahwa pada tahun itu bioskop lokal di Medan sudah mati, digantikan
+    jaringan bioskop komersial berskala nasional. Kesulitan bersaing dengan
+    teknologi lebih baru dan harga terjangkau akhirnya memnuat pengusaha bioskop
+    lokal gulung tikar. Tercatat bioskop lokal terakhir di Medan adalah Bioskop
+    President yang terletak di Deli Plaza.
+    
+    Saat itu minat warga Medan dan sekitarnya terhadap film bisa dibilang tinggi,
+    meski kegiatan produksi audiovisual terbatas di sejumlah kalangan profesional.
+    Alat produksi film masa itu—video recorder dengan pita magnetik seperti
+    Betacam dan MiniDV—umumnya hanya dimiliki stasiun televisi dan usaha
+    dokumentasi acara pernikahan.
+    
+    Saat itu juga, hadir sejumlah terobosan yang pada kemudian hari menjadi embrio
+    komunitas film di Medan. Salah satunya adalah STUPA (Studi Teater untuk aPa
+    Aja). Seperti yang tersirat dari namanya, kelompok ini awalnya tidak spesifik
+    fokus ke film, namun pada prosesnya turut melibatkan produksi film independen
+    yang kental dengan semangat teater dan jurnalistik. Kelompok ini dibentuk oleh
+    seniman teater Taman Budaya Sumatera Utara, meliputi alm. Tatang, Tubagus
+    Ayat, dan Darma Lubis. STUPA nantinya hanya menyisakan Tubagus Ayat, yang
+    tetap mempertahankan nama STUPA hingga saat ini.
+    
+    Embrio lainnya hadir melalui pertumbuhan pesat lembaga swadaya masyarakat
+    (LSM). Mereka terpicu semangat jurnalistik yang dimotori para seniman teater
+    Taman Budaya Sumatera Utara, yang pada prosesnya memantik ketertarikan
+    mereka dengan produksi film dokumenter. Capaian menggembirakan dari hal ini:
+    Rute Menantang Bahaya karya Duma Yanti Theresia dan Ressi Dwiana berhasil
+    menjadi finalis Eagle Award 2005—kompetisi dokumenter yang digelar Metro TV.
+
+    Dalam kaitannya dengan pembentukan kultur komunitas film di Medan, LSM
+    memungkinkan penghimpunan sumber daya seperti alat produksi, dana, dan
+    jaringan kerja. Akses-akses ini dibutuhkan untuk operasional LSM, khususnya
+    ketika film dilihat sebagai medium strategis untuk advokasi. Salah satu koneksi
+    langsung antara LSM dengan komunitas film di Medan adalah Yayasan Bina
+    Keterampilan Pedesaan Indonesia (Bitra), yang membentuk Bitra Media Syndicate
+    (BMS). Hidayat Muhammad (Dayat Kampret), salah satu tokohnya, nantinya
+    berperan aktif dalam membentuk komunitas film di Medan. Layaknya LSM,
+    Bitra memanfaatkan film sebagai media untuk mengkhalayakkan program dan
+    gagasan Bitra. Penayangan film seringnya dilakukan di halaman kantor Bitra dan
+    terbuka untuk umum.
+
+    Ada juga Sources of Indonesia (SOI), yang terbentuk selepas bencana banjir
+    bandang di Kabupaten Langkat pada 2006. Dipimpin Renta Nababan, organisasi
+    ini mengupayakan penguatan masyarakat melalui keadilan pengelolaan
+    lingkungan hidup. Beberapa program pelatihan dan advokasi yang digelarnya
+    turut melibatkan medium seni, termasuk film. Kegiatan-kegiatan SOI lantas
+    memicu terbentuknya sebuah program khusus film, yakni SOI Film Documentary,
+    yang kemudian berkembang secara independen dengan nama Sineas Film
+    Documentary (SFD) yang dibina oleh Onny Kresnawan.
+
+    <hr />
+
+  </GridItem>
+</GridContainer>
+
+<GridContainer>
+  <GridItemLeftContent>
+    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'thumb')} alt={'Program Film Bukan Keluarga (2022) oleh Manu Project PRO'}>
+      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'thumb')} alt={'Program Film Bukan Keluarga (2022) oleh Manu Project PRO'} mb="16px" />
+    </Lightbox>
+    <p className="caption">Program Film Bukan Keluarga (2022) oleh Manu Project PRO</p>
+  </GridItemLeftContent>
+  <GridItem>
+    ### Rupa-rupa Bisnis Film Lokal
+
+    Embrio-embrio perfilman di Medan lantas disambut dengan aliran pegiat dan
+    sumber daya dari dimensi yang lebih beragam, yakni stasiun televisi dan lembaga
+    perguruan tinggi.
+
+    TVRI Sumatera Utara berandil besar memproduksi tayangan bertopik budaya
+    lokal, yang pengerjaannya banyak melibatkan seniman Taman Budaya.
+    Kolaborasi dengan perusahaan televisi negara ini yang mendorong komunitas
+    seniman di Taman Budaya untuk fokus membentuk komunitas film. Sementara
+    itu, pada Desember 2004, PT Deli Media Televisi alias Deli TV—stasiun televisi
+    lokal pertama di Sumatera Utara pertama kali mengudara. Program tayangannya
+    menghadirkan sejumlah film lokal dengan topik dan latar yang lebih urban.
+    Proses pengerjaannya cukup sering melibatkan pekerja audiovisual setempat,
+    yang pada prosesnya melahirkan sejumlah komunitas film. Salah duanya:
+    Manuproject Porductions dan Mata Sapi Productions.
+    
+    Manuproject Productions lahir dari semangat untuk mengadakan program
+    reality show di Deli TV pada awal 2005. Komunitas ini awalnya berdiri dari
+    mayoritas mahasiswa Jurusan Bahasa dan Sastra Inggris Universitas Negeri
+    Medan, yang lantas terjun ke kerja produksi profestional dengan belajar
+    otodidak mengoperasikan alat produksi saat produksi program Deli TV. Pada
+    2017, para pendiri Manuproject Productions memutuskan untuk melegalkan
+    kelembagaannya dengan nama Yayasan Sinema Manuproject Productions
+    Indonesia.
+    
+    Kemunculan Mata Sapi Production juga terhubung dengan Deli TV. Komunitas ini
+    terbentuk dari eks karyawan Deli TV yang berambisi melanjutkan kreativitasnya di
+    produksi audiovisual. Mereka adalah Hendry Norman, Mameng, dan Ichsan.
+    
+    Sekitar 2006, di kampus Institut Teknologi Medan, komunitas teater mahasiswa
+    kemudian tertarik memproduksi film sebagai bagian dari pengembangan seni
+    yang kemudian melahirkan komunitas Kopi 52 Medan yang didirikan salah
+    satunya oleh Andi Hutagalung. Komunitas ini kemudian mengalami banyak
+    perkembangan, hingga akhirnya Andi merintis Media Identitas setelah menang
+    penghargaan melalui film dokumenter hasil produksinya.
+
+    Pada awal 2007, di beberapa kampus kota Medan, mahasiswa mulai tergerak
+    untuk membentuk komunitas pecinta film. Di Universitas Negeri Medan, sejak
+    dibentuknya Manuproject Productions, gerakan awal ini melakukan perekrutan
+    mahasiswa dan mulai banyak memproduksi film-film pendek. Mereka turut
+    menyelenggarakan Festival Film Pendek Unimed di Museum Negeri Provinsi
+    Sumatera Utara dengan mengundang beberapa tokoh perfilman dan wartawan
+    senior seperti AR Qamar dan dan Muhammad Tok Wan Haria. Capaian-capaian ini
+    meyakinkan para pengurus Manuproject Indonesia untuk menyebut diri mereka
+    sebagai komunitas film.
+    
+    Pada tahun yang sama, mahasiswa Universitas Sumatera Utara (melalui FISIP
+    USU) juga mulai membentuk komunitas pecinta film yang kemudian melahirkan
+    kine klub. Dari sini, terbentuk komunitas Rumah Film Indonesia yang dikenal
+    sebagai RuFi. Komunitas lain yang lahir dari gerakan ini adalah Opique Pictures,
+    yang digagas oleh Muhammad Taufik, salah seorang mahasiswa FISIP USU.
+    Gerakan komunitas film bentukan kampus Universitas Sumatera Utara ini turut
+    melibatkan dr. Daniel Irawan dalam aktivitas komunitas perfilman.
+    
+    Menjamurnya kegiatan produksi lantas memicu perkembangan lain: penjualan
+    film melalui keping VCD dan DVD, berdampingan dengan film bajakan dari
+    luar negeri. Produksi dan distribusi lokal menjadi prestise sendiri, yang pada
+    prosesnya menjadi sebuah tren di kalangan pegiat perfilman Sumatera Utara.
+    Menariknya, kala itu, para pelakunya bahkan belum menyadari arti kata
+    komunitas film. Mereka bertindak layaknya rumah produksi tanpa badan hukum
+    dan izin usaha. Mereka bahkan tidak pernah mengurus administrai sensor. Mereka
+    lebih banyak termotivasi oleh kemungkinan profit dari penjualan keping VCD
+    dan DVD. Film yang terhitung fenomenal pada masa ini adalah Golden Egg (2012)
+    karya Rius Suhendra. Penjualan film berbahasa Hokkien ini menembus angka
+    empat ratusan juta Rupiah.
+    
+    Di tengah tren bisnis dadakan ini, terobosan lain terjadi tengah masyarakat Tanah
+    Karo. Tenori Sembiring Keloko (Ori Semloko), yang baru saja menamatkan studi
+    ilmu komunikasi di Yogyakarta, menghimpun kawan-kawan dengan semangat
+    belajar serupa untuk coba-coba produksi film. Proses yang digeluti sejak 2010 ini
+    menghasilkan sejumlah film. Salah satunya adalah sebuah film laga dengan silat
+    tradisional Karo. Judulnya Nggara. Film ini terhitung laris di pasaran keping VCD
+    dan DVD.
+    
+    Sebagai pegiat perfilman Tanah Karo, Ori sebenarnya sudah banyak
+    membuktikan melalui karya-karya filmnya yang cukup berprestasi di luar Sumut.
+    Salah satu pencapaiannya adalah pembuatan film layar lebar yang diangkat dari
+    novel romansa berlatar Karo berjudul Jandi La Surong (Janji yang Tak Terpenuhi)
+    yang diputar di beberapa tempat, termasuk bioskop Medan dan Jakarta dengan
+    sistem penyewaan layar bioskop.
+    
+    Film tanpa tanda lulus sensor dan mampu meraih jumlah penonton yang hampir
+    mencapai 2000 orang penonton—sebuah prestasi yang tidak bisa dianggap
+    sepele, apalagi di Sumatera Utara. Prestasi ini seharusnya mampu meletakkan
+    fungsi pemerintah daerah ke dalam ekosistem perfilman. Apalagi dalam film
+    itu pemerintah daerah terlibat sebagai penyandang dana. Sayangnya, justru
+    masalah terjadi karena pemerintah dianggap ingkar dan abai terhadap kewajiban,
+    sehingga pembiayaan produksi film terbengkalai, yang menjalar hingga
+    pemutaran filmnya setelah produksi selesai.
+    
+    “Kemarin tahun 2020, kami masukin filmnya [Jandi La Surong] ke Piala Maya.
+    Ternyata masuk filmnya ke nominasi untuk film non exhibition, dan ternyata
+    itu juga belum memberikan sesuatu, kita bukannya ngarep kita diperhatiin
+    itu enggak, tapi minimal produk yang kita persembahkan dari suatu tempat
+    melalui sebuah film lebih bisa diapresiasi, atau pun yang namanya pemerintah
+    kan sebagai orang tua. Sebenarnya apa lagi kami membangun dari nol di suatu
+    tempat (Tanah Karo) dengan aktivitas perfilman,” tutur Ori mengenang buruknya
+    dukungan dan partisipasi pemerintah daerah tempatnya memulai karir sebagai
+    sineas lokal dari dasar.
+
+    “Nah selesai itu aku sudah lebih sering menggarap film dokumenter, film pendek,
+    gitu dengan teman teman yang di Medan dan mulai expansi dengan beberapa
+    wilayah di luar Karo, ada kabupaten Toba, Simalungun, kemudian yang terakhir
+    kita garap mengenai agama Parmalim, yang terakhir aku garap film dokumenter
+    pendek,” lanjut Ori. Baginya, buruknya partisipasi pemerintah daerahnya
+    tidak menyurutkan langkahnya untuk berkarya, bahkan semakin matang dan
+    mengurangi asa untuk bergantung pada dukungan pemerintah.
+
+    <hr />
+
+    ### Mewujudkan Kebersamaan
+
+    Berbagai kumpulan yang disebutkan kala itu belum tegas menyebut diri
+    sebagai komunitas film, walau kegiatan mereka sudah memenuhi ciri komunitas
+    film. Kebanyakan dari mereka masih menganggap diri mereka sebagai rumah
+    produksi, yang kegiatan utamanya memproduksi film dan sesekali menggelar
+    penayangan film.
+
+    Keseluruhan gerakan awal terbentuknya komunitas film di Sumatera Utara
+    membentuk pola manajemen komunitas yang beragam. Tidak banyaknya sosok
+    yang berlatar belakang pendidikan di bidang perfilman, menjadikan kualitas film
+    yang dihasilkan juga tidak bisa disetarakan dengan kualitas film industri layar
+    lebar.
+
+    Satu alasan yang sering digunakan saat itu adalah gerakan film independen—
+    sebuah gerakan film yang sebelumnya sudah hadir sejak Reformasi 1998 untuk
+    menentang gunting sensor. Bagi komunitas film di Sumatera Utara, tak peduli
+    yang lahir dari idealisme ataupun industri rumahan, kualitas film di awal lahirnya
+    komunitas film ini semuanya hampir mirip: film tanpa format naskah yang standar,
+    teknik garapan yang kurang rapi, gelap, tidak stabil, eksperimen dengan shot,
+    sound kurang jelas, dan jalan cerita yang terlalu mudah dipahami atau malah sulit
+    dipahami dengan alasan eksperimental. Ini juga terjadi tidak jauh karena alasan
+    tidak adanya sumber daya manusia profesional, minimnya pengetahuan produksi
+    film, pendanaan produksi film ala kadarnya, serta ketersediaan alat produksi apa
+    adanya. Walau berada di tengah kondisi itu, komunitas film tidak jarang justru
+    menjadikan beberapa film tadi sebagai cult film yang langganan ditayangkan.
+    Film-film tersebut didiskusikan bersama di kegiatan-kegiatan kecil yang mereka
+    selenggarakan sendiri.
+
+    Beberapa dari mereka justru juga mendapat perhatian pemerintah daerah
+    yang juga mulai tertarik melirik aktivitas perfilman sebagai kegiatan yang
+    perlu dilaksanakan. Ragam programnya merentang dari produksi video profil,
+    penayangan dan diskusi film, hingga kompetisi film pendek. Dalam kerangka
+    program ini, istilah festival film diterjemahkan semata sebagai perlombaan film,
+    tanpa ada pertimbangan bagaimana film-film partisipian ditayangkan di hadapan
+    penonton lebih luas. Tak jarang justru penonton festival adalah sesama peserta
+    lomba. Bisa dikatakan generasi awal terbentuknya komunitas film di Medan
+    adalah sekumpulan orang yang mengalami prosesnya sendirian, tanpa pernah
+    menyadari kehadiran komunitas sejenis di luar lingkar sosial mereka.
+    
+    Pada 2013, setelah beberapa tahun berproses tanpa saling mengenal satu
+    dengan yang lain, lima komunitas film berkumpul dan melahirkan proses
+    kolaborasi produksi dan pemutaran film omnibus Bohong. Mereka adalah
+    Manuprojectpro Indonesia, Mata Sapi, Media Identitas, Opique Pictures, dan
+    RuFi yang belakangan digantikan oleh Mataniari karena perbedaan visi dan misi.
+    Semangat kolaborasi ini kemudian melahirkan semangat untuk bersatu dalam
+    Komunitas Film Sumatera Utara atau KoFi Sumut, yang diniatkan sebagai wadah
+    berkumpulnya komunitas-komunitas film se-Sumatera Utara.
+
+    Setelah penayangan keliling omnibus Bohong, KoFi mendapat tawaran dari
+    TVRI untuk mengisi program acara televisi mengenai hasil karya “film indie”—
+    demikian para pegiat film ini menyebut jenis film mereka di Sumatera Utara.
+    Hal ini menjadikan semangat untuk para komunitas yang berhubungan dengan
+    film untuk bergabung membesarkan KoFi Sumut pada saat itu. Gerakan ini tidak
+    maksimal selain karena ketidakpahaman semua komunitas untuk mengelola
+    sebuah komunitas yang lebih besar, juga akibat persaingan sengit antara
+    komunitas yang tergabung di dalamnya.
+
+    <hr />
+    
+    ### Momentum Lain
+
+  </GridItem>
+</GridContainer>
+
+<GridContainer>
+  <GridItemLeftContent>
+    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'medan-2')} alt={'Salah satu proses kegiatan produksi film oleh Ninestar Production di tahun 2022'}>
+      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'medan-2')} alt={'Salah satu proses kegiatan produksi film oleh Ninestar Production di tahun 2022'} mb="16px" />
+    </Lightbox>
+    <p className="caption">Salah satu proses kegiatan produksi film oleh Ninestar Production di tahun 2022</p>
+  </GridItemLeftContent>
+  <GridItem>
+
+
+    Peran Alex Sihar dan Darma Lubis membawa keterlibatan KoFi Sumut dalam
+    penyelenggaraan Apresiasi Film Indonesia (AFI) 2014 di Medan. Kegiatan AFI
+    2014 mampu mengumpulkan komunitas film di Medan dan sekitarnya untuk
+    aktif berhimpun. Pertemuan ini menghasilkan kegiatan apresiasi dan diskusi di
+    sejumlah tempat, meliputi kampus, kafe, hingga gedung pertunjukan Taman
+    Budaya Sumatera Utara.
+
+    Di titik ini, semua komunitas film terlibat dengan lebih aktif serta mencatatkan diri
+    pada nasional bahwa komunitas film Kota Medan beserta karya-karyanya diakui
+    eksistensinya. Hal yang ‘dijual’ melalui kegiatan ini adalah capaian komunitas film
+    di Sumatera Utara. Sebagai industri rumahan, skala perfilman di Sumatera Utara
+    setara atau bahkan melampaui gerakan film sejenis di daerah lain di Indonesia.
+    Persaingan sengit antara komunitaes film di luar dugaan malah memantik efek
+    positif. Tampak ada upaya untuk melampaui standar yang ada. Tampak pula
+    upaya untuk menunjukkan ciri berbeda.
+
+    Salah satu komunitas yang berdiri di era ini adalah Nine Star Productions.
+    Komunitas ini terbentuk di SMKN 9 Medan melalui kegiatan ekstrakurikuler
+    di sekolah. Awalnya, kumpulan ini belum berupa komunitas, hanya sebatas
+    perkumpulan pembuatan project bersama teman yang didampingi oleh guru di
+    sekolah. Kumpulan ini kemudian memproduksi film untuk mengikuti Festival Film
+    Anak Pusat Kajian Perlindungan Anak (PKPA) 2016. Hasilnya: film karya mereka
+    mendapat juara satu.
+
+    Kemenangan ini memicu inisiatif untuk membentuk komunitas film untuk
+    mewadahi para siswa yang bukan dari jurusan Multimedia yang ingin belajar dan
+    berkeinginan untuk memproduksi film.
+
+    Generasi siswa sekolah lainnya turut merintis hadirnya lulusan-lulusan jurusan
+    film dari kampus luar Sumatera Utara yang menamatkan kuliahnya dan kembali
+    ke kota Medan dengan semangat yang sama yaitu bersaing dengan komunitas
+    film yang sudah ada sebelumnya. Lulusan Institus Kesenian Jakarta, Institut Seni
+    Indonesia (ISI), atau kampus dengan jurusan film lainnya kemudian menginspirasi
+    generasi yang lebih muda untuk bergabung membentuk komunitas film
+    yang baru. Kampus jurusan film dan televisi juga muncul di Kota Medan, yang
+    kemudian disusul dengan SMK jurusan perfilman.
+
+    Sekitar Agustus 2015, Muhammad Fazruchi K—alumni Jurusan Film dan
+    Televisi ISI Yogyakarta—mendirikan Fisabilillah Production (Fispro) karena
+    kegelisahan terhadap semakin maraknya film-film yang dianggap mengangkat
+    tema yang tidak mendidik untuk generasi muda dan langkanya film-film lokal
+    bernafaskan Islami. Kegiatan Fispro secara umum adalah memproduksi film dan
+    menayangkan film sebagai media dakwah.
+
+    Dua komunitas ini mengalami fase berbeda. Setelah AFI 2014, hampir bisa
+    dikatakan semua komunitas film yang tergabung dalam KoFi Sumut tadi kembali
+    sibuk dengan aktivitas perfilmannya masing-masing. Beberapa di antaranya
+    bahkan sudah tak lagi terdengar kabarnya. Hal ini menjadikan komunitas film
+    yang baru terbentuk setelah AFI 2014, termasuk Nine Star Production dan
+    Fisabilillah Production, tidak selalu mendapat informasi dengan apa yang terjadi
+    di luar komunitasnya, bahkan juga tidak mengikuti apa yang terjadi dalam KoFi
+    Sumut.
+
+    Dari apa yang terjadi pada Nine Star Production dan Fisabilillah Production,
+    dapat diamati satu variabel menarik yang menjadikan keduanya tetap eksis
+    dan bertahan hingga saat ini sejak 2015 dan 2016. Nine Star Production
+    langganan menjadi nominator dan pemenang Festival Film Anak Pusat Kajian
+    Perlindungan Anak (PKPA). Ada insentif bagi mereka untuk terus bertahan dan
+    tetap berproduksi setiap tahunnya, karena merasa diakui keberadaannya dan
+    diapresiasi karyanya. Hal yang sama terjadi juga dengan Fisabilillah Production,
+    yang menurut pengakuannya langganan jadi nominasi dan pemenang di Festival
+    Film Islami sejak 2016.
+
+    <hr />
+
+  </GridItem>
+</GridContainer>
+
+<GridContainer>
+  <GridItemLeftContent>
+    <p className="info">Kepemilikan Ruang Putar (%)</p>
+    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Kepemilikan-Ruang-Putar')} alt={'Kepemilikan Ruang Putar thumb'} mb="16px" size="2xl">
+      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Kepemilikan-Ruang-Putar-thumb'))} alt={'Kepemilikan Ruang Putar thumb'} noBorder />
+    </Lightbox>
+    <p className="caption">Seturut dengan modal finansial yang minim,
+      ketersediaan ruang fisik menjadi tantangan
+      bagi komunitas film. Hanya 26% dari total
+      responden yang mengaku punya tempat.
+      Sebagian komunitas ‘beruntung’ lantaran
+      tak perlu merogoh kantong sendiri untuk
+      membuat kegiatan pemutaran. Namun,
+      sepertiga (32%) lainnya perlu mencadangkan
+      uang untuk menyewa tempat. Sementara,
+      11% komunitas film lainnya bereksperimen
+      dengan pemutaran secara daring.</p>
+  </GridItemLeftContent>
+  <GridItem>
+
+    ### Sinergi dalam Keterbatasan
+
+    Perkembangan teknologi internet yang pesat serta semakin murahnya alat
+    produksi film menjadikan semakin banyaknya komunitas film yang lahir dengan
+    beberapa kali ikut dalam kegiatan-kegiatan bidang perfilman yang diprakarsai
+    oleh pemerintah daerah, maupun komunitas film lainnya. Media YouTube
+    kemudian menjadi tempat menampilkan karya-karya film hasil produksi
+    komunitas film di era ini. Walaupun demikian, semangat untuk menampilkan film
+    karya sineas lokal di layar bioskop juga terus terpelihara. Beberapa film panjang
+    karya komunitas film Sumatera Utara semisal Di Mana Kau Sembunyikan Jodohku
+    (2017), Selembar itu Berarti (2018), Sang Prawira (2019), Jandi La Surong (2019),
+    dan A Thousand Midnight at Kesawan (2022) berhasil tayang di layar bioskop
+    sebagai bentuk pencapaian tersendiri bagi ekosistem perfilman di Sumatera
+    Utara.
+    
+    2018 menjadi sebuah milestone kegiatan besar komunitas film di kota Medan
+    dengan hadirnya proyek pembuatan film layar lebar berjudul Haji Asrama
+    produksi SFD. Gerakan kolaborasi dengan melibatkan banyak pihak mulai dari
+    pemerintah, swasta dan komunitas film sempat memperlihatkan kekompakan
+    antar komunitas film di Sumatera Utara yang sangat tinggi dalam kegiatan
+    produksi film. Sayang, kemudian project ini terhenti karena kurangnya dana yang
+    terkumpul untuk mampu melanjutkan ke tahapan produksi, walaupun sudah ada
+    beberapa kegiatan syukuran yang terlaksana atas nama produksi film ini.
+    
+    Pada tahun yang sama, Lake Toba Film Festival juga lahir dari RKI yang
+    diselenggarakan di pinggir Danau Toba dan melibatkan hampir semua komunitas
+    film yang tergabung di KoFi Sumut, maupun komunitas-komunitas film lain
+    di daerah sekitar Danau Toba. Program LTFF ini terus berlanjut hingga saat ini
+    dan dapat dianggap sebagai satu-satunya program perfilman yang mampu
+    mempersatukan semua komunitas film di Sumatera Utara hingga saat ini.
+    
+    KoFi Sumut yang pernah tampil dengan semangat kebersamaan yang kuat
+    di penyelenggaraan AFI 2014, hingga saat ini masih dianggap sebagai satusatunya
+    wadah perkumpulan yang mampu menyatukan mayoritas komunitas
+    film maupun sineas di Sumatera Utara. Jargon “KoFi Sumut Masih Ada!” yang
+    terus menjadi slogan di tiap perayaan hari jadinya, tetap menjadi sebuah kalimat
+    penyemangat untuk tetap bersatu, walau semakin banyak masalah yang terjadi
+    di antara mereka semua dan kurangnya kesempatan untuk bertemu bersama.
+    Karena hal ini juga lah, terjadi jurang pemisah dengan komunitas-komunitas film
+    lainnya yang baru bermunculan, walaupun kemudian, satu per satu mereka yang
+    sudah diperkenalkan tentang KoFi Sumut ini kemudian diajak untuk masuk ke
+    dalamnya yang saat ini masih berupa sebuah grup WhatsApp yang tidak memiliki
+    kepengurusan yang definitif dan masih bercampur baur dengan beberapa sineas
+    berdarah Sumatera Utara yang menetap di luar Sumatera Utara.
+
+    Tercatat hingga saat ini, kegiatan-kegiatan yang mengatasnamakan KoFi Sumut
+    selalu berjalan dengan kehadiran para anggotanya yang bisa dikatakan lengkap.
+    Penggunaan nama KoFi Sumut pun seakan tidak menjadi sebuah masalah jika
+    digunakan oleh segelintir orang yang masih merasa bagian dari perkumpulan
+    besar ini. Hanya kegiatan Lake Toba Film Festival lah yang selalu konsisten
+    mampu mengumpulkan hampir semua pendiri KoFi Sumut untuk hadir bersama
+    dan melakukan forum diskusi. Selebihnya lebih tepat dikatakan sebagai kegiatan
+    segelintir partisipan KoFi Sumut untuk memeriahkan momen-momen tertentu,
+    seperti hari Film Nasional atau Hari jadi Kota Medan.
+    
+
+  </GridItem>
+</GridContainer>
+<GridContainer>
+  <GridItemLeftContent>
+    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'medan-3')} alt={'Salah satu proses kegiatan produksi film oleh RKI Docs'} mb="16px" size="2xl">
+      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'medan-3'))} alt={'Salah satu proses kegiatan produksi film oleh RKI Docs'} noBorder />
+    </Lightbox>
+    <p className="caption">Salah satu proses kegiatan produksi film oleh RKI Docs</p>
+  </GridItemLeftContent>
+  <GridItem>
+
+    Yang awalnya masih berupa komunitas yang lebih banyak melakukan kegiatan
+    produksi dan apresiasi film, akhirnya terbentuklah beberapa perkumpulan yang
+    berfokus pada kegiatan perfilman lain seperti organisasi seni budaya yang
+    berfokus pada penyelenggaraan festival seperti Rumah Karya Indonesia (RKI)
+    yang melibatkan Ori Semloko di tahun 2017 dan komunitas yang berfokus pada
+    pemutaran film karya komunitas lainnya yaitu Layar Indie Project, dengan sosok
+    Robby Saputra sebagai salah satu pendirinya. Kegiatan perfilman lainnya seperti
+    review atau kritik film juga marak melibatkan beberapa nama seperti dr. Daniel
+    Irawan dan Amir Syarif Siregar.
+
+    <hr />
+
+    ### Perkembangan dari Pengalaman
+
+    Seiring dengan perkembangan selanjutnya, gerakan komunitas film di Kota
+    Medan ini semakin berevolusi dengan tetap membawa semangat untuk
+    menumbuhkembangkan ekosistem perfilman di kota Medan. Maraknya film-film
+    Indonesia bertemakan Sumatera Utara kemudian membuat ekosistem perfilman
+    di Sumatera Utara juga terus berkembang, termasuk peningkatan kualitas
+    lembaga dan kegiatan komunitasnya. Kesadaran pembentukan komunitas
+    dengan lembaga hukum yang jelas serta kesadaran untuk memproduksi film
+    dengan standar yang dianggap baik oleh industri perfilman nasional menjadikan
+    komunitas film di kota Medan terus berkembang hingga saat ini.
+    
+    Keseluruhan komunitas film yang eksis di kota Medan dan sekitarnya yang dapat
+    disebut Komunitas Film Sumatera Utara seluruhnya berasal dari semangat
+    kelompok kecil atau perseorangan yang bermodal nekat dan tidak punya
+    bekal kuat di bidang pengelolaan komunitas, bahkan tidak sepenuhnya pula
+    berlatar pendidikan perfilman formal. Hal ini sudah pasti mengalami banyak
+    permasalahan, baik secara internal maupun eksternal komunitas itu sendiri.
+    
+    Tetapi ternyata bertahan di tengah banyaknya masalah sambil berkarya, baik
+    melakukan produksi film ataupun aktivitas lain yang berhubungan dengan film
+    menjadikan komunitas film di kota Medan justru bertahan menghadapi semua
+    permasalahan tadi. Modal nekat menjadi ciri komunitas film di kota Medan ini
+    sehingga tidak dapat menjadi tolak ukur berapa besaran biaya yang dibutuhkan
+    untuk dapat menyelenggarakan sebuah kegiatan perfilman di Medan ataupun
+    di Sumatera Utara. Bahkan percaya tak percaya, ada yang bermodal bincangbincang
+    dengan pemerintah daerah atau sponsor pun sudah mampu menjadi
+    modal untuk mencairkan anggaran untuk menyelenggarakan kegiatan perfilman.
+    
+    Aroma persaingan diantara komunitas-komunitas yang ada sebenarnya bisa
+    dimaklumi mengingat bahwa modal nekat ini harus disertai pula dengan
+    kecurigaan dan ketidak-mudah-percayaan yang tinggi di antara komunitas film.
+    Kebanyakan dari mereka tidak punya perencanaan jangka panjang yang bisa
+    dikatakan sebagai program yang sustainable. Ketidakjelasan apakah program
+    mereka bisa dijalankan atau tidak mengakibatkan persaingan yang tinggi.
+    Persaingan ini sedikit memudar ketika mereka bisa menemukan kesamaan
+    capaian program mereka masing-masing dalam diskusi bersama yang terfasilitasi
+    oleh pemerintah, maupun salah satu diantara mereka sendiri.
+    
+    Saat ditemukannya persamaan ini, maka yang muncul berikutnya selalu adalah
+    sebuah produk kegiatan yang lebih besar dan mampu memuaskan lebih banyak
+    pihak, walaupun jika berseberangan, maka pihak yang berbeda itu, tidak secara
+    aktif ikut berpartisipasi, melainkan mungkin juga akan membuat kegiatan
+    tandingan sebagai bentuk perlawanan.
+    
+    Sebagai contoh kegiatan Lake Toba Film Festival (LTFF) yang sudah berjalan
+    selama 5 tahun yang diselenggarakan oleh RKI yang mampu secara konsisten
+    mempersatukan lebih banyak komunitas film untuk berpartisipasi dalam
+    kegiatannya, baik itu melalui eksebisi karya film, produksi bersama, maupun
+    forum diskusi yang seringnya lebih layak disebut forum debat daripada diskusi.
+    Tapi kemampuan LTFF untuk mempersatukan ini lah yang patut diapresiasi di
+    tengah persaingan yang sengit antara komunitas film di Medan dan Sumatera
+    Utara ini.
+
+    <hr />
+
+    ### Catatan tentang Ketahanan
+
+    Tujuan besar dari kehadiran semua komunitas film ini sebenarnya tidak jauh
+    dari mempertahankan eksistensi, sambil berupaya mendapatkan popularitas
+    dan terutama keuntungan materiil. Bagi sebagian besar komunitas film yang
+    tidak memiliki sistem kelembagaan yang sehat dan program yang konsisten
+    dan mampu dipertanggungjawabkan, proses yang terjadi berikutnya adalah
+    eksploitasi besar-besaran yang mengakibatkan kecurigaan dan pandangan
+    negatif satu dengan yang lainnya. Bagi mereka, kesempatan yang diraih oleh
+    sebuah komunitas di luar mereka dianggap sebagai hasil dari eksploitasi
+    terhadap mereka juga. Inilah yang kemudian menjadikan semua usaha untuk
+    bersinergi biasanya kandas sebelum dilaksanakan.
+    
+    Tetapi dengan meningkatnya pengetahuan dan keterampilan di bidang perfilman
+    yang disertai peningkatan kualitas manajerial beberapa komunitas film di kota
+    Medan, saat ini arah ekosistem perfilman di kota Medan semakin baik dan
+    mengarah ke pencapaian standar yang diakui secara nasional. Hal ini terbukti
+    dengan banyaknya fasilitasi yang didapatkan komunitas film dari program
+    nasional oleh beberapa pihak dengan syarat kualifikasi yang tinggi sekalipun.
+    Sebut saja Banper Kemenparekraf, Dana Indonesiana, Fasilitasi Kemendikbud
+    Ristek dan beberapa fasilitasi tingkat nasional lainnya. Pencapaian ini tentu
+    diharapkan mampu berhasil meningkatkan kualitas komunitas film lainnya, baik
+    melalui cara kolaboratif, maupun persaingan sekalipun. Semoga!
+
+  </GridItem>
+</GridContainer>
+
+<hr />
+
+<Text as="h3" mt={["40px", null, "60px"]} mb={["20px !important", null, "32px !important"]}> Karya-karya pilihan Kota Medan </Text>
+
+<SimpleGrid columns={[1, null, 2]} spacingX={34} spacingY={10}>
+  <ImagePlay href="https://rangkai.id/?browse=293">
+    <Box 
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'anak-danau-thumbnail-master'))}
+      alt={'angkara-thumbnail-master'}
+      border="2px solid"
+      borderColor="brandRed.500"
+    />
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=300">
+    <Box 
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'Bekal-Fisabilillah-Production'))}
+      alt={'bukan-kupu-kupu-malam'}
+      border="2px solid"
+      borderColor="brandRed.500"
+    />
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=298">
+    <Box 
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'Didekatmu-Fisabilillah-Production'))}
+      alt={'kambing-hitam-thumbnail-master'}
+      border="2px solid"
+      borderColor="brandRed.500"
+    />
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=299">
+    <Box 
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'Setelah-Akad-IqbalFahlevi'))}
+      alt={'kayon-thumbnail-master'}
+      border="2px solid"
+      borderColor="brandRed.500"
+    />
+  </ImagePlay>
+</SimpleGrid>
