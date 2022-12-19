@@ -36,7 +36,7 @@ function How({ data }) {
               color="brandRed.500"
             >
               Pertanyaan tentang cakupan sinema Indonesia seringnya
-              terbentur pada ketersediaan informasi.
+              terbentur pada ketersediaan informasi
             </Heading>
 
             <Text fontSize="16px" mb="24px">
