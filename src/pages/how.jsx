@@ -8,10 +8,13 @@ import {
 import React from 'react';
 import GridContainer, { GridItemLeftContent } from '../components/GridContainer';
 import Layout from '../components/Layout';
+import Lightbox from '../components/Lightbox';
 import SEO from '../components/SEO';
+import SquareImage from '../components/SquareImage';
 
 function How({ data }) {
   const howBanner = getImage(data.file);
+  const images = data.allFile.nodes;
 
   return (
     <Layout>
@@ -52,6 +55,33 @@ function How({ data }) {
             <Text fontSize={['18px', null, '24px']} fontWeight="700" color="brandBlue.500">
               Landasan Program
             </Text>
+          </GridItem>
+        </GridContainer>
+        <GridContainer>
+          <GridItemLeftContent>
+            <Lightbox
+              image={images.find((item) => item.name === 'Produksi-film-Sekarang-Kita-Jalan-Bersama')}
+              alt="Produksi film Sekarang Kita Jalan Bersama"
+              mb="16px"
+              size="2xl"
+            >
+              <SquareImage
+                image={getImage(images.find((item) => item.name === 'Produksi-film-Sekarang-Kita-Jalan-Bersama'))}
+                alt="Produksi film Sekarang Kita Jalan Bersama"
+              />
+            </Lightbox>
+            <Text
+              fontSize="16px"
+              lineHeight="shorter"
+              color="brandBlue.500"
+              fontWeight={700}
+              fontStyle="italic"
+              textAlign="left"
+            >
+              Produksi film &quot;Sekarang Kita Jalan Bersama&quot;
+            </Text>
+          </GridItemLeftContent>
+          <GridItem>
             <Text fontSize="16px" mb="24px">
               Objek penelitiannya: komunitas film. Dengan rupa-rupa dinamika sosial yang ada
               di Indonesia, istilah &apos;komunitas&apos;
@@ -86,7 +116,34 @@ function How({ data }) {
             </Text>
 
             <Divider opacity={1} borderColor="brandRed.500" mb="32px" />
-
+          </GridItem>
+        </GridContainer>
+        <GridContainer>
+          <GridItemLeftContent>
+            <Lightbox
+              image={images.find((item) => item.name === 'BasriandSalma2022')}
+              alt="Proses produksi film Basri and Salma in a never-ending comedy pada tahun 2022"
+              mb="16px"
+              size="2xl"
+            >
+              <SquareImage
+                image={getImage(images.find((item) => item.name === 'BasriandSalma2022'))}
+                alt="Proses produksi film Basri and Salma in a never-ending comedy pada tahun 2022"
+              />
+            </Lightbox>
+            <Text
+              fontSize="16px"
+              lineHeight="shorter"
+              color="brandBlue.500"
+              fontWeight={700}
+              fontStyle="italic"
+              textAlign="left"
+            >
+              Proses produksi film Basri and Salma in a
+              never-ending comedy pada tahun 2022
+            </Text>
+          </GridItemLeftContent>
+          <GridItem>
             <Text fontSize={['18px', null, '24px']} fontWeight="700" color="brandBlue.500">
               Pelaksanaan Program
             </Text>
@@ -120,7 +177,34 @@ function How({ data }) {
               menggali wawasan mengenai keberdayaan komunitas terkait sumber daya,
               rentang kegiatan, peningkatan kapasitas, hingga pengelolaan risiko.
             </Text>
-
+          </GridItem>
+        </GridContainer>
+        <GridContainer>
+          <GridItemLeftContent>
+            <Lightbox
+              image={images.find((item) => item.name === 'Pemutaran-Film-Semarang')}
+              alt="Pemutaran Film Secara Luring Apresiasi Film Indonesia 2022 di Semarang"
+              mb="16px"
+              size="2xl"
+            >
+              <SquareImage
+                image={getImage(images.find((item) => item.name === 'Pemutaran-Film-Semarang'))}
+                alt="Pemutaran Film Secara Luring Apresiasi Film Indonesia 2022 di Semarang"
+              />
+            </Lightbox>
+            <Text
+              fontSize="16px"
+              lineHeight="shorter"
+              color="brandBlue.500"
+              fontWeight={700}
+              fontStyle="italic"
+              textAlign="left"
+            >
+              Pemutaran Film Secara Luring Apresiasi Film
+              Indonesia 2022 di Semarang
+            </Text>
+          </GridItemLeftContent>
+          <GridItem>
             <Text fontSize="16px" mb="24px">
               Selama proses pendataan, tim riset turut menghimpun arsip foto dan karya
               film. Materi arsip dipilah untuk pendamping tulisan hasil pendataan kualitatif,
@@ -152,6 +236,14 @@ export const query = graphql`
       name
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED)
+      }
+    }
+    allFile(filter: {relativeDirectory: {eq: "how"}}) {
+      nodes {
+        name
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
       }
     }
   }
