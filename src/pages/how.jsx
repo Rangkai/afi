@@ -10,7 +10,6 @@ import GridContainer, { GridItemLeftContent } from '../components/GridContainer'
 import Layout from '../components/Layout';
 import Lightbox from '../components/Lightbox';
 import SEO from '../components/SEO';
-import SquareImage from '../components/SquareImage';
 
 function How({ data }) {
   const howBanner = getImage(data.file);
@@ -59,14 +58,23 @@ function How({ data }) {
         </GridContainer>
         <GridContainer>
           <GridItemLeftContent>
+            <Text
+              fontSize="24px"
+              lineHeight="shorter"
+              color="brandRed.500"
+              fontWeight={800}
+              textAlign="left"
+            >
+              Capaian Riset
+            </Text>
             <Lightbox
-              image={images.find((item) => item.name === 'Produksi-film-Sekarang-Kita-Jalan-Bersama')}
+              image={images.find((item) => item.name === 'Capaian')}
               alt="Produksi film Sekarang Kita Jalan Bersama"
               mb="16px"
               size="2xl"
             >
-              <SquareImage
-                image={getImage(images.find((item) => item.name === 'Produksi-film-Sekarang-Kita-Jalan-Bersama'))}
+              <GatsbyImage
+                image={getImage(images.find((item) => item.name === 'Capaian-thumb'))}
                 alt="Produksi film Sekarang Kita Jalan Bersama"
               />
             </Lightbox>
@@ -78,7 +86,18 @@ function How({ data }) {
               fontStyle="italic"
               textAlign="left"
             >
-              Produksi film &quot;Sekarang Kita Jalan Bersama&quot;
+              Seiring dengan lebih tinggi dari sisi
+              ekonomi, komunitas produksi mendominasi
+              jenis komunitas yang terdata. 54 dari 79
+              komunitas merupakan komunitas produksi
+              (68%). Komunitas produksi dan ekshibisi
+              berjumlah 15 (19%). Terakhir, komunitas
+              ekshibisi hanya berjumlah 10 (13%).
+              Analisis riset akan dibagi menjadi dua
+              kategori besar: Produksi dan Ekshibisi –
+              dimana komunitas produksi berjumlah
+              69 komunitas dan komunitas ekshibisi
+              berjumlah 25 komunitas.
             </Text>
           </GridItemLeftContent>
           <GridItem>
@@ -114,40 +133,10 @@ function How({ data }) {
               yang kokoh untuk pemajuan budaya sinema. Rekam jejak produksi dan ekshibisi
               film pula yang menjadi dasar kami memilih sepuluh kota sasaran.
             </Text>
-
             <Divider opacity={1} borderColor="brandRed.500" mb="32px" />
-          </GridItem>
-        </GridContainer>
-        <GridContainer>
-          <GridItemLeftContent>
-            <Lightbox
-              image={images.find((item) => item.name === 'BasriandSalma2022')}
-              alt="Proses produksi film Basri and Salma in a never-ending comedy pada tahun 2022"
-              mb="16px"
-              size="2xl"
-            >
-              <SquareImage
-                image={getImage(images.find((item) => item.name === 'BasriandSalma2022'))}
-                alt="Proses produksi film Basri and Salma in a never-ending comedy pada tahun 2022"
-              />
-            </Lightbox>
-            <Text
-              fontSize="16px"
-              lineHeight="shorter"
-              color="brandBlue.500"
-              fontWeight={700}
-              fontStyle="italic"
-              textAlign="left"
-            >
-              Proses produksi film Basri and Salma in a
-              never-ending comedy pada tahun 2022
-            </Text>
-          </GridItemLeftContent>
-          <GridItem>
             <Text fontSize={['18px', null, '24px']} fontWeight="700" color="brandBlue.500">
               Pelaksanaan Program
             </Text>
-
             <Text fontSize="16px" mb="24px">
               Penelitian Apresiasi Film Indonesia 2022 berlaku secara kuantitatif dan kualitatif.
               Kerangka, rencana, dan dokumen kerja riset dirumuskan melalui focus group
@@ -159,37 +148,29 @@ function How({ data }) {
               presentasi setiap narasumber turut menjadi bahan pertimbangan tim riset dalam
               menyusun rencana kerja.
             </Text>
-
-            <Text fontSize="16px" mb="24px">
-              Pengambilan data kuantitatif dilaksanakan dari Juli hingga Oktober
-              menggunakan metode purposive sampling. Berkolaborasi dengan pegiat
-              komunitas di setiap kota, tim riset menyebarkan kuesioner untuk diisi oleh
-              komunitas yang berkegiatan produksi dan/atau ekshibisi film. Sampel dibatasi
-              pada komunitas yang punya karya atau kegiatan pada tiga tahun terakhir. Hasil
-              dari pendataan ini kemudian diolah sebagai bahan untuk infografis dan tulisan
-              panorama perfilman setiap kota.
-            </Text>
-
-            <Text fontSize="16px" mb="24px">
-              Pendataan kualitatif berlangsung dari Juli hingga September. Pendataan ini
-              turut melibatkan pegiat komunitas di setiap kota. Tim riset berkolaborasi dengan
-              penulis lokal untuk mewawancarai lima narasumber dari setiap kota, untuk
-              menggali wawasan mengenai keberdayaan komunitas terkait sumber daya,
-              rentang kegiatan, peningkatan kapasitas, hingga pengelolaan risiko.
-            </Text>
           </GridItem>
         </GridContainer>
         <GridContainer>
           <GridItemLeftContent>
+            <Text
+              fontSize="24px"
+              lineHeight="shorter"
+              color="brandRed.500"
+              fontWeight={800}
+              textAlign="left"
+            >
+              Jumlah komunitas per kota
+              (Persentase)
+            </Text>
             <Lightbox
-              image={images.find((item) => item.name === 'Pemutaran-Film-Semarang')}
-              alt="Pemutaran Film Secara Luring Apresiasi Film Indonesia 2022 di Semarang"
+              image={images.find((item) => item.name === 'Jumlah')}
+              alt="Produksi film Sekarang Kita Jalan Bersama"
               mb="16px"
               size="2xl"
             >
-              <SquareImage
-                image={getImage(images.find((item) => item.name === 'Pemutaran-Film-Semarang'))}
-                alt="Pemutaran Film Secara Luring Apresiasi Film Indonesia 2022 di Semarang"
+              <GatsbyImage
+                image={getImage(images.find((item) => item.name === 'Jumlah-thumb'))}
+                alt="Produksi film Sekarang Kita Jalan Bersama"
               />
             </Lightbox>
             <Text
@@ -200,11 +181,61 @@ function How({ data }) {
               fontStyle="italic"
               textAlign="left"
             >
-              Pemutaran Film Secara Luring Apresiasi Film
-              Indonesia 2022 di Semarang
+              Dari 10 kota yang terdata, sekitar 53% dari
+              sampel penelitian berlokasi di Pulau Jawa.
+            </Text>
+            <Text
+              fontSize="16px"
+              lineHeight="shorter"
+              color="brandBlue.500"
+              fontWeight={700}
+              fontStyle="italic"
+              textAlign="left"
+            >
+              Semarang menjadi kota dengan jumlah
+              komunitas paling tinggi (20%) di tahun ini.
+              Dari temuan kualitatif, sineas Semarang
+              banyak yang berstatus pelajar dan
+              mahasiswa. Untuk pelajar SMK dan
+              Mahasiswa, ada kebutuhan untuk membuat
+              film dan/atau ekshibisi dari intitusi
+              pendidikan masing-masing. Oleh karena
+              itu, mereka yang tertarik lebih jauh pada
+              perfilman bergabung di komunitas untuk
+              menjawab kebutuhan tersebut.
+            </Text>
+            <Text
+              fontSize="16px"
+              lineHeight="shorter"
+              color="brandBlue.500"
+              fontWeight={700}
+              fontStyle="italic"
+              textAlign="left"
+            >
+              Capaian Kota Kupang paling rendah di
+              antara kota lainnya. Hanya 3 komunitas
+              (4%) yang terdata dari Kupang. Ekosistem
+              yang baru bertumbuh menjadi salah satu
+              penyebab sedikitnya komunitas di Kupang.
             </Text>
           </GridItemLeftContent>
           <GridItem>
+            <Text fontSize="16px" mb="24px">
+              Pengambilan data kuantitatif dilaksanakan dari Juli hingga Oktober
+              menggunakan metode purposive sampling. Berkolaborasi dengan pegiat
+              komunitas di setiap kota, tim riset menyebarkan kuesioner untuk diisi oleh
+              komunitas yang berkegiatan produksi dan/atau ekshibisi film. Sampel dibatasi
+              pada komunitas yang punya karya atau kegiatan pada tiga tahun terakhir. Hasil
+              dari pendataan ini kemudian diolah sebagai bahan untuk infografis dan tulisan
+              panorama perfilman setiap kota.
+            </Text>
+            <Text fontSize="16px" mb="24px">
+              Pendataan kualitatif berlangsung dari Juli hingga September. Pendataan ini
+              turut melibatkan pegiat komunitas di setiap kota. Tim riset berkolaborasi dengan
+              penulis lokal untuk mewawancarai lima narasumber dari setiap kota, untuk
+              menggali wawasan mengenai keberdayaan komunitas terkait sumber daya,
+              rentang kegiatan, peningkatan kapasitas, hingga pengelolaan risiko.
+            </Text>
             <Text fontSize="16px" mb="24px">
               Selama proses pendataan, tim riset turut menghimpun arsip foto dan karya
               film. Materi arsip dipilah untuk pendamping tulisan hasil pendataan kualitatif,
