@@ -1,0 +1,49 @@
+.custom-slick {
+  margin-bottom: 50px !important;
+  .slick-track {
+    padding: 32px 0;
+    .slick-center .slick-box-item {
+      background: #61d8ff;
+      border-color: #61d8ff;
+      transform: scale(1.2);
+      hr {
+        border-color: #000000;
+      }
+    }
+    .slick-box-title {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+
+    }
+    .slick-box-caption {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+  .slick-dots {
+    bottom: -40px;
+    li button::before{
+      font-size: 14px;
+      color: #ccc;
+      opacity: 1;
+    }
+    li.slick-active button::before{
+      color: var(--chakra-colors-brandPrimary-500);
+    }
+  } 
+  .slick-prev, .slick-next {
+    border-radius: 50%;
+    width: 29px;
+    height: 29px;
+    z-index: 1;
+    &::before {
+      font-size: 36px;
+      line-height: 1;
+      color: #000;
+    }
+  }
+}

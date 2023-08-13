@@ -52,7 +52,7 @@ function ScrollOnTop() {
     >
       <Flex
         position="fixed"
-        bg="brandBlue.500"
+        bg="brandPrimary.500"
         bottom="40px"
         right={['20px', null, '40px']}
         zIndex={2}

@@ -1,7 +1,7 @@
 {
-  "name": "afi-2022",
+  "name": "afi-2023",
   "private": true,
-  "description": "afi-2022-project",
+  "description": "afi-2023-project",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
@@ -31,7 +31,8 @@
     "gatsby-transformer-remark": "^5.24.0",
     "gatsby-transformer-sharp": "^4.24.0",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-slick": "^0.29.0"
   },
   "devDependencies": {
     "eslint": "^7.32.0",

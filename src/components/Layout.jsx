@@ -1,4 +1,4 @@
-import { ChakraProvider } from '@chakra-ui/react';
+import { Box, ChakraProvider } from '@chakra-ui/react';
 import React, { lazy, Suspense } from 'react';
 import '../styles/global.scss';
 import theme from '../theme/theme';
@@ -13,7 +13,9 @@ function Layout({ children }) {
       <Suspense fallback={null}>
         <Header />
         <ScrollOnTop />
-        {children}
+        <Box mt={107} position="relative">
+          {children}
+        </Box>
         <Footer />
       </Suspense>
     </ChakraProvider>

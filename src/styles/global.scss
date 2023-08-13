@@ -1,9 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300;400;700&family=Plus+Jakarta+Sans:wght@400;700;800&display=swap");
+@import './slick.scss';
 
-$text-font: 'Raleway';
+// $text-font: 'Raleway';
+$text-font: 'Plus Jakarta Sans', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 body, html {
   font-family: $text-font, sans-serif;
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Azeret Mono', monospace;
+  font-weight: 400;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(97, 215, 255, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 0 15px rgba(97, 215, 255, 0);
+  }
 }

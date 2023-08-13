@@ -1,14 +1,36 @@
 import {
-  Box, Button, Container, Flex,
-  Heading, Link, Modal, ModalBody, ModalCloseButton,
+  Box, Button, Container, Divider, Flex,
+  Heading, Image, Link, List, ListItem, Modal, ModalBody, ModalCloseButton,
   ModalContent, ModalOverlay, SimpleGrid, Text, useDisclosure, useMediaQuery,
 } from '@chakra-ui/react';
 import { graphql, Link as LinkGatsby } from 'gatsby';
 import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 import React, { useState } from 'react';
+import Slider from 'react-slick';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import useLayoutFormatter from '../hooks/useLayout';
+import logoBlue from '../images/logo-blue.svg';
+import mapNew from '../images/map_new.svg';
+import ButtonLink from '../components/ButtonLink';
+import Arrow from '../components/Arrow';
+
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  centerMode: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+};
 
 export default function Home({ data }) {
   const initialSelectedCity = {
@@ -55,6 +77,326 @@ export default function Home({ data }) {
   const bannerMobile = getImage(imageData('home_banner_mobile'));
   const thumbnailBanner = getImage(imageData('thumbnail_banner'));
   const thumbnailBannerMobile = getImage(imageData('thumbnail_banner_mobile'));
+  const heroBanner = getImage(imageData('hero-banner'));
+  const gridFilm = getImage(imageData('grid-film'));
+  const program = getImage(imageData('program'));
+  if (true) {
+    return (
+      <Layout>
+        <Container paddingInlineStart={['20px', null, '12px']} paddingInlineEnd={['20px', null, '12px']}>
+          <Flex
+            as="section"
+            flexDir={['column', null, 'row']}
+            justifyContent={['center', null, 'space-between']}
+            background="brandPrimary.500"
+          >
+            <Box position="relative" w={['100%', null, getCol(6)]}>
+              <Box
+                as={GatsbyImage}
+                quality={100}
+                image={heroBanner}
+                alt="home_banner"
+                layout="full_width"
+                w="100%"
+              />
+              <Image
+                src={logoBlue}
+                position="absolute"
+                w="100px"
+                h="100px"
+                top="50%"
+                left="50%"
+                transform="translate(-50%, -50%)"
+                zIndex={1}
+              />
+            </Box>
+            <Box w={['100%', null, getCol(5)]}>
+              <Flex flexDir="column" justifyContent="center" p={['30px', null, '0 80px 0 0']} h="100%">
+                <Heading as="h2" fontSize={30} lineHeight={[1.2, null, 1.33]}>
+                  TAK KENAL
+                  <br />
+                  MAKA TAK TAYANG
+                </Heading>
+                <Text>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quia aliquid magni nostrum aspernatur ducimus et itaque eaque qui
+                  nemo atque reprehenderit amet libero, ea dignissimos tempore consequuntur
+                  expedita mollitia ratione iure. Sequi iste tenetur consectetur itaque
+                  nihil consequuntur optio autem sapiente natus, blanditiis dolorum unde
+                  deleniti repellendus culpa perferendis at.
+                </Text>
+              </Flex>
+            </Box>
+          </Flex>
+          <Flex
+            as="section"
+            flexDir={['column', null, 'row']}
+            mt="100px"
+            borderTop="2px solid #000000"
+            pt="1rem"
+          >
+            <Box w={['100%', null, getCol(7)]}>
+              <Heading as="h2" textTransform="uppercase" fontSize="30px">
+                Program
+              </Heading>
+              <List>
+                <ListItem mb="8px">
+                  <ButtonLink to="what">
+                    Apa dan Siapa
+                  </ButtonLink>
+                </ListItem>
+                <ListItem>
+                  <ButtonLink to="how">
+                    Mengapa dan Bagaimana
+                  </ButtonLink>
+                </ListItem>
+              </List>
+            </Box>
+            <Box w={['100%', null, getCol(5)]} pr={['0px', null, '3rem']} pt={['48px', null, '0']}>
+              <Text>
+                Untuk mengapresiasi film Indonesia seluas-luasnya, perlu diusahakan berbagai
+                cara untuk memperkenalkan keragamannya. APRESIASI FILM INDONESIA 2022 adalah
+                upaya untuk menelusuri akar dan ranting budaya perfilman di Indonesia melalui
+                kolaborasi pendataan dan kuratorial. Program ini dirintis oleh Kementerian
+                Pendidikan, Kebudayaan, Riset, dan Teknologi dan dikelola oleh
+                Cinema Poetica dan Rangkai.
+              </Text>
+            </Box>
+          </Flex>
+          <Flex
+            as="section"
+            flexDir={['column', null, 'row']}
+            justifyContent="space-between"
+            mt="100px"
+            borderY="2px solid #000000"
+            borderBottomWidth={['0', null, '2px']}
+          >
+            <Box w={['100%', null, getCol(6)]} pt="1rem">
+              <Heading as="h2" textTransform="uppercase" fontSize="30px">
+                Ekosistem Perfilman
+              </Heading>
+              <Text>
+                Lima belas kota yang menjadi lokasi penelitian ditentukan berdasarkan
+                volume kegiatan produksi dan ekshibisi lokal selama tiga tahun terakhir
+              </Text>
+            </Box>
+            <Box w={['100%', null, getCol(3)]}>
+              <ButtonLink to="/ecosystem" wrapped>
+                Selengkapnya
+              </ButtonLink>
+            </Box>
+          </Flex>
+          <Box position="relative" my="3rem">
+            <Image
+              src={mapNew}
+            />
+            <Box
+              position="absolute"
+              top={['-25%', null, '-8%']}
+              transform={['scale(0.4) translate(-20px, 10px)', null, 'unset']}
+              _hover={{
+                cursor: 'pointer',
+              }}
+              _after={{
+                content: '""',
+                position: 'absolute',
+                bottom: '-20px',
+                left: 0,
+                right: 0,
+                margin: '0 auto',
+                width: '12px',
+                height: '12px',
+                borderRadius: '50%',
+                backgroundColor: '#000000',
+                animation: 'pulse-animation 2s infinite',
+                filter: 'brightness(0)',
+              }}
+            >
+              <Arrow
+                w="25px"
+                h="25px"
+                ml="0"
+                color="dark"
+              />
+            </Box>
+            <Box
+              position="absolute"
+              bottom={['8%']}
+              left="63%"
+              transform={['scale(0.4) translate(-20px, 10px)', null, 'unset']}
+              _hover={{
+                cursor: 'pointer',
+              }}
+              _after={{
+                content: '""',
+                position: 'absolute',
+                bottom: '-20px',
+                left: 0,
+                right: 0,
+                margin: '0 auto',
+                width: '12px',
+                height: '12px',
+                borderRadius: '50%',
+                backgroundColor: '#000000',
+                animation: 'pulse-animation 2s infinite',
+                filter: 'brightness(0)',
+              }}
+            >
+              <Arrow
+                w="25px"
+                h="25px"
+                ml="0"
+                color="dark"
+              />
+            </Box>
+            <Box
+              position="absolute"
+              bottom={['20%', null, '25%']}
+              left="28%"
+              transform={['scale(0.4) translate(-20px, 10px)', null, 'unset']}
+              _hover={{
+                cursor: 'pointer',
+              }}
+              _after={{
+                content: '""',
+                position: 'absolute',
+                bottom: '-20px',
+                left: 0,
+                right: 0,
+                margin: '0 auto',
+                width: '18px',
+                height: '18px',
+                borderRadius: '50%',
+                backgroundColor: '#007399',
+                animation: 'pulse-animation 2s infinite',
+              }}
+            >
+              <Arrow
+                w="35px"
+                h="35px"
+                ml="0"
+              />
+            </Box>
+          </Box>
+          <Box>
+            <Slider className="custom-slick" {...settings}>
+              {[1, 2, 3, 4, 5, 6].map((item) => (
+                <div key={item}>
+                  <Box
+                    className="slick-box-item"
+                    p="30px"
+                    mx="15px"
+                    border="1px solid #000000"
+                    transition=".2s all ease-in-out"
+                    width="230px"
+                  >
+                    <Box
+                      as={GatsbyImage}
+                      quality={100}
+                      image={program}
+                      alt="program"
+                    />
+                    <Text
+                      mt="20px"
+                      fontFamily="Azeret Mono"
+                    >
+                      Banda Aceh
+                      {' '}
+                      {item}
+                    </Text>
+                    <Text
+                      fontSize="22px"
+                      fontWeight="800"
+                      lineHeight="26.4px"
+                      className="slick-box-title"
+                    >
+                      Banda Aceh Title
+                    </Text>
+                    <Divider my="12px" />
+                    <Text className="slick-box-caption">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Maiores aliquid corporis accusantium libero dolores veniam hic perferendis
+                    </Text>
+                  </Box>
+                </div>
+              ))}
+            </Slider>
+          </Box>
+          <Flex
+            as="section"
+            justifyContent="space-between"
+            flexDir={['column', null, 'row']}
+            mt="100px"
+            borderY="2px solid #000000"
+            borderBottomWidth={['0', null, '2px']}
+          >
+            <Box w={['100%', null, getCol(6)]} py="1rem">
+              <Heading as="h2" textTransform="uppercase" fontSize="30px">
+                Hasil Riset
+              </Heading>
+              <Text>
+                Ada dua capaian yang diharapkan. Melalui kolaborasi penelitian,
+                program ini menyajikan himpunan wawasan perihal kegiatan produksi dan ekshibisi
+                di tingkat lokal, yang seringnya terjadi di luar lingkup bioskop dan industri.
+              </Text>
+            </Box>
+            <Box w={['100%', null, getCol(3)]}>
+              <ButtonLink to="/" wrapped wrapperProps={{ mb: ['20px', null, 0] }}>
+                Tahun 2022
+              </ButtonLink>
+            </Box>
+            <Box w={['100%', null, getCol(3)]}>
+              <ButtonLink to="/" wrapped>
+                Tahun 2023
+              </ButtonLink>
+            </Box>
+          </Flex>
+        </Container>
+
+        <Box as="section" mt="100px">
+          <Box
+            as={GatsbyImage}
+            quality={100}
+            image={gridFilm}
+            objectFit={['cover', null, 'initial']}
+            alt="grid film"
+            w="100vw"
+            h={['300px', null, 'auto']}
+            layout="full_width"
+          />
+        </Box>
+        <Box bgColor="fossil.500">
+          <Container py="24px" paddingInlineStart={['20px', null, '12px']} paddingInlineEnd={['20px', null, '12px']}>
+            <Flex
+              as="section"
+              flexDir={['column', null, 'row']}
+            >
+              <Box w={['100%', null, getCol(6)]}>
+                <Heading
+                  as="h2"
+                  color="white"
+                  textTransform="uppercase"
+                  mb={['48px', null, '0']}
+                >
+                  Karya Pilihan
+                </Heading>
+                <Text color="white">
+                  Tonton karya-karya pilihan Apresiasi Film Indonesia 2023
+                </Text>
+              </Box>
+              <Box w={['100%', null, getCol(6)]} alignSelf="center">
+                <Box py="16px" px={['16px', null, '48px']} bgColor="knit.500">
+                  <ButtonLink to="/" color="white" iconColor="light">
+                    Tonton Gratis di Rangkai
+                  </ButtonLink>
+                </Box>
+              </Box>
+            </Flex>
+          </Container>
+        </Box>
+      </Layout>
+    );
+  }
 
   return (
     <Layout>
