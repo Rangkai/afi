@@ -34,7 +34,7 @@ const slideDown = keyframes`
   }
 `;
 
-const StyledListItem = styled.li`
+const StyledListItem = styled(Box)`
   list-style: none;
   border-radius: 10px 10px 0 0;
   position: relative;
@@ -99,7 +99,7 @@ const StyledListItemChild = styled.li`
 
 function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [isMd] = useMediaQuery('(min-width: 768px)');
+  const [isDesktop] = useMediaQuery('(min-width: 1400px)');
 
   const data = useStaticQuery(graphql`
     query NavbarQuery {
@@ -185,7 +185,7 @@ function Header() {
     },
     {
       id: 3,
-      text: 'Ekosistem',
+      text: 'Ekosistem Perfilman',
       link: '/ecosystem',
       children: data.cities.nodes.map((node) => ({
         id: node.id,
@@ -195,7 +195,7 @@ function Header() {
     },
     {
       id: 4,
-      text: 'RTL',
+      text: 'Tindak Lanjut',
       link: '/',
       children: [
         {
@@ -212,28 +212,37 @@ function Header() {
     },
     {
       id: 5,
-      text: 'Semesta',
+      text: 'Semesta Data',
       link: '/',
     },
     {
       id: 6,
-      text: 'Kemdikbud',
+      text: 'Program Kemdikbudristek',
       link: '/',
       children: [
         {
           id: 1,
           text: 'Dana Indonesiana',
-          link: '/',
+          external: true,
+          link: 'https://danaindonesiana.kemdikbud.go.id/berita/tentang/',
         },
         {
           id: 2,
-          text: 'Wirausaha Merdeka',
-          link: '/',
+          text: 'Indonesiana Film',
+          external: true,
+          link: 'https://kebudayaan.kemdikbud.go.id/ ',
         },
         {
           id: 3,
-          text: 'Merdeka Belajar',
-          link: '/',
+          text: 'Layar Indonesia',
+          external: true,
+          link: 'https://kebudayaan.kemdikbud.go.id/',
+        },
+        {
+          id: 4,
+          text: 'Indonesia TV',
+          external: true,
+          link: 'https://indonesiana.tv/',
         },
       ],
     },
@@ -259,7 +268,7 @@ function Header() {
         background="#FFFFFF"
       >
         <Container>
-          <Flex alignItems="center" justifyContent={['space-between', null, 'flex-start']}>
+          <Flex alignItems="center" justifyContent={{ base: 'space-between', '2xl': 'flex-start' }}>
             <LinkBox as={LinkGatsby} to="/" width={['130px', null, '300px']} minW={['130px', null, '300px']}>
               <Image
                 src={logo}
@@ -267,6 +276,7 @@ function Header() {
                 width={300}
                 height="auto"
                 display={['none', null, 'block']}
+                my="30px"
               />
               <Image
                 src={logoMobile}
@@ -280,13 +290,15 @@ function Header() {
               as="nav"
               justifyContent="flex-end"
               width="100%"
-              display={['none', null, 'flex']}
+              display={{ base: 'none', '2xl': 'flex' }}
             >
               <Flex
+                justifyContent="flex-end"
                 as="ul"
               >
                 {navListNew.map((item) => (
                   <StyledListItem
+                    as="li"
                     key={item.id}
                     hasChild={!!item.children?.length}
                   >
@@ -294,7 +306,7 @@ function Header() {
                       fontSize={16}
                       fontWeight={400}
                       letterSpacing=".5px"
-                      px="20px"
+                      px="12px"
                       display="block"
                       _hover={{
                         color: 'var(--chakra-colors-brandPrimary-600) !important',
@@ -325,7 +337,7 @@ function Header() {
               colorScheme="gray"
               p="2px"
               height="max-content"
-              display={['block', null, 'none']}
+              display={{ base: 'block', '2xl': 'none' }}
               id="buttonMenu"
               minH="unset"
               aria-label="buttonMenu"
@@ -334,17 +346,25 @@ function Header() {
             </Button>
           </Flex>
         </Container>
-        {!isMd && (
-          <Drawer isOpen={isOpen} onClose={onClose} placement="right" size="full">
+        {!isDesktop && (
+          <Drawer
+            isOpen={isOpen}
+            onClose={onClose}
+            placement="right"
+            size={['full', null, 'sm']}
+            blockScrollOnMount
+          >
             <DrawerOverlay />
             <DrawerContent>
               <DrawerCloseButton color="#000000" opacity="0.5" />
-              <DrawerHeader pt="16px">
+              <DrawerHeader p="16px">
                 <Image
                   src={logo}
                   alt="afi_logo"
                   width={250}
                   height="auto"
+                  mt="10px"
+                  ml="10px"
                 />
               </DrawerHeader>
               <DrawerBody p="16px">
@@ -353,15 +373,16 @@ function Header() {
                   pb="20px"
                 >
                   {navListNew.map((nav) => (
-                    <Box as="li" my="5px" listStyleType="none" key={nav.id}>
+                    <Box as="li" py={['5px', null, '25px']} listStyleType="none" key={nav.id}>
                       <Link
                         as={LinkGatsby}
                         to={nav.link}
                         target={nav?.external ? '_blank' : ''}
-                        p="5px 10px"
-                        color="brandPrimary.500"
+                        p={['5px 10px', null, null, '0 20px']}
+                        color={['brandPrimary.500', null, null, '#000000']}
                         fontWeight="500"
                         display="block"
+                        transition=".2s all ease-in-out"
                       >
                         {nav.text}
                       </Link>
@@ -374,11 +395,12 @@ function Header() {
                                 to={child.link}
                                 target={child?.external ? '_blank' : ''}
                                 p="10px"
-                                pl="40px"
+                                pl={['40px', null, null, '25px']}
                                 color="#0000000"
                                 fontWeight="500"
                                 display="block"
                                 borderBottom="1px solid #000000"
+                                transition=".2s all ease-in-out"
                               >
                                 {child.text}
                               </Link>
@@ -472,7 +494,7 @@ function Header() {
           </Button>
         </Flex>
       </Container>
-      {!isMd && (
+      {!isDesktop && (
         <Drawer isOpen={isOpen} onClose={onClose} placement="right" size="full">
           <DrawerOverlay />
           <DrawerContent maxW="calc(100vw - 12px)">

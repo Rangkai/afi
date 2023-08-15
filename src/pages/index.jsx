@@ -24,7 +24,13 @@ const settings = {
   centerMode: true,
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 768,
       settings: {
         slidesToShow: 1,
       },
@@ -112,7 +118,11 @@ export default function Home({ data }) {
             </Box>
             <Box w={['100%', null, getCol(5)]}>
               <Flex flexDir="column" justifyContent="center" p={['30px', null, '0 80px 0 0']} h="100%">
-                <Heading as="h2" fontSize={30} lineHeight={[1.2, null, 1.33]}>
+                <Heading
+                  as="h2"
+                  fontSize={['30px', '25px', null, null, '36px']}
+                  lineHeight={[1.2, null, 1.33]}
+                >
                   TAK KENAL
                   <br />
                   MAKA TAK TAYANG
@@ -120,10 +130,7 @@ export default function Home({ data }) {
                 <Text>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Quia aliquid magni nostrum aspernatur ducimus et itaque eaque qui
-                  nemo atque reprehenderit amet libero, ea dignissimos tempore consequuntur
-                  expedita mollitia ratione iure. Sequi iste tenetur consectetur itaque
-                  nihil consequuntur optio autem sapiente natus, blanditiis dolorum unde
-                  deleniti repellendus culpa perferendis at.
+                  nemo atque reprehenderit amet libero, ea dignissimos tempore
                 </Text>
               </Flex>
             </Box>
@@ -136,7 +143,11 @@ export default function Home({ data }) {
             pt="1rem"
           >
             <Box w={['100%', null, getCol(7)]}>
-              <Heading as="h2" textTransform="uppercase" fontSize="30px">
+              <Heading
+                as="h2"
+                textTransform="uppercase"
+                fontSize={['30px', '25px', null, null, '36px']}
+              >
                 Program
               </Heading>
               <List>
@@ -172,7 +183,11 @@ export default function Home({ data }) {
             borderBottomWidth={['0', null, '2px']}
           >
             <Box w={['100%', null, getCol(6)]} pt="1rem">
-              <Heading as="h2" textTransform="uppercase" fontSize="30px">
+              <Heading
+                as="h2"
+                textTransform="uppercase"
+                fontSize={['30px', '25px', null, null, '36px']}
+              >
                 Ekosistem Perfilman
               </Heading>
               <Text>
@@ -180,7 +195,7 @@ export default function Home({ data }) {
                 volume kegiatan produksi dan ekshibisi lokal selama tiga tahun terakhir
               </Text>
             </Box>
-            <Box w={['100%', null, getCol(3)]}>
+            <Box w={['100%', null, getCol(4), getCol(3)]}>
               <ButtonLink to="/ecosystem" wrapped>
                 Selengkapnya
               </ButtonLink>
@@ -330,8 +345,13 @@ export default function Home({ data }) {
             borderY="2px solid #000000"
             borderBottomWidth={['0', null, '2px']}
           >
-            <Box w={['100%', null, getCol(6)]} py="1rem">
-              <Heading as="h2" textTransform="uppercase" fontSize="30px">
+            <Box w={['100%', null, getCol(6)]} py="1rem" pr={{ md: '24px' }}>
+              <Heading
+                as="h2"
+                textTransform="uppercase"
+                fontSize={['30px', '25px', null, null, '36px']}
+                mb="0"
+              >
                 Hasil Riset
               </Heading>
               <Text>
@@ -377,6 +397,7 @@ export default function Home({ data }) {
                   color="white"
                   textTransform="uppercase"
                   mb={['48px', null, '0']}
+                  fontSize={['30px', '25px', null, null, '36px']}
                 >
                   Karya Pilihan
                 </Heading>
@@ -385,7 +406,7 @@ export default function Home({ data }) {
                 </Text>
               </Box>
               <Box w={['100%', null, getCol(6)]} alignSelf="center">
-                <Box py="16px" px={['16px', null, '48px']} bgColor="knit.500">
+                <Box py="16px" px={['16px', null, '24px', '48px']} bgColor="knit.500">
                   <ButtonLink to="/" color="white" iconColor="light">
                     Tonton Gratis di Rangkai
                   </ButtonLink>

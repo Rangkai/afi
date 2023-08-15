@@ -14,8 +14,18 @@ const wrapperColorOption = {
 };
 
 function LinkComponent({
-  isExternal, children, iconColor, ...props
+  isExternal, children, iconColor, to, ...props
 }) {
+  let linkProps = {
+    to,
+  };
+
+  if (isExternal) {
+    linkProps = {
+      href: to,
+      target: '_blank',
+    };
+  }
   return (
     <LinkStyled
       as={isExternal ? 'a' : LinkGatsby}
@@ -24,6 +34,7 @@ function LinkComponent({
       _hover={{
         textDecor: 'none',
       }}
+      {...linkProps}
       {...props}
     >
       {children}
@@ -41,7 +52,8 @@ function ButtonLink({
   if (wrapped) {
     return (
       <Flex
-        height={['max-content', null, '180px']}
+        height={['max-content', null, '100%']}
+        minH={{ md: '180px' }}
         py={['15px', null, 0]}
         alignItems="center"
         justifyContent="center"

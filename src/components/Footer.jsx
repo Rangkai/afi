@@ -1,12 +1,39 @@
 import React from 'react';
 import {
-  Container, Flex, Text, Box, LinkOverlay, LinkBox, Heading, List, ListItem, Link, Image, Divider,
+  Container, Flex, Text, Box, LinkOverlay, LinkBox, Heading, List, ListItem, Image, Divider,
 } from '@chakra-ui/react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import useLayoutFormatter from '../hooks/useLayout';
 import ButtonLink from './ButtonLink';
 import logoFooter from '../images/logo-footer.svg';
+
+const dikbudPrograms = [
+  {
+    id: 1,
+    text: 'Dana Indonesiana',
+    external: true,
+    link: 'https://danaindonesiana.kemdikbud.go.id/berita/tentang/',
+  },
+  {
+    id: 2,
+    text: 'Indonesiana Film',
+    external: true,
+    link: 'https://kebudayaan.kemdikbud.go.id/ ',
+  },
+  {
+    id: 3,
+    text: 'Layar Indonesia',
+    external: true,
+    link: 'https://kebudayaan.kemdikbud.go.id/',
+  },
+  {
+    id: 4,
+    text: 'Indonesia TV',
+    external: true,
+    link: 'https://indonesiana.tv/',
+  },
+];
 
 function Footer() {
   const { getCol } = useLayoutFormatter();
@@ -46,69 +73,75 @@ function Footer() {
 
   if (true) {
     return (
-      <Box as="footer" py="48px" bgColor="#007399" color="white">
-        <Container paddingInlineStart={['20px', null, '12px']} paddingInlineEnd={['20px', null, '12px']}>
-          <Flex
-            justifyContent="space-between"
-            alignItems="center"
-            flexDirection={['column', null, 'row']}
-          >
+      <>
+        <Box as="footer" py="48px" bgColor="#007399" color="white">
+          <Container paddingInlineStart={['20px', null, '12px']} paddingInlineEnd={['20px', null, '12px']}>
             <Flex
-              width={['100%', null, getCol(4)]}
-              flexDir={['column', null, 'row']}
-              h="max-content"
-              mb={['48px', null, 0]}
+              justifyContent="space-between"
+              alignItems="center"
+              flexDirection={['column', null, 'row']}
             >
-              <Box w={['100%', null, getCol(4)]} px={[0, null, '12px']}>
-                <Image src={logoFooter} w="123px" mt={[0, null, '8px']} mb={['24px', null, '0']} />
-              </Box>
-              <Box w={['100%', null, getCol(8)]} pl={[0, null, '24px']} pr={[0, null, '12px']}>
-                <Text>
-                  Program ini dirintis oleh Kementerian Pendidikan, Kebudayaan, Riset,
-                  dan Teknologi dan dikelola oleh Cinema Poetica dan Rangkai.
-                </Text>
-              </Box>
+              <Flex
+                width={['100%', null, getCol(6), getCol(4)]}
+                flexDir={['column', null, 'row']}
+                h="max-content"
+                mb={['48px', null, 0]}
+              >
+                <Box w={['100%', null, getCol(4)]} px={[0, null, '12px']}>
+                  <Image src={logoFooter} w="123px" mt={[0, null, '8px']} mb={['24px', null, '0']} />
+                </Box>
+                <Box w={['100%', null, getCol(8)]} pl={[0, null, '24px']} pr={[0, null, '12px']}>
+                  <Text>
+                    Program ini dirintis oleh Kementerian Pendidikan, Kebudayaan, Riset,
+                    dan Teknologi dan dikelola oleh Cinema Poetica dan Rangkai.
+                  </Text>
+                </Box>
+              </Flex>
+              <Divider
+                borderColor="white"
+                borderBottomWidth="2px"
+                mb="48px"
+                opacity="1"
+                display={['block', null, 'none']}
+              />
+              <Flex
+                w={['100%', null, getCol(6), getCol(5)]}
+                flexDir={['column', null, 'row']}
+              >
+                <Box mr="36px" mb={['24px', null, 0]}>
+                  <GatsbyImage image={dikbudLogo} alt={data.file.name} />
+                </Box>
+                <div>
+                  <Heading
+                    as="h3"
+                    textTransform="uppercase"
+                    fontSize={['23px', '27px', null, null, '28px']}
+                  >
+                    Program Kemendikbudristek
+                  </Heading>
+                  <List>
+                    {dikbudPrograms.map((item) => (
+                      <ListItem key={item.id} mb="8px">
+                        <ButtonLink iconColor="light" to={item.link} isExternal={item.external}>
+                          {item.text}
+                        </ButtonLink>
+                      </ListItem>
+                    ))}
+                  </List>
+                </div>
+              </Flex>
             </Flex>
-            <Divider
-              borderColor="white"
-              borderBottomWidth="2px"
-              mb="48px"
-              opacity="1"
-              display={['block', null, 'none']}
-            />
-            <Flex
-              w={['100%', null, getCol(5)]}
-              flexDir={['column', null, 'row']}
-            >
-              <Box mr="36px" mb={['24px', null, 0]}>
-                <GatsbyImage image={dikbudLogo} alt={data.file.name} />
-              </Box>
-              <div>
-                <Heading as="h3" textTransform="uppercase" fontSize={['23px', null, '28px']}>
-                  Program Kemendikbud
-                </Heading>
-                <List>
-                  <ListItem mb="8px">
-                    <ButtonLink iconColor="light" to="/">
-                      Dana Indonesia
-                    </ButtonLink>
-                  </ListItem>
-                  <ListItem mb="8px">
-                    <ButtonLink iconColor="light" to="/">
-                      Wirausaha Merdeka
-                    </ButtonLink>
-                  </ListItem>
-                  <ListItem mb="8px">
-                    <ButtonLink iconColor="light" to="/">
-                      Merdeka Belajar
-                    </ButtonLink>
-                  </ListItem>
-                </List>
-              </div>
-            </Flex>
-          </Flex>
-        </Container>
-      </Box>
+          </Container>
+        </Box>
+        <Box bg="rgb(33, 37, 41)" py="16px">
+          <Container paddingInlineStart={['20px', null, '12px']} paddingInlineEnd={['20px', null, '12px']}>
+            <Text mb="0" color="white" fontSize="10px">
+              © 2023 Apresiasi Film Indonesia. All Rights Reserved.
+              Bekerjasama dengan Cinema Poetica dan Rangkai.
+            </Text>
+          </Container>
+        </Box>
+      </>
     );
   }
 

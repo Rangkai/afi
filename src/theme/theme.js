@@ -5,7 +5,7 @@ import containerTheme from './components/container-theme';
 const breakpoints = {
   sm: '576px',
   md: '768px',
-  lg: '960px',
+  lg: '993px',
   xl: '1200px',
   '2xl': '1400px',
 };
