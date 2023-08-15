@@ -5,7 +5,7 @@ import {
 } from '@chakra-ui/react';
 import { graphql, Link as LinkGatsby } from 'gatsby';
 import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Slider from 'react-slick';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -45,8 +45,10 @@ export default function Home({ data }) {
     thumb: getImage(data.defaultImg),
     slug: '',
   };
+  const [selectedMapIdx, setSelectedMapIdx] = useState(0);
   const [selectedCity, setSelectedCity] = useState(initialSelectedCity);
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const sliderRef = useRef();
   const [isMd] = useMediaQuery('(min-width: 768px)', {
     ssr: true,
     fallback: false,
@@ -86,6 +88,13 @@ export default function Home({ data }) {
   const heroBanner = getImage(imageData('hero-banner'));
   const gridFilm = getImage(imageData('grid-film'));
   const program = getImage(imageData('program'));
+
+  const clickMaps = (index) => {
+    sliderRef.current.slickGoTo(index);
+    setSelectedMapIdx(index);
+  };
+
+  const isActiveMaps = (index) => selectedMapIdx === index;
   if (true) {
     return (
       <Layout>
@@ -219,19 +228,20 @@ export default function Home({ data }) {
                 left: 0,
                 right: 0,
                 margin: '0 auto',
-                width: '12px',
-                height: '12px',
+                width: isActiveMaps(0) ? '18px' : '12px',
+                height: isActiveMaps(0) ? '18px' : '12px',
                 borderRadius: '50%',
-                backgroundColor: '#000000',
+                backgroundColor: isActiveMaps(0) ? '#007399' : '#000000',
                 animation: 'pulse-animation 2s infinite',
-                filter: 'brightness(0)',
+                filter: isActiveMaps(0) ? 'unset' : 'brightness(0)',
               }}
+              onClick={() => clickMaps(0)}
             >
               <Arrow
-                w="25px"
-                h="25px"
+                w={isActiveMaps(0) ? '35px' : '25px'}
+                h={isActiveMaps(0) ? '35px' : '25px'}
                 ml="0"
-                color="dark"
+                color={isActiveMaps(0) ? '' : 'dark'}
               />
             </Box>
             <Box
@@ -249,19 +259,20 @@ export default function Home({ data }) {
                 left: 0,
                 right: 0,
                 margin: '0 auto',
-                width: '12px',
-                height: '12px',
+                width: isActiveMaps(2) ? '18px' : '12px',
+                height: isActiveMaps(2) ? '18px' : '12px',
                 borderRadius: '50%',
-                backgroundColor: '#000000',
+                backgroundColor: isActiveMaps(2) ? '#007399' : '#000000',
                 animation: 'pulse-animation 2s infinite',
-                filter: 'brightness(0)',
+                filter: isActiveMaps(2) ? 'unset' : 'brightness(0)',
               }}
+              onClick={() => clickMaps(2)}
             >
               <Arrow
-                w="25px"
-                h="25px"
+                w={isActiveMaps(2) ? '35px' : '25px'}
+                h={isActiveMaps(2) ? '35px' : '25px'}
                 ml="0"
-                color="dark"
+                color={isActiveMaps(2) ? '' : 'dark'}
               />
             </Box>
             <Box
@@ -279,22 +290,29 @@ export default function Home({ data }) {
                 left: 0,
                 right: 0,
                 margin: '0 auto',
-                width: '18px',
-                height: '18px',
+                width: isActiveMaps(1) ? '18px' : '12px',
+                height: isActiveMaps(1) ? '18px' : '12px',
                 borderRadius: '50%',
-                backgroundColor: '#007399',
+                backgroundColor: isActiveMaps(1) ? '#007399' : '#000000',
                 animation: 'pulse-animation 2s infinite',
+                filter: isActiveMaps(1) ? 'unset' : 'brightness(0)',
               }}
+              onClick={() => clickMaps(1)}
             >
               <Arrow
-                w="35px"
-                h="35px"
+                w={isActiveMaps(1) ? '35px' : '25px'}
+                h={isActiveMaps(1) ? '35px' : '25px'}
                 ml="0"
+                color={isActiveMaps(1) ? '' : 'dark'}
               />
             </Box>
           </Box>
           <Box>
-            <Slider className="custom-slick" {...settings}>
+            <Slider
+              className="custom-slick"
+              {...settings}
+              ref={sliderRef}
+            >
               {[1, 2, 3, 4, 5, 6].map((item) => (
                 <div key={item}>
                   <Box
