@@ -217,7 +217,7 @@ function Header() {
     },
     {
       id: 6,
-      text: 'Program Kemdikbudristek',
+      text: 'Program Kemendikbudristek',
       link: '/',
       children: [
         {
@@ -306,7 +306,7 @@ function Header() {
                       fontSize={16}
                       fontWeight={400}
                       letterSpacing=".5px"
-                      px="12px"
+                      px="10px"
                       display="block"
                       _hover={{
                         color: 'var(--chakra-colors-brandPrimary-600) !important',
