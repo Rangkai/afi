@@ -72,7 +72,8 @@ const StyledListItemChild = styled.li`
   background-color: #FFFFFF;
   list-style: none;
   transform-origin: top center;
-  animation: ${slideDown} 200ms ${(p) => +p.idx * 60}ms ease-in forwards;
+  /* animation: ${slideDown} 200ms ${(p) => +p.idx * 60}ms ease-in forwards; */
+  animation: ${slideDown} 300ms ease-in forwards;
   display: none;
   color: #FFFFFF;
   opacity: 0;
@@ -303,6 +304,7 @@ function Header() {
                     hasChild={!!item.children?.length}
                   >
                     <Link
+                      as={LinkGatsby}
                       fontSize={16}
                       fontWeight={400}
                       letterSpacing=".5px"
@@ -312,12 +314,17 @@ function Header() {
                         color: 'var(--chakra-colors-brandPrimary-600) !important',
                         textDecoration: 'none',
                       }}
-                      to="/"
+                      to={item.link}
                     >
                       {item.text}
                     </Link>
                     {!!item.children?.length && (
-                      <ul>
+                      <Flex
+                        as="ul"
+                        flexDir="column"
+                        flexWrap="wrap"
+                        maxH={item.id === 3 ? '270px' : 'unset'}
+                      >
                         {item.children.map((child, i) => (
                           <StyledListItemChild key={child.id} idx={i + 1}>
                             <Link as={LinkGatsby} to={child.link}>
@@ -325,7 +332,7 @@ function Header() {
                             </Link>
                           </StyledListItemChild>
                         ))}
-                      </ul>
+                      </Flex>
                     )}
                   </StyledListItem>
                 ))}
