@@ -143,7 +143,7 @@ function Ecosystem({ data }) {
                   <Text display="inline-block" pr="20px" mb="20px">
                     {city.frontmatter.desc}
                   </Text>
-                  <ButtonLink mt="auto">
+                  <ButtonLink mt="auto" to={`/${city.frontmatter.slug}`}>
                     Selengkapnya
                   </ButtonLink>
                 </ListItem>
