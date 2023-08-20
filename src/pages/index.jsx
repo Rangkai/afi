@@ -1,6 +1,6 @@
 import {
   Box, Button, Container, Divider, Flex,
-  Heading, Image, Link, List, ListItem, Modal, ModalBody, ModalCloseButton,
+  Heading, Image, Link, LinkBox, List, ListItem, Modal, ModalBody, ModalCloseButton,
   ModalContent, ModalOverlay, SimpleGrid, Text, useDisclosure, useMediaQuery,
 } from '@chakra-ui/react';
 import { graphql, Link as LinkGatsby } from 'gatsby';
@@ -14,29 +14,6 @@ import logoBlue from '../images/logo-blue.svg';
 import mapNew from '../images/map_new.svg';
 import ButtonLink from '../components/ButtonLink';
 import Arrow from '../components/Arrow';
-
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 5,
-  slidesToScroll: 1,
-  centerMode: true,
-  responsive: [
-    {
-      breakpoint: 1200,
-      settings: {
-        slidesToShow: 3,
-      },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-      },
-    },
-  ],
-};
 
 export default function Home({ data }) {
   const initialSelectedCity = {
@@ -54,19 +31,54 @@ export default function Home({ data }) {
     fallback: false,
   });
   const { getCol } = useLayoutFormatter();
-  const cities = data.cities.nodes.map((node) => {
+  const tempCitiesRaw = data.cities.nodes.map((node) => {
     const {
-      title, position, desc, thumb, slug,
+      title, position, desc, thumb, slug, year, info,
     } = node.frontmatter;
+
     return {
       key: node.id,
       title,
       desc,
       thumb: getImage(thumb),
       slug,
+      year,
+      info,
       ...position,
     };
   });
+  const tmpCities2 = tempCitiesRaw.splice(0, 2);
+  const cities = [...tempCitiesRaw, ...tmpCities2].map((item, idx) => ({
+    idx,
+    ...item,
+  }));
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: '0px',
+    afterChange: (e) => {
+      setSelectedMapIdx(e);
+    },
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
 
   const onOpenModal = (key) => {
     const filteredCity = cities.find((city) => city.key === key);
@@ -214,98 +226,39 @@ export default function Home({ data }) {
             <Image
               src={mapNew}
             />
-            <Box
-              position="absolute"
-              top={['-25%', null, '-8%']}
-              transform={['scale(0.4) translate(-20px, 10px)', null, 'unset']}
-              _hover={{
-                cursor: 'pointer',
-              }}
-              _after={{
-                content: '""',
-                position: 'absolute',
-                bottom: '-20px',
-                left: 0,
-                right: 0,
-                margin: '0 auto',
-                width: isActiveMaps(0) ? '18px' : '12px',
-                height: isActiveMaps(0) ? '18px' : '12px',
-                borderRadius: '50%',
-                backgroundColor: isActiveMaps(0) ? '#007399' : '#000000',
-                animation: 'pulse-animation 2s infinite',
-                filter: isActiveMaps(0) ? 'unset' : 'brightness(0)',
-              }}
-              onClick={() => clickMaps(0)}
-            >
-              <Arrow
-                w={isActiveMaps(0) ? '35px' : '25px'}
-                h={isActiveMaps(0) ? '35px' : '25px'}
-                ml="0"
-                color={isActiveMaps(0) ? '' : 'dark'}
-              />
-            </Box>
-            <Box
-              position="absolute"
-              bottom={['8%']}
-              left="63%"
-              transform={['scale(0.4) translate(-20px, 10px)', null, 'unset']}
-              _hover={{
-                cursor: 'pointer',
-              }}
-              _after={{
-                content: '""',
-                position: 'absolute',
-                bottom: '-20px',
-                left: 0,
-                right: 0,
-                margin: '0 auto',
-                width: isActiveMaps(2) ? '18px' : '12px',
-                height: isActiveMaps(2) ? '18px' : '12px',
-                borderRadius: '50%',
-                backgroundColor: isActiveMaps(2) ? '#007399' : '#000000',
-                animation: 'pulse-animation 2s infinite',
-                filter: isActiveMaps(2) ? 'unset' : 'brightness(0)',
-              }}
-              onClick={() => clickMaps(2)}
-            >
-              <Arrow
-                w={isActiveMaps(2) ? '35px' : '25px'}
-                h={isActiveMaps(2) ? '35px' : '25px'}
-                ml="0"
-                color={isActiveMaps(2) ? '' : 'dark'}
-              />
-            </Box>
-            <Box
-              position="absolute"
-              bottom={['20%', null, '25%']}
-              left="28%"
-              transform={['scale(0.4) translate(-20px, 10px)', null, 'unset']}
-              _hover={{
-                cursor: 'pointer',
-              }}
-              _after={{
-                content: '""',
-                position: 'absolute',
-                bottom: '-20px',
-                left: 0,
-                right: 0,
-                margin: '0 auto',
-                width: isActiveMaps(1) ? '18px' : '12px',
-                height: isActiveMaps(1) ? '18px' : '12px',
-                borderRadius: '50%',
-                backgroundColor: isActiveMaps(1) ? '#007399' : '#000000',
-                animation: 'pulse-animation 2s infinite',
-                filter: isActiveMaps(1) ? 'unset' : 'brightness(0)',
-              }}
-              onClick={() => clickMaps(1)}
-            >
-              <Arrow
-                w={isActiveMaps(1) ? '35px' : '25px'}
-                h={isActiveMaps(1) ? '35px' : '25px'}
-                ml="0"
-                color={isActiveMaps(1) ? '' : 'dark'}
-              />
-            </Box>
+            {cities.map((item) => (
+              <Box
+                position="absolute"
+                left={item.left}
+                bottom={item.bottom}
+                transform={['scale(0.4) translate(-20px, 10px)', null, 'unset']}
+                _hover={{
+                  cursor: 'pointer',
+                }}
+                _after={{
+                  content: '""',
+                  position: 'absolute',
+                  bottom: '-20px',
+                  left: 0,
+                  right: 0,
+                  margin: '0 auto',
+                  width: isActiveMaps(item.idx) ? '18px' : '12px',
+                  height: isActiveMaps(item.idx) ? '18px' : '12px',
+                  borderRadius: '50%',
+                  backgroundColor: isActiveMaps(item.idx) ? '#007399' : '#000000',
+                  animation: 'pulse-animation 2s infinite',
+                  filter: isActiveMaps(item.idx) ? 'unset' : 'brightness(0)',
+                }}
+                onClick={() => clickMaps(item.idx)}
+              >
+                <Arrow
+                  w={isActiveMaps(item.idx) ? '35px' : '25px'}
+                  h={isActiveMaps(item.idx) ? '35px' : '25px'}
+                  ml="0"
+                  color={isActiveMaps(item.idx) ? '' : 'dark'}
+                />
+              </Box>
+            ))}
           </Box>
           <Box>
             <Slider
@@ -313,45 +266,74 @@ export default function Home({ data }) {
               {...settings}
               ref={sliderRef}
             >
-              {[1, 2, 3, 4, 5, 6].map((item) => (
-                <div key={item}>
-                  <Box
+              {cities.map((item) => (
+                <Box key={item.key}>
+                  <LinkBox
+                    key={item.key}
+                    as={LinkGatsby}
                     className="slick-box-item"
+                    display="block"
                     p="30px"
-                    mx="15px"
                     border="1px solid #000000"
                     transition=".2s all ease-in-out"
                     width="230px"
+                    to={`${item.slug}`}
+                    _hover={{
+                      cursor: 'pointer',
+                      background: 'garlic.500',
+                    }}
                   >
                     <Box
                       as={GatsbyImage}
                       quality={100}
-                      image={program}
+                      image={item.thumb}
                       alt="program"
+                      height="160px"
+                      w="100%"
+                      maxW="100%"
+                      filter={item.year === 2022 ? 'grayscale(100%)' : 'unset'}
                     />
                     <Text
-                      mt="20px"
-                      fontFamily="Azeret Mono"
+                      my="20px"
+                      fontSize="14px"
                     >
-                      Banda Aceh
+                      Periode riset:
                       {' '}
-                      {item}
+                      {item.year}
                     </Text>
                     <Text
-                      fontSize="22px"
+                      fontSize="16px"
                       fontWeight="800"
-                      lineHeight="26.4px"
+                      lineHeight="19.2px"
                       className="slick-box-title"
                     >
-                      Banda Aceh Title
+                      {item.title}
                     </Text>
                     <Divider my="12px" />
-                    <Text className="slick-box-caption">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Maiores aliquid corporis accusantium libero dolores veniam hic perferendis
-                    </Text>
-                  </Box>
-                </div>
+                    <div className="slick-box-caption">
+                      <Text mb="0">
+                        Terdata:
+                      </Text>
+                      <ul>
+                        <li>
+                          {item.info?.community}
+                          {' '}
+                          komunitas
+                        </li>
+                        <li>
+                          {item.info?.filmProduction}
+                          {' '}
+                          produksi film
+                        </li>
+                        <li>
+                          {item.info?.filmExhibition}
+                          {' '}
+                          ekshibisi film
+                        </li>
+                      </ul>
+                    </div>
+                  </LinkBox>
+                </Box>
               ))}
             </Slider>
           </Box>
@@ -378,14 +360,9 @@ export default function Home({ data }) {
                 di tingkat lokal, yang seringnya terjadi di luar lingkup bioskop dan industri.
               </Text>
             </Box>
-            <Box w={['100%', null, getCol(3)]}>
-              <ButtonLink to="/" wrapped wrapperProps={{ mb: ['20px', null, 0] }}>
-                Tahun 2022
-              </ButtonLink>
-            </Box>
-            <Box w={['100%', null, getCol(3)]}>
+            <Box w={['100%', null, getCol(4), getCol(3)]}>
               <ButtonLink to="/" wrapped>
-                Tahun 2023
+                Selengkapnya
               </ButtonLink>
             </Box>
           </Flex>
@@ -625,12 +602,21 @@ export const query = graphql`
         }
       }
     }
-    cities: allMdx {
+    cities: allMdx(sort: {
+      fields: [frontmatter___year, frontmatter___title],
+      order: [DESC, ASC],
+    }) {
       nodes {
         frontmatter {
           desc
           slug
           title
+          year
+          info {
+            community
+            filmProduction
+            filmExhibition
+          }
           position {
             bottom
             left

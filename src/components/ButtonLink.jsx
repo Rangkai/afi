@@ -1,4 +1,4 @@
-import { Box, Flex, Link } from '@chakra-ui/react';
+import { Flex, Link } from '@chakra-ui/react';
 import { Link as LinkGatsby } from 'gatsby';
 import React from 'react';
 import styled from '@emotion/styled';
