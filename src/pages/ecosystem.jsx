@@ -134,15 +134,37 @@ function Ecosystem({ data }) {
                       }}
                     />
                   </Box>
-                  <Text fontSize="14px" mb="8px">
-                    {`${i < 9 ? 0 : ''}${i + 1}`}
+                  <Text
+                    my="20px"
+                    fontSize="14px"
+                  >
+                    Periode riset:
+                    {' '}
+                    {city.frontmatter.year}
                   </Text>
                   <Text fontSize="20px" fontWeight="800" my="15px">
                     {city.frontmatter.title}
                   </Text>
-                  <Text display="inline-block" pr="20px" mb="20px">
-                    {city.frontmatter.desc}
+                  <Text mb="0">
+                    Terdata:
                   </Text>
+                  <List mb="20px">
+                    <ListItem>
+                      {city.frontmatter.info?.community}
+                      {' '}
+                      komunitas
+                    </ListItem>
+                    <ListItem>
+                      {city.frontmatter.info?.filmProduction}
+                      {' '}
+                      produksi film
+                    </ListItem>
+                    <ListItem>
+                      {city.frontmatter.info?.filmExhibition}
+                      {' '}
+                      ekshibisi film
+                    </ListItem>
+                  </List>
                   <ButtonLink mt="auto" to={`/${city.frontmatter.slug}`}>
                     Selengkapnya
                   </ButtonLink>
@@ -248,6 +270,12 @@ export const query = graphql`
         frontmatter {
           slug
           title
+          info {
+            community
+            filmProduction
+            filmExhibition
+          }
+          year
           thumb {
             childImageSharp {
               gatsbyImageData(placeholder: BLURRED)
