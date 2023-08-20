@@ -240,7 +240,10 @@ export const query = graphql`
         gatsbyImageData(placeholder: BLURRED)
       }
     }
-    cities: allMdx(sort: {fields: frontmatter___title, order: ASC}) {
+    cities: allMdx(sort: {
+      fields: [frontmatter___year, frontmatter___title],
+      order: [DESC, ASC],
+    }) {
       nodes {
         frontmatter {
           slug

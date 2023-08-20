@@ -1,6 +1,9 @@
-import { Grid, GridItem } from '@chakra-ui/react';
+import {
+  Box, Flex, Grid, GridItem,
+} from '@chakra-ui/react';
 import styled from '@emotion/styled';
 import React from 'react';
+import useLayout from '../hooks/useLayout';
 
 export const GridItemLeftContent = styled(GridItem)`
   @media screen and (min-width: 768px) {
@@ -9,10 +12,15 @@ export const GridItemLeftContent = styled(GridItem)`
 `;
 
 function GridContainer({ children }) {
+  const { getCol } = useLayout();
   return (
-    <Grid templateColumns={['1fr', null, '4fr 6fr']}>
-      {children}
-    </Grid>
+    <Flex justifyContent="center">
+      <Box w={['100%', null, getCol(8)]}>
+        <Grid templateColumns="1fr">
+          {children}
+        </Grid>
+      </Box>
+    </Flex>
   );
 }
 

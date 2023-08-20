@@ -117,7 +117,7 @@ function Footer() {
                     textTransform="uppercase"
                     fontSize={['23px', '27px', null, null, '28px']}
                   >
-                    Program Kemendikbudristek
+                    Program Kemdikbudristek
                   </Heading>
                   <List>
                     {dikbudPrograms.map((item) => (

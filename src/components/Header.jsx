@@ -58,7 +58,6 @@ const StyledListItem = styled(Box)`
         ul {
           opacity: 1;
           top: 100%;
-          width: max-content;
           li {
             display: block;
           }
@@ -104,11 +103,15 @@ function Header() {
 
   const data = useStaticQuery(graphql`
     query NavbarQuery {
-      cities: allMdx(sort: {fields: frontmatter___title, order: ASC}) {
+      cities: allMdx(sort: {
+        fields: [frontmatter___year, frontmatter___title],
+        order: [DESC, ASC],
+      }) {
         nodes {
           frontmatter {
             slug
             title
+            year
           }
           id
         }
@@ -163,11 +166,6 @@ function Header() {
   ];
   const navListNew = [
     {
-      id: 1,
-      text: 'Beranda',
-      link: '/',
-    },
-    {
       id: 2,
       text: 'Program',
       link: '/about',
@@ -218,7 +216,7 @@ function Header() {
     },
     {
       id: 6,
-      text: 'Program Kemendikbudristek',
+      text: 'Kemdikbudristek',
       link: '/',
       children: [
         {
@@ -324,6 +322,7 @@ function Header() {
                         flexDir="column"
                         flexWrap="wrap"
                         maxH={item.id === 3 ? '270px' : 'unset'}
+                        w={item.id === 3 ? 'auto' : 'max-content !important'}
                       >
                         {item.children.map((child, i) => (
                           <StyledListItemChild key={child.id} idx={i + 1}>
