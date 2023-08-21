@@ -39,6 +39,13 @@ const theme = {
     knit: {
       500: '#8a897f',
     },
+    blueOcean: {
+      500: '#007399',
+    },
+    telorAsin: {
+      400: '#99c7d6',
+      500: '#c2dde7',
+    },
   },
   lineHeights: {
     shorter: 1.2,
