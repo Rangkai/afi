@@ -30,7 +30,23 @@
     }
     .slick-slide {
       margin: 0 15px;
-      width: 230px !important;
+      position: relative;
+      width: calc(100vw - 70px) !important;
+      @media screen and (min-width: 576px) {
+        width: calc((500px / 3) - 30px) !important;
+      }
+      @media screen and (min-width: 768px) {
+        width: calc((696px / 3) - 30px) !important;
+      }
+      @media screen and (min-width: 992px) {
+        width: calc((936px / 3) - 30px) !important;
+      }
+      @media screen and (min-width: 1200px) {
+        width: calc((1116px / 5) - 30px) !important;
+      }
+      @media screen and (min-width: 1400px) {
+        width: calc((1296px / 5) - 30px) !important;
+      }
     }
   }
   .slick-dots {

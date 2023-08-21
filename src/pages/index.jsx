@@ -69,12 +69,21 @@ export default function Home({ data }) {
         breakpoint: 1200,
         settings: {
           slidesToShow: 3,
+          centerPadding: '0px',
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          centerPadding: '0px',
+        },
+      },
+      {
+        breakpoint: 576,
         settings: {
           slidesToShow: 1,
+          centerPadding: '0px',
         },
       },
     ],
@@ -276,7 +285,6 @@ export default function Home({ data }) {
                     p="30px"
                     border="1px solid #000000"
                     transition=".2s all ease-in-out"
-                    width="230px"
                     to={`${item.slug}`}
                     _hover={{
                       cursor: 'pointer',
