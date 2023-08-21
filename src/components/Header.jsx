@@ -267,7 +267,7 @@ function Header() {
         background="#FFFFFF"
       >
         <Container>
-          <Flex alignItems="center" justifyContent={{ base: 'space-between', '2xl': 'flex-start' }}>
+          <Flex alignItems="center" justifyContent={{ base: 'space-between', xl: 'flex-start' }}>
             <LinkBox as={LinkGatsby} to="/" width={['130px', null, '300px']} minW={['130px', null, '300px']}>
               <Image
                 src={logo}
@@ -289,7 +289,7 @@ function Header() {
               as="nav"
               justifyContent="flex-end"
               width="100%"
-              display={{ base: 'none', '2xl': 'flex' }}
+              display={{ base: 'none', xl: 'flex' }}
             >
               <Flex
                 justifyContent="flex-end"
@@ -343,7 +343,7 @@ function Header() {
               colorScheme="gray"
               p="2px"
               height="max-content"
-              display={{ base: 'block', '2xl': 'none' }}
+              display={{ base: 'block', xl: 'none' }}
               id="buttonMenu"
               minH="unset"
               aria-label="buttonMenu"
@@ -378,6 +378,19 @@ function Header() {
                   as="ul"
                   pb="20px"
                 >
+                  <Box as="li" py={['5px', null, '25px']} listStyleType="none">
+                    <Link
+                      as={LinkGatsby}
+                      to="/"
+                      p={['5px 10px', null, null, '0 20px']}
+                      color={['brandPrimary.500', null, null, '#000000']}
+                      fontWeight="500"
+                      display="block"
+                      transition=".2s all ease-in-out"
+                    >
+                      Beranda
+                    </Link>
+                  </Box>
                   {navListNew.map((nav) => (
                     <Box as="li" py={['5px', null, '25px']} listStyleType="none" key={nav.id}>
                       <Link
