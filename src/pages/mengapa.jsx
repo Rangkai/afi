@@ -1,5 +1,5 @@
 import {
-  Box, Container, Divider, GridItem, Heading, Text,
+  Box, Container, Divider, Flex, GridItem, Heading, Image, Text,
 } from '@chakra-ui/react';
 import { graphql } from 'gatsby';
 import {
@@ -10,10 +10,72 @@ import GridContainer, { GridItemLeftContent } from '../components/GridContainer'
 import Layout from '../components/Layout';
 import Lightbox from '../components/Lightbox';
 import SEO from '../components/SEO';
+import useLayout from '../hooks/useLayout';
+import logoBlueOcean from '../images/logo-blue-ocean.svg';
 
 function Mengapa({ data }) {
+  const { getCol } = useLayout();
   const howBanner = getImage(data.file);
   const images = data.allFile.nodes;
+
+  if (true) {
+    return (
+      <Layout>
+        <Container py={{ md: '48px' }} paddingInlineStart={['20px', null, '12px']} paddingInlineEnd={['20px', null, '12px']}>
+          <Flex
+            as="section"
+            flexDir={['column', null, 'row']}
+            justifyContent={['center', null, 'flex-end']}
+            background="blueOcean.500"
+            mt={{ md: '62px' }}
+          >
+            <Box w={['100%', null, getCol(5)]}>
+              <Flex
+                flexDir="column"
+                justifyContent="center"
+                p={['30px', null, '0 25px 0 0']}
+                h="100%"
+                color="white"
+              >
+                <Heading
+                  as="h2"
+                  fontSize={['30px', '25px', null, null, '31px']}
+                  lineHeight={1.2}
+                >
+                  MENGAPA DAN BAGAIMANA
+                </Heading>
+                <Text>
+                  Sinema hidup lewat kerjasama. Apresiasi Film Indonesia
+                  terlahir sebagai kerja pengetahuan dan berkembang sebagai simpul
+                  berbagai kegiatan dan jaringan perfilman.
+                </Text>
+              </Flex>
+            </Box>
+            <Box position="relative" w={['100%', null, getCol(6)]}>
+              <Box
+                as={GatsbyImage}
+                quality={100}
+                image={howBanner}
+                alt="mengapa banner"
+                layout="full_width"
+                w="100%"
+              />
+              <Image
+                src={logoBlueOcean}
+                position="absolute"
+                w="100px"
+                h="100px"
+                top="50%"
+                right="0"
+                transform="translate(0%, -50%)"
+                zIndex={1}
+              />
+            </Box>
+          </Flex>
+        </Container>
+      </Layout>
+    );
+  }
 
   return (
     <Layout>
@@ -257,7 +319,7 @@ export function Head() {
 
 export const query = graphql`
   query HowPageQuery {
-    file(relativePath: {eq: "how/how_banner.jpg"}) {
+    file(relativePath: {eq: "how/mengapa-header.jpg"}) {
       name
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)

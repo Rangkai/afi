@@ -37,7 +37,7 @@ function Tentang({ data }) {
               >
                 <Heading
                   as="h2"
-                  fontSize={['30px', '25px', null, null, '36px']}
+                  fontSize={['30px', '25px', null, null, '31px']}
                   lineHeight={1.2}
                 >
                   TENTANG

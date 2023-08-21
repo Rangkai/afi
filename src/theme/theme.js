@@ -61,6 +61,7 @@ const theme = {
         fontSize: '15px',
         lineHeight: 'tall',
         color: 'colors.blue',
+        letterSpacing: '.5',
       },
     },
     Heading: {
