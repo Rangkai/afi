@@ -141,8 +141,8 @@ export default function Home({ data }) {
                 w="100px"
                 h="100px"
                 top="50%"
-                left="50%"
-                transform="translate(-50%, -50%)"
+                left="0"
+                transform="translate(0, -50%)"
                 zIndex={1}
               />
             </Box>
@@ -150,17 +150,17 @@ export default function Home({ data }) {
               <Flex flexDir="column" justifyContent="center" p={['30px', null, '0 80px 0 0']} h="100%">
                 <Heading
                   as="h2"
-                  fontSize={['30px', '25px', null, null, '36px']}
+                  fontSize={['30px', '25px', null, null, '31px']}
                   lineHeight={[1.2, null, 1.33]}
                 >
-                  TAK KENAL
+                  BERBEDA-BEDA
                   <br />
-                  MAKA TAK TAYANG
+                  BERSAMA DALAM SINEMA
                 </Heading>
                 <Text>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quia aliquid magni nostrum aspernatur ducimus et itaque eaque qui
-                  nemo atque reprehenderit amet libero, ea dignissimos tempore
+                  Kolaborasi pendataan dan kuratorial
+                  <br />
+                  Melibatkan 107 komunitas dari 15 kota.
                 </Text>
               </Flex>
             </Box>
@@ -176,31 +176,33 @@ export default function Home({ data }) {
               <Heading
                 as="h2"
                 textTransform="uppercase"
-                fontSize={['30px', '25px', null, null, '36px']}
+                fontSize={['30px', '25px', null, null, '31px']}
               >
                 Program
               </Heading>
               <List>
                 <ListItem mb="8px">
-                  <ButtonLink to="what">
+                  <ButtonLink to="apa">
                     Apa dan Siapa
                   </ButtonLink>
                 </ListItem>
                 <ListItem>
-                  <ButtonLink to="how">
+                  <ButtonLink to="mengapa">
                     Mengapa dan Bagaimana
                   </ButtonLink>
                 </ListItem>
               </List>
             </Box>
-            <Box w={['100%', null, getCol(5)]} pr={['0px', null, '3rem']} pt={['48px', null, '0']}>
+            <Box w={['100%', null, getCol(5)]} pr={['0px', null, '3rem']} pt={['48px', null, '20px']}>
               <Text>
-                Untuk mengapresiasi film Indonesia seluas-luasnya, perlu diusahakan berbagai
-                cara untuk memperkenalkan keragamannya. APRESIASI FILM INDONESIA 2022 adalah
-                upaya untuk menelusuri akar dan ranting budaya perfilman di Indonesia melalui
-                kolaborasi pendataan dan kuratorial. Program ini dirintis oleh Kementerian
-                Pendidikan, Kebudayaan, Riset, dan Teknologi dan dikelola oleh
-                Cinema Poetica dan Rangkai.
+                Film Indonesia rupa-rupa wajahnya, rupa-rupa pula rasanya.
+                Untuk mengapresiasi film Indonesia seluas-luasnya, perlu
+                berbagai cara untuk membahasakan keragamannya.
+                APRESIASI FILM INDONESIA adalah upaya untuk menelusuri
+                akar dan ranting budaya perfilman
+                di Indonesia melalui kolaborasi pendataan dan kuratorial.
+                Program ini dirintis oleh Kementerian Pendidikan, Kebudayaan,
+                Riset, dan Teknologi dan dikelola oleh Cinema Poetica dan Rangkai.
               </Text>
             </Box>
           </Flex>
@@ -216,7 +218,7 @@ export default function Home({ data }) {
               <Heading
                 as="h2"
                 textTransform="uppercase"
-                fontSize={['30px', '25px', null, null, '36px']}
+                fontSize={['30px', '25px', null, null, '31px']}
               >
                 Ekosistem Perfilman
               </Heading>
@@ -225,8 +227,8 @@ export default function Home({ data }) {
                 volume kegiatan produksi dan ekshibisi lokal selama tiga tahun terakhir
               </Text>
             </Box>
-            <Box w={['100%', null, getCol(4), getCol(3)]}>
-              <ButtonLink to="/ecosystem" wrapped>
+            <Box w={['100%', null, getCol(5)]}>
+              <ButtonLink to="/ekosistem" wrapped>
                 Selengkapnya
               </ButtonLink>
             </Box>
@@ -357,18 +359,18 @@ export default function Home({ data }) {
               <Heading
                 as="h2"
                 textTransform="uppercase"
-                fontSize={['30px', '25px', null, null, '36px']}
+                fontSize={['30px', '25px', null, null, '31px']}
                 mb="0"
               >
-                Hasil Riset
+                SEMESTA DATA
               </Heading>
               <Text>
-                Ada dua capaian yang diharapkan. Melalui kolaborasi penelitian,
-                program ini menyajikan himpunan wawasan perihal kegiatan produksi dan ekshibisi
-                di tingkat lokal, yang seringnya terjadi di luar lingkup bioskop dan industri.
+                Apresiasi Film Indonesia menelusuri tumbuh kembang
+                perfilman di tingkat akar rumput, dengan fokus pada
+                kegiatan produksi dan ekshibisi film.
               </Text>
             </Box>
-            <Box w={['100%', null, getCol(4), getCol(3)]}>
+            <Box w={['100%', null, getCol(5)]}>
               <ButtonLink to="/" wrapped>
                 Selengkapnya
               </ButtonLink>
@@ -400,7 +402,7 @@ export default function Home({ data }) {
                   color="white"
                   textTransform="uppercase"
                   mb={['48px', null, '0']}
-                  fontSize={['30px', '25px', null, null, '36px']}
+                  fontSize={['30px', '25px', null, null, '31px']}
                 >
                   Karya Pilihan
                 </Heading>

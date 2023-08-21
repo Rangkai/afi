@@ -11,7 +11,7 @@ import Layout from '../components/Layout';
 import Lightbox from '../components/Lightbox';
 import SEO from '../components/SEO';
 
-function How({ data }) {
+function Mengapa({ data }) {
   const howBanner = getImage(data.file);
   const images = data.allFile.nodes;
 
@@ -249,7 +249,7 @@ function How({ data }) {
   );
 }
 
-export default How;
+export default Mengapa;
 
 export function Head() {
   return <SEO />;

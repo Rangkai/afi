@@ -12,7 +12,7 @@ import useLayout from '../hooks/useLayout';
 import logoBrown from '../images/logo-brown.svg';
 import ButtonLink from '../components/ButtonLink';
 
-function Ecosystem({ data }) {
+function Ekosistem({ data }) {
   const { getCol } = useLayout();
   const ecosystemBanner = getImage(data.file);
   const cities = data.cities.nodes;
@@ -242,7 +242,7 @@ function Ecosystem({ data }) {
   );
 }
 
-export default Ecosystem;
+export default Ekosistem;
 
 export function Head() {
   return <SEO title="Ekosistem AFI - Apresiasi Film Indonesia" />;

@@ -138,7 +138,7 @@ const teams = [
   },
 ];
 
-function What({ data }) {
+function Apa({ data }) {
   const whatBanner = getImage(data.file);
   const images = data.allFile.nodes;
 
@@ -521,7 +521,7 @@ function What({ data }) {
   );
 }
 
-export default What;
+export default Apa;
 
 export function Head() {
   return <SEO />;

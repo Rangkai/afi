@@ -7,7 +7,7 @@ import {
 import Layout from '../components/Layout';
 import useLayout from '../hooks/useLayout';
 
-function Contact({ data }) {
+function Kontak({ data }) {
   const banner = getImage(data.file);
   const { getCol } = useLayout();
 
@@ -73,7 +73,7 @@ function Contact({ data }) {
   );
 }
 
-export default Contact;
+export default Kontak;
 
 export const query = graphql`
   query ContactPageQuery {

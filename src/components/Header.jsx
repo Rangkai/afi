@@ -128,24 +128,24 @@ function Header() {
     {
       id: 2,
       text: 'Tentang Program',
-      link: '/about',
+      link: '/tentang',
       children: [
         {
           id: 1,
           text: 'Apa dan Siapa',
-          link: '/what',
+          link: '/apa',
         },
         {
           id: 2,
           text: 'Mengapa dan Bagaimana',
-          link: '/how',
+          link: '/mengapa',
         },
       ],
     },
     {
       id: 3,
       text: 'Ekosistem Perfilman Lokal',
-      link: '/ecosystem',
+      link: '/ekosistem',
       children: data.cities.nodes.map((node) => ({
         id: node.id,
         text: node.frontmatter.title,
@@ -161,31 +161,31 @@ function Header() {
     {
       id: 5,
       text: 'Hubungi',
-      link: '/contact',
+      link: '/kontak',
     },
   ];
   const navListNew = [
     {
       id: 2,
       text: 'Program',
-      link: '/about',
+      link: '/tentang',
       children: [
         {
           id: 1,
           text: 'Apa dan Siapa',
-          link: '/what',
+          link: '/apa',
         },
         {
           id: 2,
           text: 'Mengapa dan Bagaimana',
-          link: '/how',
+          link: '/mengapa',
         },
       ],
     },
     {
       id: 3,
       text: 'Ekosistem Perfilman',
-      link: '/ecosystem',
+      link: '/ekosistem',
       children: data.cities.nodes.map((node) => ({
         id: node.id,
         text: node.frontmatter.title,
@@ -248,7 +248,7 @@ function Header() {
     {
       id: 7,
       text: 'Kontak',
-      link: '/contact',
+      link: '/kontak',
     },
   ];
 

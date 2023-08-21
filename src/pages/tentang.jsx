@@ -10,7 +10,7 @@ import SEO from '../components/SEO';
 import SquareImage from '../components/SquareImage';
 import useLayout from '../hooks/useLayout';
 
-function About({ data }) {
+function Tentang({ data }) {
   const { getCol } = useLayout();
   const aboutBanner = getImage(data.file);
 
@@ -107,7 +107,7 @@ function About({ data }) {
   );
 }
 
-export default About;
+export default Tentang;
 
 export function Head() {
   return <SEO title="Tentang AFI - Apresiasi Film Indonesia" />;
