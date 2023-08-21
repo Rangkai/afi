@@ -93,7 +93,7 @@ function EcosystemDetail({ data, children }) {
   return (
     <Layout>
       <Container pt="50px">
-        <Flex>
+        <Flex flexDir={['column-reverse', null, 'row']}>
           <Flex flexFlow="column" justifyContent="space-between" w={{ base: '100%', md: getCol(6) }}>
             <Box borderTop="2px solid #000000" pt="30px">
               <Text
@@ -138,13 +138,13 @@ function EcosystemDetail({ data, children }) {
               </Heading>
             </Box>
             <Flex borderY="2px solid #000000">
-              <Box background="brandPrimary.500" px="48px" py="16px" w="100%">
+              <Box background="brandPrimary.500" px={['8px', null, '48px']} py={['8px', null, '16px']} w="100%">
                 <ButtonLink h="100%">
                   Grafik Data
                 </ButtonLink>
               </Box>
               {year === 2023 && (
-                <Box background="garlic.500" px="48px" py="16px" w="100%">
+                <Box background="garlic.500" px={['8px', null, '48px']} py={['8px', null, '16px']} w="100%">
                   <ButtonLink h="100%">
                     Dokumentasi
                   </ButtonLink>
