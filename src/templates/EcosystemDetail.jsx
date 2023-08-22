@@ -160,6 +160,7 @@ function EcosystemDetail({ data, children }) {
               image={cityBanner}
               alt={title}
               minH={['unset', null, '407px']}
+              filter={year === 2022 ? 'grayscale(100%)' : 'unset'}
             />
             <Image
               src={logoBlue}

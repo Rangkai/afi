@@ -2,6 +2,8 @@
 title: Balikpapan
 slug: kota-balikpapan
 desc: Merintis dengan taktis, melaju dengan jitu.
+headline: Berkenalan dengan Insan Perfilman di Kota Balikpapan
+author: Masitah Fitria Ningrum
 banner: '../images/cities/balikpapan/banner.jpg'
 thumb: '../images/cities/balikpapan/thumb.jpg'
 galleryDir: 'cities/balikpapan'
@@ -25,35 +27,17 @@ import Lightbox from '../components/Lightbox';
 import ImagePlay from '../components/ImagePlay';
 
 <GridContainer>
-  <GridItemLeftContent />
   <GridItem>
-    ## Berkenalan dengan Insan Perfilman di Kota Balikpapan
-
-    <p className="caption">Masitah Fitria Ningrum</p>
-
-    Kota Balikpapan terkenal dengan industri minyak. Hal itu ditandai dalam sejarah
+    <p className="highlight"> Kota Balikpapan terkenal dengan industri minyak. Hal itu ditandai dalam sejarah
     Perang Pasifik pada tahun 1942. Lantas, banyak orang dari luar pulau Kalimantan
     berdatangan untuk mencari nafkah. Karena percampuran berbagai macam
     suku pendantang, Kota Balikpapan menjadi tidak punya karakteristik budaya
     yang dominan. Hal tersebut mempengaruhi pula pada tidak adanya karakteristik
     khusus pada film Balikpapan. Namun, kota Balikpapan tidak asing dengan geliat
-    ekosistem dunia perfilman. 
-
-    <hr />
+    ekosistem dunia perfilman.</p>
 
     ### Komunitas Sineas Muda Balikpapan Sebagai Pondasi SDM Perfilman Balikpapan
 
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'balikpapan1')} alt={'Balikpapan 1'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'balikpapan1')} alt={'Balikpapan 1'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Sekarang Kita Jalan Bersama</p>
-  </GridItemLeftContent>
-  <GridItem>
     Kehidupan perfilman di Balikpapan dapat ditelusuri dari keberadaan Yayasan
     Bayu Asri yang berdiri sejak tahun 1986 sebagai wadah seni teater, seni peran
     televisi dan film, lukis, sastra, pantomim, teater komedi, tari, kerajinan, dan bela
@@ -63,6 +47,9 @@ import ImagePlay from '../components/ImagePlay';
     Rizky mengenal Yayasan Bayu Asri dari tahun 2002 melalui lokakarya seni peran
     dan teater. Yayasan ini didirikan oleh Zulhamdani AS - yang menjadi guru bagi
     Rizky, Syahroni, dan Muanam.
+
+    <Box as={GatsbyImage} mb="8px" mt="50px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'balikpapan1'))} alt="balikpapan 1" filter="grayscale(100%)" />
+    <Text className="caption" mb="50px !important">Sekarang Kita Jalan Bersama</Text>
 
     Zulhamdani merupakan seniman yang aktif di dunia perfilman sepanjang tahun
     1980-an hingga 2000-an. Zulhamdani terlibat di film-film besar, misalnya, _“Apa
@@ -83,28 +70,6 @@ import ImagePlay from '../components/ImagePlay';
     bidang media penyiaran. Ia pernah bekerja sebagai produser dan editor di stasiun
     televisi lokal, Balikpapan TV (BTV) di bawah naungan grup Jawa Pos Multimedia
     Corporation (JPMC) pada tahun 2009-2011.
-
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Jumlah Anggota (%)</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Jumlah-Anggota')} alt={'Jumlah-Anggota'} mb="16px" size="xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Jumlah-Anggota-thumb'))} alt={'Jumlah-Anggota-thumb'} noBorder />
-    </Lightbox>
-    <p className="caption">Terdapat dua pola kecondongan dalam
-      jumlah range anggota komunitas, yaitu
-      komunitas berskala kecil, yaitu berjumlah
-      1 - 6 orang (40%), atau komunitas berskala
-      besar, yaitu berjumlah lebih dari 25 orang
-      (28%). -Dari 22 komunitas yang memiliki
-      anggota lebih dari 25 orang, mayoritas
-      komunitas tersebut berbadan hukum (91%),
-      produksi (64%), dan berstatus pelajar (50%)
-      atau mahasiswa (55%).</p>
-  </GridItemLeftContent>
-  <GridItem>
 
     Untuk membangun ekosistem perfilman di Balikpapan, KSMB membekali diri
     dengan mengikuti berbagai lokakarya. Sebagai contoh, lokakarya penulisan
@@ -170,28 +135,6 @@ import ImagePlay from '../components/ImagePlay';
     terpilih menjadi TOP 10 Mobile Film Festival 2015 dari 765 Judul Film pendek
     yang diikuti oleh 27 Negara.
 
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Anggota Komunitas (%)</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Anggota-Komunitas')} alt={'Anggota-Komunitas'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Anggota-Komunitas-thumb'))} alt={'Anggota-Komunitas-thumb'} noBorder />
-    </Lightbox>
-    <p className="caption">Siapa anggota komunitas? Pertanyaan itu
-      mudah dijawab bila suatu komunitas film
-      merupakan bagian dari sebuah institusi
-      pendidikan. Komunitas film pelajar hampir
-      bisa ditemui di sekolah dan perguruan
-      tinggi yang memiliki program studi atau
-      mata kuliah terkait media dan perfilman.
-      Sebagian komunitas lainnya beranggotakan
-      individu-individu yang juga tidak serta merta
-      memiliki profesi di dunia perfilman.</p>
-  </GridItemLeftContent>
-  <GridItem>
-
     Setelah nama KSMB mengudara berkat prestasi yang diraihnya, kolaborasi
     antar komunitas terus berlangsung dan sedikit demi sedikit mulai membangun
     fondasi ekosistem perfilman lokal. Peran pemerintah mulai ada pada ajang
@@ -217,8 +160,6 @@ import ImagePlay from '../components/ImagePlay';
     sebagai pekerja lepas baik itu di produksi film pendek maupun membuka usaha
     sendiri di bidang jasa videografi”, tutur Rizky.
 
-    <hr />
-
     ### Pergerakan Perfilman di Kota Kilang Minyak Pada Masa Pandemi - Pandemi Mereda
 
     Tak jauh berbeda dengan daerah lain, di kota 'kilang minyak' ini terdapat beragam
@@ -235,16 +176,8 @@ import ImagePlay from '../components/ImagePlay';
     peralatan dan merangkul orang-orang awam untuk bergabung dan berkolaborasi
     membuat karya film.
 
-  </GridItem>
-</GridContainer>
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'balikpapan2')} alt={'Balikpapan 2'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'balikpapan2')} alt={'Balikpapan 2'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Sekarang Kita Jalan Bersama</p>
-  </GridItemLeftContent>
-  <GridItem>
+    <Box as={GatsbyImage} mb="8px" mt="50px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'balikpapan2'))} alt="balikpapan 2" filter="grayscale(100%)"/>
+    <Text className="caption" mb="50px !important">Sekarang Kita Jalan Bersama</Text>
 
     Didukung oleh Dinas Pemuda Olahraga dan Pariwisata Kota Balikpapan, KSMB
     menggelar ajang apresiasi film bertajuk Balikpapan Film Festival (BFF) pada
@@ -281,26 +214,16 @@ import ImagePlay from '../components/ImagePlay';
     Projex dengan pengikut belasan ribu ini, Instagram dan Tik-tok adalah medium
     pemasaran yang efektif.
 
-    <hr />
-
     ### Tentang SDM, Ragam Corak Produksi, Ekshibisi dan Sekelumit Hambatan Komunitas Film Sekaligus Peran Pemerintah Kota Balikpapan
-
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'balikpapan3')} alt={'balikpapan 3'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'balikpapan3')} alt={'balikpapan 3'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Target Lima Juta</p>
-  </GridItemLeftContent>
-  <GridItem>
+    
     Tidak adanya pendidikan atau universitas di Kota Balikpapan yang menjurus
     langsung ke film membuat sejumlah individu yang memang punya minat film di
     kota ini tumbuh secara otodidak dan mandiri bersama komunitas film. Padahal,
     menurut Satya dari komunitas Gambar Gerak, pendidikan film adalah hal
     fundamental bagi kehidupan komunitas film.
+
+    <Box as={GatsbyImage} mb="8px" mt="50px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'balikpapan3'))} alt="balikpapan 3" filter="grayscale(100%)" />
+    <Text className="caption" mb="50px !important">Target Lima Juta</Text>
 
     Tak seperti Jakarta atau Yogyakarta yang tumbuh sebagai salah satu kota dengan
     industri film, Balikpapan masih menjadi kota yang sedang berkenalan dengan
@@ -324,25 +247,6 @@ import ImagePlay from '../components/ImagePlay';
     kantong pribadi, Komunitas Gambar Gerak, Ria Gumbira mengatakan ia sangat
     mengharapkan dana hibah dan bantuan peran pemerintah untuk mendukung
     pergerakan komunitasnya. 
-
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Perekrutan Anggota (%)</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Perektrutan-Anggota')} alt={'Perektrutan-Anggota'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Perektrutan-Anggota-thumb'))} alt={'Perektrutan-Anggota-thumb'} noBorder />
-    </Lightbox>
-    <p className="caption">Sebagian komunitas yang terdata mengakui
-      bahwa rekrutmen anggota tidak berjalan.
-      Beberapa mengadakan rekrutmen anggota
-      hanya ketika ada kegiatan. Perihal
-      regenerasi ini bisa menjadi persoalan untuk
-      keberlanjutan komunitas dalam jangka
-      panjang</p>
-  </GridItemLeftContent>
-  <GridItem>
 
     Hambatan-hambatan tersebut pada akhirnya menghasilkan siasat-siasat sinema
     baik dalam hal produksi dan ekshibisi. Ketika pemeran film secara profesional
@@ -388,31 +292,23 @@ import ImagePlay from '../components/ImagePlay';
 
 <hr />
 
-<Text as="h3" mt={["40px", null, "60px"]} mb={["20px !important", null, "32px !important"]}> Karya-karya pilihan Kota Balikpapan </Text>
+<Text mb="0px !important" fontSize="12.25px">Karya-karya pilihan kota</Text>
+<Text as="h3" mb={["20px !important", null, "32px !important"]} textTransform="uppercase" fontWeight="400 !important"> Balikpapan </Text>
 
-<SimpleGrid columns={[1, null, 2]} spacingX={34} spacingY={10}>
-  <ImagePlay href="https://rangkai.id/?browse=308">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'Balada Romansa Bujang_Nocturne Films_Ihsan Aditama'))}
-      alt={'Balada Romansa Bujang_Nocturne Films_Ihsan Aditama'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=307">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'Four Horsemen_Nocturne Films_Ihsan Aditama'))}
-      alt={'Four Horsemen_Nocturne Films_Ihsan Aditama'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=281">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'target-5-juta-thumbnail-master'))}
-      alt={'target-5-juta-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
+<SimpleGrid columns={[1, null, 3]} spacingX={34} spacingY={10}>
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'Balada Romansa Bujang_Nocturne Films_Ihsan Aditama'))}
+    alt={'Balada Romansa Bujang_Nocturne Films_Ihsan Aditama'}
+    filter="grayscale(100%)"
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'Four Horsemen_Nocturne Films_Ihsan Aditama'))}
+    alt={'Four Horsemen_Nocturne Films_Ihsan Aditama'}
+    filter="grayscale(100%)"
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'target-5-juta-thumbnail-master'))}
+    alt={'target-5-juta-thumbnail-master'}
+    filter="grayscale(100%)"
+  />
 </SimpleGrid>
