@@ -69,7 +69,7 @@ const theme = {
         lineHeight: 'shorter',
         marginBottom: '12px',
         fontWeight: '400',
-        fontSize: '30px',
+        fontSize: ['30px', '25px', null, null, '31px'],
       },
     },
   },

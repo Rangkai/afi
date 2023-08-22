@@ -39,8 +39,6 @@ function Mengapa({ data }) {
               >
                 <Heading
                   as="h2"
-                  fontSize={['30px', '25px', null, null, '31px']}
-                  lineHeight={1.2}
                 >
                   MENGAPA DAN BAGAIMANA
                 </Heading>

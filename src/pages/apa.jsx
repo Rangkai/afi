@@ -1,5 +1,7 @@
 import {
-  Box, Container, Divider, Flex, GridItem, Heading, Image, List, ListItem, SimpleGrid, Text,
+  Box, Button, Container, Divider, Flex, GridItem,
+  Heading, Image, List, ListItem, SimpleGrid,
+  Tab, TabList, TabPanel, TabPanels, Tabs, Text, useMultiStyleConfig, useTab,
 } from '@chakra-ui/react';
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
@@ -11,8 +13,9 @@ import SEO from '../components/SEO';
 import SquareImage from '../components/SquareImage';
 import useLayout from '../hooks/useLayout';
 import logoBlueOcean from '../images/logo-blue-ocean.svg';
+import Arrow from '../components/Arrow';
 
-const teams = [
+const teams2022 = [
   {
     division: 'Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi',
     people: [
@@ -140,8 +143,36 @@ const teams = [
   },
 ];
 
+const CustomTab = React.forwardRef((props, ref) => {
+  // 1. Reuse the `useTab` hook
+  const tabProps = useTab({ ...props, ref });
+  const isSelected = !!tabProps['aria-selected'];
+
+  const styles = useMultiStyleConfig('Tabs', tabProps);
+
+  return (
+    <Button
+      __css={styles.tab}
+      p="20px 40px"
+      fontSize="20px"
+      width="100%"
+      justifyContent="flex-start"
+      bg="telorAsin.400"
+      color="#000000"
+      marginBottom="0"
+      borderBottom="0"
+      _selected={{ color: 'white', bg: 'blueOcean.500' }}
+      {...tabProps}
+    >
+      {tabProps.children}
+      <Arrow dir="right" color={isSelected ? 'light' : 'dark'} />
+    </Button>
+  );
+});
+
 function Apa({ data }) {
   const whatBanner = getImage(data.file);
+  const marlianaTalks = getImage(data.marlianaTalks);
   const images = data.allFile.nodes;
   const { getCol } = useLayout();
 
@@ -223,361 +254,214 @@ function Apa({ data }) {
     },
   ];
 
-  if (true) {
-    return (
-      <Layout>
-        <Container py={{ md: '48px' }} paddingInlineStart={['20px', null, '12px']} paddingInlineEnd={['20px', null, '12px']}>
-          <Flex
-            as="section"
-            flexDir={['column', null, 'row']}
-            justifyContent={['center', null, 'flex-end']}
-            background="blueOcean.500"
-            mt={{ md: '62px' }}
-          >
-            <Box w={['100%', null, getCol(5)]}>
-              <Flex
-                flexDir="column"
-                justifyContent="center"
-                p={['30px', null, '0 80px 0 0']}
-                h="100%"
-                color="white"
-              >
-                <Heading
-                  as="h2"
-                  fontSize={['30px', '25px', null, null, '31px']}
-                  lineHeight={1.2}
-                >
-                  APA DAN SIAPA
-                </Heading>
-                <Text>
-                  Sinema hidup dalam berbagai rupa. Apresiasi Film Indonesia hadir sebagai
-                  upaya untuk menelusuri akar dan ranting budaya sinema sebagai landasan
-                  penguatan ekosistem perfilman.
-                </Text>
-              </Flex>
-            </Box>
-            <Box position="relative" w={['100%', null, getCol(6)]}>
-              <Box
-                as={GatsbyImage}
-                quality={100}
-                image={whatBanner}
-                alt="apa banner"
-                layout="full_width"
-                w="100%"
-              />
-              <Image
-                src={logoBlueOcean}
-                position="absolute"
-                w="100px"
-                h="100px"
-                top="50%"
-                right="0"
-                transform="translate(0%, -50%)"
-                zIndex={1}
-              />
-            </Box>
-          </Flex>
-        </Container>
-      </Layout>
-    );
-  }
-
   return (
     <Layout>
-      <Box
-        as={GatsbyImage}
-        height={['220px', null, 'auto']}
-        objectFit={['cover', null, 'unset']}
-        image={whatBanner}
-        alt="what banner"
-      />
-      <Container mt="48px">
-        <GridContainer>
-          <GridItemLeftContent />
-          <GridItem>
+      <Container py={{ md: '48px' }} paddingInlineStart={['20px', null, '12px']} paddingInlineEnd={['20px', null, '12px']}>
+        <Flex
+          as="section"
+          flexDir={['column', null, 'row']}
+          justifyContent={['center', null, 'flex-end']}
+          background="blueOcean.500"
+          mt={{ md: '62px' }}
+        >
+          <Box w={['100%', null, getCol(5)]}>
+            <Flex
+              flexDir="column"
+              justifyContent="center"
+              p={['30px', null, '0 80px 0 0']}
+              h="100%"
+              color="white"
+            >
+              <Heading
+                as="h2"
+                fontSize={['30px', '25px', null, null, '31px']}
+                lineHeight={1.2}
+              >
+                APA DAN SIAPA
+              </Heading>
+              <Text>
+                Sinema hidup dalam berbagai rupa. Apresiasi Film Indonesia hadir sebagai
+                upaya untuk menelusuri akar dan ranting budaya sinema sebagai landasan
+                penguatan ekosistem perfilman.
+              </Text>
+            </Flex>
+          </Box>
+          <Box position="relative" w={['100%', null, getCol(6)]}>
+            <Box
+              as={GatsbyImage}
+              quality={100}
+              image={whatBanner}
+              alt="apa banner"
+              layout="full_width"
+              w="100%"
+            />
+            <Image
+              src={logoBlueOcean}
+              position="absolute"
+              w="100px"
+              h="100px"
+              top="50%"
+              right="0"
+              transform="translate(0%, -50%)"
+              zIndex={1}
+            />
+          </Box>
+        </Flex>
+
+        <Flex
+          as="section"
+          flexDir={['column', null, 'row']}
+          justifyContent="center"
+          mt={{ md: '62px' }}
+        >
+          <Box
+            w={['100%', null, getCol(9)]}
+            borderTop="2px solid #000000"
+            pt="16px"
+          >
             <Heading
               as="h3"
-              fontSize={['28px', null, '40px']}
-              fontWeight="600"
-              color="brandRed.500"
+              fontSize={['30px', '25px', null, null, '28px']}
+              mb="24px"
             >
-              Apresiasi Film Indonesia 2022
+              APRESIASI FILM INDONESIA
             </Heading>
-
-          </GridItem>
-        </GridContainer>
-
-        <GridContainer>
-          <GridItemLeftContent>
-            <Lightbox
-              image={images.find((item) => item.name === 'AFI_Apa Marlina Yulianty Memberi')}
-              alt="AFI_Apa Marlina Yulianty Memberi"
-              mb="16px"
-              size="2xl"
-            >
-              <SquareImage
-                image={getImage(images.find((item) => item.name === 'AFI_Apa Marlina Yulianty Memberi'))}
-                alt="AFI_Apa Marlina Yulianty Memberi"
-              />
-            </Lightbox>
-            <Text
-              fontSize="16px"
-              lineHeight="shorter"
-              color="brandBlue.500"
-              fontWeight={700}
-              fontStyle="italic"
-              textAlign="left"
-            >
-              Marlina Yulianty Machfud (Pamong Budaya
-              Bidang Perfilman) memberi tanggapan
-              terhadap paparan hasil riset
+            <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+              Sinema, layaknya sejarah, tidak pernah tunggal. Kehadirannya tidak terbatas di
+              karpet merah dan panggung para pemenang sebagaimana yang populer diberitakan.
+              Ia turut hidup di sekolah, pojok desa, bioskop tua, layar-layar sederhana, dan
+              ruang-ruang lain yang jarang dibicarakan. Dalam rupa-rupa wajahnya, sinema
+              seringkali menghibur, namun tak jarang ia turut jadi titik temu warga untuk saling
+              melebur. Melalui keragaman sinema di akar rumput, terbuka pintu bagi keterlibatan
+              publik yang lebih luas dalam perfilman Indonesia.
             </Text>
-          </GridItemLeftContent>
-          <GridItem>
-            <Text fontSize="16px" mb="24px">
-              Sinema, layaknya sejarah, tidak pernah tunggal. Kehadirannya tidak terbatas
-              di karpet merah dan panggung para pemenang sebagaimana yang populer
-              diberitakan. Ia turut hidup di sekolah, pojok desa, bioskop tua, layar-layar
-              sederhana, dan ruang-ruang lain yang jarang dibicarakan. Dalam rupa-rupa
-              wajahnya, sinema seringkali menghibur, namun tak jarang ia turut jadi titik temu
-              warga untuk saling melebur. Melalui keragaman sinema di tingkat akar rumput,
-              terbuka pintu bagi keterlibatan publik yang lebih luas dalam perfilman Indonesia.
-            </Text>
-
-            <Text fontSize="16px" mb="24px">
+            <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
               Kekayaan bentuk dan pengalaman sinema inilah yang menjadi sasaran
               {' '}
-              <b>
-                Apresiasi Film Indonesia 2022.
-              </b>
-              {' '}
-              Diselenggarakan oleh Kementerian Pendidikan,
-              Kebudayaan, Riset, dan Teknologi, program ini bertujuan merekam beragam
-              wujud perfilman di Indonesia melalui kolaborasi penelitian dan kuratorial. Di
-              tingkat pelaksanaan, Cinema Poetica dan Rangkai saling berkolaborasi untuk
-              memetakan dan menghubungkan berbagai sumber daya yang dibutuhkan.
+              <b>Apresiasi Film Indonesia</b>
+              . Diselenggarakan oleh Kementerian Pendidikan, Kebudayaan, Riset, dan
+              Teknologi, program ini bertujuan merekam beragam wujud perfilman di Indonesia
+              melalui kolaborasi penelitian dan kuratorial. Di tingkat pelaksanaan, Cinema
+              Poetica dan Rangkai berkolaborasi dengan berbagai pribadi dan kelompok, membentuk
+              suatu tim kerja untuk memetakan dan menghubungkan berbagai sumber daya yang
+              dibutuhkan.
             </Text>
-
-            <Text fontSize="16px" mb="24px">
-              Ada dua capaian yang diharapkan. Pertama, melalui kolaborasi penelitian,
-              program ini menyajikan himpunan wawasan perihal kegiatan produksi dan
-              ekshibisi di tingkat lokal, yang seringnya terjadi di luar lingkup bioskop dan
-              industri. Kedua, melalui kolaborasi kuratorial, program ini mengupayakan
-              kesempatan tayang yang lebih luas bagi film-film komunitas, yang umumnya
-              hanya terwadahi lewat festival film dan inisiatif layar mandiri.
+            <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+              Ada dua capaian yang diharapkan. Pertama, melalui kolaborasi penelitian, program
+              ini menyajikan himpunan wawasan perihal kegiatan produksi dan ekshibisi di tingkat
+              lokal, yang seringnya terjadi di luar lingkup bioskop dan industri. Kedua, melalui
+              kolaborasi kuratorial, program ini mengupayakan kesempatan tayang yang lebih luas
+              bagi film-film komunitas, yang umumnya hanya terwadahi lewat festival film dan
+              inisiatif layar mandiri.
             </Text>
-
-          </GridItem>
-        </GridContainer>
-
-        <GridContainer>
-          <GridItemLeftContent>
-            <Lightbox
-              image={images.find((item) => item.name === 'AFI_Apa Presentasi publik')}
-              alt="AFI_Apa Presentasi publik"
-              mb="16px"
-              size="2xl"
-            >
-              <SquareImage
-                image={getImage(images.find((item) => item.name === 'AFI_Apa Presentasi publik'))}
-                alt="AFI_Apa Presentasi publik"
-              />
-            </Lightbox>
-            <Text
-              fontSize="16px"
-              lineHeight="shorter"
-              color="brandBlue.500"
-              fontWeight={700}
-              fontStyle="italic"
-              textAlign="left"
-              mb="30px"
-            >
-              Presentasi publik Apresiasi Film Indonesia
-              2022 di Semarang
-            </Text>
-          </GridItemLeftContent>
-          <GridItem>
-            <Text fontSize="16px" mb="24px">
-              Sepuluh kota menjadi sasaran penelitian: Banda Aceh, Bandung, Balikpapan,
-              Denpasar, Kupang Makassar, Medan, Purbalingga, Semarang, dan Surabaya.
+            <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+              Pada 2022, ada sepuluh kota yang menjadi sasaran penelitian: Banda Aceh, Bandung,
+              Balikpapan, Denpasar, Kupang Makassar, Medan, Purbalingga, Semarang, dan Surabaya.
               Kota-kota ini dipilih dengan pertimbangan atas rekam jejak kegiatan yang bisa
-              dilacak selama lima tahun terakhir. Di setiap kota, Cinema Poetica dan Rangkai
-              berkolaborasi dengan pegiat komunitas setempat untuk mencatat bagaimana
-              budaya sinema mewujud dalam keseharian masyarakatnya.
+              dilacak selama lima tahun terakhir. Di setiap kota, tim program berkolaborasi
+              dengan pegiat komunitas setempat untuk mencatat bagaimana budaya sinema mewujud
+              dalam keseharian masyarakatnya.
             </Text>
-
-            <Text fontSize="16px" mb="24px">
-              Hasil penelitian Apresiasi Film Indonesia 2022 bisa diakses publik di website
-              komunitasfilm.id, sementara film-film pilihan dari kolaborasi kuratorial bisa
-              disaksikan gratis di rangkai.id.
-            </Text>
-
-            <Divider opacity={1} borderColor="brandRed.500" mb="32px" />
-          </GridItem>
-        </GridContainer>
-
-        <Box
-          as={GatsbyImage}
-          height={['220px', null, 'auto']}
-          objectFit={['cover', null, 'unset']}
-          image={getImage(images.find((image) => image.name === 'AFI_Apa Tim'))}
-          alt="what banner"
-          border="1px solid"
-          borderColor="brandRed.500"
-        />
-
-        <Heading
-          as="h3"
-          fontSize={['28px', null, '40px']}
-          fontWeight="700"
-          color="brandRed.500"
-          mt="48px"
-          mb="32px"
-        >
-          Tim Kerja
-        </Heading>
-        <SimpleGrid
-          columns={[1, null, 3]}
-          gap={['0px', null, '10vw']}
-          mb={['20px', null, '40px']}
-        >
-          <Box>
-            {teams.slice(0, 4).map((team) => (
-              <Box mb={['16px', null, '24px']}>
-                <Text fontSize={['14px', null, '16px']} fontWeight="700" color="brandBlue.500">
-                  {team.division}
-                </Text>
-                <List>
-                  {team.people.map((person) => (
-                    <ListItem fontSize={['14px', null, '16px']}>
-                      {person}
-                    </ListItem>
-                  ))}
-                </List>
-              </Box>
-            ))}
-          </Box>
-          <Box>
-            {teams.slice(4, 9).map((team) => (
-              <Box mb={['16px', null, '24px']}>
-                <Text fontSize={['14px', null, '16px']} fontWeight="700" color="brandBlue.500">
-                  {team.division}
-                </Text>
-                <List>
-                  {team.people.map((person) => (
-                    <ListItem fontSize={['14px', null, '16px']}>
-                      {person}
-                    </ListItem>
-                  ))}
-                </List>
-              </Box>
-            ))}
-          </Box>
-          <Box>
-            {teams.slice(9, 15).map((team) => (
-              <Box mb={['16px', null, '24px']}>
-                <Text fontSize={['14px', null, '16px']} fontWeight="700" color="brandBlue.500">
-                  {team.division}
-                </Text>
-                <List>
-                  {team.people.map((person) => (
-                    <ListItem fontSize={['14px', null, '16px']}>
-                      {person}
-                    </ListItem>
-                  ))}
-                </List>
-              </Box>
-            ))}
-          </Box>
-        </SimpleGrid>
-        <SimpleGrid columns={[2, null, 4]} gap={['20px', null, '40px']} mb="80px">
-          {people.map((person) => (
-            <div>
-              <Lightbox image={person.image} alt={person.name} mb="16px">
-                <SquareImage image={person.image} alt={person.name} />
-              </Lightbox>
-              <Text
-                fontSize={['14px', null, '16px']}
-                fontWeight="700"
-                color="brandRed.500"
-                mb="0px"
-                lineHeight="shorter"
-              >
-                {person.name}
-                {' -'}
-              </Text>
-              <Text
-                fontSize={['14px', null, '16px']}
-                mb="0px"
-                lineHeight="shorter"
-              >
-                {person.division}
-              </Text>
-            </div>
-          ))}
-        </SimpleGrid>
-
-        <GridContainer mb="20px">
-          <GridItemLeftContent>
             <Box
               as={GatsbyImage}
-              image={getImage(images.find((image) => image.name === 'AFI_Apa CP'))}
-              width="140px"
-              mb="24px"
+              mb="8px"
+              mt="50px"
+              image={marlianaTalks}
+              alt="Marlina Yulianty Machfud (Pamong Budaya Bidang Perfilman) memberi tanggapan terhadap paparan hasil riset"
+              _hover={{
+                opacity: '.9',
+              }}
             />
-          </GridItemLeftContent>
-          <GridItem>
-            <Heading
-              as="h3"
-              fontSize={['28px', null, '40px']}
-              fontWeight="600"
-              color="brandRed.500"
+            <Text
+              fontFamily="'Azeret Mono', monospace"
+              fontSize="12.25px"
+              lineHeight="18.375px"
+              mb="50px"
             >
-              Cinema Poetica
-            </Heading>
-
-            <Text fontSize="16px" mb="24px">
-              Dibentuk pada 2010, Cinema Poetica merupakan respons terhadap minimnya
-              literatur tentang film dan perfilman di Indonesia. Cinema Poetica utamanya
-              mengupayakan produksi dan distribusi pengetahuan sinema bagi publik.
-              Idealnya, dalam ekosistem perfilman yang sehat, produksi-distribusi
-              pengetahuan dan produksi-distribusi film bisa saling mengisi.
+              Marlina Yulianty Machfud (Pamong Budaya Bidang Perfilman)
+              memberi tanggapan terhadap paparan hasil riset
             </Text>
-
-            <Divider opacity={1} borderColor="brandRed.500" mb="52px" />
-          </GridItem>
-        </GridContainer>
-
-        <GridContainer>
-          <GridItemLeftContent>
-            <Box
-              as={GatsbyImage}
-              image={getImage(images.find((image) => image.name === 'AFI_Apa Rangkai'))}
-              width="220px"
-              mb="24px"
-            />
-          </GridItemLeftContent>
-          <GridItem>
-            <Heading
-              as="h3"
-              fontSize={['28px', null, '40px']}
-              fontWeight="600"
-              color="brandRed.500"
-            >
-              Rangkai
-            </Heading>
-
-            <Text fontSize="16px" mb="24px">
-              Mengudara pada 28 Oktober 2021, Rangkai adalah startup film Indonesia yang
-              berfokus pada koleksi Film Digital Nasional. Fokus utama Rangkai adalah
-              mengupayakan sarana menonton yang mudah diakses publik dengan harga
-              terjangkau. Rangkai juga menargetkan akses pendapatan baru dan upaya
-              pendataan yang komprehensif bagi pembuat film di berbagai layar
+            <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+              Pada 2023, Apresiasi Film Indonesia memperluas cakupan kerjanya. Lini kerja
+              pendataan dan penayangan tetap dijalankan, yang lanjut bergerak ke lima kota lain:
+              Jambi, Malang, Palu, Singkawang, dan Sumbawa. Bersamaan dengan itu, tim program
+              turut merancang dan melaksanakan serangkaian program yang diberi tajuk Tindak
+              Lanjut. Ada tiga kota sasaran yang diseleksi berdasarkan hasil riset tahun
+              sebelumnya, yakni Banda Aceh, Balikpapan, dan Kupang. Melalui rangkaian program
+              Tindak Lanjut, tim program berkolaborasi dengan komunitas film dan pemerintah
+              daerah di ketiga kota untuk penguatan pelaku dan jaringan perfilman setempat.
+              Program yang dilaksanakan bersifat jangka pendek, dengan diskusi dan proyeksi
+              untuk kepentingan jangka panjang.
             </Text>
-
-            <Divider opacity={1} borderColor="brandRed.500" mb="52px" />
-          </GridItem>
-        </GridContainer>
+            <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+              Hasil penelitian serta laporan kegiatan Apresiasi Film Indonesia bisa diakses
+              publik di website komunitasfilm.id, sementara film-film pilihan dari kolaborasi
+              kuratorial bisa disaksikan gratis di rangkai.id.
+            </Text>
+            <Tabs variant="unstyled">
+              <TabList borderY="2px solid #000000">
+                <CustomTab>
+                  Tim Kerja 2023
+                </CustomTab>
+                <CustomTab
+                  borderLeft="2px solid #000000"
+                >
+                  Tim Kerja 2022
+                </CustomTab>
+              </TabList>
+              <TabPanels>
+                <TabPanel p="0" mt="50px">
+                  <List>
+                    {teams2022.map((team) => (
+                      <ListItem
+                        key={team.division}
+                        pb="15px"
+                        borderBottom="1px solid #000000"
+                        mb="20px"
+                      >
+                        <Text
+                          fontWeight="800"
+                          fontSize="20px"
+                          mb="8px"
+                          lineHeight="24px"
+                        >
+                          {team.division}
+                        </Text>
+                        <Text mb="0" fontSize="14px">
+                          {team.people?.join(', ')}
+                        </Text>
+                      </ListItem>
+                    ))}
+                  </List>
+                </TabPanel>
+                <TabPanel p="0" mt="50px">
+                  <List>
+                    {teams2022.map((team) => (
+                      <ListItem
+                        key={team.division}
+                        pb="15px"
+                        borderBottom="1px solid #000000"
+                        mb="20px"
+                      >
+                        <Text
+                          fontWeight="800"
+                          fontSize="20px"
+                          mb="8px"
+                          lineHeight="24px"
+                        >
+                          {team.division}
+                        </Text>
+                        <Text mb="0" fontSize="14px">
+                          {team.people?.join(', ')}
+                        </Text>
+                      </ListItem>
+                    ))}
+                  </List>
+                </TabPanel>
+              </TabPanels>
+            </Tabs>
+          </Box>
+        </Flex>
       </Container>
     </Layout>
   );
@@ -598,6 +482,12 @@ export const query = graphql`
       }
     }
     default: file(relativePath: {eq: "default.jpg"}) {
+      name
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED)
+      }
+    }
+    marlianaTalks: file(relativePath: {eq: "what/Marlina-Yulianty-Machfud.jpeg"}) {
       name
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED)
