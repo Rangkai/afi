@@ -1,19 +1,17 @@
 import {
-  Box, Button, Container, Divider, Flex, GridItem,
-  Heading, Image, List, ListItem, SimpleGrid,
-  Tab, TabList, TabPanel, TabPanels, Tabs, Text, useMultiStyleConfig, useTab,
+  Box, Button, Container,
+  Flex,
+  Heading, Image, List, ListItem,
+  TabList, TabPanel, TabPanels, Tabs, Text, useMultiStyleConfig, useTab,
 } from '@chakra-ui/react';
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
-import GridContainer, { GridItemLeftContent } from '../components/GridContainer';
+import Arrow from '../components/Arrow';
 import Layout from '../components/Layout';
-import Lightbox from '../components/Lightbox';
 import SEO from '../components/SEO';
-import SquareImage from '../components/SquareImage';
 import useLayout from '../hooks/useLayout';
 import logoBlueOcean from '../images/logo-blue-ocean.svg';
-import Arrow from '../components/Arrow';
 
 const teams2022 = [
   {
@@ -312,7 +310,7 @@ function Apa({ data }) {
           as="section"
           flexDir={['column', null, 'row']}
           justifyContent="center"
-          mt={{ md: '62px' }}
+          mt={{ md: '100px' }}
         >
           <Box
             w={['100%', null, getCol(9)]}
