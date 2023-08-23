@@ -199,12 +199,17 @@ function Header() {
       children: [
         {
           id: 1,
-          text: '2022',
+          text: 'Banda Aceh',
           link: '/',
         },
         {
           id: 2,
-          text: '2023',
+          text: 'Balikpapan',
+          link: '/',
+        },
+        {
+          id: 3,
+          text: 'Kupang',
           link: '/',
         },
       ],
