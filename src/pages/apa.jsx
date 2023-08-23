@@ -119,7 +119,7 @@ const teams2022 = [
     ],
   },
   {
-    division: 'Purbalinga',
+    division: 'Purbalingga',
     people: [
       'Muhammad Taufiqurrohman',
       'Wiman Rizkidarajat',
@@ -137,6 +137,104 @@ const teams2022 = [
     people: [
       'Dimas Giswa Prasiddha',
       'Yogi Ishabib',
+    ],
+  },
+];
+
+const teams2023 = [
+  {
+    division: 'Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi',
+    people: [
+      'Hilmar Farid',
+      'Ahmad Mahendra',
+      'Marlina Yulianty Machfud',
+      'Pandu Pradana',
+      'Tim Direktorat Perfilman, Musik, dan Media',
+    ],
+  },
+  {
+    division: 'Pengarah Program',
+    people: [
+      'Adrian Jonathan Pasaribu',
+      'Muhammad Abraham',
+      'Redemptus Rangga Raditya',
+      'Sastha Sunu',
+      'Vivian Idris',
+    ],
+  },
+  {
+    division: 'Riset dan Editorial',
+    people: [
+      'Adinda Zakiah',
+      'Avicenna Raksa Santana',
+      'Dini Adanurani',
+      'Raihan Zaky',
+    ],
+  },
+  {
+    division: 'Film dan Kuratorial',
+    people: [
+      'Abidzar Ghifary',
+      'Alexander Matius',
+      'Mazda Radita Roromari',
+    ],
+  },
+  {
+    division: 'Aktivasi & Komunikasi Publik',
+    people: [
+      'Lintang Aulia Yudhityasari',
+      'Yuriko Abi Pratama',
+    ],
+  },
+  {
+    division: 'Narasumber Tindak Lanjut',
+    people: [
+      'Alex Sihar',
+      'Angkasa Ramadhan',
+      'Ifan Adriansyah Ismail',
+      'Nauval Yazid',
+    ],
+  },
+  {
+    division: 'Web & Desain',
+    people: [
+      'Ardhi Yudho Anggoro',
+      'Nurul Iman',
+    ],
+  },
+  {
+    division: 'Jambi',
+    people: [
+      'Anton Oktaviano',
+      'Melda Ria Sinambela',
+    ],
+  },
+  {
+    division: 'Malang',
+    people: [
+      'Dwi Yusrika Tautin',
+      'Nashiru Setiawan',
+    ],
+  },
+  {
+    division: 'Palu',
+    people: [
+      'Rahmadiyah Tria Gayathri',
+      'Taufiqurrahman',
+    ],
+  },
+  {
+    division: 'Singkawang',
+    people: [
+      'Agus Muri Arviandi',
+      'Frino Bariarcianur',
+    ],
+  },
+  {
+    division: 'Sumbawa',
+    people: [
+      'Harsa Perdana',
+      'Reny Suci',
     ],
   },
 ];
@@ -410,7 +508,7 @@ function Apa({ data }) {
               <TabPanels>
                 <TabPanel p="0" mt="50px">
                   <List>
-                    {teams2022.map((team) => (
+                    {teams2023.map((team) => (
                       <ListItem
                         key={team.division}
                         pb="15px"

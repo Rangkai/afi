@@ -38,8 +38,6 @@ function Ekosistem({ data }) {
                   EKOSISTEM
                   <br />
                   PERFILMAN
-                  <br />
-                  LOKAL
                 </Heading>
                 <Text>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
