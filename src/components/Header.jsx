@@ -195,22 +195,22 @@ function Header() {
     {
       id: 4,
       text: 'Tindak Lanjut',
-      link: '/',
+      link: '/tindaklanjut',
       children: [
         {
           id: 1,
           text: 'Banda Aceh',
-          link: '/',
+          link: '/tindaklanjut?city=aceh',
         },
         {
           id: 2,
           text: 'Balikpapan',
-          link: '/',
+          link: '/tindaklanjut?city=balikpapan',
         },
         {
           id: 3,
           text: 'Kupang',
-          link: '/',
+          link: '/tindaklanjut?city=kupang',
         },
       ],
     },
