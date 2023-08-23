@@ -1,15 +1,14 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import {
-  Box, Button, Container, Flex, Heading, LinkBox, LinkOverlay, SimpleGrid, Text,
+  Box,
+  Container, Flex, Heading,
+  Text,
 } from '@chakra-ui/react';
+import React from 'react';
+import ButtonLink from '../components/ButtonLink';
 import Layout from '../components/Layout';
 import useLayout from '../hooks/useLayout';
-import ButtonLink from '../components/ButtonLink';
 
-function Kontak({ data }) {
-  const banner = getImage(data.file);
+function Kontak() {
   const { getCol } = useLayout();
 
   return (
@@ -111,14 +110,3 @@ function Kontak({ data }) {
 }
 
 export default Kontak;
-
-export const query = graphql`
-  query ContactPageQuery {
-    file(relativePath: {eq: "AFI_Hubungi Hero.jpg"}) {
-      name
-      childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
-      }
-    }
-  }
-`;
