@@ -2,6 +2,8 @@
 title: Banda Aceh
 slug: kota-aceh
 desc: Bersiasat demi berbagi manfaat.
+headline: Siasat Untuk Maslahat Legalitas Komunitas di Aceh
+author: Akbar Rafsanjani
 banner: '../images/cities/banda_aceh/banner.jpg'
 thumb: '../images/cities/banda_aceh/thumb.jpg'
 galleryDir: 'cities/banda_aceh'
@@ -25,36 +27,16 @@ import Lightbox from '../components/Lightbox';
 import ImagePlay from '../components/ImagePlay';
 
 <GridContainer>
-  <GridItemLeftContent />
+  
   <GridItem>
-    ## Siasat Untuk Maslahat: Legalitas Komunitas di Aceh
 
-    <p className="caption">Akbar Rafsanjani</p>
-
-    Di Aceh, komunitas film lahir dan tumbuh sebagai siasat dari keterbatasan
+    <p className="highlight">Di Aceh, komunitas film lahir dan tumbuh sebagai siasat dari keterbatasan
     yang dihadapi di ekosistem perfilman lokal, terutama di lini produksi. Mulai dari
     sumber dana, sumber daya manusia yang terampil, hingga kepemilikan peralatan
     produksi film. Anggota komunitas film tersebut awalnya adalah individu yang
     punya relasi (pertemanan). Kemudian mengajak yang lainnya, teman dari teman
     yang punya keahlian mengoperasi kamera, atau _jago_ editing. Komunitas film
-    muncul untuk berbagi _resources_ yang dimiliki setiap individu; 
-
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Jenis Komunitas Terdata</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Jenis-Komunitas-Terdata-')} alt={'Jenis-Komunitas-Terdata-'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Jenis-Komunitas-Terdata-thumb'))} alt={'Jenis-Komunitas-Terdata-thumb'} noBorder />
-    </Lightbox>
-    <p className="caption">Sebagian besar komunitas yang terdata
-      hanya berfokus pada satu lini kegiatan.
-      Namun, ada pula beberapa komunitas yang
-      menjalankan program produksi dan ekshibisi
-      secara bersamaan.</p>
-  </GridItemLeftContent>
-  <GridItem>
+    muncul untuk berbagi _resources_ yang dimiliki setiap individu; </p>
 
     Namun, keberlanjutan sumber dana produksi film dari individu dalam komunitas
     film di Aceh ternyata tidak bisa menyokong keberlangsungan aktivitas mereka
@@ -71,9 +53,8 @@ import ImagePlay from '../components/ImagePlay';
     berbagi _resources_ individu-individu, tetapi komunitas film yang punya legalitas
     untuk bisa melewati birokrasi dalam memperoleh sumber dana dari pemerintah.
 
-    <hr />
 
-    ### NGO, Film Advokasi, Hingga Lahirnya “Komunitas Film” di Aceh
+    <h5>NGO, Film Advokasi, Hingga Lahirnya “Komunitas Film” di Aceh</h5>
 
     Tahun 2013 menandai tumbuhnya ekosistem perfilman di Aceh. Hal itu terlihat
     dari hadirnya komunitas Aceh Documentary. Aceh Documentary diinisiasi
@@ -113,23 +94,6 @@ import ImagePlay from '../components/ImagePlay';
     25.000,-. Salah satu yang paling terkenal dan berhasil diproduksi sampai 14
     volume adalah film _Eumpang Breuh_ yang diproduksi berkala dari tahun 2006
     hingga 2018.
-
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Dukungan untuk Komunitas Produksi (%)</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Dukungan-untuk-Komunitas-Produksi')} alt={'Dukungan-untuk-Komunitas-Produksi'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Dukungan-untuk-Komunitas-Produksi-thumb'))} alt={'Dukungan-untuk-Komunitas-Produksi-thumb'} noBorder />
-    </Lightbox>
-    <p className="caption">Sekitar 45% dari 69 komunitas mengaku
-      bahwa mereka mendapatkan dukungan
-      dari pemerintah. Bentuk yang paling banyak
-      disebutkan adalah dana (59%), dukungan
-      fasilitas (44%) dan program kerja sama (31%). </p>
-  </GridItemLeftContent>
-  <GridItem>
 
     Dua tujuan produksi film ini, advokasi dan komersial, terus mengisi cerita
     perfilman di Aceh sampai sekarang. Film advokasi yang dimaksud adalah yang
@@ -197,21 +161,10 @@ import ImagePlay from '../components/ImagePlay';
     Documentary Competition dibentuk dengan legalitas berupa yayasan, akan
     dapat dijadikan sebagai sekolah film.
 
-    <hr />
+    <h5>Komunitas Menuju Legalitas</h5>
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'Aceh Documentary 2014 Training. Sumber_ Aceh DocumentaryBW'))} alt="AFI_Ekosistem Banda Aceh Documentary" filter="grayscale(100%)" />
+    <Text className="caption" mb="50px !important">Aceh Documentary 2014 Training. Sumber_ Aceh Documentary</Text>
 
-    ### Komunitas Menuju Legalitas
-
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'AFI_Ekosistem Banda Aceh Documentary')} alt={'AFI_Ekosistem Banda Aceh Documentary'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'AFI_Ekosistem Banda Aceh Documentary')} alt={'AFI_Ekosistem Banda Aceh Documentary'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Aceh Documentary 2014 Training<br/>Sumber_ Aceh Documentary</p>
-  </GridItemLeftContent>
-  <GridItem>
     Pada tahun 2014, Aceh Documentary resmi menjadi Yayasan Aceh Dokumenter
     (YAD). Tahun kedua, program Aceh Documentary berhasil mendapat sokongan
     dana dari _The Asia Foundation_, yang dimanfaatkan untuk mengadakan program
@@ -237,30 +190,12 @@ import ImagePlay from '../components/ImagePlay';
     Documentary serta mencari sumber dana, serta mengerjakan hal-hal yang
     bersifat administratif, misalnya laporan keuangan.
 
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Bentuk Legalitas (%)</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Bentuk-Legalitas')} alt={'Bentuk-Legalitas'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Bentuk-Legalitas-thumb'))} alt={'Bentuk-Legalitas-thumb'} noBorder />
-    </Lightbox>
-    <p className="caption">Istilah komunitas acap kali sulit didefinisikan
-      secara tegas lantaran basis hukum bukan
-      merupakan suatu kebutuhan dalam
-      menjalankan program mereka.</p>
-  </GridItemLeftContent>
-  <GridItem>
-
     Anggota lain bertanggung jawab untuk menjalankan program Aceh Documentary
     Competition, yang terbagi ke dua cabang yaitu pendidikan seperti pengajaran
     penulisan naskah dan penyutradaraan, dan produksi yang berupa pengajaran
     terhadap penggunaan kamera hingga penyuntingan gambar.
 
-    <hr />
-
-    ### Keberlanjutan Komunitas FIlm Dengan Kolaborasi
+    <h5>Keberlanjutan Komunitas FIlm Dengan Kolaborasi</h5>
 
     Di tahun yang sama, RA Karamullah mendirikan komunitas film di Fakultas
     Dakwah dan Komunikasi, UIN Ar-Raniry. Setiap tahun komunitas yang dinamai
@@ -286,17 +221,8 @@ import ImagePlay from '../components/ImagePlay';
     Menonton fokus pada pemutaran film-film yang diproduksi oleh komunitas film di
     Aceh.
 
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'AFI_Ekosistem Banda Aceh Produksi Film')} alt={'AFI_Ekosistem Banda Aceh Produksi Film'} mb="16px">
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'AFI_Ekosistem Banda Aceh Produksi Film')} alt={'AFI_Ekosistem Banda Aceh Produksi Film'} />
-    </Lightbox>
-    <p className="caption">Produksi Film Aceh Documentary 2014. <br/>Sumber_ Aceh Documentary</p>
-  </GridItemLeftContent>
-  <GridItem>
+    <Box as={GatsbyImage} mb="8px" mt="50px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'Produksi Film Aceh Documentary 2014. Sumber_ Aceh DocumentaryBW'))} alt="Produksi Film Aceh Documentary 2014. Sumber_ Aceh DocumentaryBW" filter="grayscale(100%)" />
+    <Text className="caption" mb="50px !important">Produksi Film Aceh Documentary 2014. Sumber_ Aceh DocumentaryBW</Text>
 
     Aceh Menonton melakukan pemutaran film dua kali dalam sebulan. Karena
     durasi pemutaran yang lumayan banyak itu, jumlah film Aceh tidak cukup
@@ -329,17 +255,9 @@ import ImagePlay from '../components/ImagePlay';
     adanya rumah produksi ini, pengelola Aceh Menonton bisa mendapatkan
     penghasilan dari produksi film maupun video pesanan. 
 
-  </GridItem>
-</GridContainer>
+    <Box as={GatsbyImage} mb="8px" mt="50px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'Syuting Film Hana Gata oleh Fisuar. Sumber_ FisuarBW'))} alt="Syuting Film Hana Gata oleh Fisuar. Sumber_ FisuarBW" filter="grayscale(100%)" />
+    <Text className="caption" mb="50px !important">Syuting Film Hana Gata oleh Fisuar. Sumber_ FisuarBW</Text>
 
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'AFI_Ekosistem Banda Aceh Syuting Film')} alt={'AFI_Ekosistem Banda Aceh Syuting Film'} mb="16px">
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'AFI_Ekosistem Banda Aceh Syuting Film')} alt={'AFI_Ekosistem Banda Aceh Syuting Film'} />
-    </Lightbox>
-    <p className="caption">Syuting Film Hana Gata oleh Fisuar. <br/>Sumber_ Fisuar</p>
-  </GridItemLeftContent>
-  <GridItem>
     Komunitas film di Aceh terhubung lewat kerjasama-kerjasama produksi maupun
     ekshibisi. Menurut Azhari komunitas film di Aceh juga terbentuk karena saling
     membutuhkan,"ada kendala pada kepemilikan alat, seperti kamera, kemudian
@@ -371,28 +289,7 @@ import ImagePlay from '../components/ImagePlay';
     mendapatkan pekerjaan beberapa kali dengan menjadi _clapper board_ maupun
     asisten sutradara pada produksi film bersama Aceh Documentary.
 
-    <hr />
-
-    ### Harmoni Dengan Pemerintah Sebagai Siasat Keberlanjutan
-
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Bentuk Dukungan Pemerintah untuk Ekshibisi (%)</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Bentuk-Dukungan-Pemerintah-untuk-Ekshibisi')} alt={'Bentuk-Dukungan-Pemerintah-untuk-Ekshibisi'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Bentuk-Dukungan-Pemerintah-untuk-Ekshibisi.-thumb'))} alt={'Bentuk-Dukungan-Pemerintah-untuk-Ekshibisi.-thumb'} noBorder />
-    </Lightbox>
-    <p className="caption">Sebagian komunitas dalam survei
-      menyatakan bahwa komunitas mereka
-      pernah mendapat dukungan dari
-      pemerintah dalam bentuk yang beragam.
-      Jenis dukungan paling banyak berupa
-      penggunaan fasilitas tempat (77%) dan
-      pendanaan (54%).</p>
-  </GridItemLeftContent>
-  <GridItem>
+    <h5>Harmoni Dengan Pemerintah Sebagai Siasat Keberlanjutan</h5>
 
     Komunitas film di Aceh menyadari bahwa sumber dana dari pemerintah sangat
     bisa dimanfaatkan untuk melaksanakan kegiatan komunitas, selain ada juga
@@ -431,49 +328,38 @@ import ImagePlay from '../components/ImagePlay';
   </GridItem>
 </GridContainer>
 
+
 <hr />
 
-<Text as="h3" mt={["40px", null, "60px"]} mb={["20px !important", null, "32px !important"]}> Karya-karya pilihan Kota Banda Aceh </Text>
+<Text mb="0px !important" fontSize="12.25px">Karya-karya pilihan kota</Text>
+<Text as="h3" mb={["20px !important", null, "32px !important"]} textTransform="uppercase" fontWeight="400 !important"> Banda Aceh </Text>
 
-<SimpleGrid columns={[1, null, 2]} spacingX={34} spacingY={10}>
-  <ImagePlay href="https://rangkai.id/?browse=280">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'canggih-thumbnail-master'))}
+<SimpleGrid columns={[1, null, 3]} spacingX={34} spacingY={10}>
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'canggih-thumbnail-master'))}
       alt={'canggih-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=284">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'haba-paleh-thumbnail-master'))}
-      alt={'haba-paleh-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=283">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'kroeng-pade-thumbnail-master'))}
-      alt={'kroeng-pade-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=285">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'mengejar-koin-thumbnail-master'))}
-      alt={'mengejar-koin-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=274">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'POSTER FILM PLASTIC BOTTLES 1920X1280.JPG - Andri Saputra'))}
-      alt={'POSTER FILM PLASTIC BOTTLES 1920X1280.JPG - Andri Saputra'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
+    filter="grayscale(100%)"
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'haba-paleh-thumbnail-master'))}
+    alt={'haba-paleh-thumbnail-master'}
+    filter="grayscale(100%)"
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'kroeng-pade-thumbnail-master'))}
+    alt={'kroeng-pade-thumbnail-master'}
+    filter="grayscale(100%)"
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'mengejar-koin-thumbnail-master'))}
+    alt={'mengejar-koin-thumbnail-master'}
+    filter="grayscale(100%)"
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'POSTER FILM PLASTIC BOTTLES 1920X1280.JPG - Andri Saputra'))}
+    alt={'POSTER FILM PLASTIC BOTTLES 1920X1280.JPG - Andri Saputra'}
+    filter="grayscale(100%)"
+  />
 </SimpleGrid>
+
+

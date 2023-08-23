@@ -38,10 +38,11 @@ const Content = styled.div`
   }
   h5 {
     font-size: 20px;
-    line-height: 24px;
+    line-height: 33px;
     font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 800;
     margin-bottom: 16px;
+    margin-top:30px;
     @media screen and (min-width: 768px) {
       font-size: 20px;
     }
