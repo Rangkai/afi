@@ -2,6 +2,8 @@
 title: Denpasar
 slug: kota-denpasar
 desc: Semangat Personal dan Kerja Komersial di Sinema Bali.
+headline: Semangat Personal dan Kerja Komersial di Sinema Bali
+author: Ayu Diah Cempaka
 banner: '../images/cities/denpasar/banner.jpg'
 thumb: '../images/cities/denpasar/SRCO_NYI RIMBIT_2019.jpg'
 galleryDir: 'cities/denpasar'
@@ -27,11 +29,9 @@ import ImagePlay from '../components/ImagePlay';
 <GridContainer>
   <GridItemLeftContent />
   <GridItem>
-    ## Semangat Personal dan Kerja Komersial di Sinema Bali
+    
 
-    <p className="caption">Ayu Diah Cempaka</p>
-
-    Dalam konstelasi perfilman Indonesia, atau bahkan dunia, Bali selalu hadir
+    <p className="highlight">Dalam konstelasi perfilman Indonesia, atau bahkan dunia, Bali selalu hadir
     sebagai latar dan objek yang _mooi indie. Eat, Pray, Love_ (Ryan Murphy, 2010)
     hampir pasti selalu disertakan ketika membicarakan Bali dan relasinya dengan
     film. Perlakuan terhadap Bali dengan segala objektifikasi melalui kacamata
@@ -43,7 +43,7 @@ import ImagePlay from '../components/ImagePlay';
     dari eksposur bentang alam dan budaya yang romantis, serta suasana magis dari
     Bali. Mulai dari _Impian di Bali_ (1939), _Noesa Penida_ (1941), _Kabut di Kintamani_ (1972),
     _Mistik_ (Punahnya Rahasia Ilmu Iblis Leak) (1981), _Ratu Sakti Calon Arang_ (1985),
-    hingga _Under the Tree_ (2008).
+    hingga _Under the Tree_ (2008).</p>
 
     Fenomena ini seolah menyiratkan bahwa kehadiran Bali dalam ekosistem
     perfilman amat pasif sekaligus menegasikan dinamika masyarakat yang terus
@@ -55,20 +55,10 @@ import ImagePlay from '../components/ImagePlay';
     mereka saling terhubung dan bergerak menghidupkan perfilman Bali melalui
     karya maupun ruang tayang film?
 
-    <hr />
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'DINASTY FILM_KAYON_2020BW'))} alt="DINASTY FILM_KAYON_2020BW" filter="grayscale(100%)" />
+    <Text className="caption" mb="50px !important">Produksi film Kayon (2020) oleh Dynasty Film</Text>
 
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'thumb')} alt={'Produksi film Kayon (2020) oleh Dynasty Film'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'thumb')} alt={'Produksi film Kayon (2020) oleh Dynasty Film'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Produksi film Kayon (2020) oleh Dynasty Film</p>
-  </GridItemLeftContent>
-  <GridItem>
-    ### Keragaman Pelaku Film di Bali
+    <h5>Keragaman Pelaku Film di Bali</h5>
 
     Runtuhnya Orde Baru memungkinkan orang-orang lebih leluasa untuk
     berhimpun dan berserikat. Dalam konteks seni-budaya, dampaknya mewujud
@@ -102,18 +92,9 @@ import ImagePlay from '../components/ImagePlay';
     sendiri saling bertemu, berdiskusi dan bertukar pengetahuan di program Open
     December yang telah digelar sejak 2003 ini.
 
-  </GridItem>
-</GridContainer>
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'DSC04095BW'))} alt="Produksi film Kambing Hitam (2022)" filter="grayscale(100%)" />
+    <Text className="caption" mb="50px !important">Produksi film Kambing Hitam (2022) oleh Mahatma Pictures</Text>
 
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'kambing-hitam')} alt={'Produksi film Kambing Hitam (2022)'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'kambing-hitam')} alt={'Produksi film Kambing Hitam (2022)'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Produksi film Kambing Hitam (2022) oleh
-      Mahatma Pictures</p>
-  </GridItemLeftContent>
-  <GridItem>
     Kini, seiring dengan berkembangnya teknologi, pelaku film di Bali semakin
     berkembang dan beragam. Dalam hal produksi ada Studio Kitapoleng, EST
     Movie, Silur Barong, DENFILM Creative Supply, Luar Kotak Audiovisual, Niskala
@@ -125,9 +106,7 @@ import ImagePlay from '../components/ImagePlay';
     Bali 1928, film-film hasil repatriasi yang dikerjakan bersama ITB Stikom Bali, dan
     institusi arsip di beberapa negara.
 
-    <hr />
-
-    ### Persimpangan dan Persilangan
+    <h5>Persimpangan dan Persilangan</h5>
 
     Identitas masyarakat Bali tidaklah tunggal seperti yang umum direpresentasikan
     dalam karya-karya populer maupun publisitas pariwisata. Namun pariwisata
@@ -163,29 +142,6 @@ import ImagePlay from '../components/ImagePlay';
     Kitapoleng yang fokus pada karya bergenre _dance film_ juga berangkat dengan
     latar belakang desain grafis Universitas Trisakti.
 
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Perangkat yang Disewa (%)</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Perangkat-yang-Disewa')} alt={'Perangkat-yang-Disewa-thumb'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Perangkat-yang-Disewa-thumb'))} alt={'Perangkat-yang-Disewa-thumb'} noBorder />
-    </Lightbox>
-    <p className="caption">Bagaimanapun juga, membuat film tidaklah
-      murah. Kebutuhan akan alat-alat yang
-      memadai adalah persoalan yang riil. Dalam
-      survei, tampak jelas bahwa mayoritas
-      komunitas mau tak mau menyewa berbagai
-      jenis perangkat pembuatan film. Kepemilikan
-      perangkat memang tidak selalu menjadi
-      keharusan. Namun, perlu diingat bahwa
-      ketersediaan perangkat adalah kebutuhan
-      material yang mungkin saja memakan porsi
-      besar dalam ongkos produksi suatu karya.</p>
-  </GridItemLeftContent>
-  <GridItem>
-
     Nirartha Bas Diwangkara yang berangkat dari latar belakang pariwisata
     menuturkan, selain melalui Minikino, sebagai orang yang mulanya belajar film
     secara otodidak, ia juga mendapat wawasan baru tentang film melalui acara-
@@ -210,9 +166,7 @@ import ImagePlay from '../components/ImagePlay';
     kesempatan mencapai 70:30.” ujar Fransiska Prihadi atau Cika, direktur program
     Minikino Film Week.
 
-    <hr />
-
-    ### Menyambung Hidup, Menghidupkan Film
+    <h5>Menyambung Hidup, Menghidupkan Film</h5>
 
     Beberapa tahun belakangan ini, khususnya ketika produksi audiovisual mulai
     marak di Bali, ada sebuah kesadaran kolektif yang terjadi di kalangan para
@@ -231,29 +185,6 @@ import ImagePlay from '../components/ImagePlay';
     dapat dijadikan mata pencaharian. Akhirnya terbentuklah pola tambal sulam:
     mencari uang dengan mengerjakan proyek audiovisual seperti video pernikahan
     atau _company profile_, dan menyisihkan sebagian untuk produksi film pribadi.
-
-    
-
-  </GridItem>
-</GridContainer>
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Jika komunitas anda
-      memiliki perangkat produksi,
-      apakah komunitas Anda
-      menyewakannya (berbayar)? (%)</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Jika-komunitas-anda')} alt={'Papakah komunitas Anda menyewakannya (berbayar)?'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Jika-komunitas-anda-thumb'))} alt={'apakah komunitas Anda menyewakannya (berbayar)?'} noBorder />
-    </Lightbox>
-    <p className="caption">Praktik pinjam-meminjam perangkat
-      antara komunitas dapat menjadi siasat
-      untuk menekan ongkos produksi. Lebih
-      dari sepertiga (33%) komunitas produksi
-      mengatakan bahwa mereka menyewakan
-      (berbayar) perangkat produksi ke komunitas
-      lain.</p>
-  </GridItemLeftContent>
-  <GridItem>
 
     Hal ini juga diamini Erick Est dan Dibal Ranuh. Bedanya, keduanya memberikan
     atasan yang tegas dalam menerima proyek komersial dengan tetap berupaya
@@ -292,9 +223,7 @@ import ImagePlay from '../components/ImagePlay';
     kita sendiri dengan layak”, ujar Nirartha menanggapi pola gotong royong dan
     kesukarelawanan yang umum dilakukan dalam produksi film di Bali.
 
-    <hr />
-
-    ### Pola Distribusi dan Ruang Temu dengan Penonton Bali
+    <h5>Pola Distribusi dan Ruang Temu dengan Penonton Bali</h5>
 
     Sejak 2015, setelah selama 13 tahun menjadi ruang menonton, Minikino
     menggelar Minikino Film Week (MFW) – Bali International Short Film Festival.
@@ -303,17 +232,9 @@ import ImagePlay from '../components/ImagePlay';
     Denpasar Documentary Film Festival (DDFF) yang digelar sejak 2010 dan Balinale
     – Bali International Film sejak 2007.
 
-  </GridItem>
-</GridContainer>
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'SRCO_NYI RIMBIT_2019'))} alt="Produksi film Nyi Rimbit (2019) oleh SRCO" filter="grayscale(100%)" />
+    <Text className="caption" mb="50px !important">Produksi film Nyi Rimbit (2019) oleh SRCO</Text>
 
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'SRCO_NYI RIMBIT_2019')} alt={'Produksi film Nyi Rimbit (2019) oleh SRCO'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'SRCO_NYI RIMBIT_2019')} alt={'Produksi film Nyi Rimbit (2019) oleh SRCO'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Produksi film Nyi Rimbit (2019) oleh SRCO</p>
-  </GridItemLeftContent>
-  <GridItem>
     Ketiga festival ini memiliki karaktet, segmen, dan pendekatan penonton yang
     beragam. Minikino Film Week konsisten dengan membuka venue festival di
     beberapa titik di kota Denpasar, kabupaten Gianyar, Badung dan layar tancap di
@@ -342,17 +263,8 @@ import ImagePlay from '../components/ImagePlay';
     siapa saja orang yang ada di dalam arsip, apakah mereka masih hidup atau
     adakah sanak keluarga dari salah satu penonton yang hadir.”
 
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'SRCO_NYI RIMBIT_2019(2)')} alt={'Produksi film Nyi Rimbit (2019) oleh SRCO'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'SRCO_NYI RIMBIT_2019(2)'))} alt={'Produksi film Nyi Rimbit (2019) oleh SRCO'} noBorder />
-    </Lightbox>
-    <p className="caption">Produksi film Nyi Rimbit (2019) oleh SRCO</p>
-  </GridItemLeftContent>
-  <GridItem>
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'SRCO_NYI RIMBIT_2019(2)'))} alt="Produksi film Nyi Rimbit (2019) oleh SRCO" filter="grayscale(100%)" />
+    <Text className="caption" mb="50px !important">Produksi film Nyi Rimbit (2019) oleh SRCO</Text>
 
     Pada 2019, hadir MASH Denpasar—sebuah _arthouse cinema_ yang didirikan oleh
     dua pengelola Minikino Film Week, Edo Wulia dan Fransiska Prihadi. Program-
@@ -391,41 +303,36 @@ import ImagePlay from '../components/ImagePlay';
   </GridItem>
 </GridContainer>
 
+
 <hr />
 
-<Text as="h3" mt={["40px", null, "60px"]} mb={["20px !important", null, "32px !important"]}> Karya-karya pilihan Kota Denpasar </Text>
+<Text mb="0px !important" fontSize="12.25px">Karya-karya pilihan kota</Text>
+<Text as="h3" mb={["20px !important", null, "32px !important"]} textTransform="uppercase" fontWeight="400 !important"> Denpasar </Text>
 
-<SimpleGrid columns={[1, null, 2]} spacingX={34} spacingY={10}>
-  <ImagePlay href="https://rangkai.id/?browse=288">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'angkara-thumbnail-master'))}
+<SimpleGrid columns={[1, null, 3]} spacingX={34} spacingY={10}>
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'angkara-thumbnail-master'))}
       alt={'angkara-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=289">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'bukan-kupu-kupu-malam'))}
-      alt={'bukan-kupu-kupu-malam'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=287">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'kambing-hitam-thumbnail-master'))}
-      alt={'kambing-hitam-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=275">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'kayon-thumbnail-master'))}
-      alt={'kayon-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
+    filter="grayscale(100%)"
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'bukan-kupu-kupu-malam'))}
+    alt={'bukan-kupu-kupu-malam'}
+    filter="grayscale(100%)"
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'kambing-hitam-thumbnail-master'))}
+    alt={'kambing-hitam-thumbnail-master'}
+    filter="grayscale(100%)"
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'kayon-thumbnail-master'))}
+    alt={'kayon-thumbnail-master'}
+    filter="grayscale(100%)"
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'POSTER FILM PLASTIC BOTTLES 1920X1280.JPG - Andri Saputra'))}
+    alt={'POSTER FILM PLASTIC BOTTLES 1920X1280.JPG - Andri Saputra'}
+    filter="grayscale(100%)"
+  />
 </SimpleGrid>
