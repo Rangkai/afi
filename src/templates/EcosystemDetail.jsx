@@ -166,7 +166,7 @@ function EcosystemDetail({ data, children }) {
             </Box>
             <Flex borderY="2px solid #000000">
               <Box background="brandPrimary.500" px={['8px', null, '48px']} py={['8px', null, '16px']} w="100%">
-                <ButtonLink h="100%">
+                <ButtonLink h="100%" to={data.pdf?.publicURL} isExternal download>
                   Grafik Data
                 </ButtonLink>
               </Box>
@@ -220,7 +220,7 @@ export function Head({ data }) {
 }
 
 export const query = graphql`
-  query EcosystemDetailQuery($slug: String, $relativeDir: String, $docsDir: String) {
+  query EcosystemDetailQuery($slug: String, $relativeDir: String, $docsDir: String, $graphFile: String) {
     detail: mdx(frontmatter: {slug: {eq: $slug}}) {
       frontmatter {
         author
@@ -259,6 +259,11 @@ export const query = graphql`
           }
         }
       }
+    }
+    pdf: file(relativePath: { eq: $graphFile }) {
+      name
+      extension
+      publicURL
     }
   }
 `;
