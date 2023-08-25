@@ -10,6 +10,7 @@ import styled from '@emotion/styled';
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
+import { LightgalleryItem, LightgalleryProvider, useLightgallery } from 'react-lightgallery';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import useLayout from '../hooks/useLayout';
@@ -84,6 +85,31 @@ const Content = styled.div`
   }
 `;
 
+function PhotoItem({ image, thumb, group }) {
+  return (
+    <Box display="none">
+      <LightgalleryItem group={group} src={image} thumb={thumb}>
+        <img src={image} alt="test" style={{ width: '100%' }} />
+      </LightgalleryItem>
+    </Box>
+  );
+}
+function OpenButtonWithHook(props) {
+  const { openGallery } = useLightgallery();
+  return (
+    <Box background="garlic.500" px={['8px', null, '48px']} py={['8px', null, '16px']} w="100%">
+      <ButtonLink
+        h="100%"
+        as="button"
+        onClick={() => openGallery('group2')}
+        {...props}
+      >
+        Dokumentasi
+      </ButtonLink>
+    </Box>
+  );
+}
+
 function EcosystemDetail({ data, children }) {
   const {
     title, banner, headline, author, year,
@@ -145,11 +171,12 @@ function EcosystemDetail({ data, children }) {
                 </ButtonLink>
               </Box>
               {year === 2023 && (
-                <Box background="garlic.500" px={['8px', null, '48px']} py={['8px', null, '16px']} w="100%">
-                  <ButtonLink h="100%">
-                    Dokumentasi
-                  </ButtonLink>
-                </Box>
+                <LightgalleryProvider>
+                  {data.docs.nodes.map((p) => (
+                    <PhotoItem key={p.id} image={p.childImageSharp.original.src} group="group2" />
+                  ))}
+                  <OpenButtonWithHook />
+                </LightgalleryProvider>
               )}
             </Flex>
           </Flex>
@@ -193,7 +220,7 @@ export function Head({ data }) {
 }
 
 export const query = graphql`
-  query EcosystemDetailQuery($slug: String, $relativeDir: String) {
+  query EcosystemDetailQuery($slug: String, $relativeDir: String, $docsDir: String) {
     detail: mdx(frontmatter: {slug: {eq: $slug}}) {
       frontmatter {
         author
@@ -218,6 +245,18 @@ export const query = graphql`
         name
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+    }
+    docs: allFile(filter: {relativeDirectory: {eq: $docsDir}}) {
+      nodes {
+        id
+        name
+        relativeDirectory
+        childImageSharp {
+          original {
+            src
+          }
         }
       }
     }
