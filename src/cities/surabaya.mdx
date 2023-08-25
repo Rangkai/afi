@@ -2,6 +2,8 @@
 title: Surabaya
 slug: kota-surabaya
 desc: Mencari refleksi, menyikapi regulasi.
+headline: Menerka Arah Film Surabaya
+author: Yogi Ishabib
 banner: '../images/cities/surabaya/banner.jpg'
 thumb: '../images/cities/surabaya/thumb.jpg'
 galleryDir: 'cities/surabaya'
@@ -28,17 +30,13 @@ import ImagePlay from '../components/ImagePlay';
 <GridContainer>
   <GridItemLeftContent />
   <GridItem>
-    ## Menerka Arah Film Surabaya
-
-    <p className="caption">Yogi Ishabib</p>
-
-    Film pernah menjadi penanda zaman di Surabaya. Seorang fotografer Perancis
+    <p className="highlight">Film pernah menjadi penanda zaman di Surabaya. Seorang fotografer Perancis
     Bernama Louis Talbot membuat program pemutaran gambar bergerak pertama
     secara komersial pada Oktober 1896—atau hanya selisih sepuluh bulan sejak
     Lumière Bersaudara merilis pemutaran film komersial pertama di dunia pada 28
     Desember 1895 di Perancis. Program pemutaran di Surabaya Theatre itu yang
     menjadikan Surabaya menjadi salah satu kota paling awal yang melaksanakan
-    pemutaran gambar bergerak _(gambar idoep)_ di Asia.
+    pemutaran gambar bergerak _(gambar idoep)_ di Asia.</p>
 
     Program pemutaran gambar bergerak itu tak hanya mulai menggoyang
     kemapanan bisnis hiburan tradisional seperti ludruk, wayang, opera melayu,
@@ -62,9 +60,7 @@ import ImagePlay from '../components/ImagePlay';
     satu praktik sosial yang menajamkan polarisasi dan hadirnya ruang-ruang liminal
     di Surabaya.
 
-    <hr />
-
-    ### Masa-masa kekosongan dan mulainya era komunitas film di Surabaya
+    <h5>Masa-masa kekosongan dan mulainya era komunitas film di Surabaya</h5>
 
     Penelitian mengenai sejarah bioskop di Surabaya sudah ada dan bisa menjadi
     petunjuk bagaimana Surabaya sebagai sebuah kawasan berkembang karena,
@@ -91,17 +87,9 @@ import ImagePlay from '../components/ImagePlay';
     awal film-film yang berkembang di Surabaya lebih banyak sebagai sebuah
     kegiatan _klangenan_ semata.
 
-  </GridItem>
-</GridContainer>
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'ffs_2019'))} alt="Festival Film Surabaya (FFS) 2019"  />
+    <Text className="caption" mb="50px !important">Festival Film Surabaya (FFS) 2019</Text>
 
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'ffs_2019')} alt={'Festival Film Surabaya (FFS) 2019'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'ffs_2019')} alt={'Festival Film Surabaya (FFS) 2019'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Festival Film Surabaya 2019<br/>(FFS 2019)</p>
-  </GridItemLeftContent>
-  <GridItem>
     Pada 2004 mulai muncul produksi film animasi pendek berlatar komedi lokal
     berjudul _Suro dan Boyo_ diproduksi oleh Mohammad Sholikin alias Cak Ikin dari
     komunitas Gatotkaca. Serial animasi ini menampilkan humor yang penuh dengan
@@ -162,17 +150,10 @@ import ImagePlay from '../components/ImagePlay';
     pemerintah karena fasilitasnya emang dapat dari pemerintah,” kata IGAK sambal
     tertawa mengingat masa-masa awal program pemutaran film di Surabaya yang
     justru dibantu oleh lembaga negara yang mengurus soal kependudukan dan
-    reproduksi.
-  </GridItem>
-</GridContainer>
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'infis2_2019')} alt={'Independen Film Surabaya (INFIS) 2 2019'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'infis2_2019')} alt={'Independen Film Surabaya (INFIS) 2 2019'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Independen Film Surabaya 2019<br/>(INFIS 2019)</p>
-  </GridItemLeftContent>
-  <GridItem>
+
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'infis2_2019'))} alt="Independen Film Surabaya (INFIS) 2 2019"  />
+    <Text className="caption" mb="50px !important">Independen Film Surabaya (INFIS) 2 2019</Text>
+
     Dari skena produksi dan distribusi tersebut, ekosistem film di Surabaya mulai
     terbentuk secara gradual, Kinne Komunikasi UPN Veteran Jawa Timur muncul
     sebagai komunitas atau klub kajian film paling awal di Surabaya pada 1999.
@@ -202,25 +183,6 @@ import ImagePlay from '../components/ImagePlay';
     dan BFS menyatakan bahwa program pemutaran yang dilakukan biasanya
     menyesuaikan dengan momen dan isu tertentu dalam satu atau dua tahun
     sebelumnya.
-
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Total Dana yang Terhimpun (sejak 2019) Berdasarkan Sumbernya</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Total-Dana-yang-Terhimpun')} alt={'Total-Dana-yang-Terhimpun'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Total-Dana-yang-Terhimpun-thumb'))} alt={'Total-Dana-yang-Terhimpun-thumb'} noBorder />
-    </Lightbox>
-    <p className="caption">Tak berbeda dengan temuan-temuan riset
-      terdahulu tentang komunitas film dan data
-      kualitatif di pendataan ini, pendanaan
-      aktivitas komunitas masih bersifat swadaya.
-      Sejak 2019, berdasarkan data terhadap
-      26 komunitas, total pendanaan mandiri
-      mencapai lebih dari Rp 6 miliar.</p>
-  </GridItemLeftContent>
-  <GridItem>
 
     Ketika ekosistem film Surabaya sudah mulai terbentuk, corak produksi filmnya
     mulai tampak. Dari amatan Kukuh Karnanta, pengajar Fakultas Ilmu Budaya
@@ -256,18 +218,10 @@ import ImagePlay from '../components/ImagePlay';
     di Surabaya selanjutnya hanya dikenal sebagai kota untuk ‘bakar tiket’ menonton
     film dari Jakarta. Sejalan dengan era tersebut, corak produksi dan distribusi film
     juga tak kunjung mapan karena absennya apresiasi dan kritik yang memadai. 
+    
 
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'bfs_2019')} alt={'Bulan Film Surabaya (BFS) 2019'} mb="16px">
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'bfs_2019')} alt={'Bulan Film Surabaya (BFS) 2019'} />
-    </Lightbox>
-    <p className="caption">Bulan Film Surabaya 2019<br/>(BFS 2019)</p>
-  </GridItemLeftContent>
-  <GridItem>
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'bfs_2019'))} alt="Bulan Film Surabaya (BFS) 2019"  />
+    <Text className="caption" mb="50px !important">Bulan Film Surabaya (BFS) 2019</Text>
 
     Kultur tersebut mulai berubah pada 2013-2020 ketika mulai bermunculannya
     komunitas film yang lahir secara organik di luar kampus yang anggotanya
@@ -297,17 +251,9 @@ import ImagePlay from '../components/ImagePlay';
     pengetahuan, dan gagasan mengenai corak produksi dan eksibisi film inilah yang
     mendorong kelahiran komunitas-komunitas film baru tersebut. 
 
-  </GridItem>
-</GridContainer>
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'bfs2_2019'))} alt="Bulan Film Surabaya (BFS) 2019"  />
+    <Text className="caption" mb="50px !important">Bulan Film Surabaya (BFS) 2019</Text>
 
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'bfs2_2019')} alt={'Bulan Film Surabaya (BFS) 2019'} mb="16px">
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'bfs2_2019')} alt={'Bulan Film Surabaya (BFS) 2019'} />
-    </Lightbox>
-    <p className="caption">Bulan Film Surabaya 2019<br/>(BFS 2019)</p>
-  </GridItemLeftContent>
-  <GridItem>
     “Di Surabaya, pada masa-masa berkembangnya komunitas film yang
     menawarkan pengalaman lain dari yang sudah-sudah, saya kira Sinema
     Intensif. Program-program yang mereka tawarkan berbeda dan lebih kompleks.
@@ -372,21 +318,11 @@ import ImagePlay from '../components/ImagePlay';
     usahanya, atau dibuat PH (_production house_) sekalian, jadi mungkin itu sekarang
     yang terjadi di Surabaya,” ujar Kukuh. 
 
-    <hr />
+    <h5>Semangat Membara, Minim Rencana</h5>
 
-    ### Semangat Membara, Minim Rencana
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'infis_2019'))} alt="Independen Film Surabaya (INFIS) 2 2019"  />
+    <Text className="caption" mb="50px !important">Independen Film Surabaya (INFIS) 2 2019</Text>
 
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'infis_2019')} alt={'Independen Film Surabaya (INFIS) 2 2019'} mb="16px">
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'infis_2019')} alt={'Independen Film Surabaya (INFIS) 2 2019'} noBorder />
-    </Lightbox>
-    <p className="caption">Independen Film Surabaya 2019 <br /> (INFIS 2019) </p>
-  </GridItemLeftContent>
-  <GridItem>
     Mungkin, kasus di Surabaya tidak sama dengan ekosistem film di kota lainnya,
     tetapi hantaman pandemi covid-19 sepertinya langsung mengubah lanskap
     dan ekosistem film di Surabaya. Komunitas film di Surabaya yang biasanya
@@ -451,45 +387,31 @@ import ImagePlay from '../components/ImagePlay';
     gelombang—saling menyusul bergantian. Sah-sah saja sebuah komunitas film
     muncul, berkembang, dan melandai digantikan oleh (apapun bentuk dan corak)
     yang selanjutnya.
-
+    
   </GridItem>
 </GridContainer>
 
 <hr />
 
-<Text as="h3" mt={["40px", null, "60px"]} mb={["20px !important", null, "32px !important"]}> Karya-karya pilihan Kota Surabaya </Text>
+<Text mb="0px !important" fontSize="12.25px">Karya-karya pilihan kota</Text>
+<Text as="h3" mb={["20px !important", null, "32px !important"]} textTransform="uppercase" fontWeight="400 !important"> Surabaya </Text>
 
-<SimpleGrid columns={[1, null, 2]} spacingX={34} spacingY={10}>
-  <ImagePlay href="https://rangkai.id/?browse=272">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === '7-deadly-sins-thumbnail-master'))}
-      alt={'7-deadly-sins-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=306">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'bapak-tidak-pulang-hari-ini-thumbnail-master'))}
-      alt={'bapak-tidak-pulang-hari-ini-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=286">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ora-katon-thumbnail-master'))}
-      alt={'ora-katon-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=304">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ronda-alhaj-thumbnail-master'))}
-      alt={'ronda-alhaj-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
+<SimpleGrid columns={[1, null, 3]} spacingX={34} spacingY={10}>
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === '7-deadly-sins-thumbnail-masterBW'))}
+    alt={'7-deadly-sins-thumbnail-masterBW'}
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'bapak-tidak-pulang-hari-ini-thumbnail-masterBW'))}
+    alt={'bapak-tidak-pulang-hari-ini-thumbnail-master'}
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ora-katon-thumbnail-masterBW'))}
+    alt={'ora-katon-thumbnail-master'}
+  />
+  
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ronda-thumbnail-masterBW'))}
+    alt={'ronda-thumbnail-master'}
+  />
 </SimpleGrid>

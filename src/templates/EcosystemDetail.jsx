@@ -52,7 +52,6 @@ const Content = styled.div`
     font-family: 'Plus Jakarta Sans';
     margin-bottom: 16px;
     line-height: 33px;
-    text-align: justify;
     letter-spacing: .5px;
     &.caption {
       font-size: 12.25px;
