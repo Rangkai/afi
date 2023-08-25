@@ -77,6 +77,10 @@ const Content = styled.div`
     }
   }
 
+  b {
+    line-height: 33px;
+  }
+
   hr {
     border-color: #000000;
     margin-bottom: 36px;

@@ -199,13 +199,13 @@ function Header() {
       children: [
         {
           id: 1,
-          text: 'Banda Aceh',
-          link: '/tindaklanjut?city=aceh',
+          text: 'Balikpapan',
+          link: '/tindaklanjut?city=balikpapan',
         },
         {
           id: 2,
-          text: 'Balikpapan',
-          link: '/tindaklanjut?city=balikpapan',
+          text: 'Banda Aceh',
+          link: '/tindaklanjut?city=aceh',
         },
         {
           id: 3,

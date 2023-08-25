@@ -280,7 +280,7 @@ import ButtonLink from '../components/ButtonLink';
 
     <Box
       borderY="2px solid #000000"
-      background="brandPrimary.500"
+      background="blueOcean.500"
       px={['8px', null, '48px']}
       py={['8px', null, '16px']}
       w="100%"
@@ -289,6 +289,8 @@ import ButtonLink from '../components/ButtonLink';
       <ButtonLink
         h="100%"
         to="/tindaklanjut?city=kupang"
+        color="white"
+        iconColor="light"
       >Simak kegiatan tindak lanjut AFI di sini</ButtonLink>
     </Box>
 
@@ -304,13 +306,11 @@ import ButtonLink from '../components/ButtonLink';
 <SimpleGrid columns={[1, null, 3]} spacingX={34} spacingY={10}>
   <Box 
     as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ada-apa-dengan-ibu-thumbnail-master'))}
-      alt={'ada-apa-dengan-ibu-thumbnail-master'}
-    filter="grayscale(100%)"
+    alt={'ada-apa-dengan-ibu-thumbnail-master'}
   />
   <Box 
     as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'doa-perantau-thumbnail-master'))}
     alt={'doa-perantau-thumbnail-master'}
-    filter="grayscale(100%)"
   />
 </SimpleGrid>
 

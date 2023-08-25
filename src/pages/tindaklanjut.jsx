@@ -356,7 +356,7 @@ const citiesData = [
           akhir tahun untuk memperkuat komunikasi dan kerjasama antara semua
           pelaku terkait program bersama dan kalender kegiatan. Tujuan akhirnya
           adalah terjalinnya kerjasama yang berkesinambungan antara
-          komunitas dan pemerintah daerah
+          komunitas dan pemerintah daerah.
         </Text>
       </>
     ),

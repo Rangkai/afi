@@ -2,6 +2,8 @@
 title: Semarang
 slug: kota-semarang
 desc: Menguji aksi, merumuskan jati diri.
+headline: Perkara Sinema Semarang
+author: Khothibul Umam
 banner: '../images/cities/semarang/banner.jpg'
 thumb: '../images/cities/semarang/thumb.jpg'
 galleryDir: 'cities/semarang'
@@ -25,25 +27,15 @@ import Lightbox from '../components/Lightbox';
 import ImagePlay from '../components/ImagePlay';
 
 <GridContainer>
-  <GridItemLeftContent />
-  <GridItem>
-    ## Perkara Sinema Semarang
-
-    <p className="caption">Khothibul Umam</p>
-
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
   <GridItemLeftContent>
     
   </GridItemLeftContent>
   <GridItem>
-    Semarang sejak awal 2000-an lebih terkenal sebagai tempat syuting. Apalagi
+    <p className="highlight">Semarang sejak awal 2000-an lebih terkenal sebagai tempat syuting. Apalagi
     sejak produksi film nasional yang mengambil lokasi syuting di Semarang. Mulai
     dari kawasan Kota Lama, Kampung Melayu, hingga Pecinan. Beberapa film yang
     syuting di Semarang adalah _Gie_ (2005), _Ayat-ayat Cinta_ (2008), _Soegija_ (2012), dan
-    _Tanda Tanya_ (2011).
+    _Tanda Tanya_ (2011).</p>
 
     Namun, popularitas Semarang terbatas pada lokasi syuting semata meresahkan
     beberapa pegiat komunitas film lokal. “Semarang harus menemukan
@@ -61,16 +53,9 @@ import ImagePlay from '../components/ImagePlay';
     secara otodidak perihal pekerjaan-pekerjaan di balik layar, terutama di ranah
     penyutradaraan.
 
-  </GridItem>
-</GridContainer>
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Kura-kura terbang_Produksi')} alt={'Kura-kura terbang_Produksi'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'Kura-kura terbang_Produksi')} alt={'Kura-kura terbang_Produksi'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Kura kura terbang Produksi</p>
-  </GridItemLeftContent>
-  <GridItem>
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'Kura-kura terbang_ProduksiBW'))} alt="Kura-kura terbang_ProduksiBW"  />
+    <Text className="caption" mb="50px !important">Kura kura terbang Produksi</Text>
+
     Pilihannya menjadi sutradara mungkin memang tepat. Filmnya yang berjudul
     _Kau adalah Aku yang Lain_ (KaAyL) menjuarai Police Movie Festival keempat
     pada 2017. Nama dia melambung lantaran film tersebut viral karena dianggap
@@ -101,17 +86,9 @@ import ImagePlay from '../components/ImagePlay';
     semakin banyak kegiatan perfilman maka akan semakin dinamis juga iklim
     perfilmannya.
 
-  </GridItem>
-</GridContainer>
+    <Box as={GatsbyImage} mb="8px" mt="10px" width="100%" image={getImage(props.data.gallery.nodes.find(item => item.name === 'Kkeane V2_2022BW'))} alt="Kkeane V2_2022"  />
+    <Text className="caption" mb="50px !important">Kkeane V2_2022</Text>
 
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Kkeane V2_2022')} alt={'Kkeane V2_2022'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'Kkeane V2_2022')} alt={'Kkeane V2_2022'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Kkeane V2_2022</p>
-  </GridItemLeftContent>
-  <GridItem>
     Perkara berkomunitas film ini mungkin agak berbeda menurut Haris Yulianto,
     seorang sineas Semarang. Dalam kurun waktu tiga tahun terakhir, dua filmnya
     tayang di Jogja-NETPAC Asian Film Festival (JAFF). Haris memilih cara yang
@@ -142,17 +119,9 @@ import ImagePlay from '../components/ImagePlay';
     memilih proyek kolaborasi dengan pihak lain. Jika merasa tidak cocok, dari selera
     artistik misalnya, maka ia cenderung menolak.
 
-  </GridItem>
-</GridContainer>
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'Kkeane_2022BW'))} alt="Kkeane_2022"  />
+    <Text className="caption" mb="50px !important">Kkeane_2022</Text>
 
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Kkeane_2022')} alt={'Kkeane_2022'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'Kkeane_2022')} alt={'Kkeane_2022'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Kkeane_2022</p>
-  </GridItemLeftContent>
-  <GridItem>
     Yang menarik, Kkeane Film bertahan berkat pencairan Jaminan Hari Tua Tangsky
     pribadi yang di dapat dari tempat kerjaan lamanya. Selain itu Tangsky paham
     hitungan dari hulu sampai hilir berapa biaya produksi filmnya. Otomatis semua
@@ -179,17 +148,10 @@ import ImagePlay from '../components/ImagePlay';
     turunnya dana dari pemerintah yang menuntut adanya produk dan laporan
     terlebih dahulu. Jadi penerima dana harus mengusahakan dana talangan untuk
     produksi.
-  </GridItem>
-</GridContainer>
 
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'SIDAMAR_PRODUKSI FILM A BOULDER_2021')} alt={'SIDAMAR_PRODUKSI FILM A BOULDER_2021'} mb="16px">
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'SIDAMAR_PRODUKSI FILM A BOULDER_2021')} alt={'SIDAMAR_PRODUKSI FILM A BOULDER_2021'} />
-    </Lightbox>
-    <p className="caption">SIDAMAR_PRODUKSI FILM A BOULDER_2021</p>
-  </GridItemLeftContent>
-  <GridItem>
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'SIDAMAR_PRODUKSI FILM A BOULDER_2021BW'))} alt="SIDAMAR_PRODUKSI FILM A BOULDER_2021BW"  />
+    <Text className="caption" mb="50px !important">SIDAMAR_PRODUKSI FILM A BOULDER_2021</Text>
+
     Selain ketiga sineas di atas, Semarang juga mempunyai darah muda dalam sosok
     komunitas SiDamar [Sineas Muda Semarang]. Pendirinya adalah duo Faris Amar
     dan Ikhlasul Haq. Awalnya mereka berdua aktif di ekstrakurikuler film di SMAN 2
@@ -215,17 +177,9 @@ import ImagePlay from '../components/ImagePlay';
     penyelenggara menyebarkan brosur sambil keliling kampung naik kereta mini.
     Setelah pemutaran ada permainan dengan berbagai macam hadiah.
 
-  </GridItem>
-</GridContainer>
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'SIDAMAR_Screening BioskopLaunching Karya_2022BW'))} alt="SIDAMAR_Screening BioskopLaunching Karya_2022"  />
+    <Text className="caption" mb="50px !important">SIDAMAR_Screening BioskopLaunching Karya_2022</Text>
 
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'SIDAMAR_Screening BioskopLaunching Karya_2022')} alt={'SIDAMAR_Screening BioskopLaunching Karya_2022'} mb="16px">
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'SIDAMAR_Screening BioskopLaunching Karya_2022')} alt={'SIDAMAR_Screening BioskopLaunching Karya_2022'} />
-    </Lightbox>
-    <p className="caption">SIDAMAR_Screening BioskopLaunching Karya_2022</p>
-  </GridItemLeftContent>
-  <GridItem>
     Dari keempat sineas di atas, tiga orang (komunitas) mengambil jalan dan
     riwayat yang hampir sama. Haris, Tangsky, dan SiDamar (duo Faris dan Ikhlas)
     sama-sama belajar dari kegiatan ekstrakurikuler di sekolah/kampus. Dari klub
@@ -239,9 +193,7 @@ import ImagePlay from '../components/ImagePlay';
     membuat pilihan dan gerakannya dalam sinema agak berbeda dengan sineas
     lain.
 
-    <hr />
-
-    ### Perkara Corak dan Ekshibisi Film di Semarang
+    <h5>Perkara Corak dan Ekshibisi Film di Semarang</h5>
 
     Membicarakan ekshibisi film di Semarang tentu saja harus membahas Sineroom.
     Sineroom didirikan pada tahun 2015 oleh Ardian Agil dan Erma Yuliati. Mereka
@@ -251,32 +203,6 @@ import ImagePlay from '../components/ImagePlay';
     mana para profesional pengajar dari berbagai latar belakang diharuskan cuti satu
     hari secara serentak untuk mengunjungi dan mengajar anak-anak SD, yaitu pada
     Hari Inspirasi. 
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Frekuensi Pemutaran</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Hambatan-Ekshibisi')} alt={'Hambatan-Ekshibisi'} mb="16px">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Hambatan-Ekshibisi-thumb'))} alt={'Hambatan-Ekshibisi-thumb'} />
-    </Lightbox>
-    <p className="caption">Walau kadang terengah-terengah, komunitas-komunitas film terus
-      menggerakkan aktivitas pemutaran.
-      Mayoritas komunitas yang terdata dalam
-      survei menyebutkan program pemutaran
-      mereka bersifat bulanan (32%). Ada pula
-      komunitas film yang menggelar pemutaran
-      film tahunan (28%), yang lazimnya berupa
-      kegiatan festival, seperti December to
-      Remember oleh komunitas film Trieng di
-      Banda Aceh, Festival Film Purbalingga oleh
-      CLC Purbalingga, dan Bandung Independent
-      Film Festival oleh BIFF Forum. Namun, tidak
-      sedikit pula komunitas yang tercatat belum
-      mampu mengadakan program pemutaran
-      reguler (28%).</p>
-  </GridItemLeftContent>
-  <GridItem>
 
     Kesamaan kegemaran Ardian dan Erma pada film dan keluhan betapa sulitnya
     akses film Indonesia membuat mereka sepakat untuk membentuk Sineroom.
@@ -322,17 +248,10 @@ import ImagePlay from '../components/ImagePlay';
     film sineas Semarang tidak banyak yang berkualitas. Ardian tidak secara rinci
     menjelaskan bagaimana kriteria sebuah film bisa diputar di Sineroom. Sebagian
     film yang ia pilih karena cocok dengan selera pribadi.
-  </GridItem>
-</GridContainer>
+    
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'Kura-kura terbang_Produksi V3BW'))} alt="Kura-kura terbang_Produksi V3"  />
+    <Text className="caption" mb="50px !important">Kura-kura terbang_Produksi V3</Text>
 
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Kura-kura terbang_Produksi V3')} alt={'Kura-kura terbang_Produksi V3'} mb="16px">
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'Kura-kura terbang_Produksi V3')} alt={'Kura-kura terbang_Produksi V3'} />
-    </Lightbox>
-    <p className="caption">Kura-kura terbang_Produksi V3</p>
-  </GridItemLeftContent>
-  <GridItem>
     Kolaborasi Sineroom dengan pemerintah kota Semarang tersebut adalah
     program mutakhir mereka di 2022. Kolaborasi pertama dengan pemerintah
     tersebut juga sebenarnya hal yang “kebetulan”. Ia ada berkat relasi individual
@@ -359,17 +278,10 @@ import ImagePlay from '../components/ImagePlay';
     kampus secara gerilya. Usaha-usaha yang diinisiasi Annisa tadi, meskipun
     memang bagian dari tugas kuliah, menjadi sumbangsih yang penting dan
     memberi warna bagi ekosistem ekshibisi film Semarang.
-  </GridItem>
-</GridContainer>
 
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'SIDAMAR_Layar Tancap KekinianLayar Tancap Bulu Lor_2022')} alt={'SIDAMAR_Layar Tancap KekinianLayar Tancap Bulu Lor_2022'} mb="16px">
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'SIDAMAR_Layar Tancap KekinianLayar Tancap Bulu Lor_2022')} alt={'SIDAMAR_Layar Tancap KekinianLayar Tancap Bulu Lor_2022'} />
-    </Lightbox>
-    <p className="caption">SIDAMAR_Layar Tancap KekinianLayar Tancap Bulu Lor_2022</p>
-  </GridItemLeftContent>
-  <GridItem>
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'SIDAMAR_Layar Tancap KekinianLayar Tancap Bulu Lor_2022BW'))} alt="SIDAMAR_Layar Tancap KekinianLayar Tancap Bulu Lor_2022"  />
+    <Text className="caption" mb="50px !important">SIDAMAR_Layar Tancap KekinianLayar Tancap Bulu Lor_2022</Text>
+
 
     Menurut Annisa, ekshibitor di Semarang harus punya basis ekonomi yang
     kuat, dalam artian mempunyai pendapatan sehari-hari dari luar film karena
@@ -393,9 +305,7 @@ import ImagePlay from '../components/ImagePlay';
     Kesemuanya tidak bisa dipisah, harus satu kesatuan karena saling terkait satu
     sama lain.
 
-    <hr />
-
-    ### Kuantitas Dulu Aja, Nanti Kualitas Mengikuti
+    <h5>Kuantitas Dulu Aja, Nanti Kualitas Mengikuti</h5>
 
     Dengan segala dinamikanya sebagai ibukota provinsi dan kota dagang/jasa,
     Semarang harus berusaha menjadi kota yang penting untuk sinema Indonesia.
@@ -403,18 +313,8 @@ import ImagePlay from '../components/ImagePlay';
     memang tidak menjadi masalah. Bahkan hal tersebut bisa menjadi keuntungan.
     Misalnya dengan magang saat ada produksi film nasional hingga mendapatkan
     jejaring ke ranah industri film dan transfer ilmu terkait kecakapan teknis.
-    
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Kura-kura terbang_Produksi V2')} alt={'Kura-kura terbang_Produksi V2'} mb="16px">
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'Kura-kura terbang_Produksi V2')} alt={'Kura-kura terbang_Produksi V2'} />
-    </Lightbox>
-    <p className="caption">Kura-kura terbang_Produksi V2</p>
-  </GridItemLeftContent>
-  <GridItem>
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'Kura-kura terbang_Produksi V2BW'))} alt="Kura-kura terbang_Produksi V2"  />
+    <Text className="caption" mb="50px !important">Kura-kura terbang_Produksi V2</Text>
   
     Perihal kecakapan teknis yang kurang ini juga menjadi pandangan Annisa
     terkait sineas Semarang. Akhirnya corak pendekatan sineas Semarang lebih
@@ -447,29 +347,6 @@ import ImagePlay from '../components/ImagePlay';
     di mana diharapkan muncul karya yang bernas dan tidak mengekor lagi pada
     generasi tua.
 
-  </GridItem>
-</GridContainer>
-
-
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Hambatan Ekshibisi</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Frekuensi-Pemutaran')} alt={'Frekuensi-Pemutaran'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Frekuensi-Pemutaran-semarang'))} alt={'Frekuensi-Pemutaran-semarang'} />
-    </Lightbox>
-    <p className="caption">Di luar kondisi pandemi COVID-19
-      sekarang, minimnya sumber pendanaan,
-      infrastruktur, perangkat dan sumber daya
-      manusia merupakan hambatan utama
-      bagi komunitas film yang memiliki program
-      ekshibisi. Persoalan ini sulit dipecahkan
-      sendiri dan memang tidak eksklusif terjadi
-      di satu-dua komunitas saja. Penguatan
-      ekosistem perfilman di ranah komunitas
-      merupakan pekerjaan rumah bersama.</p>
-  </GridItemLeftContent>
-  <GridItem>
-
     Strategi kantong budaya ini masih sangat relevan untuk era sekarang. Pun
     dalam konteks film atau sinema Semarang. Asumsinya adalah dengan makin
     banyaknya komunitas film, baik produksi maupun ekshibisi, maka semakin
@@ -478,44 +355,32 @@ import ImagePlay from '../components/ImagePlay';
     persaingan. Iklim sinema lokal akan dinamis, dan Semarang tidak sekadar
     menjadi tempat jujugan syuting orang-orang Jakarta.
     
+
   </GridItem>
 </GridContainer>
 
+
 <hr />
 
-<Text as="h3" mt={["40px", null, "60px"]} mb={["20px !important", null, "32px !important"]}> Karya-karya pilihan Kota Semarang </Text>
+<Text mb="0px !important" fontSize="12.25px">Karya-karya pilihan kota</Text>
+<Text as="h3" mb={["20px !important", null, "32px !important"]} textTransform="uppercase" fontWeight="400 !important"> Semarang </Text>
 
-<SimpleGrid columns={[1, null, 2]} spacingX={34} spacingY={10}>
-  <ImagePlay href="https://rangkai.id/?browse=301">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'JBSS_ISI_1920-1080-Semesta K.S'))}
-      alt={'JBSS_ISI_1920-1080-Semesta K.S'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=303">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'Kata_Rupiah_1920-1080- Emilio Wiwanda'))}
-      alt={'Kata_Rupiah_1920-1080- Emilio Wiwanda'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=305">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'bersepeda-ke-bulan-thumbnail-master'))}
-      alt={'bersepeda-ke-bulan-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=237">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'the-last-sunset-thumbnail-master'))}
-      alt={'the-last-sunset-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
+<SimpleGrid columns={[1, null, 3]} spacingX={34} spacingY={10}>
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'JBSS_ISI_1920-1080-Semesta K.SBW'))}
+    alt={'JBSS_ISI_1920-1080-Semesta K.S'}
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'Kata_Rupiah_1920-1080- Emilio WiwandaBW'))}
+    alt={'Kata_Rupiah_1920-1080- Emilio Wiwanda'}
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'bersepeda-ke-bulan-thumbnail-masterBW'))}
+    alt={'bersepeda-ke-bulan-thumbnail-master'}
+  />
+  
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'the-last-sunset-thumbnail-masterBW'))}
+    alt={'the-last-sunset-thumbnail-master'}
+  />
 </SimpleGrid>

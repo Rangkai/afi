@@ -333,7 +333,7 @@ import ButtonLink from '../components/ButtonLink';
 
     <Box
       borderY="2px solid #000000"
-      background="brandPrimary.500"
+      background="blueOcean.500"
       px={['8px', null, '48px']}
       py={['8px', null, '16px']}
       w="100%"
@@ -342,6 +342,8 @@ import ButtonLink from '../components/ButtonLink';
       <ButtonLink
         h="100%"
         to="/tindaklanjut?city=aceh"
+        color="white"
+        iconColor="light"
       >Simak kegiatan tindak lanjut AFI di sini</ButtonLink>
     </Box>
   </GridItem>
@@ -356,28 +358,23 @@ import ButtonLink from '../components/ButtonLink';
 <SimpleGrid columns={[1, null, 3]} spacingX={34} spacingY={10}>
   <Box 
     as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'canggih-thumbnail-master'))}
-      alt={'canggih-thumbnail-master'}
-    filter="grayscale(100%)"
+    alt={'canggih-thumbnail-master'}
   />
   <Box 
     as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'haba-paleh-thumbnail-master'))}
     alt={'haba-paleh-thumbnail-master'}
-    filter="grayscale(100%)"
   />
   <Box 
     as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'kroeng-pade-thumbnail-master'))}
     alt={'kroeng-pade-thumbnail-master'}
-    filter="grayscale(100%)"
   />
   <Box 
     as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'mengejar-koin-thumbnail-master'))}
     alt={'mengejar-koin-thumbnail-master'}
-    filter="grayscale(100%)"
   />
   <Box 
     as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'POSTER FILM PLASTIC BOTTLES 1920X1280.JPG - Andri Saputra'))}
     alt={'POSTER FILM PLASTIC BOTTLES 1920X1280.JPG - Andri Saputra'}
-    filter="grayscale(100%)"
   />
 </SimpleGrid>
 

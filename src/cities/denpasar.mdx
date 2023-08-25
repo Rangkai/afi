@@ -55,7 +55,7 @@ import ImagePlay from '../components/ImagePlay';
     mereka saling terhubung dan bergerak menghidupkan perfilman Bali melalui
     karya maupun ruang tayang film?
 
-    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'DINASTY FILM_KAYON_2020BW'))} alt="DINASTY FILM_KAYON_2020BW" filter="grayscale(100%)" />
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'DINASTY FILM_KAYON_2020BW'))} alt="DINASTY FILM_KAYON_2020BW"  />
     <Text className="caption" mb="50px !important">Produksi film Kayon (2020) oleh Dynasty Film</Text>
 
     <h5>Keragaman Pelaku Film di Bali</h5>
@@ -92,7 +92,7 @@ import ImagePlay from '../components/ImagePlay';
     sendiri saling bertemu, berdiskusi dan bertukar pengetahuan di program Open
     December yang telah digelar sejak 2003 ini.
 
-    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'DSC04095BW'))} alt="Produksi film Kambing Hitam (2022)" filter="grayscale(100%)" />
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'DSC04095BW'))} alt="Produksi film Kambing Hitam (2022)"  />
     <Text className="caption" mb="50px !important">Produksi film Kambing Hitam (2022) oleh Mahatma Pictures</Text>
 
     Kini, seiring dengan berkembangnya teknologi, pelaku film di Bali semakin
@@ -232,7 +232,7 @@ import ImagePlay from '../components/ImagePlay';
     Denpasar Documentary Film Festival (DDFF) yang digelar sejak 2010 dan Balinale
     – Bali International Film sejak 2007.
 
-    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'SRCO_NYI RIMBIT_2019'))} alt="Produksi film Nyi Rimbit (2019) oleh SRCO" filter="grayscale(100%)" />
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'SRCO_NYI RIMBIT_2019BW - Copy'))} alt="Produksi film Nyi Rimbit (2019) oleh SRCO"  />
     <Text className="caption" mb="50px !important">Produksi film Nyi Rimbit (2019) oleh SRCO</Text>
 
     Ketiga festival ini memiliki karaktet, segmen, dan pendekatan penonton yang
@@ -263,7 +263,7 @@ import ImagePlay from '../components/ImagePlay';
     siapa saja orang yang ada di dalam arsip, apakah mereka masih hidup atau
     adakah sanak keluarga dari salah satu penonton yang hadir.”
 
-    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'SRCO_NYI RIMBIT_2019(2)'))} alt="Produksi film Nyi Rimbit (2019) oleh SRCO" filter="grayscale(100%)" />
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'SRCO_NYI RIMBIT_2019(2)BW'))} alt="Produksi film Nyi Rimbit (2019) oleh SRCO"  />
     <Text className="caption" mb="50px !important">Produksi film Nyi Rimbit (2019) oleh SRCO</Text>
 
     Pada 2019, hadir MASH Denpasar—sebuah _arthouse cinema_ yang didirikan oleh
@@ -312,27 +312,22 @@ import ImagePlay from '../components/ImagePlay';
 <SimpleGrid columns={[1, null, 3]} spacingX={34} spacingY={10}>
   <Box 
     as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'angkara-thumbnail-master'))}
-      alt={'angkara-thumbnail-master'}
-    filter="grayscale(100%)"
+    alt={'angkara-thumbnail-master'}
   />
   <Box 
     as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'bukan-kupu-kupu-malam'))}
     alt={'bukan-kupu-kupu-malam'}
-    filter="grayscale(100%)"
   />
   <Box 
     as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'kambing-hitam-thumbnail-master'))}
     alt={'kambing-hitam-thumbnail-master'}
-    filter="grayscale(100%)"
   />
   <Box 
     as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'kayon-thumbnail-master'))}
     alt={'kayon-thumbnail-master'}
-    filter="grayscale(100%)"
   />
   <Box 
     as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'POSTER FILM PLASTIC BOTTLES 1920X1280.JPG - Andri Saputra'))}
     alt={'POSTER FILM PLASTIC BOTTLES 1920X1280.JPG - Andri Saputra'}
-    filter="grayscale(100%)"
   />
 </SimpleGrid>

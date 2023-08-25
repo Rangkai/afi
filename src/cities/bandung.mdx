@@ -489,28 +489,23 @@ import ImagePlay from '../components/ImagePlay';
 <SimpleGrid columns={[1, null, 3]} spacingX={34} spacingY={10}>
   <Box 
     as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ai-kamu-ai-aku-thumbnail-master'))}
-      alt={'ai-kamu-ai-aku-thumbnail-master'}
-    filter="grayscale(100%)"
+    alt={'ai-kamu-ai-aku-thumbnail-master'}
   />
   <Box 
     as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ronda-thumbnail-master'))}
     alt={'ronda-thumbnail-master'}
-    filter="grayscale(100%)"
   />
   <Box 
     as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'sang-penyulut-api-thumbnail-master'))}
     alt={'sang-penyulut-api-thumbnail-master'}
-    filter="grayscale(100%)"
   />
   <Box 
     as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'the-sun-never-set-thumbnail-master'))}
     alt={'the-sun-never-set-thumbnail-master'}
-    filter="grayscale(100%)"
   />
   <Box 
     as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'A Matter of Time_ISI_1920-1280 - Roufy Nasution'))}
     alt={'A Matter of Time_ISI_1920-1280 - Roufy Nasution'}
-    filter="grayscale(100%)"
   />
 </SimpleGrid>
 

@@ -297,7 +297,7 @@ import ButtonLink from '../components/ButtonLink';
 
     <Box
       borderY="2px solid #000000"
-      background="brandPrimary.500"
+      background="blueOcean.500"
       px={['8px', null, '48px']}
       py={['8px', null, '16px']}
       w="100%"
@@ -306,6 +306,8 @@ import ButtonLink from '../components/ButtonLink';
       <ButtonLink
         h="100%"
         to="/tindaklanjut?city=balikpapan"
+        color="white"
+        iconColor="light"
       >Simak kegiatan tindak lanjut AFI di sini</ButtonLink>
     </Box>
   </GridItem>
@@ -320,16 +322,13 @@ import ButtonLink from '../components/ButtonLink';
   <Box 
     as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'Balada Romansa Bujang_Nocturne Films_Ihsan Aditama'))}
     alt={'Balada Romansa Bujang_Nocturne Films_Ihsan Aditama'}
-    filter="grayscale(100%)"
   />
   <Box 
     as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'Four Horsemen_Nocturne Films_Ihsan Aditama'))}
     alt={'Four Horsemen_Nocturne Films_Ihsan Aditama'}
-    filter="grayscale(100%)"
   />
   <Box 
     as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'target-5-juta-thumbnail-master'))}
     alt={'target-5-juta-thumbnail-master'}
-    filter="grayscale(100%)"
   />
 </SimpleGrid>
