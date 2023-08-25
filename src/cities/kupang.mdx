@@ -25,6 +25,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import SquareImage from '../components/SquareImage';
 import Lightbox from '../components/Lightbox';
 import ImagePlay from '../components/ImagePlay';
+import ButtonLink from '../components/ButtonLink';
 
 <GridContainer>
   <GridItemLeftContent />
@@ -271,6 +272,25 @@ import ImagePlay from '../components/ImagePlay';
     kolaborasi berbagai pihak. Meski begitu banyak tantangan merintang, para pegiat
     komunitas film di Kupang bisa terus hidup dan berkembang karena satu sama
     lain.
+
+    <b>AFI 2023 menindaklanjuti hasil penelitian di tiga kota, salah satunya Kota Kupang.
+      Pemilihan kota tersebut berdasarkan riset terkait potensi pengembangan ekosistem perfilman dan keterlibatan
+      dukungan pemerintah daerah pada kegiatan komunitas. Program Tindak Lanjut disesuaikan dengan riset dan kebutuhan setiap kota.
+      Di Kupang, tim AFI melaksanakan pelatihan penulisan skenario pendek dan tata kelola festival film.</b>
+
+    <Box
+      borderY="2px solid #000000"
+      background="brandPrimary.500"
+      px={['8px', null, '48px']}
+      py={['8px', null, '16px']}
+      w="100%"
+      my="48px"
+    >
+      <ButtonLink
+        h="100%"
+        to="/tindaklanjut?city=kupang"
+      >Simak kegiatan tindak lanjut AFI di sini</ButtonLink>
+    </Box>
 
   </GridItem>
 </GridContainer>
