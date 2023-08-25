@@ -8,6 +8,7 @@ exports.createPages = async ({ graphql, actions }) => {
           frontmatter {
             slug
             galleryDir
+            graphFile
           }
           internal {
             contentFilePath
@@ -23,7 +24,12 @@ exports.createPages = async ({ graphql, actions }) => {
     actions.createPage({
       path: `/${node.frontmatter.slug}`,
       component: `${ecosystemTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
-      context: { slug: node.frontmatter.slug, relativeDir: node.frontmatter.galleryDir },
+      context: {
+        slug: node.frontmatter.slug,
+        relativeDir: node.frontmatter.galleryDir,
+        docsDir: `${node.frontmatter.galleryDir}/docs`,
+        graphFile: node.frontmatter.graphFile,
+      },
     });
   });
 };
