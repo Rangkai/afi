@@ -2,6 +2,8 @@
 title: Malang
 slug: kota-malang
 desc: Mencari refleksi, menyikapi regulasi.
+headline: Menerka Pergerakan Komunitas Film di Malang
+author: Nashiru Setiawan
 banner: '../images/cities/malang/banner.jpg'
 thumb: '../images/cities/malang/MalangBW.jpg'
 galleryDir: 'cities/malang'
@@ -26,470 +28,400 @@ import Lightbox from '../components/Lightbox';
 import ImagePlay from '../components/ImagePlay';
 
 <GridContainer>
-  <GridItemLeftContent />
   <GridItem>
-    ## Menerka Arah Film Surabaya
+    <p className="highlight">Warung kopi kini menjadi pemandangan biasa di berbagai sudut Kota Malang. Titik temu dan
+    ruang dialog para komunitas film seiring waktu juga berpindah ke sana. Didukung oleh iklim
+    mengobrol yang sudah ada, warung kopi begitu tepat untuk budaya _rasan-rasan_. Meski dianggap
+    berkonotasi negatif, yakni sebagai kegiatan membicarakan orang lain, _rasan-rasan_ masih
+    berperan sebagai ajang saling koreksi dalam kegiatan perfilman di Malang.</p>
 
-    <p className="caption">Yogi Ishabib</p>
+    Taufan Agustian, sutradara _Darah Biru Arema_ (2015), menyebut _rasan-rasan_ dapat menjadi
+    barometer kondisi perfilman di Malang. Ia meyakini bahwa ekosistem perfilman di Malang
+    masih bisa dikatakan sehat ketika kultur _rasan-rasan_ ini masih ada. Kultur _rasan-rasan_
+    memungkinkan komunitas-komunitas film, baik secara kolektif maupun personal, untuk saling
+    memberi masukan dan berbagi _update_ mengenai perkembangan perfilman di Malang dengan
+    satu sama lain.
 
-    Film pernah menjadi penanda zaman di Surabaya. Seorang fotografer Perancis
-    Bernama Louis Talbot membuat program pemutaran gambar bergerak pertama
-    secara komersial pada Oktober 1896—atau hanya selisih sepuluh bulan sejak
-    Lumière Bersaudara merilis pemutaran film komersial pertama di dunia pada 28
-    Desember 1895 di Perancis. Program pemutaran di Surabaya Theatre itu yang
-    menjadikan Surabaya menjadi salah satu kota paling awal yang melaksanakan
-    pemutaran gambar bergerak _(gambar idoep)_ di Asia.
+    “Bahas produksian juga. Misalnya ketika suatu produksi film memiliki sistem yang buruk atau
+    bahkan merugikan kru produksi, mulai dari sajian makanan yang kurang layak, jam kerja yang
+    molor, sampai upah yang minim, semua menjadi pembahasan,” ucap Taufan.
 
-    Program pemutaran gambar bergerak itu tak hanya mulai menggoyang
-    kemapanan bisnis hiburan tradisional seperti ludruk, wayang, opera melayu,
-    dan komedi stambul, tetapi juga mengurai rantai peristiwa mulai dari dibawanya
-    teknologi pemutaran gambar ke Asia pada akhir abad ke-19 dan tumbuhnya
-    minat orang-orang akan medium baru yang membuat aktivitas menonton
-    gambar bergerak menjadi salah satu pilihan hiburan pada era kolonial. Merambat
-    naiknya bisnis pemutaran di Surabaya mulai dari tenda kanvas, bambu _(gedek)_,
-    hingga gedung pemutaran yang mewah merangsang mobilitas penonton
-    _(spectators)_ dan memberi petunjuk kepada kita soal evolusi awal lanskap urban
-    kota Surabaya.
+    Budaya _rasan-rasan_ mungkin dibenci, tapi pada saat bersamaan juga dirindukan komunitas film
+    di Malang. Tak hanya bersifat negatif, dialog di warung kopi juga bisa produktif, seperti yang
+    terjadi pada proses pembuatan film _Darah Biru Arema_. Kegiatan kolaborasi seperti pemutaran
+    film tak jarang juga diinisiasi dari warung kopi, seperti yang dilakukan oleh Lensa Mata lewat
+    bebagai kegiatannya di Malang Meeting Point.
 
-    Kultur menonton gambar bergerak merebak di seluruh Surabaya. Jelang setahun
-    dari program pemutaran Talbot, seorang pengusaha Tionghoa yang tidak
-    diketahui namanya membangun Gedung pemutaran bernama Kenotograph
-    di Kapasan, wilayah pecinan di Surabaya Utara. Jika Surabaya Theatre hanya
-    memperbolehkan warga Eropa dan elit pribumi, Kenotograph memperbolehkan
-    siapa saja dengan berbagai macam latar belakang etnis dan kelas sosial untuk
-    menonton dengan harga tiket separuh dari Surabaya Theatre. Selain praktik
-    kolonial dan rasial, kehadiran film—danmenonton film bisa dianggit sebagai salah
-    satu praktik sosial yang menajamkan polarisasi dan hadirnya ruang-ruang liminal
-    di Surabaya.
+    ##### Lingkungan Pendidikan sebagai Rahim Perfilman
 
-    <hr />
+    Kine Klub Universitas Muhammadiyah Malang (UMM) bisa dikatakan sebagai komunitas film
+    paling awal yang ada di Malang. Komunitas ini hadir pada tahun 1999 dengan dilandasi oleh
+    dorongan yang sama akan ketertarikan mahasiswa terhadap film. Menurut Arfan Adhi Perdana, 
+    kehadiran film di kampus UMM awalnya dibawa oleh salah satu mahasiswa yang memiliki
+    jaringan pertemanan dengan teman-teman dari Institut Kesenian Jakarta (IKJ).
 
-    ### Masa-masa kekosongan dan mulainya era komunitas film di Surabaya
+    <Box
+      as={GatsbyImage}
+      mb="8px"
+      mt="50px"
+      image={getImage(props.data.gallery.nodes.find(item => item.name === 'malang1'))} alt="Salah satu kegiatan Malang Film Festival 2018 yang diselenggarakan oleh
+      Kine Klub Universitas Muhammadiyah Malang (UMM)"
+    />
+    <Text className="caption" mb="50px !important">Salah satu kegiatan Malang Film Festival 2018 yang diselenggarakan oleh
+    Kine Klub Universitas Muhammadiyah Malang (UMM)</Text>
 
-    Penelitian mengenai sejarah bioskop di Surabaya sudah ada dan bisa menjadi
-    petunjuk bagaimana Surabaya sebagai sebuah kawasan berkembang karena,
-    salah satunya, berdasarkan budaya menonton film. Tetapi jauh dari ingar bingar
-    dan romantisme sejarah Surabaya saat kedatangan gambar bergerak sampai
-    masa membludaknya bioskop, ada masa-masa kekosongan yang belum berhasil
-    terungkap tentang bagaimana kondisi dan model produksi, distribusi, serta
-    eksibisi film Surabaya mulai dari masa-masa awal film masuk di Surabaya pada
-    era kolonial sampai tahun 2000-an. Masa kekosongan yang terlampau lama ini
-    menyebabkan sulitnya memetakan ekosistem film di Surabaya.
+    Selain Kine Klub UMM, belakangan ini muncul beberapa komunitas serupa, seperti Societo Sine
+    Klub dan Nol Derajat di Universitas Brawijaya, Organisasi Sinematografi Indie (OSI) di STT
+    Malang, dan Sineas Merdeka (Sinedek) di Universitas Merdeka Malang. Komunitas-komunitas
+    kampus tersebut cenderung memiliki bentuk yang sama—kegiatan mereka mencakup produksi,
+    apresiasi, pemutaran, penyelenggaraan festival film, dan pembentukan jejaring baru. Sebagai
+    contoh, Kine Klub UMM, memiliki program produksi film diklat, produksi film bersama, serta
+    penyelenggaraan Malang Film Festival.
 
-    Masa-masa kekosongan ini disebut oleh IGAK Satrya Wibawa, salah satu
-    pendiri Independen Film Surabaya (INFIS) disebabkan karena sedari awal publik
-    Surabaya menganggap bahwa menonton film adalah kebutuhan rekreasional,
-    yang kebetulan pilihannya sangat beragam pada waktu itu, seperti gelaran
-    olahraga (sepakbola, basket, dan balap motor), atau konser musik—yang mana
-    film bukan merupakan pilihan utama.
+    Selain lewat komunitas-komunitasnya, lembaga pendidikan di Malang juga mulai menyediakan
+    pendidikan formal yang secara khusus mengajarkan film. Di Fakultas Vokasi Brawijaya terdapat
+    program studi Film dan Broadcasting. Selain itu, pada tingkat sekolah menengah kejuruan,
+    jurusan perfilman ada di SMK Negeri 3 Batu dan SMK 5 Muhammadiyah Kepanjen.
 
-    Mungkin, gelombang film independen yang muncul pasca runtuhnya Orde Baru
-    baru bisa dijadikan pijakan untuk mengenal kembali ekosistem film di Surabaya,
-    meskipun heroisme tentang bagaimana film-film independen yang muncul pasca
-    Orba biasanya menawarkan wacana alternatif atas keterpusatan tidak tampak
-    begitu menonjol di Surabaya. Alih-alih sebagai wacana alternatif, corak produksi
-    awal film-film yang berkembang di Surabaya lebih banyak sebagai sebuah
-    kegiatan _klangenan_ semata.
+    Kegiatan perfilman di lembaga pendidikan tersebut secara rutin menghasilkan karya-karya film
+    yang dapat ditonton oleh masyarakat luas. Kerja sama antara SMK 5 Muhammadiyah dengan
+    Kelas Film yang diinisiasi oleh Paradise Picture menghasilkan produksi film _Darah Biru Arema_.
+    Film yang mengangkat dinamika para Aremania ini telah ditayangkan di beberapa tempat, salah
+    satunya di UMM Dome dengan jumlah penonton mencapai tiga ribu orang lebih—sebagian besar
+    adalah simpatisan Aremania. Selain itu, SMK Negeri 3 Batu juga telah beberapa kali
+    mencatatkan film-filmnya sebagai nominasi dalam ajang Festival Lomba Seni Siswa Nasional
+    (FLS2N) tingkat sekolah.
 
-  </GridItem>
-</GridContainer>
+    Tidak bisa dimungkiri bahwa lingkungan pendidikan memang merupakan rahim bagi lahirnya
+    komunitas-komunitas film di Malang. Komunitas yang berjalan di luar kampus pun, seperti
+    Lentera Sinema Mandiri Malang Kota (Lensa Mata) yang didirikan oleh Arief Akhmad Yani
+    pada tahun 2004, telah lebih dulu berproses dari dalam kampus. Lensa Mata hadir mengisi
+    kosongnya lini ekshibisi film di skena komunitas yang kala itu didominasi oleh kegiatan
+    produksi. Masa paling aktif Lensa Mata bisa dibilang adalah ketika mengelola ruangan bernama
+    MAMIPO (Malang Meeting Point), sebuah tempat pameran foto yang salah satu ruangannya
+    disulap menjadi ruang pemutaran dengan nama program MISI (Minggu Apresiasi). 
 
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'ffs_2019')} alt={'Festival Film Surabaya (FFS) 2019'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'ffs_2019')} alt={'Festival Film Surabaya (FFS) 2019'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Festival Film Surabaya 2019<br/>(FFS 2019)</p>
-  </GridItemLeftContent>
-  <GridItem>
-    Pada 2004 mulai muncul produksi film animasi pendek berlatar komedi lokal
-    berjudul _Suro dan Boyo_ diproduksi oleh Mohammad Sholikin alias Cak Ikin dari
-    komunitas Gatotkaca. Serial animasi ini menampilkan humor yang penuh dengan
-    _pisuhan_ (umpatan lokal) sebagai respon atas problem sosial dan budaya di
-    Surabaya. Cak Ikin mendapatkan perhatian lebih luas ketika diundang Boemboe
-    Forum Jakarta dalam Forum Boemboe Forum Dua di Teater Utan Kayu pada
-    2005. Sezaman dengan Cak Ikin, Tosan Priyonggo dari komunitas Cazlorda juga
-    memproduksi film pendek dan animasi seperti _Topeng Kota_ (2004), _Serem 3: Ting
-    Tong_ (2005), _Kimeru_ (2005), dan _Kapit_ (2008). Karya-karya Tosan kebanyakan
-    berupa animasi berlatar superhero kocak, dan sempat memenangkan Kuldesak
-    Award untuk Hellofest Vol.4 pada 2007. Pada tahun-tahun tersebut, produksi film
-    animasi pendek cukup mendominasi di Surabaya.
+    <Box
+      as={GatsbyImage}
+      mb="8px"
+      mt="50px"
+      image={getImage(props.data.gallery.nodes.find(item => item.name === 'malang2'))} alt="Produksi Film Memorial oleh Kjokkenmoddinger Studio di 2019"
+    />
+    <Text className="caption" mb="50px !important">Produksi Film Memorial oleh Kjokkenmoddinger Studio di 2019</Text>
 
-    Setelah era film animasi pendek, proyek omnibus film _CUKS_ (Cinta Untuk Kota
-    Surabaya) yang diproduksi oleh beberapa sutradara dari berbagai komunitas
-    film di Surabaya dirilis pada 14 Februari 2008 di bioskop Mitra 21 Surabaya. _CUKS_
-    biasanya dianggit sebagai proyek produksi film pendek pertama di Surabaya
-    pasca Orba. Selain diputar di bioskop, kisah-kisah roman picisan dan komedi di
-    omnibus _CUKS_ juga diputar di berbagai program pemutaran yang diinisiasi secara
-    mandiri oleh komunitas film berbasis kampus yang berada di Surabaya.
+    “Melalui kegiatan-kegiatan yang bekerja sama dengan teman-teman dari Yogyakarta dan Jakarta,
+    Lensa Mata menawarkan beragam bentuk film, sehinga kemudian terciptalah ruang literasi dan
+    pengetahuan bagi penonton atau _filmmaker_ di Malang,” kata Arfan.
 
-    “_CUKS_ itu semacam perayaan saja, seperti merayakan capain produksi dan
-    teknis yang sudah lama tidak ada di Surabaya. Proyek omnibus ini dilakukan oleh
-    sutradara-sutradara muda dari berbagai komunitas dan kampus di Surabaya,”
-    tutur WImar Herdanto, sutradara yang turut menyumbang karyanya di dalam
-    _CUKS_.
-
-    _CUKS_ sepertinya membuka babak baru dalam skena produksi dan distribusi di
-    Surabaya. Jika era film animasi pendek yang berkembang pada 2004 berdasarkan
-    klangenan dan distribusinya memanfaatkan kompetisi festival dan media sosial
-    (tahun-tahun pertama dirilisnya Facebook yang kemudian disusul oleh Youtube),
-    _CUKS_ lebih memanfaatkan komunitas film berbasis kampus yang pada saat itu
-    mulai bermunculan.
-
-    Pengetahuan mengenai produksi dan distribusi film di Surabaya disemai melalui
-    kampus-kampus yang menawarkan program studi maupun mata kuliah media,
-    komunikasi, film, dan pertelevisian. Mulai 90-an sampai pertengahan 2000-an,
-    Sekolah Tinggi Ilmu Komunikasi Almamater Wartawan Surabaya (STIKOSA-AWS)
-    merupakan kampus pertama sekaligus satu-satunya yang memiliki alat editing
-    film analog beserta teknisinya.
-
-    IGAK Satrya menuturkan bahwa film-film yang diproduksi pada era tersebut,
-    hampir bisa dipastikan mengalami proses editing di STIKOSA-AWS. “Pada waktu
-    itu, mahasiswa yang bikin film pasti editingnya di STIKOSA-AWS, honor editor
-    waktu itu sekitar 150 ribuan. Awalnya begitu, tapi ketika sudah kenal dan saking
-    seringnya meminta jasa dari orang yang sama, honor editing berubah jadi uang
-    rokok,” ujarnya.
-
-    Film-film yang diproduksi pada tahun-tahun tersebut biasanya didistribusikan
-    melalui bioskop mobil hasil menyewa mobil penerangan Badan Kependudukan
-    dan Keluarga Berencana Nasional (BKKBN) Kota Surabaya. Mobil penerangan
-    BKKBN biasa disewakan untuk program pemutaran keliling dengan harga Rp
-    600.000/hari. Informasi ini, kata IGAK, didapatkan dari mata kuliah Komunikasi
-    Pembangunan Universitas Airlangga yang kemudian disebarkan ke komunitaskomunitas film berbasis kampus di Surabaya. 
-
-    “Biasanya yang diputar rata-rata film-film produksi 90-an akhir, dan tentu saja
-    program pemutaran juga harus disertai dengan pemutaran film propaganda
-    pemerintah karena fasilitasnya emang dapat dari pemerintah,” kata IGAK sambal
-    tertawa mengingat masa-masa awal program pemutaran film di Surabaya yang
-    justru dibantu oleh lembaga negara yang mengurus soal kependudukan dan
-    reproduksi.
-  </GridItem>
-</GridContainer>
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'infis2_2019')} alt={'Independen Film Surabaya (INFIS) 2 2019'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'infis2_2019')} alt={'Independen Film Surabaya (INFIS) 2 2019'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Independen Film Surabaya 2019<br/>(INFIS 2019)</p>
-  </GridItemLeftContent>
-  <GridItem>
-    Dari skena produksi dan distribusi tersebut, ekosistem film di Surabaya mulai
-    terbentuk secara gradual, Kinne Komunikasi UPN Veteran Jawa Timur muncul
-    sebagai komunitas atau klub kajian film paling awal di Surabaya pada 1999.
-    Selanjutnya disusul oleh kemunculan Sinematografi Unair pada 2002. Di luar
-    komunitas film berbasis kampus, Independen Film Surabaya (INFIS) berdiri pada
-    2000. Pada masa-masa itu lah _CUKS_ lahir, ketika persemaian bibit pengetahuan
-    produksi dan distribusi film di Surabaya dimulai di kampus dan mulai
-    menampakkan hasilnya melalui kemunculan komunitas-komunitas film.
-
-    Bersamaan dengan itu ekosistem film juga mulai tumbuh di kalangan pelajar
-    dengan munculnya jurusan Produksi Film untuk sekolah kejuruan seperti yang
-    terjadi di SMK Dr. Soetomo Surabaya, SMKN 12 Surabaya, dan jurusan Produksi
-    Siaran Program Pertelevisian (PSPT) di SMKN 1 Surabaya. Menyusul kemudian
-    ekskul film mulai bermunculan di sekolah-sekolah menengah atas. Tepat pada
-    perkembangan awal ekosistem film pelajar di Surabaya, SMK Dr.Soetomo
-    menginisiasi festival film pelajar yang dinamakan Festival Film Surabaya (FFS).
-
-    Festival Film Surabaya (FFS) memperkenalkan format festival yang menerapkan
-    proses seleksi film, pemutaran, diskusi, serta kompetisi kepada publik Surabaya.
-    Meski digagas untuk pelajar, keberadaan FFS bisa dijadikan petunjuk awal
-    tentang bagaimana format festival film di Surabaya. Festival yang digelar tiap
-    tiga tahunan itu rutin menerima sekitar 300-400an film pendek pelajar dari
-    seluruh Indonesia. Selain festival, SMK Dr. Soetomo juga rutin membuat program
-    jembatan menuju festival dengan membuat pemutaran tahunan bagi pelajar
-    yang diberi tajuk Bulan Film Surabaya (BFS). Sol Amrida, pengajar Produksi
-    Film SMK Dr. Soetomo yang juga menjadi juru program dan kurator untuk FFS
-    dan BFS menyatakan bahwa program pemutaran yang dilakukan biasanya
-    menyesuaikan dengan momen dan isu tertentu dalam satu atau dua tahun
-    sebelumnya.
-
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Total Dana yang Terhimpun (sejak 2019) Berdasarkan Sumbernya</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Total-Dana-yang-Terhimpun')} alt={'Total-Dana-yang-Terhimpun'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Total-Dana-yang-Terhimpun-thumb'))} alt={'Total-Dana-yang-Terhimpun-thumb'} noBorder />
-    </Lightbox>
-    <p className="caption">Tak berbeda dengan temuan-temuan riset
-      terdahulu tentang komunitas film dan data
-      kualitatif di pendataan ini, pendanaan
-      aktivitas komunitas masih bersifat swadaya.
-      Sejak 2019, berdasarkan data terhadap
-      26 komunitas, total pendanaan mandiri
-      mencapai lebih dari Rp 6 miliar.</p>
-  </GridItemLeftContent>
-  <GridItem>
-
-    Ketika ekosistem film Surabaya sudah mulai terbentuk, corak produksi filmnya
-    mulai tampak. Dari amatan Kukuh Karnanta, pengajar Fakultas Ilmu Budaya
-    Universitas Airlangga yang juga pengkaji film, tampak bahwa sebagian besar
-    film yang diproduksi di Surabaya adalah film fiksi drama dan komedi. “Awal-awal
-    berkembangnya film-film Surabaya yang diproduksi secara mandiri dan diputar di
-    kampus atau di komunitas-komunitas, kita mengenalnya sebagai film _indie_, yang
-    berkesan absurd dan secara peyoratif merujuk film yang susah dipahami oleh
-    publik, atau kalau tidak ya film roman picisan atau komedi,” terang Kukuh yang
-    tahun lalu mendapat penghargaan Karya Kritik Film FFI 2021.
-
-    Corak tersebut dapat dengan mudah ditemui, karena belum memadainya
-    ekosistem film di Surabaya. “Komunitas atau kolektif film memang banyak,
-    tapi yang menyertakan program pemutaran yang agak ‘serius’ atau workshop
-    tentang kritik film, riset, mentoring produksi, _pitching_ ide, pendanaan, manajemen
-    produksi, tidak banyak. Dulu nonton film ya nonton saja, ya tidak salah, seringnya
-    teman-teman sendiri yang bikin film, teman-teman sendiri yang nontonnya, jadi
-    ekosistemnya tidak berkembang dengan baik,” lanjut Kukuh.
-
-    Masalah belum ‘mapannya’ ekosistem film di Surabaya juga coba diurai dari
-    sudut pandang dari luar Surabaya. Irfan Akbar dari Gresik Movie menilai bahwa
-    ‘komunitas lama’ atau ‘orang-orang lama’ yang berada di dalam komunitas film di
-    Surabaya terlalu asyik dengan jejaring internalnya sendiri. “Dari perspektifku yang
-    berada di luar Surabaya, aku melihat bahwa komunitas-komunitas film lawas
-    di Surabaya asyik dengan lingkaran yang terlalu kecil, contoh paling gampang
-    misalnya, ketika banyak program workshop, residensi, dan festival film ternama
-    dihelat di kota-kota besar di luar Surabaya, aku tidak pernah sekalipun dengar
-    nama mereka,” tutur Irfan.
-
-    Era ‘komunitas lama’ melahirkan kultur patron-klien, senior-junior, atau abangabangan—ngabers, di dalam skena film Surabaya. Era ini meromantisasi nyaris
-    apapun terhadap capaian-capaian garib film Surabaya yang sebenarnya belum
-    atau tidak pernah ke mana-mana. Kejenuhan itu memuncak ketika ekosistem film
-    di Surabaya selanjutnya hanya dikenal sebagai kota untuk ‘bakar tiket’ menonton
-    film dari Jakarta. Sejalan dengan era tersebut, corak produksi dan distribusi film
-    juga tak kunjung mapan karena absennya apresiasi dan kritik yang memadai. 
-
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'bfs_2019')} alt={'Bulan Film Surabaya (BFS) 2019'} mb="16px">
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'bfs_2019')} alt={'Bulan Film Surabaya (BFS) 2019'} />
-    </Lightbox>
-    <p className="caption">Bulan Film Surabaya 2019<br/>(BFS 2019)</p>
-  </GridItemLeftContent>
-  <GridItem>
-
-    Kultur tersebut mulai berubah pada 2013-2020 ketika mulai bermunculannya
-    komunitas film yang lahir secara organik di luar kampus yang anggotanya
-    tidak sebatas hanya dari kampus, tetapi juga dari berbagai elemen. Komunitas
-    Penonton mulai lahir dan menginisiasi program-program pemutaran secara
-    berkala untuk publik yang lebih luas. Alih-alih hanya berkutat di persoalan teknis
-    produksi film yang dibahas secara monokrom di Surabaya, Komunitas Penonton
-    memulai dari tema-tema yang dekat dengan keseharian yang juga menyertakan
-    masalah-masalah keseharian yang mesti dihadapi oleh orang-orang yang hidup
-    di Surabaya. Pada tahun yang sama, merespon kemonotonan corak produksi
-    film Surabaya, _Gundah Gundala_ (Wimar Herdanto, 2013) mencuri perhatian
-    publik karena menyajikan gaya tutur yang ringan dalam balutan kritik satir atas
-    persoalan bonus demografi di Indonesia.
-
-    Era baru komunitas film di Surabaya lahir kembali dalam bentuknya yang lain.
-    Masa-masa ini lahir karena semakin tingginya intensitas persinggungan dengan
-    komunitas dari luar Surabaya dan mulai rajinnya anak-anak muda Surabaya
-    mengikuti lokakarya film dan menyambangi berbagai festival film atau sekadar
-    bertemu dengan komunitas-komunitas film, baik secara ‘formal’ melalui forum
-    atau temu komunitas di gelaran festival maupun secara ‘informal’ dengan
-    langsung melakukan kontak personal yang menjadi simpul-simpul di komunitas
-    film di berbagai daerah. 
-
-    Seturut perjalanan pada masa itu, komunitas-komunitas film yang terbentuk
-    organik di Surabaya menjadi semakin beragam. Praktik komunikasi yang
-    lebih luas, cair, egaliter, memungkinkan untuk saling bertukar pengalaman,
-    pengetahuan, dan gagasan mengenai corak produksi dan eksibisi film inilah yang
-    mendorong kelahiran komunitas-komunitas film baru tersebut. 
-
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'bfs2_2019')} alt={'Bulan Film Surabaya (BFS) 2019'} mb="16px">
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'bfs2_2019')} alt={'Bulan Film Surabaya (BFS) 2019'} />
-    </Lightbox>
-    <p className="caption">Bulan Film Surabaya 2019<br/>(BFS 2019)</p>
-  </GridItemLeftContent>
-  <GridItem>
-    “Di Surabaya, pada masa-masa berkembangnya komunitas film yang
-    menawarkan pengalaman lain dari yang sudah-sudah, saya kira Sinema
-    Intensif. Program-program yang mereka tawarkan berbeda dan lebih kompleks.
-    Program pemutarannya tidak sekadar menonton saja, tapi juga mulai dipandu
-    oleh _programmer_ yang mengerti film dan konteksnya, adanya catatan program
-    untuk penonton, ada _workshop_, baik untuk produksi maupun kritik, terus sebisa
-    mungkin untuk menghidupkan ekosistem, program _screening_-nya berbayar,
-    ini bagus untuk menjelaskan bahwa dalam ekosistem film sebagai salah satu
-    industri kreatif membutuhkan dukungan dari publik. Jadi publik Surabaya seperti
-    mendapatkan pengalaman lain dalam menonton film,” ujar Kukuh Karnanta
-    ketika mencoba menjelaskan perkembangan corak eksibisi dan komunitas film di
-    Surabaya.
-
-    Corak eksibisi seperti yang dilakukan oleh Sinema Intensif juga dilakukan oleh
-    komunitas film yang juga lahir secara organik seperti Sekuens. Corak eksibisi
-    Sinema Intensif dan Sekuens nyaris seperti anomali bagi publik Surabaya karena
-    menyajikan pusparagam film, baik dari dalam maupun luar negeri, terutama film
-    pendek, yang selama ini, mungkin, hanya diedarkan secara terbatas dan nyaris
-    tidak mendapatkan tempat pemutaran di Surabaya. Karena saking melimpahnya
-    produksi film pendek di Indonesia, Sinema Intensif berupaya untuk menginisiasi
-    program eksibisi yang lebih luas jangkauannya dengan menginisiasi Festcil—
-    Festival Kecil, festival film yang fokus kepada perkembangan film pendek di
+    Kampus sebagai potensi munculnya komunitas film juga menjadi sasaran beberapa institusi dan
+    _filmmaker_ dari luar Malang untuk mengadakan kegiatan film, seperti _screening_ atau _workshop_.
+    Pada tahun 2012, di UMM telah diadakan pencarian bakat LA Indie Movie 2012, yang
+    memunculkan nama-nama seperti Mahesa Desaga sebagai sutradara dan Wilhy Bara sebagai
+    _soundman_. Lewat ajang tersebut, mereka memproduksi film pendek berjudul _Jumprit Singit_
+    (2013) yang gaung filmnya terdengar sampai ke beberapa penyelenggaraan festival film di
     Indonesia.
 
-    “_Nah_, pada era Sinema Intensif dan Festcil ini, publik Surabaya seperti
-    mendapatkan kesempatan untuk menengok film-film pendek, para pelaku, serta
-    jejaring komunitas film dari seluruh Indonesia. Peran Festcil terasa siginifikan
-    karena publik Surabaya tidak lagi disodori romantisme film produksi Surabaya
-    dan komunitas yang tidak pernah ke mana-mana itu, tapi keragaman dan
-    kebaruan,” tegas Irfan.
+    Dinamika komunitas film di kampus memengaruhi kegiatan perfilman di Malang dengan
+    melahirkan SDM yang melanjutkan aktivitasnya di luar kampus. Meskipun demikian, tidak
+    jarang komunitas film harus gulung tikar karena tuntutan nafkah. Beberapa di antaranya mulai
+    bekerja kembali sebagai tukang syuting manten atau produk audiovisual lainnya.
 
-    Senada dengan Irfan, Kukuh Karnanta juga menyampaikan bahwa Sinema
-    Intensif dan Festcil dianggap sebagai salah satu komunitas dan festival yang
-    berhasil menghubungkan film dengan publiknya. Selain menyajikan pusparagam
-    film pendek dalam negeri, Festcil juga menyajikan khazanah film Asia melalui
-    program satelit bekerja sama dengan WaterTreeFilm—sebuah organisasi yang
-    fokus pada literasi sinema, produksi, dan distribusi film. Selain itu komunikasi dan
-    kolaborasi program dengan komunitas, rumah produksi, distributor, dan festival
-    film dari luar Surabaya seperti Cinema Poetica, Kolektif, Buttonijo, Forum Lenteng,
-    Festival Film Dokumenter, JAFF-Netpac, Gresik Movie, Malang Film Festival,
-    Sinema Juang Aceh, Studio Batu, Studio Antelope, dll, mulai terbangun dengan
-    baik.
+    Pada tahun 2018, intensitas kegiatan komunitas ekshibisi Lensa Mata, misalnya, mulai menurun
+    setelah Arief Akhmad Yani lebih banyak berkegiatan di luar Malang. Beberapa pemutaran hanya
+    diselenggarakan secara spontan, misalnya acara nobar film _Seperti Dendam_, _Rindu Harus di
+    Bayar Tuntas_ (2021). Padahal sebelumnya, pemutaran-pemutaran yang dilakukan Lensa Mata
+    terprogram dengan baik. Di antara sejumlah kegiatannya, mungkin yang paling berkesan adalah
+    pemutaran dengan format layar tancap bertajuk _Restorasi Ingatan_ pada tahun 2018. Bekerja
+    sama dengan Indonesia Old Cinema Museum, Lensa Mata menayangkan _Bayi Ajaib_ versi
+    seluloid. Tercatat, kurang lebih ada 150 penonton yang hadir.
 
-    Saat ekosistem film di Surabaya dibangun ulang berdasarkan pengalaman,
-    pengetahuan, dan memanfaatkan jejaring film dari luar Surabaya, tema dan
-    corak produksi film di Surabaya juga semakin beragam dan berani. _Sapu Angin_
-    (Cahyo Wulan Prayogo, 2017), _Bayang Bayan_ (Reno Surya, 2017), _Mesin Tanah_
-    (Wimar Herdanto, 2016) menyoal perebutan ruang dan menjadi ‘Yang-Asing’ di
-    kota urban. Sedangkan film hasil workshop Doc-Clinic dari Sinema Intensif dan
-    Wisma Jerman berjudul _Lantun Rakyat_ (Dwi Cahyo, 2019) yang menyoal praktik
-    demokrasi elettoral- transaksional yang menghasilkan sampah visual di Indonesia
-    berhasil menjadi nominasi Piala Citra FFI 2020 untuk kategori film pendek terbaik.
+    ##### Saling Silang Komunitas Film Malang
 
-    Sayangnya, kronik itu terputus karena pandemic Covid-19. 
+    Komunitas kampus memiliki kecenderungan dalam pola kerjanya yang sama, yakni
+    berkomunitas untuk menjalankan program kerja tahunan. Mereka membuat program, merekrut
+    anggota dari kalangan mahasiswa, dan melanjutkan program yang telah dibuat oleh pendahulu
+    mereka. Anggota mereka kebanyakan adalah mahasiswa yang tertarik atau baru belajar soal film.
+    Sementara pemutarannya secara umum dihadiri oleh sesama mahasiwa dan pelajar. Kurang lebih
+    begitulah gerak-gerik komunitas-komunitas film kampus di Malang.
 
-    “Saya baru tahu kalau Sinema Intensif dan Festcil sudah tidak aktif pasca
-    pandemi, mungkin ini adalah kritik paling mendasar tentang komunitas ya,
-    tentang _sustainability_, regenerasi, dan skema pendanaan yang berkelanjutan.
-    Pasca pandemi mungkin karena desakan ekonomi _ya_, jadi anggota-anggota
-    komunitas mesti menyelamatkan ‘dapur’ dulu, pilihannya ya kerja professional,
-    kalau komunitas ya mestinya dibuat badan hukumnya secara legal, ada unit
-    usahanya, atau dibuat PH (_production house_) sekalian, jadi mungkin itu sekarang
-    yang terjadi di Surabaya,” ujar Kukuh. 
+    Di samping komunitas, ada lembaga formal seperti Dewan Kesenian Malang selaku
+    perpanjangan tangan pemerintah Kota Malang. Lembaga ini memiliki ruang kegiatan yang bisa
+    dimanfaatkan oleh berbagai bidang kesenian. Akan tetapi, untuk bidang film, Dimas Novib
+    sebagai ketua di kepengurusan yang baru, menyatakan bahwa mereka hanya mengadakan
+    pemutaran dan belum pernah produksi. Pemutaran film dilakukan di halaman DKM. Karakter
+    penonton yang hadir saat mengadakan pemutaran film kebanyakan berasal dari masyarakat
+    sekitar
 
-    <hr />
+    <Box
+      as={GatsbyImage}
+      mb="8px"
+      mt="50px"
+      image={getImage(props.data.gallery.nodes.find(item => item.name === 'malang3'))} alt="Produksi Film Rencana Rencana oleh Mata Mata Films di 2022"
+    />
+    <Text className="caption" mb="50px !important">Produksi Film Rencana Rencana oleh Mata Mata Films di 2022</Text>
 
-    ### Semangat Membara, Minim Rencana
+    Bentuk formal lainnya adalah kegiatan film seperti yang dilakukan oleh Vicky Arief dan Agus
+    Setiawan di Kawasan Ekonomi Khusus (KEK) Singhasari, yang merupakan lokasi ekonomi
+    khusus digital di Jawa Timur. Lewat ruang ini, keduanya ingin mendorong ekosistem film dan
+    animasi menjadi lebih baik. Vicky Arief juga memulai kegiatan film dari lingkungan kampus 
+    UMM dan sempat menjadi ketua Kine Klub UMM. Kemudian, ia membentuk Paradise Picture—
+    rumah produksi yang menjadi kendaraan berjejaringnya di luar kampus. Sementara Agus
+    Setiawan mengenal film animasi ketika berada di SMK Negeri 4 Malang Jurusan Animasi dan
+    memulai membangun jaringan animasinya melalui alumni. Vicky dan Agus melihat keberadaan
+    komunitas film di Malang belum berorientasi pada industri. Inilah alasan yang mendorong
+    mereka untuk membentuk industri film di Malang lewat KEK Digital Singhasari. 
 
-  </GridItem>
-</GridContainer>
+    <Box
+      as={GatsbyImage}
+      mb="8px"
+      mt="50px"
+      image={getImage(props.data.gallery.nodes.find(item => item.name === 'malang4'))} alt="Produksi Web Series Sampai Nanti oleh Equator Cinema di 2023"
+    />
+    <Text className="caption" mb="50px !important">Produksi Web Series Sampai Nanti oleh Equator Cinema di 2023</Text>
 
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'infis_2019')} alt={'Independen Film Surabaya (INFIS) 2 2019'} mb="16px">
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'infis_2019')} alt={'Independen Film Surabaya (INFIS) 2 2019'} noBorder />
-    </Lightbox>
-    <p className="caption">Independen Film Surabaya 2019 <br /> (INFIS 2019) </p>
-  </GridItemLeftContent>
-  <GridItem>
-    Mungkin, kasus di Surabaya tidak sama dengan ekosistem film di kota lainnya,
-    tetapi hantaman pandemi covid-19 sepertinya langsung mengubah lanskap
-    dan ekosistem film di Surabaya. Komunitas film di Surabaya yang biasanya
-    menjalankan berbagai program secara swakelola sepertinya gagap dan tidak
-    menyiapkan mitigasi ketika diharuskan mengambil keputusan yang mendesak
-    dan mendadak karena pandemi. Larangan untuk berkumpul di saat pandemi
-    membuyarkan program-program—terutama yang dilakukan secara luring dan
-    melibatkan banyak orang—yang sudah disusun oleh beberapa komunitas film.
+    Lantas, bagaimana dengan pemerintah Kota Malang sendiri? Menurut Arfan, pemerintah tampak
+    kesulitan mendefinisikan kegiatan film. Hingga kini belum ada langkah stratetegis yang jelas
+    dalam mengembangkan perfilman. Kota Malang belum benar-benar membuka peluang yang
+    konkret, dan hanya memunculkan jargon-jargon yang mengatasnamakan ekonomi kreatif.
+    Anggaran yang ada juga seakan belum dimanfaatkan secara maksimal. 
 
-    Berbagai siasat, adaptasi, dan strategi untuk menghadapi situasi tak menentu di
-    tengah pandemi mesti dilakukan, beberapa program mulai dialihkan ke ruangruang virtual. Program-program pemutaran mulai dilakukan secara daring,
-    demikian halnya dengan gelaran-gelaran festival film. Tetapi tetap saja energi
-    dan kemampuan finansial yang harus dialokasikan berubah sebangun dengan
-    kondisi semua sektor yang juga sama ambruknya. Meski format komunitas film di
-    Surabaya berkembang ke arah yang menjanjikan, ada beberapa hal yang masih
-    tampak lemah yaitu: regenerasi, pengelolaan organisasi, dan skema pendanaan
-    yang baik.
+    “Ketika ada orang dari luar Kota Malang yang datang untuk syuting film di sini, regulasi
+    pemerintah harusnya bisa digunakan untuk kepentingan para pekerja film di Malang,” ucap
+    Arfan.
+  
+    Beda dengan Arfan, Vicky melihat pemerintah cukup membantu. Sebagai orang yang pernah
+    bekerja sama dengan pemerintah atau kedinasan, seperti untuk penyelenggaran Festival Film
+    Malang 2016 dan 2017, Vicky meyakini bahwa pemerintah bisa diajak untuk berdialog terkait
+    kegiatan perfilman di Malang. Upayanya untuk membuka ruang kerja sama dengan pemerintah
+    ini pun telah dilakukannya sejak berkegiatan di UKM Kine Klub UMM.
 
-    “Relasi _pentahelix_ yang melibatkan akademisi, industri, pelaku-komunitas,
-    pemerintah, dan media secara sistematis dan berkelanjutan masih lemah
-    di Surabaya. Dari kasus ini, tampaknya masalahnya bukan soal literasi dan
-    kolaborasi, tapi resiliensi,” ujar Kukuh saat menjelaskan tumbangnya komunitaskomunitas film saat pandemi yang kemudian mengubah lanskap dan ekosistem
-    film di Surabaya.
+    “Saat banyak komunitas film di Malang belum mau mengarah ke sana, saya sudah
+    melakukannya. Beberapa kegiatan mendapat dukungan, dan relasi itu tetap berlanjut hingga hari
+    ini,” ucap Vicky.
 
-    “Soal literasi, kawan-kawan yang lebih muda justru pengalaman dan
-    pengetahuannya lebih banyak, sedangkan soal kolaborasi, kawan-kawan, baik itu
-    di Surabaya atau dengan kota lain itu sudah sangat biasa untuk saling mengisi,
-    entah itu soal kebutuhan sumber daya manusia, atau soal tukar teknologi dan
-    alat. Hanya bagaimana dari sisi kapital yang belum mapan dan mungkin tidak
-    seberani, Jakarta dan Yogya misalnya,” tambah Sol Amrida.
+    Di luar itu semua, ada pula berbagai komunitas film yang memiliki banyak rencana tapi belum
+    memiliki inisiatif yang mandiri. Menurut Arfan, banyak di antara komunitas film masih
+    pragmatis dan bergantung pada program _pitching_ atau bantuan dana produksi. Sejauh ini
+    mungkin hanya Hisstory Film yang bisa membagi peran untuk menghidupi komunitasnya
+    dengan mengerjakan beberapa proyek yang dinamai proyek Rotasi.
 
-    Seperti yang disampaikan oleh Kukuh sebelumnya, bahwa pandemi kemudian
-    membuat para anggota komunitas mulai mengalihkan energinya untuk
-    bertahan dan mengamankan kebutuhan domestik. Pilihan-pilihan rasional itu
-    yang kemudian menyebabkan anggota-anggota komunitas film menyebar atau
-    kembali ke kota asal untuk bekerja—entah masih berhubungan dengan film atau
-    tidak. Tepat pada saat itu pula pilihan-pilihan rasional untuk membuat unit usaha
-    dengan memanfaatkan pengalaman dan pengetahuan di bidang film mulai
-    dilakukan oleh anggota-anggota komunitas film untuk membuat rumah produksi
-    yang membuat film atau konten-konten komersial lainnya. 
+    <Box
+      as={GatsbyImage}
+      mb="8px"
+      mt="50px"
+      image={getImage(props.data.gallery.nodes.find(item => item.name === 'malang5'))} alt="Produksi film Tidak Mati, Aku Tetap Menjadi Milikku Selalu oleh Meraki Visual di 2023"
+    />
+    <Text className="caption" mb="50px !important">Produksi film Tidak Mati, Aku Tetap Menjadi Milikku Selalu oleh Meraki Visual di 2023</Text>
 
-    “Di Surabaya, yang akhirnya jadi PH (_production house_) mungkin _ya_ People Film,
-    Kreasitama, Lintasinema, Surface, dan Hinterhov. Mungkin ada banyak juga, tapi
-    ga muncul namanya. Era komunitas mungkin berlanjut atau bergeser bentuknya
-    karena bagaimanapun, komunitas ya bentuknya kan cair, orang bisa keluar masuk
-    seenaknya, bikin lalu bubar juga bisa seenaknya, bikin lagi, meskipun anggotanya
-    bisa jadi orang-orang yang sama, begitu seterusnya,” terang Kukuh saat mencoba
-    menjelaskan tentang pergeseran format komunitas film di Surabaya pasca
-    pandemi.
+    Tanpa ada pendanaan yang pasti, komunitas film biasanya bergerak dengan kultur gotong
+    royong. Model gotong royong ini sudah sering terjadi, seperti pada produksi webseries _Sinar_
+    (2022) produksi Outline – salah satu rental alat film di Malang (2022), _Memoar_ (2021) dan
+    _Ghulam_ (2021) yang berisikan kru profesional tapi bekerja atas asas kekaryaan—pendanaan
+    dilakukan secara mandiri atau patungan. Mengingat fondasinya adalah dorongan kekaryaan, bisa
+    ditebak bahwa diskusi selama produksi akan berlangsung secara alot, karena setiap orang
+    memiliki hak untuk bersuara. Selain itu, asas gotong royong juga tidak memberi jaminan penuh
+    untuk keberlangsungan komunitas.
 
-    Perubahan corak komunitas film di Surabaya menjadi rumah produksi,
-    mungkin, merupakan kritik sekaligus jembatan yang mengentaskan kita atas
-    bayangan kerja-kerja kreatif—dalam hal ini film—yang telanjur dibingkai dalam
-    Undang-undang Nomor 33 Tahun 2009 tentang Perfilman yang menyatakan
-    bahwa komunitas film hanya sebatas sebagai pelaku ‘kegiatan perfilman’
-    atau penyelenggaraan perfilman yang berhubungan dengan film dan bersifat
-    nonkomersial. Bahwa komunitas film tak mesti seperti bayangan negara: yang
-    institusional, mandiri, militan, dan kuat bertahan seperti batu karang. Komunitas
-    film, jika boleh sedikit berapologetik, selalu menempati ruang-ruang liminal yang
-    berada di ambang atau ‘pada batas’ yang membangkitkan periode waktu atau
-    ruang 'di antara'; bahwa ekosistem film bukan batu karang, tetapi lebih seperti
-    gelombang—saling menyusul bergantian. Sah-sah saja sebuah komunitas film
-    muncul, berkembang, dan melandai digantikan oleh (apapun bentuk dan corak)
-    yang selanjutnya.
+    Seperti warung kopi di Malang, di mana pengunjung bisa datang dan pergi kapan saja, komunitas
+    film juga bergantian lahir dan gugur. Begitulah dinamika aktivitas film di Malang. Pada tahun
+    2017, Arfan merasakan banyak sekali kegiatan film di Malang. Untuk program ekshibisi, ada
+    Lélakon dengan Lintang Aulia sebagai pengelola, Gambar Obah yang didirikan oleh Mahesa
+    Desaga dan Melati Fajri, hingga Rollab UB dan kolektif Parade Film Malang yang diinisiasi oleh
+    Astu Prasidya. Sementara itu, dalam hal produksi film di Malang, ada program Sinau 
+    Dokumenter dengan sasaran peserta siswa SMA dan SMK serta program _pitching_ dan _funding_
+    Sine Act dari Equator Cinema.
+
+    Rata-rata program tersebut berjalan singkat. Mungkin hanya Parade Film Malang yang
+    terselenggara paling lama yakni, sejak 2016 sampai 2019. Kesan yang ditinggalkan oleh Parade
+    Film Malang ini juga cukup kuat. Pasalnya, selain ekshibisi film, mereka sesungguhnya juga
+    berupaya mengadakan program pendanaan untuk produksi film. Salah satu karya yang lahir dari
+    program ini, _Begal_ (2018), juga telah didistribusikan di berbagai kegiatan pemutaran film.
+
+    ##### Menuju Industri Film, Jalan yang Masih Samar
+
+    Sejauh ini, hanya ada satu film panjang asal Malang yang pernah teruji di publik dengan tayang
+    di bioskop. Film tersebut adalah _Satu Jiwa untuk Indonesia: Darah Biru Arema 2_ (2018), yang
+    diproduksi oleh teman-teman komunitas dengan modal nekat. Sebagai produser, Vicky saat itu
+    memang bersikeras agar filmnya dapat tayang di bioskop. Ia juga sekaligus mencoba untuk
+    merintis suatu model bisnis, yang diakuinya tidak mudah.
+
+    Sebagai sutradara, Taufan pun merasa, proses pembuatan film panjang pertamanya terbilang
+    konyol. Saat itu ia bahkan tidak tahu bagaimana mengembalikan modal dengan valuasi sekitar 2
+    miliar. Ia merasa bahwa saat itu sulit untuk mendapat keuntungan di bioskop, karena industrinya
+    masih dikuasai oleh segilintir orang yang memiliki modal, akses, dan privilese. Efeknya, hasil
+    yang diperoleh oleh film bisa dibilang tidak memuaskan.
+
+    “Saat bikin film panjang pertama, saya akui saya tidak memiliki peta bisnis film, bagaimana itu
+    didistribusikan ke bioskop, dan sebagainya,” ucap Taufan.
+
+    Dari segi sumber daya manusia, Taufan menyebut bahwa penggawa komunitas di Malang
+    mampu membuat film untuk industri. Film-film Malang pun menurutnya sudah memiliki
+    kekhasan, yakni kecenderungan bahasanya yang eksplosif, entah pada dialog atau _shot_-nya.
+    Kecendrungan ini, menurutnya punya kedekatan dengan karakter kesenian ludruk—sebuah
+    kesenian tradisional asal Jawa Timur. Beberapa adegan yang mewakili terdapat dalam _Satu Jiwa
+    Untuk Indonesia_, dan beberapa film pendek seperti _Jumprit Singit_ (2013) karya Mahesa Desaga,
+    _Tinuk_ (2015) karya Aprilingga Dani, _Ora Srawung Mati Suwung_ (2021) karya Destian Rendra
+    Pratama, dan _Ghulam_ (2021) karya Nashiru Setiawan.
+
+    <Box
+      as={GatsbyImage}
+      mb="8px"
+      mt="50px"
+      image={getImage(props.data.gallery.nodes.find(item => item.name === 'malang6'))} alt="Produksi film Oskab Geger Geden oleh Komunitas Sinema Batu Adem di 2022"
+    />
+    <Text className="caption" mb="50px !important">Produksi film Oskab Geger Geden oleh Komunitas Sinema Batu Adem di 2022</Text>
+
+    Pandangan Taufan tersebut agak berbeda dengan yang disebutkan oleh Arfan. Menurut Arfan,
+    film-film Malang, belum menemukan karakter dan bentuknya. Oleh karena itu, komunitas di
+    Malang masih perlu meningkatkan kemampuannya menggali gagasan yang mendalam.
+    Menurutnya, untuk bicara soal kedaerahan, seharusnya pembuat film tak hanya mengandalkan
+    bahasa, tapi juga aspek sosial budaya lainnya.
+
+    Produksi yang mengandalkan semangat kekaryaan lantas tampak penting untuk dilakukan.
+    Pasalnya, menurut Arfan, tidak tergalinya karakter atau gaya tutur film di Malang salah satunya
+    karena pragmatisme pembuat film dalam memanfaatkan bantuan dengan ketentuan tema yang
+    sudah dipilih oleh penyokong dana. Walaupun begitu, pada saat yang sama, ia juga mengamini
+    bahwa membuat film secara mandiri tidaklah semudah itu untuk diwujudkan.
+
+    “Masalahnya, kenapa tidak ada yang berani membuat film di luar bantuan atau pekerjaan, ya
+    karena risiko film akan didistribusikan ke mana,” ucap Arfan.
+
+    Hambatan distribusi film masih menjadi persoalan di Malang. Arfan mengatakan bahwa masih
+    sedikit kelompok produksi yang menargetkan filmnya untuk tayang di festival internasional.
+    Padahal, apa yang dicapai oleh teman-teman di luar Malang seharusnya bisa menjadi motivasi.
+    Hisstory Film mungkin salah satu dari sedikit yang pernah ikut kompetisi film pendek dan
+    menang di Singapura. Sisanya, setidaknya lima tahun terakhir, jarang ada komunitas film yang
+    berorientasi ke festival.
+
+    “Saya curiga teman-teman belum bisa mengukur kualitas filmnya, sehinga mereka kesulitan
+    untuk membaca peta festival film dunia,” ucap Arfan.
+
+    Selain dalam kancah festival, kelemahan pegiat film Malang juga dirasakan Arfan ada pada
+    kesiapan masuk industri film. Malang tidak memiliki banyak sosok yang telah berhasil lebih dulu
+    di industri film. Ada nama seperti Bayu Skak, seorang _content creator_ yang akhirnya terjun di
+    industri film dan terlibat dalam beberapa produksi film panjang. Namun, Bayu Skak seorang
+    tidaklah cukup. Oleh karena itu, pekerja film di Malang juga dinilainya perlu membuka
+    komunikasi dengan orang-orang yang memiliki jaringan industri.
+
+    Jalan masuk industri film semakin samar ketika para pekerja film di Malang sendiri belum
+    mampu mengkalkulasi budget, dan pekerjanya belum bisa menentukan honor profesinya sendiri.
+    Taufan melihat ada kegugupan dan kegagapan bagi pekerja film untuk menentukan harga hasil
+    kerja profesionalnya. Ini menurutnya disebabkan oleh ketiadaan panduan profesi, sehingga
+    banyak teman-teman komunitas atau pekerja film yang bekerja tanpa kontrak.
+
+    “Mungkin belum adanya kesadaran struktural dan kultural, di mana banyak pekerja menganggap
+    bahwa memiliki NPWP dan kesadaran membayar pajak tidak terlalu dibutuhkan, sehingga
+    pekerja filmnya bekerja untuk memenuhi kebutuhan _project_ saja,” ucap Taufan.
+    
+    Sejatinya, tiap bagian ekosistem film selalu terhubung dan saling membutuhkan. Hubungan itu
+    seperti rantai kebutuhan, antara produksi, ekshibisi, dan apresiasi. Sayangnya, hal itu tidak
+    terjadi pada kegiatan ekshibisi di Malang. Sejauh ini, kegiatan ekshibisi masih didominasi oleh
+    komunitas kampus. Perlu adanya komunitas terprogram seperti Lensa Mata yang sempat
+    mewarnai kegiatan ekshibisi film sejak tahun 2004 hingga 2018. Saat ini mungkin ada kelompok
+    pemutaran di luar kampus, seperti Proyeksi Besok Lagi yang mulai menanyangkan film-film dari
+    Jogja. Namun, apakah komunitas-komunitas akan tetap konsisten, itu belum bisa teruji dalam
+    waktu singkat.
+
+    “Jangan sampai kehadiran mereka sama dengan komunitas ekshibisi yang sebelumnya. Soalnya
+    sulit rasanya kegiatan produksi film di Malang masuk ke industri jika Malang belum menemukan
+    role modelnya sendiri,” ucap Arfan.
+
+    <Box
+      as={GatsbyImage}
+      mb="8px"
+      mt="50px"
+      image={getImage(props.data.gallery.nodes.find(item => item.name === 'malang7'))} alt="Program Ekshibisi Berlayar oleh Komunitas Proyeksi Besok Lagi di 2023"
+    />
+    <Text className="caption" mb="50px !important">Program Ekshibisi Berlayar oleh Komunitas Proyeksi Besok Lagi di 2023</Text>
+
+    ##### Pandemi Memisahkan Jarak, Membangkitkan Kehendak
+
+    Coretan di tembok warung kopi Tjap Panorama yang mulai beroperasi ketika pandemi COVID19 berisikan umpatan, sindiran, doa, dan harapan. Warung kopi kaki lima ini menjadi salah satu
+    tempat berkumpulnya komunitas film. Sebagai ruang temu, warung kopi ini tetap bergairah
+    untuk membuka usaha di tengah pandemi. Begitu pula dengan kerja-kerja komunitas film yang
+    justru semakin terkonsilidasi, alih-alih tercerai-berai.
+
+    “Selama pandemi, saya lihat kehendak yang memuncak terjadi pada komunitas film. Beberapa
+    kegiatan komunitas justru bergeliat, seperti produksi film pendek, terbentuknya Asosiasi
+    Dokumenteris Nusantara Malang Raya, hingga kegiatan Rasan-Rasan film di DKM,” ucap
+    Arfan.
+
+    Kegiatan produksi film pendek saat pandemi diawali melalui Rekam Pandemi, program
+    kolaborasi Asosiasi Dokumenteris Nusantara Malang dengan Kementerian Pendidikan dan
+    Kebudayaan untuk kebutuhan belajar dari rumah. Program ini dilaksanakan selama empat bulan,
+    dan menghasilkan 40 dokumenter pendek. Selain itu, Arfan juga merinci beberapa produksi film
+    lainnya, seperti _Ghulam_ karya Nashiru Setiawan, _Bumi_ karya Kiki Rahma Ardiansyah (2020),
+    _Secangkir Gula Pahit_ (2020) karya Mahesa Desaga, _Memoar_ (2021) karya Faris Ghaisani,
+    hingga seri tiga film dokumenter pendek bertajuk _Perempuan dalam Seni Pertunjukan_ karya
+    Equator Cinema yang mendapat bantuan dana Fasilitasi Bidang Kebudayaan.
+
+    Komunitas di Malang juga membuka ruang dialog dengan tajuk Rasan-Rasan Film. Tujuan
+    kegiatan ini adalah untuk menjalin silaturahmi dan berkomunikasi mengenai kegiatan film di
+    Malang. Menurut Taufan, kegiatan _rasan-rasan_ di DKM sekadar berisikan obrolan, tanpa
+    mengambil kesimpulan apa pun. Meski demikian, bagi Arfan, momen itu merupakan suatu awal
+    terbentuknya perkumpulan Guyub Film Malang Raya. Sebagai ketua terpilih, Arfan menyebut
+    bahwa Guyub Film Malang Raya adalah jawaban atas keresahan bersama dalam
+    mengomunikasikan segala bentuk kegiatan film di Malang. 
+
+    <Box
+      as={GatsbyImage}
+      mb="8px"
+      mt="50px"
+      image={getImage(props.data.gallery.nodes.find(item => item.name === 'malang8'))} alt="Produksi Film Persenan oleh Raya Media di 2022"
+    />
+    <Text className="caption" mb="50px !important">Produksi Film Persenan oleh Raya Media di 2022</Text>
+
+    “Setidaknya ruang tersebut dapat mendorong berbagai komunitas memiliki kesempatan yang
+    sama untuk tumbuh dan berkembang,” ucap Arfan.
+
+    Manfaat yang diberikan Guyub Film Malang Raya meliputi berbagai aspek, mulai dari urusan
+    pekerjaan, klasifikasi, kompetensi, hingga urusan advokasi. Kolaborasi yang terjadi juga
+    berdampak pada pembentukan kumpulan profesi seperti Open Daily Set (kumpulan pekerja
+    artistik) dan Surya Jaya (kumpulan pekerja lampu). Selain itu, Guyub Film Malang Raya juga
+    diisi oleh berbagai _stakeholder_ yang telah ada sebelumnya. Sebut saja Dewan Kesenian Malang,
+    Hisstory Film, Paradise Picture, Content Garage, Raya Media, Equator Cinema, Mata-Mata
+    Film, Sound Film Malang, Padepokan Film, dan Kamar Merah. Para pemilik usaha rental alat
+    seperti Kamera Malang, Ngalam Rent, dan Outline juga tergabung. Begitu pula akademisi yang
+    mengajar di kampus dan sekolah kejuruan film.
+
+    Kultur _rasan-rasan_ dan budaya ngobrol yang ada akhirnya menemukan hilirnya yang lebih
+    terkonsolidasi. Dengan memuncaknya kehendak komunitas-komunitas yang telah ada, serta
+    kehadiran Guyub Film Malang Raya, Malang memiliki progres yang bisa menjadi fondasi baru. 
+
+    Mungkin tidak semua hambatan terselesaikan sekarang, tapi harapannya akan terus ada progres
+    dan perkembangan untuk terus bergerak dan menjadi lebih baik di bidang perfilman.
 
   </GridItem>
 </GridContainer>
 
 <hr />
 
-<Text as="h3" mt={["40px", null, "60px"]} mb={["20px !important", null, "32px !important"]}> Karya-karya pilihan Kota Surabaya </Text>
+<Text mb="0px !important" fontSize="12.25px">Karya-karya pilihan kota</Text>
+<Text as="h3" mb={["20px !important", null, "32px !important"]} textTransform="uppercase" fontWeight="400 !important">Malang</Text>
 
-<SimpleGrid columns={[1, null, 2]} spacingX={34} spacingY={10}>
+<SimpleGrid columns={[1, null, 3]} spacingX={34} spacingY={10}>
   <ImagePlay href="https://rangkai.id/?browse=272">
     <Box 
       as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === '7-deadly-sins-thumbnail-master'))}
       alt={'7-deadly-sins-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
     />
   </ImagePlay>
   <ImagePlay href="https://rangkai.id/?browse=306">
     <Box 
       as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'bapak-tidak-pulang-hari-ini-thumbnail-master'))}
       alt={'bapak-tidak-pulang-hari-ini-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
     />
   </ImagePlay>
   <ImagePlay href="https://rangkai.id/?browse=286">
     <Box 
       as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ora-katon-thumbnail-master'))}
       alt={'ora-katon-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
     />
   </ImagePlay>
   <ImagePlay href="https://rangkai.id/?browse=304">
     <Box 
       as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ronda-alhaj-thumbnail-master'))}
       alt={'ronda-alhaj-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
     />
   </ImagePlay>
 </SimpleGrid>
