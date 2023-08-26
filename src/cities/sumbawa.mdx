@@ -2,6 +2,8 @@
 title: Sumbawa
 slug: kota-sumbawa
 desc: Mencari refleksi, menyikapi regulasi.
+headline: Menyemai Bibit Sinema di Tanah Samawa
+author: Reny Suci
 banner: '../images/cities/sumbawa/banner.jpg'
 thumb: '../images/cities/sumbawa/SumbawaBW.jpg'
 galleryDir: 'cities/sumbawa'
@@ -26,470 +28,318 @@ import Lightbox from '../components/Lightbox';
 import ImagePlay from '../components/ImagePlay';
 
 <GridContainer>
-  <GridItemLeftContent />
   <GridItem>
-    ## Menerka Arah Film Surabaya
+    <p className="highlight">Jejak kegiatan perfilman di Sumbawa diawali dengan _Sapugara_, sebuah film kolosal yang 
+    diproduksi pada tahun 1991. Dibintangi oleh Nungki Kusumastuti dan Adi Pranajaya, film ini 
+    juga diramaikan oleh nama-nama lain yang kini menjadi tokoh penting di Sumbawa seperti 
+    Iskandar D, M.Ec.Dev (Ketua Dewan Kesenian Sumbawa), Aries Zulkarnaen (budayawan), 
+    dan Dr. Akhmad Yamin (Direktur Pascasarjana Universitas Teknologi Sumbawa). _Sagapura_
+    merupakan film pertama yang mengangkat kisah kepahlawanan Lalu Unru dari Sumbawa.</p>
 
-    <p className="caption">Yogi Ishabib</p>
+    Satu film kolosal sayangnya tidak cukup untuk menopang kelangsungan perfilman di 
+    Sumbawa. Satu per satu bioskop tutup, dan kegiatan perfilman Sumbawa meredup. 
+    Menghidupkan kembali ekosistem perfilman di kabupaten kecil yang sudah lebih dari 15 
+    tahun kehilangan bioskop lantas terdengar seperti misi yang terlalu besar. Namun, inilah 
+    yang dilakukan oleh Yuli Andari, yang kemudian pulang dan melahirkan seorang bayi 
+    perempuan serta mendirikan sebuah komunitas film pertama di Sumbawa. 
 
-    Film pernah menjadi penanda zaman di Surabaya. Seorang fotografer Perancis
-    Bernama Louis Talbot membuat program pemutaran gambar bergerak pertama
-    secara komersial pada Oktober 1896—atau hanya selisih sepuluh bulan sejak
-    Lumière Bersaudara merilis pemutaran film komersial pertama di dunia pada 28
-    Desember 1895 di Perancis. Program pemutaran di Surabaya Theatre itu yang
-    menjadikan Surabaya menjadi salah satu kota paling awal yang melaksanakan
-    pemutaran gambar bergerak _(gambar idoep)_ di Asia.
+    “Saya awalnya hanya berniat melahirkan di Sumbawa lalu kembali ke Jogja, tapi kemudian 
+    (niat itu) berubah arah karena bapak saya minta menetap. Keluarga lain juga mendukung,”
+    ucap Yuli menceritakan awal mula kegiatannya di Sumbawa.
 
-    Program pemutaran gambar bergerak itu tak hanya mulai menggoyang
-    kemapanan bisnis hiburan tradisional seperti ludruk, wayang, opera melayu,
-    dan komedi stambul, tetapi juga mengurai rantai peristiwa mulai dari dibawanya
-    teknologi pemutaran gambar ke Asia pada akhir abad ke-19 dan tumbuhnya
-    minat orang-orang akan medium baru yang membuat aktivitas menonton
-    gambar bergerak menjadi salah satu pilihan hiburan pada era kolonial. Merambat
-    naiknya bisnis pemutaran di Surabaya mulai dari tenda kanvas, bambu _(gedek)_,
-    hingga gedung pemutaran yang mewah merangsang mobilitas penonton
-    _(spectators)_ dan memberi petunjuk kepada kita soal evolusi awal lanskap urban
-    kota Surabaya.
+    Yuli Andari, sutradara film dokumenter _Joki Kecil_ (2005) yang membuat film pertamanya 
+    lewat program Eagle Awards pada 2005, tidak menyangka akan berada di Sumbawa dan 
+    menginisiasi Sumbawa Cinema Society (SCS) di kampung halamannya. Yuli dan Anton 
+    Susilo, pasangannya yang juga turut menyutradarai _Joki Kecil_, menikah dan membangun 
+    karier mereka di Yogyakarta dengan membuat rumah produksi Benang Merah. _Production 
+    house_ ini memproduksi karya-karya dokumenter tentang Nusa Tenggara Barat, khususnya 
+    Sumbawa.
 
-    Kultur menonton gambar bergerak merebak di seluruh Surabaya. Jelang setahun
-    dari program pemutaran Talbot, seorang pengusaha Tionghoa yang tidak
-    diketahui namanya membangun Gedung pemutaran bernama Kenotograph
-    di Kapasan, wilayah pecinan di Surabaya Utara. Jika Surabaya Theatre hanya
-    memperbolehkan warga Eropa dan elit pribumi, Kenotograph memperbolehkan
-    siapa saja dengan berbagai macam latar belakang etnis dan kelas sosial untuk
-    menonton dengan harga tiket separuh dari Surabaya Theatre. Selain praktik
-    kolonial dan rasial, kehadiran film—danmenonton film bisa dianggit sebagai salah
-    satu praktik sosial yang menajamkan polarisasi dan hadirnya ruang-ruang liminal
-    di Surabaya.
+    <Box
+      as={GatsbyImage}
+      mb="8px"
+      mt="50px"
+      image={getImage(props.data.gallery.nodes.find(item => item.name === 'sumbawa1'))} alt=" Yuli Andari, inisiator Sumbawa Cinema Society, memberikan sambutan di 
+      Awarding night Festival Film Sumbawa 3 di 2021."
+    />
+    <Text className="caption" mb="50px !important">Yuli Andari, inisiator Sumbawa Cinema Society, memberikan sambutan di 
+      Awarding night Festival Film Sumbawa 3 di 2021.</Text>
 
-    <hr />
+    Film-film itulah yang dibawa pulang untuk diputar di Sumbawa, dan mendapat sambutan 
+    yang baik. Saat memutarkan film _Joki Kecil_ dan film-film lain karya Benang Merah, Yuli 
+    Andari bekerja sama dengan dinas terkait untuk mendapatkan rekomendasi dan dukungan 
+    guna memobilisasi siswa menonton. Bertepatan dengan Hari Pendidikan Nasional, 
+    pemutaran film _Joki Kecil_ dan film-film lainnya disebut sebagai embrio, cikal bakal 
+    munculnya SCS. Meski demikian, di titik ini, SCS belum dapat dianggap berdiri.
 
-    ### Masa-masa kekosongan dan mulainya era komunitas film di Surabaya
+    SCS baru terbentuk pada tahun 2014. Awalnya, tawaran dari Indocs untuk bekerja sama 
+    melakukan pemutaran film untuk program Screendocs Travelling di Sumbawa menjadi 
+    pemicu. Pemutaran tersebut memantik keinginan untuk terus melakukan kegiatan. Setelah 
+    itu, Yuli dan beberapa temannya membuat penayangan dan diskusi film _The Act of Killing_
+    (2012), yang dilaksanakan secara sederhana di teras rumah dan diikuti oleh 10-15 orang 
+    penonton. Dari pemutaran itu, muncul ide untuk membentuk komunitas atau klub menonton 
+    serta melakukan pemutaran-pemutaran film dari koleksi pribadi Yuli Andari. Tidak lama
+    kemudian, klub menonton ini memiliki nama, yakni Sumbawa Cinema Society.
 
-    Penelitian mengenai sejarah bioskop di Surabaya sudah ada dan bisa menjadi
-    petunjuk bagaimana Surabaya sebagai sebuah kawasan berkembang karena,
-    salah satunya, berdasarkan budaya menonton film. Tetapi jauh dari ingar bingar
-    dan romantisme sejarah Surabaya saat kedatangan gambar bergerak sampai
-    masa membludaknya bioskop, ada masa-masa kekosongan yang belum berhasil
-    terungkap tentang bagaimana kondisi dan model produksi, distribusi, serta
-    eksibisi film Surabaya mulai dari masa-masa awal film masuk di Surabaya pada
-    era kolonial sampai tahun 2000-an. Masa kekosongan yang terlampau lama ini
-    menyebabkan sulitnya memetakan ekosistem film di Surabaya.
+    “Kegiatan SCS diniatkan untuk mengakrabkan lagi film kepada masyarakat setelah dua 
+    bioskop di Sumbawa (Sumbawa Theatre & President Theatre) tutup karena industri film mati 
+    suri di akhir tahun 90-an,” ucap Yuli.
 
-    Masa-masa kekosongan ini disebut oleh IGAK Satrya Wibawa, salah satu
-    pendiri Independen Film Surabaya (INFIS) disebabkan karena sedari awal publik
-    Surabaya menganggap bahwa menonton film adalah kebutuhan rekreasional,
-    yang kebetulan pilihannya sangat beragam pada waktu itu, seperti gelaran
-    olahraga (sepakbola, basket, dan balap motor), atau konser musik—yang mana
-    film bukan merupakan pilihan utama.
+    <Box
+      as={GatsbyImage}
+      mb="8px"
+      mt="50px"
+      image={getImage(props.data.gallery.nodes.find(item => item.name === 'sumbawa2'))} alt="Nonton bareng dalam rangka memperingati Hari Film Nasional 2019 berlokasi di Dusun Batu Alang."
+    />
+    <Text className="caption" mb="50px !important">Nonton bareng dalam rangka memperingati Hari Film Nasional 2019
+      berlokasi di Dusun Batu Alang.</Text>
 
-    Mungkin, gelombang film independen yang muncul pasca runtuhnya Orde Baru
-    baru bisa dijadikan pijakan untuk mengenal kembali ekosistem film di Surabaya,
-    meskipun heroisme tentang bagaimana film-film independen yang muncul pasca
-    Orba biasanya menawarkan wacana alternatif atas keterpusatan tidak tampak
-    begitu menonjol di Surabaya. Alih-alih sebagai wacana alternatif, corak produksi
-    awal film-film yang berkembang di Surabaya lebih banyak sebagai sebuah
-    kegiatan _klangenan_ semata.
+    Pada tahun berikutnya, SCS menerima beberapa tawaran untuk menjadi rekanan lokal 
+    dalam festival film berskala nasional: Anti-Corruption Film Festival (ACFFest) dan Science 
+    Film Festival. Pada tahun yang sama, SCS juga melakukan pemutaran untuk omnibus
+    _Kembang 6 Rupa_ (2014), yang mana salah satu film dokumenter karya Anton Susilo turut 
+    diputar. Lewat ACFFest 2015, Anton Susilo juga berhasil mendapatkan pendanaan untuk 
+    memproduksi film fiksi pendek berjudul _Menya(m)bung Nasib di Negeri Orang_ (2015). 
 
-  </GridItem>
-</GridContainer>
+    Turut membantu, Reny Suci, alumni LA Lights Indie Movie 2009 yang sebelumnya bekerja 
+    sebagai koordinator ACFFest 2014-2015 di Jakarta, kemudian pulang untuk menetap di 
+    Sumbawa dan bergabung dengan SCS. Pada tahun yang sama, ia berhasil memperoleh
+    dana produksi dari Pusbang Film melalui program Fasilitasi Film Pendek 2015 untuk 
+    membuat film pertamanya berjudul _Jon_ (2015). Dengan adanya kegiatan pemutaran serta 
+    penambahan dua film pendek yang diproduksi, SCS mulai masuk ke dalam radar komunitas 
+    film dan diundang untuk mengikuti Forum Komunitas di Jogja-NETPAC Asian Film Festival 
+    (JAFF) 2015.
 
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'ffs_2019')} alt={'Festival Film Surabaya (FFS) 2019'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'ffs_2019')} alt={'Festival Film Surabaya (FFS) 2019'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Festival Film Surabaya 2019<br/>(FFS 2019)</p>
-  </GridItemLeftContent>
-  <GridItem>
-    Pada 2004 mulai muncul produksi film animasi pendek berlatar komedi lokal
-    berjudul _Suro dan Boyo_ diproduksi oleh Mohammad Sholikin alias Cak Ikin dari
-    komunitas Gatotkaca. Serial animasi ini menampilkan humor yang penuh dengan
-    _pisuhan_ (umpatan lokal) sebagai respon atas problem sosial dan budaya di
-    Surabaya. Cak Ikin mendapatkan perhatian lebih luas ketika diundang Boemboe
-    Forum Jakarta dalam Forum Boemboe Forum Dua di Teater Utan Kayu pada
-    2005. Sezaman dengan Cak Ikin, Tosan Priyonggo dari komunitas Cazlorda juga
-    memproduksi film pendek dan animasi seperti _Topeng Kota_ (2004), _Serem 3: Ting
-    Tong_ (2005), _Kimeru_ (2005), dan _Kapit_ (2008). Karya-karya Tosan kebanyakan
-    berupa animasi berlatar superhero kocak, dan sempat memenangkan Kuldesak
-    Award untuk Hellofest Vol.4 pada 2007. Pada tahun-tahun tersebut, produksi film
-    animasi pendek cukup mendominasi di Surabaya.
+    ##### Bersinergi dengan Pemerintah Daerah
 
-    Setelah era film animasi pendek, proyek omnibus film _CUKS_ (Cinta Untuk Kota
-    Surabaya) yang diproduksi oleh beberapa sutradara dari berbagai komunitas
-    film di Surabaya dirilis pada 14 Februari 2008 di bioskop Mitra 21 Surabaya. _CUKS_
-    biasanya dianggit sebagai proyek produksi film pendek pertama di Surabaya
-    pasca Orba. Selain diputar di bioskop, kisah-kisah roman picisan dan komedi di
-    omnibus _CUKS_ juga diputar di berbagai program pemutaran yang diinisiasi secara
-    mandiri oleh komunitas film berbasis kampus yang berada di Surabaya.
+    Pada awal berdirinya, SCS melakukan kegiatan secara swadaya tanpa dukungan dana dari 
+    pemerintah. Keterlibatan Pemda baru sebatas pada kehadiran mereka untuk memberikan 
+    sambutan pada acara-acara besar seperti _roadshow_ ACFFest dan Science Film Festival. 
+    Baru pada tahun 2017, SCS berhasil memperoleh dana hibah dari Yayasan Kelola untuk 
+    membuat pertunjukan _Harmoni di Tana Samawa_, Wakil Bupati serta beberapa kepala dinas 
+    hadir dan melihat langsung kegiatan SCS. Pertunjukan yang mengangkat sejarah 
+    keberagaman di Sumbawa tersebut lantas menjadi gerbang masuknya dukungan Pemda 
+    lewat Dewan Kesenian Sumbawa (DKS). 
 
-    “_CUKS_ itu semacam perayaan saja, seperti merayakan capain produksi dan
-    teknis yang sudah lama tidak ada di Surabaya. Proyek omnibus ini dilakukan oleh
-    sutradara-sutradara muda dari berbagai komunitas dan kampus di Surabaya,”
-    tutur WImar Herdanto, sutradara yang turut menyumbang karyanya di dalam
-    _CUKS_.
+    Saat itu, SCS menemui Iskandar D, M.Ec.Dev, ketua DKS yang akrab dipanggil Pak Ande, 
+    untuk mengajukan permohonan dana tambahan untuk kegiatan Harmoni di Tana Samawa. 
+    Dari kegiatan tersebut, DKS mulai melihat potensi yang dimiliki SCS dan berkomitmen 
+    mendukung kegiatan-kegiatan SCS yang akan datang. 
 
-    _CUKS_ sepertinya membuka babak baru dalam skena produksi dan distribusi di
-    Surabaya. Jika era film animasi pendek yang berkembang pada 2004 berdasarkan
-    klangenan dan distribusinya memanfaatkan kompetisi festival dan media sosial
-    (tahun-tahun pertama dirilisnya Facebook yang kemudian disusul oleh Youtube),
-    _CUKS_ lebih memanfaatkan komunitas film berbasis kampus yang pada saat itu
-    mulai bermunculan.
+    “Selaku Dewan Kesenian, kami hanya bisa men-_support_ walaupun dengan dana terbatas. 
+    Dari dana yang terbatas itu, 25 persen kami gunakan untuk mendukung kegiatan perfilman,” 
+    ucap Ande.
 
-    Pengetahuan mengenai produksi dan distribusi film di Surabaya disemai melalui
-    kampus-kampus yang menawarkan program studi maupun mata kuliah media,
-    komunikasi, film, dan pertelevisian. Mulai 90-an sampai pertengahan 2000-an,
-    Sekolah Tinggi Ilmu Komunikasi Almamater Wartawan Surabaya (STIKOSA-AWS)
-    merupakan kampus pertama sekaligus satu-satunya yang memiliki alat editing
-    film analog beserta teknisinya.
+    Bagi Pak Ande yang telah menjabat sebagai ketua DKS selama tiga periode, tidak banyak 
+    kelompok kesenian yang datang untuk mengajukan proposal program untuk didanai oleh 
+    DKS. SCS datang dengan proposal kegiatan yang belum pernah dilaksanakan di Sumbawa. 
+    Dalam proposal itu, SCS membuat karya multidisiplin (teater, foto, arsip, film, dan seni 
+    tradisi) yang diisi oleh 300 pengisi acara dari latar belakang seni dan etnis yang beragam. 
 
-    IGAK Satrya menuturkan bahwa film-film yang diproduksi pada era tersebut,
-    hampir bisa dipastikan mengalami proses editing di STIKOSA-AWS. “Pada waktu
-    itu, mahasiswa yang bikin film pasti editingnya di STIKOSA-AWS, honor editor
-    waktu itu sekitar 150 ribuan. Awalnya begitu, tapi ketika sudah kenal dan saking
-    seringnya meminta jasa dari orang yang sama, honor editing berubah jadi uang
-    rokok,” ujarnya.
+    Festival Film Sumbawa (FFS) yang diadakan pertama kali pada tahun 2019 adalah bukti 
+    komitmen dan dukungan penuh dari DKS. Mengusung tema “Warna Warni Keberagaman 
+    Sumbawa”, FFS pertama memiliki program pendampingan produksi film fiksi dan 
+    dokumenter untuk pelajar. Film-film yang diproduksi kemudian diputar pada malam puncak,
+    dan penonton diminta untuk memilih film favoritnya. Kompetisi ini membuat pelaksanaan 
+    FFS pertama dihadiri oleh 1.000 orang lebih.
 
-    Film-film yang diproduksi pada tahun-tahun tersebut biasanya didistribusikan
-    melalui bioskop mobil hasil menyewa mobil penerangan Badan Kependudukan
-    dan Keluarga Berencana Nasional (BKKBN) Kota Surabaya. Mobil penerangan
-    BKKBN biasa disewakan untuk program pemutaran keliling dengan harga Rp
-    600.000/hari. Informasi ini, kata IGAK, didapatkan dari mata kuliah Komunikasi
-    Pembangunan Universitas Airlangga yang kemudian disebarkan ke komunitaskomunitas film berbasis kampus di Surabaya. 
+    <Box
+      as={GatsbyImage}
+      mb="8px"
+      mt="50px"
+      image={getImage(props.data.gallery.nodes.find(item => item.name === 'sumbawa3'))} alt="Nonton bareng dalam rangka memperingati Hari Film Nasional 2019 berlokasi di Dusun Batu Alang."
+    />
+    <Text className="caption" mb="50px !important"> Awarding Night Festival Film Sumbawa tahun 2019</Text>
 
-    “Biasanya yang diputar rata-rata film-film produksi 90-an akhir, dan tentu saja
-    program pemutaran juga harus disertai dengan pemutaran film propaganda
-    pemerintah karena fasilitasnya emang dapat dari pemerintah,” kata IGAK sambal
-    tertawa mengingat masa-masa awal program pemutaran film di Surabaya yang
-    justru dibantu oleh lembaga negara yang mengurus soal kependudukan dan
-    reproduksi.
-  </GridItem>
-</GridContainer>
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'infis2_2019')} alt={'Independen Film Surabaya (INFIS) 2 2019'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'infis2_2019')} alt={'Independen Film Surabaya (INFIS) 2 2019'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Independen Film Surabaya 2019<br/>(INFIS 2019)</p>
-  </GridItemLeftContent>
-  <GridItem>
-    Dari skena produksi dan distribusi tersebut, ekosistem film di Surabaya mulai
-    terbentuk secara gradual, Kinne Komunikasi UPN Veteran Jawa Timur muncul
-    sebagai komunitas atau klub kajian film paling awal di Surabaya pada 1999.
-    Selanjutnya disusul oleh kemunculan Sinematografi Unair pada 2002. Di luar
-    komunitas film berbasis kampus, Independen Film Surabaya (INFIS) berdiri pada
-    2000. Pada masa-masa itu lah _CUKS_ lahir, ketika persemaian bibit pengetahuan
-    produksi dan distribusi film di Surabaya dimulai di kampus dan mulai
-    menampakkan hasilnya melalui kemunculan komunitas-komunitas film.
+    Selain bekerja sama dengan DKS, SCS juga berkolaborasi dengan Balai Pelestarian Nilai 
+    Budaya (BPNB) Bali untuk melaksanakan _workshop_ film secara daring dalam Festival Film 
+    Sumbawa 2020. Mengingat pada tahun itu terjadi pandemi COVID-19, dan pemerintah 
+    menerapkan pembatasan, jumlah partisipan dan penonton FFS mengalami penurunan 
+    drastis.
 
-    Bersamaan dengan itu ekosistem film juga mulai tumbuh di kalangan pelajar
-    dengan munculnya jurusan Produksi Film untuk sekolah kejuruan seperti yang
-    terjadi di SMK Dr. Soetomo Surabaya, SMKN 12 Surabaya, dan jurusan Produksi
-    Siaran Program Pertelevisian (PSPT) di SMKN 1 Surabaya. Menyusul kemudian
-    ekskul film mulai bermunculan di sekolah-sekolah menengah atas. Tepat pada
-    perkembangan awal ekosistem film pelajar di Surabaya, SMK Dr.Soetomo
-    menginisiasi festival film pelajar yang dinamakan Festival Film Surabaya (FFS).
+    Strategi SCS dalam melibatkan lembaga dan tokoh-tokoh penting dalam pemerintahan telah 
+    mendorong perkembangan yang cepat dalam kegiatan perfilman di Sumbawa. Bahkan,
+    pada Festival Film Sumbawa 2021, Bupati Sumbawa hadir untuk memberikan penghargaan. 
+    Kehadiran Bupati menjadikan FFS sebagai _event_ tahunan yang prestisius dan dinantikan 
+    oleh sekolah-sekolah di Sumbawa.
 
-    Festival Film Surabaya (FFS) memperkenalkan format festival yang menerapkan
-    proses seleksi film, pemutaran, diskusi, serta kompetisi kepada publik Surabaya.
-    Meski digagas untuk pelajar, keberadaan FFS bisa dijadikan petunjuk awal
-    tentang bagaimana format festival film di Surabaya. Festival yang digelar tiap
-    tiga tahunan itu rutin menerima sekitar 300-400an film pendek pelajar dari
-    seluruh Indonesia. Selain festival, SMK Dr. Soetomo juga rutin membuat program
-    jembatan menuju festival dengan membuat pemutaran tahunan bagi pelajar
-    yang diberi tajuk Bulan Film Surabaya (BFS). Sol Amrida, pengajar Produksi
-    Film SMK Dr. Soetomo yang juga menjadi juru program dan kurator untuk FFS
-    dan BFS menyatakan bahwa program pemutaran yang dilakukan biasanya
-    menyesuaikan dengan momen dan isu tertentu dalam satu atau dua tahun
-    sebelumnya.
+    “Melihat Bowo (Leksono) berani protes dan mendemo Pemda, kami tidak berani melakukan 
+    hal serupa di Sumbawa. Risikonya terlalu besar. Kami di sini justru berusaha menggandeng 
+    Pemda dalam kegiatan-kegiatan kami,” ujar Anton Susilo. 
 
-  </GridItem>
-</GridContainer>
+    FFS, yang kini sudah memasuki penyelenggaraan edisi keempat, mulai menentukan 
+    arahnya dengan berfokus pada karya-karya dokumenter. Pada tiga penyelenggaraan 
+    sebelumnya, FFS masih memfasilitasi produksi film fiksi pendek, tapi tidak membuka 
+    kompetisi untuk umum pada kategori tersebut. Keputusan untuk berfokus pada karya 
+    dokumenter yang mengusung tema pelestarian kebudayaan sejalan dengan pemikiran 
+    Kepala Bidang Kebudayaan, Sutan Syahril. Kabid Kebudayaan yang menemui kami dengan 
+    T-Shirt dan _bucket hat_ di kantornya ini berbicara dengan sangat semangat mengenai 
+    harapannya untuk bersinergi dengan komunitas film dalam mendokumentasikan objek 
+    kebudayaan yang menjadi program utamanya.
 
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Total Dana yang Terhimpun (sejak 2019) Berdasarkan Sumbernya</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Total-Dana-yang-Terhimpun')} alt={'Total-Dana-yang-Terhimpun'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Total-Dana-yang-Terhimpun-thumb'))} alt={'Total-Dana-yang-Terhimpun-thumb'} noBorder />
-    </Lightbox>
-    <p className="caption">Tak berbeda dengan temuan-temuan riset
-      terdahulu tentang komunitas film dan data
-      kualitatif di pendataan ini, pendanaan
-      aktivitas komunitas masih bersifat swadaya.
-      Sejak 2019, berdasarkan data terhadap
-      26 komunitas, total pendanaan mandiri
-      mencapai lebih dari Rp 6 miliar.</p>
-  </GridItemLeftContent>
-  <GridItem>
+    ##### Menumbuhkan Minat, Mengantisipasi Regenerasi
 
-    Ketika ekosistem film Surabaya sudah mulai terbentuk, corak produksi filmnya
-    mulai tampak. Dari amatan Kukuh Karnanta, pengajar Fakultas Ilmu Budaya
-    Universitas Airlangga yang juga pengkaji film, tampak bahwa sebagian besar
-    film yang diproduksi di Surabaya adalah film fiksi drama dan komedi. “Awal-awal
-    berkembangnya film-film Surabaya yang diproduksi secara mandiri dan diputar di
-    kampus atau di komunitas-komunitas, kita mengenalnya sebagai film _indie_, yang
-    berkesan absurd dan secara peyoratif merujuk film yang susah dipahami oleh
-    publik, atau kalau tidak ya film roman picisan atau komedi,” terang Kukuh yang
-    tahun lalu mendapat penghargaan Karya Kritik Film FFI 2021.
+    <Box
+      as={GatsbyImage}
+      mb="8px"
+      mt="50px"
+      image={getImage(props.data.gallery.nodes.find(item => item.name === 'sumbawa4'))} alt="Rapat persiapan produksi dua film dokumenter Warisan Budaya Tak Benda (WBTB) yang berjudul Berang Rempe dan Barapan Kebo di 2022."
+    />
+    <Text className="caption" mb="50px !important">Rapat persiapan produksi dua film dokumenter Warisan Budaya Tak 
+      Benda (WBTB) yang berjudul Berang Rempe dan Barapan Kebo di 2022.</Text>
+    
+    Dalam kegiatannya, SCS diisi oleh anggota yang berasal dari kalangan mahasiswa dan 
+    siswa SMA. Kepada mereka, Anton Susilo selalu berusaha untuk menularkan semangatnya 
+    dalam membuat film dan berkarya dengan konsisten. Pasalnya, Anton kadang merasa
+    sebagian besar anggota SCS hanya aktif jika ada kegiatan seperti festival atau produksi. 
+    Menonton dan berdiskusi tidak terlalu diminati. Lebih banyak minat dalam belajar teknik 
+    kamera.
 
-    Corak tersebut dapat dengan mudah ditemui, karena belum memadainya
-    ekosistem film di Surabaya. “Komunitas atau kolektif film memang banyak,
-    tapi yang menyertakan program pemutaran yang agak ‘serius’ atau workshop
-    tentang kritik film, riset, mentoring produksi, _pitching_ ide, pendanaan, manajemen
-    produksi, tidak banyak. Dulu nonton film ya nonton saja, ya tidak salah, seringnya
-    teman-teman sendiri yang bikin film, teman-teman sendiri yang nontonnya, jadi
-    ekosistemnya tidak berkembang dengan baik,” lanjut Kukuh.
+    “Saya pribadi menyampaikan kepada teman-teman bahwa membuat film tidak serta-merta 
+    membawamu untuk aman secara finansial, tapi ini adalah jalan jihadmu. Karena lewat film 
+    _Joki Kecil_ dan _Satu Harapan_, saya bisa mengubah hidup orang-orang yang terlibat di 
+    dalamnya,” tutur Anton, merefleksikan pengalamannya ketika Pemda dan Persatuan 
+    Olahraga Berkuda Seluruh Indonesia (Pordasi) terpantik untuk mengevaluasi peraturan 
+    keselamatan joki di Kabupaten Sumbawa. 
 
-    Masalah belum ‘mapannya’ ekosistem film di Surabaya juga coba diurai dari
-    sudut pandang dari luar Surabaya. Irfan Akbar dari Gresik Movie menilai bahwa
-    ‘komunitas lama’ atau ‘orang-orang lama’ yang berada di dalam komunitas film di
-    Surabaya terlalu asyik dengan jejaring internalnya sendiri. “Dari perspektifku yang
-    berada di luar Surabaya, aku melihat bahwa komunitas-komunitas film lawas
-    di Surabaya asyik dengan lingkaran yang terlalu kecil, contoh paling gampang
-    misalnya, ketika banyak program workshop, residensi, dan festival film ternama
-    dihelat di kota-kota besar di luar Surabaya, aku tidak pernah sekalipun dengar
-    nama mereka,” tutur Irfan.
+    Untuk memberikan dorongan, Anton Susilo melatih anggota-anggota SCS melalui Kronik 
+    Sumbawa. Kronik Sumbawa adalah _brand_ yang mengakomodasi permintaan dokumentasi 
+    dan peliputan yang ditawarkan kepada SCS. Bagi Anton, Kronik adalah kawah 
+    candradimuka, tempat di mana calon juru kamera dan editor ditempa untuk mendapatkan 
+    _skill_ yang mumpuni. Dalam status SCS sebagai komunitas non-profit, Kronik Sumbawa 
+    menjadi sumber pemasukan untuk memenuhi biaya operasional sehari-hari. 
 
-    Era ‘komunitas lama’ melahirkan kultur patron-klien, senior-junior, atau abangabangan—ngabers, di dalam skena film Surabaya. Era ini meromantisasi nyaris
-    apapun terhadap capaian-capaian garib film Surabaya yang sebenarnya belum
-    atau tidak pernah ke mana-mana. Kejenuhan itu memuncak ketika ekosistem film
-    di Surabaya selanjutnya hanya dikenal sebagai kota untuk ‘bakar tiket’ menonton
-    film dari Jakarta. Sejalan dengan era tersebut, corak produksi dan distribusi film
-    juga tak kunjung mapan karena absennya apresiasi dan kritik yang memadai. 
+    Pembagian fungsi antara dua entitas tersebut mulai dilakukan sejak tahun 2018. Kronik 
+    Sumbawa yang berbadan hukum untuk kegiatan usaha, membuat video dokumentasi, 
+    liputan, dengan melibatkan kru yang berasal dari anggota SCS. Sementara itu, karya yang 
+    diproduksi SCS berupa film dokumenter dan perekaman warisan budaya adalah bentuk 
+    kerja sama dengan Bidang Kebudayaan Kabupaten Sumbawa dan Kabupaten Sumbawa 
+    Barat. 
 
-  </GridItem>
-</GridContainer>
+    Mengajarkan teknik kamera dan _editing_ kepada anak muda adalah perkara yang mudah 
+    bagi Anton. Namun, hal yang sulit baginya adalah ketika mereka sudah punya kemampuan
+    yang cukup, tapi harus berhadapan dengan realitas: tuntutan memiliki pekerjaan tetap. 
+    Mereka yang mencoba “berguru” kepada Anton, sebagian besar adalah mahasiswa, yang 
+    biasanya akan memilih untuk mengikuti ujian menjadi PNS, bekerja sebagai pegawai 
+    swasta, atau kembali ke kampung halamannya setelah lulus kuliah. Anton kerap patah hati 
+    setiap kali kehilangan anak didiknya—yang sudah digembleng tapi kemudian harus 
+    melepaskan diri dari komunitas.
 
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'bfs_2019')} alt={'Bulan Film Surabaya (BFS) 2019'} mb="16px">
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'bfs_2019')} alt={'Bulan Film Surabaya (BFS) 2019'} />
-    </Lightbox>
-    <p className="caption">Bulan Film Surabaya 2019<br/>(BFS 2019)</p>
-  </GridItemLeftContent>
-  <GridItem>
+    <Box
+      as={GatsbyImage}
+      mb="8px"
+      mt="50px"
+      image={getImage(props.data.gallery.nodes.find(item => item.name === 'sumbawa5'))} alt="RProses produksi film JASTIP ACFFest KPK di 2020"
+    />
+    <Text className="caption" mb="50px !important">Proses produksi film JASTIP ACFFest KPK di 2020</Text>
 
-    Kultur tersebut mulai berubah pada 2013-2020 ketika mulai bermunculannya
-    komunitas film yang lahir secara organik di luar kampus yang anggotanya
-    tidak sebatas hanya dari kampus, tetapi juga dari berbagai elemen. Komunitas
-    Penonton mulai lahir dan menginisiasi program-program pemutaran secara
-    berkala untuk publik yang lebih luas. Alih-alih hanya berkutat di persoalan teknis
-    produksi film yang dibahas secara monokrom di Surabaya, Komunitas Penonton
-    memulai dari tema-tema yang dekat dengan keseharian yang juga menyertakan
-    masalah-masalah keseharian yang mesti dihadapi oleh orang-orang yang hidup
-    di Surabaya. Pada tahun yang sama, merespon kemonotonan corak produksi
-    film Surabaya, _Gundah Gundala_ (Wimar Herdanto, 2013) mencuri perhatian
-    publik karena menyajikan gaya tutur yang ringan dalam balutan kritik satir atas
-    persoalan bonus demografi di Indonesia.
+    Sosok lain yang juga berkutat dalam regenerasi pegiat film di Sumbawa adalah Jaka Tidar, 
+    guru SMAN 2 Sumbawa. Sebagai guru Teknologi Informasi dan Komunikasi (TIK) sekaligus 
+    pendamping ekstrakurikuler film di sekolahnya, Jaka menceritakan kegiatannya bersama 
+    murid-muridnya di ekstrakurikuler Snapshot. Di Snapshot, mereka belajar fotografi dan 
+    pembuatan video, aktif membuat konten, serta mengikuti kompetisi film pendek seperti 
+    Festival Film Sumbawa (FFS) dan Festival Lomba Seni Siswa Nasional (FLS2N). 
 
-    Era baru komunitas film di Surabaya lahir kembali dalam bentuknya yang lain.
-    Masa-masa ini lahir karena semakin tingginya intensitas persinggungan dengan
-    komunitas dari luar Surabaya dan mulai rajinnya anak-anak muda Surabaya
-    mengikuti lokakarya film dan menyambangi berbagai festival film atau sekadar
-    bertemu dengan komunitas-komunitas film, baik secara ‘formal’ melalui forum
-    atau temu komunitas di gelaran festival maupun secara ‘informal’ dengan
-    langsung melakukan kontak personal yang menjadi simpul-simpul di komunitas
-    film di berbagai daerah. 
+    Sebelum SCS mengadakan Festival Film Sumbawa, Jaka dan murid-muridnya mengikuti 
+    kompetisi film lewat FLS2N. Saat melakukan itu mereka biasanya hanya berbekal juknis 
+    yang diterima 7 hari sebelum _deadline_ ditutup. Dengan semangat pantang menyerah, 
+    mereka berusaha memenuhi tenggat tersebut, meskipun hasilnya belum memuaskan. 
 
-    Seturut perjalanan pada masa itu, komunitas-komunitas film yang terbentuk
-    organik di Surabaya menjadi semakin beragam. Praktik komunikasi yang
-    lebih luas, cair, egaliter, memungkinkan untuk saling bertukar pengalaman,
-    pengetahuan, dan gagasan mengenai corak produksi dan eksibisi film inilah yang
-    mendorong kelahiran komunitas-komunitas film baru tersebut. 
+    “Untung filmnya jadi, tapi prosesnya seru. Saya bilang ke mereka, film ini adalah _legacy_
+    kalian. Menang apa engga, tidak usah dipikirkan. Yang penting pernah bikin film dan nikmati 
+    proses belajarnya,” ujar Jaka. 
 
-  </GridItem>
-</GridContainer>
+    Skill kamera dan _editing_, yang awalnya direncanakan untuk mempersiapkan mereka 
+    menghadapi FFS dan FLS2N, sejatinya bisa dimanfaatkan siswa untuk mengerjakan tugas 
+    sekolah. Kemampuan tersebut bahkan dapat dijadikan bisnis pembuatan video pendek yang 
+    menghasilkan pendapatan. Oleh karena itu, menurut Jaka, mengajarkan teknik kamera 
+    haruslah fun dan mengikuti tren. Siswa yang ikut ekstrakurikulernya harus merasa bangga, 
+    karena hal ini adalah bagian dari cara mereka menunjukkan eksistensi di mata teman￾temannya. 
+    
+    Seperti Anton yang kerap melihat anak didiknya pergi, Jaka juga menyaksikan siswa ekskul 
+    datang dan pergi. Fluktuasi jumlah peminat ekskul pun menjadi kenyataan yang sering 
+    ditemuinya selama menjadi guru pendamping. Namun, ia menanggapinya dengan lebih 
+    santai. Baginya, ia memang hanya punya waktu dua tahun bersama. Sudah jadi 
+    keniscayaan jika ia harus berpisah saat muridnya naik kelas 3 dan bersiap menghadapi 
+    ujian akhir. 
 
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'bfs2_2019')} alt={'Bulan Film Surabaya (BFS) 2019'} mb="16px">
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'bfs2_2019')} alt={'Bulan Film Surabaya (BFS) 2019'} />
-    </Lightbox>
-    <p className="caption">Bulan Film Surabaya 2019<br/>(BFS 2019)</p>
-  </GridItemLeftContent>
-  <GridItem>
-    “Di Surabaya, pada masa-masa berkembangnya komunitas film yang
-    menawarkan pengalaman lain dari yang sudah-sudah, saya kira Sinema
-    Intensif. Program-program yang mereka tawarkan berbeda dan lebih kompleks.
-    Program pemutarannya tidak sekadar menonton saja, tapi juga mulai dipandu
-    oleh _programmer_ yang mengerti film dan konteksnya, adanya catatan program
-    untuk penonton, ada _workshop_, baik untuk produksi maupun kritik, terus sebisa
-    mungkin untuk menghidupkan ekosistem, program _screening_-nya berbayar,
-    ini bagus untuk menjelaskan bahwa dalam ekosistem film sebagai salah satu
-    industri kreatif membutuhkan dukungan dari publik. Jadi publik Surabaya seperti
-    mendapatkan pengalaman lain dalam menonton film,” ujar Kukuh Karnanta
-    ketika mencoba menjelaskan perkembangan corak eksibisi dan komunitas film di
-    Surabaya.
+    ##### Harapan untuk Tumbuh Bersama
 
-    Corak eksibisi seperti yang dilakukan oleh Sinema Intensif juga dilakukan oleh
-    komunitas film yang juga lahir secara organik seperti Sekuens. Corak eksibisi
-    Sinema Intensif dan Sekuens nyaris seperti anomali bagi publik Surabaya karena
-    menyajikan pusparagam film, baik dari dalam maupun luar negeri, terutama film
-    pendek, yang selama ini, mungkin, hanya diedarkan secara terbatas dan nyaris
-    tidak mendapatkan tempat pemutaran di Surabaya. Karena saking melimpahnya
-    produksi film pendek di Indonesia, Sinema Intensif berupaya untuk menginisiasi
-    program eksibisi yang lebih luas jangkauannya dengan menginisiasi Festcil—
-    Festival Kecil, festival film yang fokus kepada perkembangan film pendek di
-    Indonesia.
+    Dari kacamata Dewan Kesenian, kolaborasi lintas disiplin adalah bagian dari kekuatan yang 
+    mampu dihimpun oleh SCS. Selain itu, SCS memiliki kemampuan manajerial yang patut 
+    dijadikan contoh oleh komunitas lain. Ande menjelaskan bahwa SCS mampu menjelaskan 
+    rencana programnya lewat proposal dan juga mampu mempertanggungjawabkan 
+    kegiatannya lewat laporan kegiatan yang diserahkan setelah kegiatan selesai. Lewat 
+    program pemutaran, SCS juga mampu menjangkau desa-desa dan menjadi sumber hiburan 
+    bagi warga.
 
-    “_Nah_, pada era Sinema Intensif dan Festcil ini, publik Surabaya seperti
-    mendapatkan kesempatan untuk menengok film-film pendek, para pelaku, serta
-    jejaring komunitas film dari seluruh Indonesia. Peran Festcil terasa siginifikan
-    karena publik Surabaya tidak lagi disodori romantisme film produksi Surabaya
-    dan komunitas yang tidak pernah ke mana-mana itu, tapi keragaman dan
-    kebaruan,” tegas Irfan.
+    SCS juga diharapkan dapat menjadi tempat bagi mereka yang benar-benar memiliki 
+    keinginan kuat untuk berkarier sebagai filmmaker. Film-film yang dihasilkan diharapkan bisa 
+    menembus berbagai festival film atau bahkan memenangkan kompetisi. Harsa Perdana, 
+    yang tahun ini menjadi _runner-up_ Eagle Awards lewat karyanya _Sang Punggawa Laut 
+    Sumbawa_ (2022) merupakan salah satu nama yang diharapkan bisa menjadi generasi 
+    penerus pembuat film dokumenter dari Sumbawa. Lebih luas lagi, SCS yang telah berkiprah 
+    selama hampir 10 tahun bukan hanya menjadi komunitas yang hanya aktif dalam kegiatan 
+    perfilman. SCS juga menjadi agensi lokal untuk pemajuan kebudayaan Sumbawa.
 
-    Senada dengan Irfan, Kukuh Karnanta juga menyampaikan bahwa Sinema
-    Intensif dan Festcil dianggap sebagai salah satu komunitas dan festival yang
-    berhasil menghubungkan film dengan publiknya. Selain menyajikan pusparagam
-    film pendek dalam negeri, Festcil juga menyajikan khazanah film Asia melalui
-    program satelit bekerja sama dengan WaterTreeFilm—sebuah organisasi yang
-    fokus pada literasi sinema, produksi, dan distribusi film. Selain itu komunikasi dan
-    kolaborasi program dengan komunitas, rumah produksi, distributor, dan festival
-    film dari luar Surabaya seperti Cinema Poetica, Kolektif, Buttonijo, Forum Lenteng,
-    Festival Film Dokumenter, JAFF-Netpac, Gresik Movie, Malang Film Festival,
-    Sinema Juang Aceh, Studio Batu, Studio Antelope, dll, mulai terbangun dengan
-    baik.
+    Hal penting yang disampaikan Ande untuk perkembangan kegiatan perfilman di Sumbawa 
+    terletak pada kritik film. Beliau merasa belum ada yang mampu menulis kritik film di 
+    Sumbawa. Baginya, kritik itu sangat penting sebagai bentuk dialog dan apresiasi terhadap 
+    sebuah karya film yang sudah diproduksi. Ini bukan hanya tentang menulis sinopsis cerita 
+    atau sekedar merilis berita dari SCS, tetapi kritik film memiliki peranan yang signifikan untuk 
+    memberikan wawasan kepada penonton tentang isu-isu yang disampaikan lewat film yang 
+    diputar.
 
-    Saat ekosistem film di Surabaya dibangun ulang berdasarkan pengalaman,
-    pengetahuan, dan memanfaatkan jejaring film dari luar Surabaya, tema dan
-    corak produksi film di Surabaya juga semakin beragam dan berani. _Sapu Angin_
-    (Cahyo Wulan Prayogo, 2017), _Bayang Bayan_ (Reno Surya, 2017), _Mesin Tanah_
-    (Wimar Herdanto, 2016) menyoal perebutan ruang dan menjadi ‘Yang-Asing’ di
-    kota urban. Sedangkan film hasil workshop Doc-Clinic dari Sinema Intensif dan
-    Wisma Jerman berjudul _Lantun Rakyat_ (Dwi Cahyo, 2019) yang menyoal praktik
-    demokrasi elettoral- transaksional yang menghasilkan sampah visual di Indonesia
-    berhasil menjadi nominasi Piala Citra FFI 2020 untuk kategori film pendek terbaik.
+    Sementara dari kacamata kebudayaan, Sutan Syahril melihat potensi besar dari komunitas 
+    dalam mendukung program pelestarian kebudayaan daerah. Bagi Syahril, pihaknya 
+    bersedia menjadi tempat bernaung bagi komunitas film di Sumbawa. Oleh karena itu, pihak 
+    komunitas diharapkan proaktif mengajukan program-program untuk dimasukkan dalam 
+    agenda Bidang Kebudayaan, sehingga mereka bisa mendapatkan anggaran dari APBD. 
 
-    Sayangnya, kronik itu terputus karena pandemic Covid-19. 
+    Bagi Jaka Tidar selaku pengajar, kuncinya adalah memotivasi siswa untuk mulai belajar 
+    membuat film. Kemampuan _storytelling_ bisa diasah seiring berjalannya waktu. Siswa-siswa 
+    yang awalnya ingin ikut demi “terlihat keren”, nantinya akan “keren beneran” ketika sudah 
+    mempunyai _skill_ setelah berproses lewat ekskul Snapshot. Sebagai guru muda, ia sangat 
+    terbantu dengan kebebasan yang diberikan oleh Kurikulum Merdeka. Ini memungkinkannya 
+    untuk leluasa berbagi informasi dengan murid-muridnya, terutama yang berkaitan dengan 
+    teknologi. 
 
-    “Saya baru tahu kalau Sinema Intensif dan Festcil sudah tidak aktif pasca
-    pandemi, mungkin ini adalah kritik paling mendasar tentang komunitas ya,
-    tentang _sustainability_, regenerasi, dan skema pendanaan yang berkelanjutan.
-    Pasca pandemi mungkin karena desakan ekonomi _ya_, jadi anggota-anggota
-    komunitas mesti menyelamatkan ‘dapur’ dulu, pilihannya ya kerja professional,
-    kalau komunitas ya mestinya dibuat badan hukumnya secara legal, ada unit
-    usahanya, atau dibuat PH (_production house_) sekalian, jadi mungkin itu sekarang
-    yang terjadi di Surabaya,” ujar Kukuh. 
-
-    <hr />
-
-    ### Semangat Membara, Minim Rencana
-
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'infis_2019')} alt={'Independen Film Surabaya (INFIS) 2 2019'} mb="16px">
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'infis_2019')} alt={'Independen Film Surabaya (INFIS) 2 2019'} noBorder />
-    </Lightbox>
-    <p className="caption">Independen Film Surabaya 2019 <br /> (INFIS 2019) </p>
-  </GridItemLeftContent>
-  <GridItem>
-    Mungkin, kasus di Surabaya tidak sama dengan ekosistem film di kota lainnya,
-    tetapi hantaman pandemi covid-19 sepertinya langsung mengubah lanskap
-    dan ekosistem film di Surabaya. Komunitas film di Surabaya yang biasanya
-    menjalankan berbagai program secara swakelola sepertinya gagap dan tidak
-    menyiapkan mitigasi ketika diharuskan mengambil keputusan yang mendesak
-    dan mendadak karena pandemi. Larangan untuk berkumpul di saat pandemi
-    membuyarkan program-program—terutama yang dilakukan secara luring dan
-    melibatkan banyak orang—yang sudah disusun oleh beberapa komunitas film.
-
-    Berbagai siasat, adaptasi, dan strategi untuk menghadapi situasi tak menentu di
-    tengah pandemi mesti dilakukan, beberapa program mulai dialihkan ke ruangruang virtual. Program-program pemutaran mulai dilakukan secara daring,
-    demikian halnya dengan gelaran-gelaran festival film. Tetapi tetap saja energi
-    dan kemampuan finansial yang harus dialokasikan berubah sebangun dengan
-    kondisi semua sektor yang juga sama ambruknya. Meski format komunitas film di
-    Surabaya berkembang ke arah yang menjanjikan, ada beberapa hal yang masih
-    tampak lemah yaitu: regenerasi, pengelolaan organisasi, dan skema pendanaan
-    yang baik.
-
-    “Relasi _pentahelix_ yang melibatkan akademisi, industri, pelaku-komunitas,
-    pemerintah, dan media secara sistematis dan berkelanjutan masih lemah
-    di Surabaya. Dari kasus ini, tampaknya masalahnya bukan soal literasi dan
-    kolaborasi, tapi resiliensi,” ujar Kukuh saat menjelaskan tumbangnya komunitaskomunitas film saat pandemi yang kemudian mengubah lanskap dan ekosistem
-    film di Surabaya.
-
-    “Soal literasi, kawan-kawan yang lebih muda justru pengalaman dan
-    pengetahuannya lebih banyak, sedangkan soal kolaborasi, kawan-kawan, baik itu
-    di Surabaya atau dengan kota lain itu sudah sangat biasa untuk saling mengisi,
-    entah itu soal kebutuhan sumber daya manusia, atau soal tukar teknologi dan
-    alat. Hanya bagaimana dari sisi kapital yang belum mapan dan mungkin tidak
-    seberani, Jakarta dan Yogya misalnya,” tambah Sol Amrida.
-
-    Seperti yang disampaikan oleh Kukuh sebelumnya, bahwa pandemi kemudian
-    membuat para anggota komunitas mulai mengalihkan energinya untuk
-    bertahan dan mengamankan kebutuhan domestik. Pilihan-pilihan rasional itu
-    yang kemudian menyebabkan anggota-anggota komunitas film menyebar atau
-    kembali ke kota asal untuk bekerja—entah masih berhubungan dengan film atau
-    tidak. Tepat pada saat itu pula pilihan-pilihan rasional untuk membuat unit usaha
-    dengan memanfaatkan pengalaman dan pengetahuan di bidang film mulai
-    dilakukan oleh anggota-anggota komunitas film untuk membuat rumah produksi
-    yang membuat film atau konten-konten komersial lainnya. 
-
-    “Di Surabaya, yang akhirnya jadi PH (_production house_) mungkin _ya_ People Film,
-    Kreasitama, Lintasinema, Surface, dan Hinterhov. Mungkin ada banyak juga, tapi
-    ga muncul namanya. Era komunitas mungkin berlanjut atau bergeser bentuknya
-    karena bagaimanapun, komunitas ya bentuknya kan cair, orang bisa keluar masuk
-    seenaknya, bikin lalu bubar juga bisa seenaknya, bikin lagi, meskipun anggotanya
-    bisa jadi orang-orang yang sama, begitu seterusnya,” terang Kukuh saat mencoba
-    menjelaskan tentang pergeseran format komunitas film di Surabaya pasca
-    pandemi.
-
-    Perubahan corak komunitas film di Surabaya menjadi rumah produksi,
-    mungkin, merupakan kritik sekaligus jembatan yang mengentaskan kita atas
-    bayangan kerja-kerja kreatif—dalam hal ini film—yang telanjur dibingkai dalam
-    Undang-undang Nomor 33 Tahun 2009 tentang Perfilman yang menyatakan
-    bahwa komunitas film hanya sebatas sebagai pelaku ‘kegiatan perfilman’
-    atau penyelenggaraan perfilman yang berhubungan dengan film dan bersifat
-    nonkomersial. Bahwa komunitas film tak mesti seperti bayangan negara: yang
-    institusional, mandiri, militan, dan kuat bertahan seperti batu karang. Komunitas
-    film, jika boleh sedikit berapologetik, selalu menempati ruang-ruang liminal yang
-    berada di ambang atau ‘pada batas’ yang membangkitkan periode waktu atau
-    ruang 'di antara'; bahwa ekosistem film bukan batu karang, tetapi lebih seperti
-    gelombang—saling menyusul bergantian. Sah-sah saja sebuah komunitas film
-    muncul, berkembang, dan melandai digantikan oleh (apapun bentuk dan corak)
-    yang selanjutnya.
-
+    Menumbuhkan dan merawat ekosistem perfilman di Sumbawa tidak lagi menjadi tanggung 
+    jawab SCS dan Yuli Andari semata. Ekosistem perfilman di Sumbawa akan berkembang 
+    seiring dengan munculnya komunitas-komunitas baru, adanya kolaborasi, pertukaran 
+    pengetahuan antar-komunitas, dan dukungan dari pemerintah. Bukan tidak mungkin, bibit-
+    bibit yang disemai akan tumbuh besar dan menjadi kebanggaan dari Tana Samawa.
   </GridItem>
 </GridContainer>
 
 <hr />
 
-<Text as="h3" mt={["40px", null, "60px"]} mb={["20px !important", null, "32px !important"]}> Karya-karya pilihan Kota Surabaya </Text>
+<Text mb="0px !important" fontSize="12.25px">Karya-karya pilihan kota</Text>
+<Text as="h3" mb={["20px !important", null, "32px !important"]} textTransform="uppercase" fontWeight="400 !important">Sumbawa</Text>
 
-<SimpleGrid columns={[1, null, 2]} spacingX={34} spacingY={10}>
+<SimpleGrid columns={[1, null, 3]} spacingX={34} spacingY={10}>
   <ImagePlay href="https://rangkai.id/?browse=272">
     <Box 
       as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === '7-deadly-sins-thumbnail-master'))}
       alt={'7-deadly-sins-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
     />
   </ImagePlay>
   <ImagePlay href="https://rangkai.id/?browse=306">
     <Box 
       as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'bapak-tidak-pulang-hari-ini-thumbnail-master'))}
       alt={'bapak-tidak-pulang-hari-ini-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
     />
   </ImagePlay>
   <ImagePlay href="https://rangkai.id/?browse=286">
     <Box 
       as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ora-katon-thumbnail-master'))}
       alt={'ora-katon-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
     />
   </ImagePlay>
   <ImagePlay href="https://rangkai.id/?browse=304">
     <Box 
       as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ronda-alhaj-thumbnail-master'))}
       alt={'ronda-alhaj-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
     />
   </ImagePlay>
 </SimpleGrid>
