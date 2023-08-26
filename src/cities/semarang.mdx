@@ -20,7 +20,7 @@ info: {
 year: 2022
 ---
 
-import { GridItem, Text, Box, SimpleGrid } from '@chakra-ui/react';
+import { GridItem, Text, Box, SimpleGrid, Flex } from '@chakra-ui/react';
 import GridContainer, { GridItemLeftContent } from '../components/GridContainer';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import SquareImage from '../components/SquareImage';
@@ -87,8 +87,10 @@ import ImagePlay from '../components/ImagePlay';
     semakin banyak kegiatan perfilman maka akan semakin dinamis juga iklim
     perfilmannya.
 
-    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'Kkeane V2_2022BW'))} alt="Kkeane V2_2022"  />
-    <Text className="caption" mb="50px !important">Kkeane V2_2022</Text>
+    <Flex alignItems="center" flexDir="column">
+      <Box as={GatsbyImage} mb="8px" w="max-content" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'Kkeane V2_2022BW'))} alt="Kkeane V2_2022"  />
+      <Text className="caption" mb="50px !important">Kkeane V2_2022</Text>
+    </Flex>
 
     Perkara berkomunitas film ini mungkin agak berbeda menurut Haris Yulianto,
     seorang sineas Semarang. Dalam kurun waktu tiga tahun terakhir, dua filmnya
@@ -279,9 +281,11 @@ import ImagePlay from '../components/ImagePlay';
     kampus secara gerilya. Usaha-usaha yang diinisiasi Annisa tadi, meskipun
     memang bagian dari tugas kuliah, menjadi sumbangsih yang penting dan
     memberi warna bagi ekosistem ekshibisi film Semarang.
-
-    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'SIDAMAR_Layar Tancap KekinianLayar Tancap Bulu Lor_2022BW'))} alt="SIDAMAR_Layar Tancap KekinianLayar Tancap Bulu Lor_2022"  />
-    <Text className="caption" mb="50px !important">SIDAMAR_Layar Tancap KekinianLayar Tancap Bulu Lor_2022</Text>
+    
+    <Flex alignItems="center" flexDir="column">
+      <Box as={GatsbyImage} mb="8px" mt="10px" w="max-content" image={getImage(props.data.gallery.nodes.find(item => item.name === 'SIDAMAR_Layar Tancap KekinianLayar Tancap Bulu Lor_2022BW'))} alt="SIDAMAR_Layar Tancap KekinianLayar Tancap Bulu Lor_2022"  />
+      <Text className="caption" mb="50px !important">SIDAMAR_Layar Tancap KekinianLayar Tancap Bulu Lor_2022</Text>
+    </Flex>
 
 
     Menurut Annisa, ekshibitor di Semarang harus punya basis ekonomi yang
