@@ -169,7 +169,7 @@ function EcosystemDetail({ data, children }) {
             </Box>
             <Flex borderY="2px solid #000000">
               <Box background="brandPrimary.500" px={['8px', null, '48px']} py={['8px', null, '16px']} w="100%">
-                <ButtonLink h="100%" to={data.pdf?.publicURL} isExternal download>
+                <ButtonLink h="100%" to={data.pdf?.publicURL} isExternal>
                   Grafik Data
                 </ButtonLink>
               </Box>
