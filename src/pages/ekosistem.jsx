@@ -40,9 +40,8 @@ function Ekosistem({ data }) {
                   PERFILMAN
                 </Heading>
                 <Text>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quia aliquid magni nostrum aspernatur ducimus et itaque eaque qui
-                  nemo atque reprehenderit amet libero, ea dignissimos tempore
+                  Melihat dan memetakan apa, siapa, dan
+                  bagaimana sinema bekerja di berbagai kota.
                 </Text>
               </Flex>
             </Box>
@@ -118,7 +117,7 @@ function Ekosistem({ data }) {
                     backgroundColor: '#000000',
                   }}
                 >
-                  <Box overflow="hidden" h="200px" mb="20px">
+                  <Box overflow="hidden" h="320px" mb="20px">
                     <Box
                       as={GatsbyImage}
                       image={getImage(city.frontmatter.thumb)}

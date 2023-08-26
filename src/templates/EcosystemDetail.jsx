@@ -145,7 +145,7 @@ function EcosystemDetail({ data, children }) {
               >
                 Judul
               </Text>
-              <Heading as="h2" fontFamily="Plus Jakarta Sans" fontWeight="800" fontSize="24px">
+              <Heading as="h2" fontFamily="Plus Jakarta Sans" fontWeight="800" fontSize="24px" pr="90px">
                 {headline}
               </Heading>
             </Box>
