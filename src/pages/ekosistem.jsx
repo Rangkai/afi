@@ -118,14 +118,13 @@ function Ekosistem({ data }) {
                     backgroundColor: '#000000',
                   }}
                 >
-                  <Box overflow="hidden" h="203px" mb="20px">
+                  <Box overflow="hidden" h="200px" mb="20px">
                     <Box
                       as={GatsbyImage}
                       image={getImage(city.frontmatter.thumb)}
                       alt={city.frontmatter.title}
                       transition=".2s all ease-in-out"
                       objectFit="cover"
-                      filter="grayscale(1)"
                       _hover={{
                         transform: 'scale(1.25) rotate(10deg)',
                         opacity: '.9',

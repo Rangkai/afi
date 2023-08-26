@@ -84,7 +84,7 @@ const Content = styled.div`
   hr {
     border-color: #000000;
     margin-bottom: 36px;
-    margin-top: 16px;
+    margin-top: 50px;
   }
 `;
 
