@@ -45,9 +45,10 @@ function Tentang({ data }) {
                   PROGRAM
                 </Heading>
                 <Text>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quia aliquid magni nostrum aspernatur ducimus et itaque eaque qui
-                  nemo atque reprehenderit amet libero, ea dignissimos tempore
+                  Apresiasi Film Indonesia dirintis oleh
+                  Kementerian Pendidikan, Kebudayaan, Riset,
+                  dan Teknologi untuk menjangkau beragam wujud
+                  perfilman di Indonesia.
                 </Text>
               </Flex>
             </Box>
@@ -93,8 +94,9 @@ function Tentang({ data }) {
                 APRESIASI FILM INDONESIA
               </Heading>
               <Text fontSize="15px" lineHeight="26px" mb="16px">
-                Tak kenal maka tak tayang. Untuk mengapresiasi film Indonesia seluas-luasnya,
-                perlu diupayakan berbagai cara untuk mengenali dan mewadahi keragamannya.
+                Sinema hidup dalam berbagai rupa. Apresiasi Film Indonesia hadir sebagai
+                upaya untuk menelusuri akar dan ranting budaya sinema sebagai landasan
+                penguatan ekosistem perfilman.
               </Text>
             </Box>
             <Box w={['100%', null, getCol(6)]}>
@@ -134,9 +136,9 @@ function Tentang({ data }) {
                 KOLABORASI PENDATAAN DAN PENAYANGAN
               </Heading>
               <Text fontSize="15px" lineHeight="26px" mb="16px">
-                Perfilman Indonesia tumbuh dan berkembang lewat kegiatan komunitas.
-                Di sepuluh kota, Apresiasi Film Indonesia menelusuri berbagi bentuk
-                budaya sinema lewat kolaborasi lintas batas.
+                Sinema hidup lewat kerjasama. Apresiasi Film Indonesia terlahir
+                sebagai kerja pengetahuan dan berkembang sebagai simpul berbagai
+                kegiatan dan jaringan perfilman.
               </Text>
             </Box>
             <Box w={['100%', null, getCol(6)]}>

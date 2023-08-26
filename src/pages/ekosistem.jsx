@@ -40,9 +40,8 @@ function Ekosistem({ data }) {
                   PERFILMAN
                 </Heading>
                 <Text>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quia aliquid magni nostrum aspernatur ducimus et itaque eaque qui
-                  nemo atque reprehenderit amet libero, ea dignissimos tempore
+                  Melihat dan memetakan apa, siapa, dan
+                  bagaimana sinema bekerja di berbagai kota.
                 </Text>
               </Flex>
             </Box>

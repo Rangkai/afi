@@ -2,6 +2,8 @@
 title: Jambi
 slug: kota-jambi
 desc: ""
+headline: Kalau Sudah Akad Berkomunitas, Dinamika adalah Bumbunya
+author: Melda Ria Sinambela & Anton Oktaviano
 info: {
   community: 6,
   filmProduction: 30,
@@ -28,68 +30,27 @@ import ImagePlay from '../components/ImagePlay';
 <GridContainer>
   <GridItemLeftContent />
   <GridItem>
-    ## Menerka Arah Film Surabaya
 
-    <p className="caption">Yogi Ishabib</p>
+    <p className="highlight">Juli 2013 menjadi catatan penting dalam sejarah perfilman di Kota Jambi dengan lahirnya
+    komunitas film pertama, Forum Film Jambi (FFJ). Cikal bakal pendirian FFJ dipicu oleh
+    program Festival Film Jambi 2011 yang diselenggarakan oleh Budak Kadub—sebuah usaha
+    media dan event di Jambi. Dalam acara tersebut, berkumpulah insan-insan film yang lambat laun
+    membentuk FFJ. Kata “forum” dalam FFJ dipilih agar organisasi dapat merangkul dan bekerja
+    sama dengan pihak mana pun untuk memajukan ekosistem film di Jambi.</p>
 
-    Film pernah menjadi penanda zaman di Surabaya. Seorang fotografer Perancis
-    Bernama Louis Talbot membuat program pemutaran gambar bergerak pertama
-    secara komersial pada Oktober 1896—atau hanya selisih sepuluh bulan sejak
-    Lumière Bersaudara merilis pemutaran film komersial pertama di dunia pada 28
-    Desember 1895 di Perancis. Program pemutaran di Surabaya Theatre itu yang
-    menjadikan Surabaya menjadi salah satu kota paling awal yang melaksanakan
-    pemutaran gambar bergerak _(gambar idoep)_ di Asia.
+    Para pendiri FFJ datang dari beragam profesi dan disiplin ilmu. Mereka terhubung karena
+    kecilnya ruang Kota Jambi, di mana masing-masing saling bertemu dan terkait satu sama lain.
+    Ada yang lulusan film dan memiliki usaha production house; ada juga yang merupakan aktivis,
+    jurnalis, hingga pengusaha dokumentasi wedding yang punya aspirasi menjadi filmmaker.
 
-    Program pemutaran gambar bergerak itu tak hanya mulai menggoyang
-    kemapanan bisnis hiburan tradisional seperti ludruk, wayang, opera melayu,
-    dan komedi stambul, tetapi juga mengurai rantai peristiwa mulai dari dibawanya
-    teknologi pemutaran gambar ke Asia pada akhir abad ke-19 dan tumbuhnya
-    minat orang-orang akan medium baru yang membuat aktivitas menonton
-    gambar bergerak menjadi salah satu pilihan hiburan pada era kolonial. Merambat
-    naiknya bisnis pemutaran di Surabaya mulai dari tenda kanvas, bambu _(gedek)_,
-    hingga gedung pemutaran yang mewah merangsang mobilitas penonton
-    _(spectators)_ dan memberi petunjuk kepada kita soal evolusi awal lanskap urban
-    kota Surabaya.
+    Anton Oktavianto sendiri, selaku ketua FFJ, memiliki latar belakang pendidikan film di Institut
+    Seni Indonesia (ISI) Yogyakarta. Ia pernah tergabung dalam komunitas film yang terbentuk
+    pasca-reformasi di Indonesia, yakni Komunitas Belajar Bikin Film (KBBF) yang dirintis
+    seniman sastra dan teater dari Jogja, Doni Kus Indarto. Pengalaman tersebut kemudian menjadi
+    modal Anton dalam mengembangkan aktivitas FFJ melalui jejaringnya yang masih terus terawat.
 
-    Kultur menonton gambar bergerak merebak di seluruh Surabaya. Jelang setahun
-    dari program pemutaran Talbot, seorang pengusaha Tionghoa yang tidak
-    diketahui namanya membangun Gedung pemutaran bernama Kenotograph
-    di Kapasan, wilayah pecinan di Surabaya Utara. Jika Surabaya Theatre hanya
-    memperbolehkan warga Eropa dan elit pribumi, Kenotograph memperbolehkan
-    siapa saja dengan berbagai macam latar belakang etnis dan kelas sosial untuk
-    menonton dengan harga tiket separuh dari Surabaya Theatre. Selain praktik
-    kolonial dan rasial, kehadiran film—danmenonton film bisa dianggit sebagai salah
-    satu praktik sosial yang menajamkan polarisasi dan hadirnya ruang-ruang liminal
-    di Surabaya.
-
-    <hr />
-
-    ### Masa-masa kekosongan dan mulainya era komunitas film di Surabaya
-
-    Penelitian mengenai sejarah bioskop di Surabaya sudah ada dan bisa menjadi
-    petunjuk bagaimana Surabaya sebagai sebuah kawasan berkembang karena,
-    salah satunya, berdasarkan budaya menonton film. Tetapi jauh dari ingar bingar
-    dan romantisme sejarah Surabaya saat kedatangan gambar bergerak sampai
-    masa membludaknya bioskop, ada masa-masa kekosongan yang belum berhasil
-    terungkap tentang bagaimana kondisi dan model produksi, distribusi, serta
-    eksibisi film Surabaya mulai dari masa-masa awal film masuk di Surabaya pada
-    era kolonial sampai tahun 2000-an. Masa kekosongan yang terlampau lama ini
-    menyebabkan sulitnya memetakan ekosistem film di Surabaya.
-
-    Masa-masa kekosongan ini disebut oleh IGAK Satrya Wibawa, salah satu
-    pendiri Independen Film Surabaya (INFIS) disebabkan karena sedari awal publik
-    Surabaya menganggap bahwa menonton film adalah kebutuhan rekreasional,
-    yang kebetulan pilihannya sangat beragam pada waktu itu, seperti gelaran
-    olahraga (sepakbola, basket, dan balap motor), atau konser musik—yang mana
-    film bukan merupakan pilihan utama.
-
-    Mungkin, gelombang film independen yang muncul pasca runtuhnya Orde Baru
-    baru bisa dijadikan pijakan untuk mengenal kembali ekosistem film di Surabaya,
-    meskipun heroisme tentang bagaimana film-film independen yang muncul pasca
-    Orba biasanya menawarkan wacana alternatif atas keterpusatan tidak tampak
-    begitu menonjol di Surabaya. Alih-alih sebagai wacana alternatif, corak produksi
-    awal film-film yang berkembang di Surabaya lebih banyak sebagai sebuah
-    kegiatan _klangenan_ semata.
+    <Box as={GatsbyImage} mb="8px" mt="50px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'Pict 1 Caption - Sambutan dari Ketua Forum Film Jambi, Anton Octaviano, di Festival Film Jambi 2015BW'))} alt="Sambutan dari Ketua Forum Film Jambi, Anton Octaviano, di Festival Film Jambi 2015BW" />
+    <Text className="caption" mb="50px !important">Sambutan dari Ketua Forum Film Jambi, Anton Octaviano, di Festival Film Jambi 2015BW</Text>
 
   </GridItem>
 </GridContainer>
