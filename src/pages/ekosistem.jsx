@@ -118,7 +118,7 @@ function Ekosistem({ data }) {
                     backgroundColor: '#000000',
                   }}
                 >
-                  <Box overflow="hidden" h="200px" mb="20px">
+                  <Box overflow="hidden" h="320px" mb="20px">
                     <Box
                       as={GatsbyImage}
                       image={getImage(city.frontmatter.thumb)}
