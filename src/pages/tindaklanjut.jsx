@@ -402,9 +402,8 @@ function TindakLanjut({ data }) {
                 TINDAK LANJUT
               </Heading>
               <Text>
-                Elia dolupta tenimolut paruntem liate estiae. Ut quas que et acestium,
-                net eos exerum assinus aut alis ressunt rest quo elestibus exerspid
-                quam atur am nobiti abo. Omnis essed eriat.
+                Mendukung ekosistem perfilman melalui program jangka pendek,
+                dengan diskusi dan proyeksi untuk kepentingan jangka panjang.
               </Text>
             </Flex>
           </Box>

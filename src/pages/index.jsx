@@ -365,6 +365,8 @@ export default function Home({ data }) {
                 SEMESTA DATA
               </Heading>
               <Text>
+                {/* Menerjemahkan sinema beserta jaringan kegiatan
+                di setiap kota dalam bentuk angka dan wacana. */}
                 Apresiasi Film Indonesia menelusuri tumbuh kembang
                 perfilman di tingkat akar rumput, dengan fokus pada
                 kegiatan produksi dan ekshibisi film.
