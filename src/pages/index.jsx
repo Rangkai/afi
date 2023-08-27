@@ -107,8 +107,8 @@ export default function Home({ data }) {
   const thumbnailBanner = getImage(imageData('thumbnail_banner'));
   const thumbnailBannerMobile = getImage(imageData('thumbnail_banner_mobile'));
   const heroBanner = getImage(imageData('hero-banner'));
-  const gridFilm = getImage(imageData('grid-film'));
-  const program = getImage(imageData('program'));
+  const karyaPilihan = getImage(imageData('karya-pilihan-desktop'));
+  const karyaPilihanMobile = getImage(imageData('karya-pilihan-mobile'));
 
   const clickMaps = (index) => {
     sliderRef.current.slickGoTo(index);
@@ -381,13 +381,21 @@ export default function Home({ data }) {
         <Box as="section" mt="100px">
           <Box
             as={GatsbyImage}
-            quality={100}
-            image={gridFilm}
-            objectFit={['cover', null, 'initial']}
-            alt="grid film"
+            display={['none', null, 'block']}
             w="100vw"
-            h={['300px', null, 'auto']}
-            layout="full_width"
+            h="auto"
+            image={karyaPilihan}
+            alt="Karya karya Pilihan"
+            quality={100}
+          />
+          <Box
+            as={GatsbyImage}
+            display={['block', null, 'none']}
+            image={karyaPilihanMobile}
+            alt="Karya karya Pilihan"
+            h="auto"
+            w="100vw"
+            quality={100}
           />
         </Box>
         <Box bgColor="fossil.500">
