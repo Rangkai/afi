@@ -1,0 +1,336 @@
+---
+title: Palu
+slug: kota-palu
+desc: Mencari refleksi, menyikapi regulasi.
+headline: Penonton yang Membuat Film
+author: Taufiqurrahman Kifu
+banner: '../images/cities/palu/banner.jpg'
+thumb: '../images/cities/palu/PaluBW.jpg'
+galleryDir: 'cities/palu'
+graphFile: 'palu.pdf'
+position: {
+  left: 53%,
+  bottom: 63.5%
+}
+info: {
+  community: 5,
+  filmProduction: 25,
+  filmExhibition: 5
+}
+year: 2023
+---
+
+import { GridItem, Text, Box, SimpleGrid } from '@chakra-ui/react';
+import GridContainer, { GridItemLeftContent } from '../components/GridContainer';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import SquareImage from '../components/SquareImage';
+import Lightbox from '../components/Lightbox';
+import ImagePlay from '../components/ImagePlay';
+
+<GridContainer>
+  <GridItem>
+    <p className="highlight">Semua orang bisa membuat film jika dibutuhkan. Pernyataan ini mungkin terdengar berlebihan, tapi
+    demikianlah medium film diartikulasikan oleh berbagai komunitas di Palu, daerah yang jauh dari
+    industri perfilman yang mapan. Kemajemukan komunitas di Palu dihuni oleh beragam kebutuhan dan
+    dieratkan oleh film sebagai medium aktivismenya. Bermula dari komunitas literasi perpustakaan
+    Nemubuku yang didirikan pada tahun 2007, muncul kegiatan rutin menonton film yang kemudian
+    menjadi Bioskop Jumat pada tahun 2009.</p>
+
+    Bioskop Jumat lahir di tengah ketiadaan bioskop komersial yang tutup pada tahun 2000. Secara
+    rutin, Bioskop Jumat melaksanakan pemutaran dan diskusi film di teras samping rumah komunitas.
+    Dalam sekali pemutaran, rata-rata ada sekitar 25 penonton yang terdiri dari anggota komunitas dan
+    khalayak umum. Di Bioskop Jumat siapa pun boleh menawarkan film untuk ditayangkan. Sumber
+    film bisa dari mana saja dan penayangannya selalu gratis, karena tujuannya untuk belajar.
+
+    “Kami pernah ditegur oleh salah satu rumah produksi asal Jakarta karena ketahuan memutarkan
+    film mereka tanpa izin. Tapi meski begitu, saya yakin bahwa kultur produksi dibangun dari kultur
+    menonton,” ucap Neni Muhidin, peneliti sekaligus perintis Bioskop Jumat.
+
+    Selama mengelola Bioskop Jumat, Neni melibatkan teman-teman pegiat lain. Soraya Pinta Rama,
+    penulis di beberapa media lokal, membantu sebagai manajer sekaligus _programmer_. Setelah itu ada
+    Syukuran atau Onqi, yang kemudian menjadi editor beberapa film pendek seperti _Umar Amir_ (2013)
+    dan _WC Terbang_ (2017). Lalu ada Yusuf Radjamuda atau Papa Al, sebagai proyeksionis Bioskop
+    Jumat, yang nantinya menjadi sutradara film _Halaman Belakang_ (2013) dan _Mountain Song_ (2019).
+    Terakhir, ada Eldiansyah Latief atau Ancha, sutradara film Umar Amir.
+
+    <Box
+      as={GatsbyImage}
+      mb="8px"
+      mt="50px"
+      image={getImage(props.data.gallery.nodes.find(item => item.name === 'palu1'))} alt="Pemutaran film Tonny Trimarsanto oleh Nemu Buku di 2019."
+    />
+    <Text className="caption" mb="50px !important">Pemutaran film Tonny Trimarsanto oleh Nemu Buku di 2019.</Text>
+
+    Bioskop Jumat juga berjejaring ke luar Palu untuk memperkaya kuratorial filmnya. Forum Lenteng di
+    Jakarta berkontribusi lewat DVD Untuk Semua—program penerjemahan film-film penting dalam
+    sejarah sinema. Sementara Elida Tamalagi, yang menginisiasi Kinoki di Yogyakarta, juga
+    berpartisipasi dengan memberikan sejumlah arsip film. Bioskop Jumat juga pernah bekerja sama
+    dengan distributor film, seperti Kolektif Film dan Buttonijo. Beberapa program pemutarannya dibuat
+    berbayar untuk mendukung ekosistem film komunitas, dengan harga tiket menonton paling mahal 15
+    ribu Rupiah.
+
+    Perubahan dari gratis ke berbayar tidak lantas menurunkan minat para penonton. Pasalnya, sebelum
+    kehadiran Bioskop Jumat, kultur menonton berbayar sudah dibentuk oleh Bazar Film yang
+    menayangkan film-film box office seperti _Ayat-Ayat Cinta_ (2008). Pelaksana menyewa ruang yang
+    mirip fasilitas bioskop komersial, semisal gedung pertunjukan milik Radio Republik Indonesia.
+    Penonton yang datang diduga ribuan, dari segala penjuru kota dan kabupaten. Namun, meski
+    antuasiasme menonton terlihat besar, bioskop baru kembali buka di Palu hampir satu dekade
+    setelahnya, tepatnya pada tahun 2017.
+
+    ##### Komunitas yang Lahir dari Ruang Film
+
+    Sebagai orang yang suka menggambar dan pernah membuat film, saya turut bergabung dengan
+    Bioskop Jumat setelah lulus SMA. Hampir setiap malam saya ke sana. Pada saat itu, Bioskop Jumat 
+    memungkinkan saya untuk sekadar duduk sambil membuka laptop tanpa harus memesan makanan
+    atau minuman. Di sana saya berjumpa dengan orang-orang yang sefrekuensi, termasuk mereka
+    yang juga suka menggambar.
+
+    Alhasil, pada tahun 2014, kami membentuk Serrupa—komunitas seni visual yang berfokus pada isuisu kontemporer. Serrupa kerap membantu mengerjakan kebutuhan visual, seperti poster film dan
+    publikasi kegiatan pemutaran. Pada tahun 2016, Serrupa berevolusi menjadi Forum
+    Sudutpandang—kolektif seni interdisiplin yang mengelolah program-program seperti pameran dan
+    residensi seni, pertunjukan musik, lokakarya, produksi, dan pemutaran film. Saat ini, Forum
+    Sudutpandang beranggotakan 27 orang.
+
+    Forum Sudutpandang memiliki _platform_ ekshibisi yang diberi nama Klub Penonton. Film-film yang
+    diputar biasanya datang dari distributor skala komunitas atau langsung dari sutradaranya atas asas
+    pertemanan. Sebagai komunitas interdisiplin, Forum Sudutpandang sering menyajikan format
+    pemutaran film di ruang-ruang kolaboratif, semisal dalam rangkaian festival yang di dalamnya
+    terdapat pasar, musik, kuliner, dan lain-lain. Hal ini dilakukan sebagai strategi untuk mempertemukan
+    film dengan penonton dan ruang-ruang lebih kompleks.
+
+    <Box
+      as={GatsbyImage}
+      mb="8px"
+      mt="50px"
+      image={getImage(props.data.gallery.nodes.find(item => item.name === 'palu2'))} alt="Produksi film Saya di Sini, Kau di Sana oleh Forum Sudutpandang di 2021"
+    />
+    <Text className="caption" mb="50px !important">Produksi film Saya di Sini, Kau di Sana oleh Forum Sudutpandang di 2021</Text>
+
+    Forum Sudutpandang juga memproduksi beberapa film—sebagian besar dokumenter—di antaranya
+    _Our Last Mangrove_ (2019), _Documentation of Survivors and Eyewitnesses Stories Tsunamis in
+    Central Sulawesi_ (2022), _A Tale of the Crocodile’s Twin_ (2022), dan _Tanah Emas_ (2022). Pada tahun
+    2023, Forum Sudutpandang mendapat fasilitasi dana kebudayaan sinema mikro untuk mengadakan
+    program pemutaran film yang bertajuk Timur Raya Sinema. Pemutaran layar tancap ini dilaksanakan
+    di enam lokasi di Palu, Sigi, Donggala, dan Parigi selama dua bulan. Film-film yang diputar berasal
+    dari jaringan komunitas di Indonesia Timur, yakni Makassar, Samarinda, Kupang, dan Papua.
+    Selama pelaksanaannya Forum Sudutpandang berkolaborasi dengan komunitas-komunitas yang
+    berlokasi di tempat pemutaran. Total jumlah penonton mencapai 1.000 orang, dengan jumlah
+    terbanyak terdapat di Kabupaten Donggala.
+
+    Besarnya antusiasme penonton di kota atau kabupaten sekitar Palu merupakan hal yang penting
+    untuk digarisbawahi. Sebab, ekosistem film di Palu sesungguhnya tidak bisa dibaca hanya dalam
+    lingkaran kawasannya. Di Sigi, misalnya, terdapat Bioskop Todea yang diinisiasi oleh Dinul dan
+    Zikran di Sigi pada tahun 2022. Bioskop Todea memiliki program regular sebulan sekali, baik
+    dibuat sendiri maupun berkolaborasi dengan komunitas lain. Format pemutarannya sebagian besar
+    berupa layar tancap, gratis, dan swadaya—memutarkan film-film dari Palu, Sigi, dan Donggala.
+
+    <Box
+      as={GatsbyImage}
+      mb="8px"
+      mt="50px"
+      image={getImage(props.data.gallery.nodes.find(item => item.name === 'palu3'))} alt="Pemutaran Film Festival Agroforestri oleh Komunitas Bioskop Todea di 2022"
+    />
+    <Text className="caption" mb="50px !important">Pemutaran Film Festival Agroforestri oleh Komunitas Bioskop Todea di 2022</Text>
+
+    Sementara itu di Donggala, tepatnya di Desa Toaya, Kecamatan Sindue, terdapat Yayasan Tana
+    Sanggamu yang aktif sejak tahun 2018. Didirikan oleh Ade Nuriadin, Yayasan Tana Sanggamu
+    merupakan komunitas anak muda yang bergerak di bidang pertanian, media, dan pengembangan,
+    wirausaha sosial – yang menggunakan film untuk mendistribusikan pengetahuan-pengetahuan.
+    Menurut Ade, memutar film di desa jauh lebih mudah daripada di kota. Penonton di desa,
+    berdasarakan amatannya, cenderung memiliki motivasi menonton yang lebih besar.
+
+    “Donggala sendiri sudah mempunyai kultur menonton itu, karena dulu pernah ada bioskop lokal di
+    sini,” ucap Ade Nuriadin
+
+    Ade Nuriadin sendiri punya pengalaman cukup panjang di ekosistem film. Ia pernah menjadi
+    direktur dan kurator di program South East Asia Movie Open Program Yogyakarta pada tahun
+    2017, dan pernah terlibat di beberapa produksi film, salah satunya sebagai kru dan pengisi
+    suara di _Worked Club_ (2015) karya Tunggul Banjaransari. Pada tahun 2014, Ade juga menjadi
+    partisipan lokakarya SEAScreen Academy di Makassar. Di Palu, Ade menjadi penulis film _WC
+    Terbang_, produser _Home Sweet Home_ (2019) karya Muh. Ifdhal dan _Senandung Bunga dari
+    Bulukadia_ (2023) karya Eldiansyah Latief, serta sutradara film _Tanigasi_ (2022)—dokumenter
+    pendek tentang upaya warga desa dalam menghindari krisis pangan pasca-bencana.
+
+    <Box
+      as={GatsbyImage}
+      mb="8px"
+      mt="50px"
+      image={getImage(props.data.gallery.nodes.find(item => item.name === 'palu4'))} alt="Produksi film Tanigasi oleh Komunitas Tana Sanggamu di 2021."
+    />
+    <Text className="caption" mb="50px !important">Produksi film Tanigasi oleh Komunitas Tana Sanggamu di 2021.</Text>
+
+    Tentunya, tak semua film di Palu dibaluti dengan semangat aktivisme. Arul dari komunitas Nadoyo
+    Production, misalnya, lebih tertarik untuk menarasikan keseharian di Palu sebagai film hiburan.
+    Beranggotakan 12 orang, Nadoyo Production dihuni oleh orang-orang dengan latar belakang
+    berbeda, dari anak teater, musisi, pedagang, pekerja IT, hingga aparat sipil negara. Saat menyusun
+    cerita film, mereka saling mengintervensi dan melempar ide yang kemudian dijahit menjadi satu 
+    cerita film dengan balutan komedi.
+
+    “Salah satu hal yang kami eksplorasi menjadi unsur komedi adalah keragaman bahasa dan aksen
+    masyarakat lokal di Palu. Kami tidak terlalu fokus pada pesan di film. Mau ada pesan atau tidak,
+    itu bukan hal yang ingin kami capai melalui film,” Kata Arul.
+
+    Sampai saat ini Nadoyo Production telah memproduksi sekitar 20-an film dengan durasi 5 sampai
+    30 menit. Dana produksinya dihimpun secara swadaya dan _sponsorship_. Mereka mengelola
+    ekshibisinya secara mandiri dengan format pemutaran layar tancap gratis di desa-desa atau
+    menyewa gedung yang biasa dipakai untuk pemutaran, seperti gedung taman budaya—sebelum
+    akhirnya sudah hancur karena tsunami. Pemutaran bernama Nadoyo Sinema tersebut dihargai
+    dengan tiket masuk 25 ribu rupiah. Diselenggarakan selama maksimal lima kali pemutaran dalam
+    seminggu, total penonton harian bisa mencapai 600 orang. Setelahnya, film-film tersebut diunggah
+    ke YouTube, dan di-_monetize_.
+
+    <Box
+      as={GatsbyImage}
+      mb="8px"
+      mt="50px"
+      image={getImage(props.data.gallery.nodes.find(item => item.name === 'palu5'))} alt="Pemutaran film oleh Komunitas Nadoyo dilakukan selama tiga malam berturutturut. Berlokasi di Gedung Teather Taman Budaya Kota Palu di 2015."
+    />
+    <Text className="caption" mb="50px !important">Pemutaran film oleh Komunitas Nadoyo dilakukan selama tiga malam berturutturut. Berlokasi di Gedung Teather Taman Budaya Kota Palu di 2015.</Text>
+
+    ##### Regenerasi Sineas dan Respons Terhadap Bencana Alam
+
+    SMA saya, SMA Negeri Model Terpadu Madani Palu, merupakan salah satu sekolah yang
+    memasukkan film ke intrakurikuler kelas 12. Meski dibuat untuk mata pelajaran, film-film yang
+    dibuat tidak pernah dikompetisikan, dan hanya menjadi hiburan sebelum perpisahan. Murid-murid
+    hanya disuruh memanfaatkan fasilitas multimedia di sekolah. Film yang diproduksi kemudian
+    ditayangkan di laboratorium komputer secara berbayar untuk menambah biaya perpisahan 
+    sekolah. Pendeknya, film saat itu tidak dituntut menjadi karya yang serius. Baru ketika Festival dan
+    Lomba Seni Siswa Nasional (FLS2N) hadir, pelajar mulai mendapat dorongan lebih.
+
+    FLS2N melahirkan sejumlah nama baru, seperti: Sarah Adilah, sutradara _Cermin_ (2015), _Neraka di
+    Telapak Kaki_ (2018), dan _Boncengan_ (2020); Nur Amri Firmansyah, sutradara _Yang Hilang dan
+    Yang Tumbuh_ (2022); Fauzan Kurnia Muttaqin, sutradara film _Tugas Akhir_ (2022); Vania Qanita
+    Damayanti, sutradara film _Telur_ (2021); dan Fikri Suni. Nama-nama tersebut sebagian besar masih
+    aktif berkegiatan film. Fikri, Amri, dan Vania mendirikan AHERA Films. Sementara Sarah, bersama
+    sejumlah pegiat film lain, mendirikan Sinekoci. 
+
+    <Box
+      as={GatsbyImage}
+      mb="8px"
+      mt="50px"
+      image={getImage(props.data.gallery.nodes.find(item => item.name === 'palu6'))} alt="Komunitas Sinekoci melakukan workshop development story untuk anak magang"
+    />
+    <Text className="caption" mb="50px !important">SMK Negeri 2 Palu di 2022.</Text>
+
+    Sinekoci menarik untuk dibahas lebih jauh, karena produktivitasnya dalam merespons dan
+    menanggapi darurat kebencanaan melalui film. Pada 2020-2022, Sinekoci menginisiasi proyek
+    dokumenter partisipatif _Hidup dengan Bencana_ yang melibatkan empat komunitas interdisiplin.
+    Proyek itu menghasilkan 5 film dokumenter pendek yang membicarakan konteks kebencanaan di
+    Palu melalui perspektif yang kontekstual dengan wilayah tempat komunitasnya berada. Film-film
+    yang diproduksi adalah _Turun ke Atas_ (2022) produksi Nemubuku; _Saya di Sini, Kau di Sana: A
+    Tale of the Crocodile’s Twin_ (2022) produksi Forum Sudutpandang; _Tanigasi_ (2022) produksi 
+    Yayasan Tana Sanggamu; dan _Timbul Tenggelam_ (2022) produksi Sikola Pomore. Film-film ini
+    pertama kali ditayangkan pada 2022 dalam rangka peringatan empat tahun peristiwa gempa bumi,
+    tsunami, dan likuefaksi di Palu, Sigi, serta Donggala. Selain proyek dokumenter, Sinekoci juga
+    memproduksi fiksi pendek _Pada Suatu hari_ (2020) yang juga masih dalam motif melestarikan
+    pengetahuan lokal tentang kebencanaan.
+
+    Peristiwa kebencanaan pada tahun 2018 begitu penting untuk diangkat dalam bentuk film.
+    Pasalnya, tidak hanya menghancurkan infrastruktur kota, bencana tersebut juga menggoyahkan
+    keyakinan tentang wilayah yang selama ini ditinggali. Ada begitu banyak pengetahuan penting yang
+    gagal terdistribusi, dan hanya tersimpan dalam syair lisan, mitos, cerita rakyat, dan nama-nama
+    terdahulu sebuah lokasi. Peran komunitas lantas menjadi penting untuk terus membicarakan
+    peristiwa tersebut menggunakan medium-medium yang mudah didistribusikan, diakses, dan
+    diapresiasi oleh publik.
+
+    “Setelah bencana orang-orang mempertanyakan hal yang mungkin ia tidak pernah pertanyakan
+    sebelumnya tentang tempat ia tinggal,” ucap Neni Muhidin.
+
+    Ketidakhadiran institusi formal dan ekosistem perfilman yang mapan di Palu mungkin memberikan
+    celah pengetahuan. Namun, pada saat bersamaan, hal tersebut juga menciptakan keleluasaan
+    dalam menyikapi medium film. Film lantas terdekonstruksi dari nilai asalnya, lalu direfleksikan,
+    didiskusikan, dan diuji kembali dengan nilai-nilai yang baru. Di sini, peran komunitas setempat
+    menjadi penting. Di Palu, komunitas memberikan muatan baru pada film sesuai kebutuhannya, dari
+    aktivisme hingga hiburan. Meski begitu, pasca-bencana tahun 2018, satu hal yang terjadi secara
+    kolektif adalah film mampu digunakan sebagai pencatat dan alat tutur kebencanaan.
+
+  </GridItem>
+</GridContainer>
+
+<hr />
+
+<h5>Catatan Kuratorial Palu</h5>
+
+Pasca serangkaian gempa dan tsunami, film-film dari Palu dan wilayah sekitarnya menjadi punya peranan
+penting dalam proses perkenalan budaya dan mitigasi bencana. Masyarakat telah hidup dalam pusaran
+bencana yang sewaktu-waktu dapat tiba, seperti gempa bumi yang telah tercatat jauh sebelum mulai
+ditinggali. Inisiatif pembuat film guna menyadarkan Kembali apa yang sesungguhnya mereka tinggali
+adalah keputusan krusial yang akan berdampak baik. Film-film dari Palu memulai dari dasar Kembali:
+menelusuri jejak-jejak kehidupan masa lampau, merisetnya, membedah dampak-dampaknya,
+menceritakannya Kembali lewat berbagai bentuk, sehingga bisa tersebar dan tersimpan; sehingga
+nantinya tidak mengulangi dari awal pencarian-pencarian hidup Bersama bencana yang berimbas pada
+persiapan, ketahanan, dan ketangguhan. Ada lima film yang dipilih. Tangkapan tradisi yang tidak
+berhubungan langsung dengan bencana juga diperlihatkan dalam tiga film, sehingga warna yang paling
+kental dalam film-film Palu adalah meletakkan film-filmnya dalam lingkaran budaya, entah itu
+memperkenalkan asal muasal, pengaruh, hingga dampaknya dalam kurun waktu belakangan:
+kebencanaan.
+
+_Vuya_ merupakan bentuk lintas disiplin antara film, seni tari, dan seni tekstil yang memiliki sejarah
+kepercayaannya. _Hold and Kick_ menjelajahi budaya Mosivinti: sebuah tradisi melakukan tendangan ke
+betis. _Turun ke Atas_ menceritakan Kembali kejadian bencana dan ingatan masa lalu dari titik likuifaksi
+paling terdampak dari mata seorang penyintas lansia. Karakter berpindah ke anak sekolah dalam film
+_Pada Suatu Hari_ di mana mitigasi bencana diceritakan dari perspektif kearifan lokal. Ceritanya ada dua
+anak sekolah yang meninggalkan rombongan di area likuifaksi, tapi justru mendapatkan cerita dari warga
+setempat. Film ini memasukkan pengetahuan sejarah tentang bencana dan disampaikan dalam situasi
+Bersama anak-anak guna memahami lingkungan mereka. Informasi yang diwariskan turun-temurun juga
+hadir dalam _Timbul Tenggelam_. Bertempat di tempat penyintas Desa Tompe yang dilanda banjir rob,
+kisah bencana diturunkan melalui diskusi seorang kakek dengan cucunya. Penggambaran terhadap
+kelompok rentan juga dihadirkan lewat _Yang Hilang dan Yang Tumbuh_, di mana berkisar setahun setelah
+situasi bencana terdapat seorang siswi yang tidak menyelesaikan pendidikannya karena harus menikah
+setelah hamil. Terakhir adalah _Saya Di Sini, Kau Di Sana_. Film yang mendapatkan _Special Mention_ pada
+kompetisi film pendek Oberhausen ini mengarungi persinggungan manusia dengan buaya yang berbagi
+ruang di zona merah.
+
+Film menelusuri jejak-jejak awal pertemuan ini. Semua film akan mengarungi kehidupan Palu yang
+memiliki pengalaman terhadap budaya dan bencana, sekaligus eksplorasi bagaimana perspektif bencana
+dan kehidupan berlangsung di sana.
+
+<hr />
+
+<Text mb="0px !important" fontSize="12.25px">Karya-karya pilihan kota</Text>
+<Text as="h3" mb={["20px !important", null, "32px !important"]} textTransform="uppercase" fontWeight="400 !important">Palu</Text>
+
+<SimpleGrid columns={[1, null, 3]} spacingX={34} spacingY={10}>
+  <ImagePlay href="https://rangkai.id/?browse=639">
+    <Box 
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'HOLD-and-KICK_AFI23_1920_1080 - bioskop todeaBW'))}
+      alt={'HOLD-and-KICK_AFI23_1920_1080 - bioskop todeaBW'}
+    />
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=657">
+    <Box 
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'PADA SUATU HARI_AFI23_1920-1080 - Sarah AdilahBW'))}
+      alt={'PADA SUATU HARI_AFI23_1920-1080 - Sarah AdilahBW'}
+    />
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=644">
+    <Box 
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'saya-disini-kau-disana-thumbnail-masterBW'))}
+      alt={'saya-disini-kau-disana-thumbnail-masterBW'}
+    />
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=638">
+    <Box 
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'Timbul_Tenggelam_AFI23_1920-1080 - Nurcholis DarmawanBW'))}
+      alt={'Timbul_Tenggelam_AFI23_1920-1080 - Nurcholis DarmawanBW'}
+    />
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=659">
+    <Box 
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'turun-ke-atas-thumbnail-masterBW'))}
+      alt={'turun-ke-atas-thumbnail-masterBW'}
+    />
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=647">
+    <Box 
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'VUYA_AFI23_1920-1080 - Sarah AdilahBW'))}
+      alt={'VUYA_AFI23_1920-1080 - Sarah AdilahBW'}
+    />
+  </ImagePlay>
+  <ImagePlay href="https://rangkai.id/?browse=646">
+    <Box 
+      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'yang-hilang-thumbnail-masterBW'))}
+      alt={'yang-hilang-thumbnail-masterBW'}
+    />
+  </ImagePlay>
+</SimpleGrid>

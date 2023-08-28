@@ -1,14 +1,23 @@
 ---
 title: Kupang
-slug: city-kupang
+slug: kota-kupang
 desc: Kemunculan dan Keberlanjutan Komunitas Film di Kota Kupang.
+headline: Kemunculan dan Keberlanjutan Komunitas Film di Kota Kupang
+author: Nurhildayati
 banner: '../images/cities/kupang/banner.jpg'
-thumb: '../images/cities/kupang/kupang-3.jpg'
+thumb: '../images/cities/kupang/thumb.jpg'
 galleryDir: 'cities/kupang'
+graphFile: 'kupang.pdf'
 position: {
   left: 62.5%,
-  bottom: 1.5%
+  bottom: 7.5%
 }
+info: {
+  community: 3,
+  filmProduction: 15,
+  filmExhibition: 3
+}
+year: 2022
 ---
 
 import { GridItem, Text, Box, SimpleGrid } from '@chakra-ui/react';
@@ -17,38 +26,28 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import SquareImage from '../components/SquareImage';
 import Lightbox from '../components/Lightbox';
 import ImagePlay from '../components/ImagePlay';
+import ButtonLink from '../components/ButtonLink';
 
 <GridContainer>
   <GridItemLeftContent />
   <GridItem>
-    ## Kemunculan dan Keberlanjutan Komunitas Film di Kota Kupang
 
-    <p className="caption">Nurhildayati</p>
-
-    Kehadiran komunitas film di Kota Kupang menghembuskan angin segar.
+    <p className="highlight">Kehadiran komunitas film di Kota Kupang menghembuskan angin segar.
     Sebelumnya, produksi dan ekshibisi film kerap dipandang eksklusif, karena
     ketersediaan peralatan dan kesempatan yang belum bisa dijangkau secara
     merata oleh warga setempat. Adanya komunitas seyogyanya mampu
-    menciptakan ruang dan kesempatan bagi mereka yang ingin belajar.
+    menciptakan ruang dan kesempatan bagi mereka yang ingin belajar.</p>
     
-    Sejarah eksistensi komunitas film di Kota Kupang bermula sejak 2011 melalui
+    <p className="highlight">Sejarah eksistensi komunitas film di Kota Kupang bermula sejak 2011 melalui
     _Jumat di Garasi_—sebuah ruang pemutaran alternatif yang dirintis jauh sebelum
     kehadiran jaringan bioskop seperti Grup 21 dan Cinepolis di Kota Kupang. Alhasil
     kehadiran ruang menonton dan berkumpul bagi para pecinta film membentuk
     suatu kerutinan pertemuan, yang pada prosesnya menjadi cikal bakal kegiatan
-    komunitas film di Kota Kupang.
+    komunitas film di Kota Kupang.</p>
 
-  </GridItem>
-</GridContainer>
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === '2020_PRODUKSI FILM OE LO_LIF_Komunitas Film KupangBW'))} alt="2020_PRODUKSI FILM OE LO_LIF_Komunitas Film KupangBW" filter="grayscale(100%)" />
+    <Text className="caption" mb="50px !important">Produksi film OE LO'LIF (2020) oleh Komunitas Film Kupang</Text>
 
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'thumb')} alt={'Komunitas Film Kupang'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'thumb')} alt={'Komunitas Film Kupang'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Produksi film OE LO'LIF (2020) oleh Komunitas Film Kupang</p>
-  </GridItemLeftContent>
-  <GridItem>
     Komunitas film memungkinkan perluasan partisipasi masyarakat di perfilman.
     Mereka berperan penting mengadakan pelatihan, pemutaran dan produksi
     yang terjangkau bagi masyarakat umum di Kota Kupang. Berbagai hal tersebut
@@ -80,22 +79,11 @@ import ImagePlay from '../components/ImagePlay';
     dan teknologi untuk perfilman hanya ada di Komunitas Film Kupang,” ungkap
     Abe.
 
-    <hr />
+    <h5>Titik Mula KFK dan Beginner</h5>
 
-    ### Titik Mula KFK dan Beginner
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === '2022_Komunitas Film Kupang_Flobamora Film FestivalBW'))} alt="2020_PRODUKSI FILM OE LO_LIF_Komunitas Film KupangBW" filter="grayscale(100%)" />
+    <Text className="caption" mb="50px !important">Pelaksanaan kegiatan Flobamora Film Festival (2022) oleh Komunitas Film Kupang</Text>
 
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'kupang-4')} alt={'Pelaksanaan kegiatan Flobamora Film Festival'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'kupang-4')} alt={'Pelaksanaan kegiatan Flobamora Film Festival'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Pelaksanaan kegiatan Flobamora Film
-      Festival (2022) oleh Komunitas Film Kupang</p>
-  </GridItemLeftContent>
-  <GridItem>
     Sejumlah film nasional berbiaya besar telah dibuat dengan mengambil cerita
     atau latar belakang dari panorama eksotis Nusa Tenggara Timur. Sayangnya,
     tidak banyak yang berhasil menyampaikan narasi otentik dari wilayah setempat.
@@ -155,18 +143,9 @@ import ImagePlay from '../components/ImagePlay';
     Layar Merdeka, dan Screening for Healing (untuk korban badai di Pulau Timor
     dan NTT pada 2019).
 
-  </GridItem>
-</GridContainer>
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === '2020_PRODUKSI FILM OE LO_LIF_Komunitas Film Kupang(1)BW'))} alt="2020_PRODUKSI FILM OE LO_LIF_Komunitas Film KupangBW" filter="grayscale(100%)" />
+    <Text className="caption" mb="50px !important">Pelaksanaan kegiatan Flobamora Film Festival (2022) oleh Komunitas Film Kupang</Text>
 
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'kupang-3')} alt={'Pelaksanaan kegiatan Flobamora Film Festival'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'kupang-3')} alt={'Pelaksanaan kegiatan Flobamora Film Festival'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Pelaksanaan kegiatan Flobamora Film
-      Festival (2022) oleh Komunitas Film Kupang</p>
-  </GridItemLeftContent>
-  <GridItem>
     Kegiatan-kegiatan ini pada prosesnya mengundang banyak keterlibatan publik,
     yang memicu munculnya warna baru dalam perfilman Kupang. Sejumlah individu
     tercatat turut membentuk komunitas baru di daerahnya. Meski tak semua bisa
@@ -199,30 +178,6 @@ import ImagePlay from '../components/ImagePlay';
     KFK dan Beginner tak serta merta membuat mereka mengadopsi fokus dan nilai
     seragam.
 
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Kegiatan tiap penyelenggaraan Ekshibisi (%)</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Kegiatan-tiap-penyelenggaraan-Ekshibisi')} alt={'Kepemilikan Ruang Putar thumb'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Kegiatan-tiap-penyelenggaraan-Ekshibisi-thumb'))} alt={'Kepemilikan Ruang Putar thumb'} noBorder />
-    </Lightbox>
-    <p className="caption">Ekshibisi tidak sekadar berarti pemutaran
-      film saja. Lebih dari 80% komunitas
-      menyelipkan kegiatan diskusi dalam
-      program pemutaran mereka. Bahkan
-      sepertiga (30%) komunitas dalam survei
-      mengatakan program ekshibisi mereka
-      menyertakan lokakarya dengan pembuat
-      filmnya. Forum-forum semacam ini lah
-      yang hanya bisa ditemukan di ekosistem
-      komunitas. Hal ini pula yang mencerminkan
-      pentingnya keberadaan komunitas dalam
-      upaya apresiasi film di Indonesia.</p>
-  </GridItemLeftContent>
-  <GridItem>
-
     “Kalau di KFK, pembahasannya serius dengan issue yang berat. Nah di sini, kita
     memilih konten ringan yang digandrungi anak muda,” jelas Andre. Konten film
     produksi Beginner condong lebih kekinian dan populer, yakni: _Letisa_ (2019),
@@ -236,9 +191,7 @@ import ImagePlay from '../components/ImagePlay';
     beginner yang sudah tentu menjadi orang penting dalam setiap pengambilan
     keputusan di KFK.
     
-    <hr />
-
-    ### Film sebagai Passion, Film sebagai Profesi
+    <h5>Film sebagai Passion, Film sebagai Profesi</h5>
 
     Keberlanjutan, atau setidaknya sumber daya untuk mengupayakannya, menjadi
     isu penting bagi komunitas film di Kupang. Dengan berbagai tantangan seputar
@@ -268,17 +221,9 @@ import ImagePlay from '../components/ImagePlay';
     menarik dan tidak membosankan. Ada yang dipelajari dari banyak kesalahan
     yang membuat saya semakin ingin berbenah dan berkembang,” ungkap Ken.
 
-  </GridItem>
-</GridContainer>
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === '2020_PRODUKSI FILM OE LO_LIF_Komunitas Film Kupang(2)BW'))} alt="2020_PRODUKSI FILM OE LO_LIF_Komunitas Film KupangBW" filter="grayscale(100%)" />
+    <Text className="caption" mb="50px !important">Produksi film OE LO'LIF (2020) oleh Komunitas Film Kupang</Text>
 
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'kupang-2')} alt={'Produksi film OE LO LIF (2020) oleh Komunitas Film Kupang'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'kupang-2')} alt={'Produksi film OE LO LIF (2020) oleh Komunitas Film Kupang'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Produksi film OE LO'LIF (2020) oleh Komunitas Film Kupang</p>
-  </GridItemLeftContent>
-  <GridItem>
     Kerja komunitas film di Indonesia banyak yang bersifat sukarela dan Kupang
     tak terkecuali. Meski begitu, komunitas film di Kupang turut mengupayakan
     keberlanjutan yang lebih konkret bagi para anggotanya. Lumrah bagi komunitas
@@ -310,30 +255,6 @@ import ImagePlay from '../components/ImagePlay';
     melalui berbagai kolaborasi yang dijalin komunitas-komunitas film di Kupang
     selama ini.
 
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Sumber film yang ditayangkan (%)</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Sumber-film')} alt={'Sumber film yang ditayangkan'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Sumber-film-thumb'))} alt={'Sumber film yang ditayangkan'} noBorder />
-    </Lightbox>
-    <p className="caption">Mayoritas komunitas film memperoleh
-      akses film yang ingin mereka putar
-      melalui pembuat film (83%). Sebagian
-      lainnya (41%) mendapatkan film dari jalur
-      universitas/sekolah. Menariknya, festival
-      film kerap menjadi titik temu dan wadah
-      antarkomunitas film dam dengan pegiat film
-      lainnya, yang memungkinkan komunitas bisa
-      secara langsung mengakses film. Praktik
-      ini juga menguntungkan para pembuat film
-      karena ‘hidup’ film yang mereka buat makin
-      panjang dan jangkauannya makin luas.</p>
-  </GridItemLeftContent>
-  <GridItem>
-
     Pada 27-29 Oktober 2022, Flobamora Film Festival diselenggarakan dan menjadi
     festival film berskala nasional pertama di Nusa Tenggara Timur. Festival ini
     dipersiapkan selama hampir setahun oleh tim panitia KFK. Kondisi finansial minim
@@ -353,28 +274,44 @@ import ImagePlay from '../components/ImagePlay';
     komunitas film di Kupang bisa terus hidup dan berkembang karena satu sama
     lain.
 
+    <b>AFI 2023 menindaklanjuti hasil penelitian di tiga kota, salah satunya Kota Kupang.
+      Pemilihan kota tersebut berdasarkan riset terkait potensi pengembangan ekosistem perfilman dan keterlibatan
+      dukungan pemerintah daerah pada kegiatan komunitas. Program Tindak Lanjut disesuaikan dengan riset dan kebutuhan setiap kota.
+      Di Kupang, tim AFI melaksanakan pelatihan penulisan skenario pendek dan tata kelola festival film.</b>
+
+    <Box
+      borderY="2px solid #000000"
+      background="blueOcean.500"
+      px={['8px', null, '48px']}
+      py={['8px', null, '16px']}
+      w="100%"
+      my="48px"
+    >
+      <ButtonLink
+        h="100%"
+        to="/tindaklanjut?city=kupang"
+        color="white"
+        iconColor="light"
+      >Simak kegiatan tindak lanjut AFI di sini</ButtonLink>
+    </Box>
+
   </GridItem>
 </GridContainer>
 
+
 <hr />
 
-<Text as="h3" mt={["40px", null, "60px"]} mb={["20px !important", null, "32px !important"]}> Karya-karya pilihan Kota Kupang </Text>
+<Text mb="0px !important" fontSize="12.25px">Karya-karya pilihan kota</Text>
+<Text as="h3" mb={["20px !important", null, "32px !important"]} textTransform="uppercase" fontWeight="400 !important"> Kupang </Text>
 
-<SimpleGrid columns={[1, null, 2]} spacingX={34} spacingY={10}>
-  <ImagePlay href="https://rangkai.id/?browse=291">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ada-apa-dengan-ibu-thumbnail-master'))}
-      alt={'angkara-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=295">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'doa-perantau-thumbnail-master'))}
-      alt={'bukan-kupu-kupu-malam'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
+<SimpleGrid columns={[1, null, 3]} spacingX={34} spacingY={10}>
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ada-apa-dengan-ibu-thumbnail-master'))}
+    alt={'ada-apa-dengan-ibu-thumbnail-master'}
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'doa-perantau-thumbnail-master'))}
+    alt={'doa-perantau-thumbnail-master'}
+  />
 </SimpleGrid>
+

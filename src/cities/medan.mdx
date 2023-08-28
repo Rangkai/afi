@@ -1,14 +1,23 @@
 ---
 title: Medan
-slug: city-medan
+slug: kota-medan
 desc: Komunitas Film Sumatera Utara, Modal Nekat yang Eksis dan Dipertahankan.
+headline: Komunitas Film Sumatera Utara, Modal Nekat yang Eksis dan Dipertahankan
+author: Immanuel Ginting
 banner: '../images/cities/medan/banner.jpg'
-thumb: '../images/cities/medan/medan-3.jpg'
+thumb: '../images/cities/medan/thumb.jpg'
 galleryDir: 'cities/medan'
+graphFile: 'medan.pdf'
 position: {
   left: 8%,
-  bottom: 79%
+  bottom: 87%
 }
+info: {
+  community: 4,
+  filmProduction: 20,
+  filmExhibition: 5
+}
+year: 2022
 ---
 
 import { GridItem, Text, Box, SimpleGrid } from '@chakra-ui/react';
@@ -21,14 +30,11 @@ import ImagePlay from '../components/ImagePlay';
 <GridContainer>
   <GridItemLeftContent />
   <GridItem>
-    ## Komunitas Film Sumatera Utara: Modal Nekat yang Eksis dan Dipertahankan
 
-    <p className="caption">Immanuel Ginting</p>
-
-    Sejarah perfilman dan komunitas film di Sumatera Utara bisa dikatakan punya
+    <p className="highlight">Sejarah perfilman dan komunitas film di Sumatera Utara bisa dikatakan punya
     latar belakang yang nyaris sama. Keberadaan panggung teater yang lebih dulu
     eksis mengiringi langkah geliat kegiatan perfilman yang membentuk embrio
-    industri perfilman era Bachtiar Siagian pada medio 1950an di Kota Medan.
+    industri perfilman era Bachtiar Siagian pada medio 1950an di Kota Medan.</p>
     
     Hal ini seolah terulang kembali dengan tambahan detail yang sedikit berbeda
     sekitar 2004, ketika perfilman perlahan bangkit dengan generasi baru film
@@ -82,20 +88,10 @@ import ImagePlay from '../components/ImagePlay';
     yang kemudian berkembang secara independen dengan nama Sineas Film
     Documentary (SFD) yang dibina oleh Onny Kresnawan.
 
-    <hr />
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === '2022 - MANUPROJECTPRO - PROGRAM FILM BULAN KELUARGABW'))} alt="Program Film Bukan Keluarga (2022) oleh Manu Project PRO"  />
+    <Text className="caption" mb="50px !important">Program Film Bukan Keluarga (2022) oleh Manu Project PRO</Text>
 
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'thumb')} alt={'Program Film Bukan Keluarga (2022) oleh Manu Project PRO'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'thumb')} alt={'Program Film Bukan Keluarga (2022) oleh Manu Project PRO'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Program Film Bukan Keluarga (2022) oleh Manu Project PRO</p>
-  </GridItemLeftContent>
-  <GridItem>
-    ### Rupa-rupa Bisnis Film Lokal
+    <h5>Rupa-rupa Bisnis Film Lokal</h5>
 
     Embrio-embrio perfilman di Medan lantas disambut dengan aliran pegiat dan
     sumber daya dari dimensi yang lebih beragam, yakni stasiun televisi dan lembaga
@@ -204,9 +200,7 @@ import ImagePlay from '../components/ImagePlay';
     tidak menyurutkan langkahnya untuk berkarya, bahkan semakin matang dan
     mengurangi asa untuk bergantung pada dukungan pemerintah.
 
-    <hr />
-
-    ### Mewujudkan Kebersamaan
+    <h5>Mewujudkan Kebersamaan</h5>
 
     Berbagai kumpulan yang disebutkan kala itu belum tegas menyebut diri
     sebagai komunitas film, walau kegiatan mereka sudah memenuhi ciri komunitas
@@ -264,22 +258,10 @@ import ImagePlay from '../components/ImagePlay';
     sebuah komunitas yang lebih besar, juga akibat persaingan sengit antara
     komunitas yang tergabung di dalamnya.
 
-    <hr />
-    
-    ### Momentum Lain
+    <h5>Momentum Lain</h5>
 
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'medan-2')} alt={'Salah satu proses kegiatan produksi film oleh Ninestar Production di tahun 2022'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'medan-2')} alt={'Salah satu proses kegiatan produksi film oleh Ninestar Production di tahun 2022'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Salah satu proses kegiatan produksi film oleh Ninestar Production di tahun 2022</p>
-  </GridItemLeftContent>
-  <GridItem>
-
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === '2022_NINESTAR PRODUCTION_SYUTINGBW'))} alt="Salah satu proses kegiatan produksi film oleh Ninestar Production di tahun 2022"  />
+    <Text className="caption" mb="50px !important">Salah satu proses kegiatan produksi film oleh Ninestar Production di tahun 2022</Text>
 
     Peran Alex Sihar dan Darma Lubis membawa keterlibatan KoFi Sumut dalam
     penyelenggaraan Apresiasi Film Indonesia (AFI) 2014 di Medan. Kegiatan AFI
@@ -344,32 +326,7 @@ import ImagePlay from '../components/ImagePlay';
     yang menurut pengakuannya langganan jadi nominasi dan pemenang di Festival
     Film Islami sejak 2016.
 
-    <hr />
-
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Kepemilikan Ruang Putar (%)</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Kepemilikan-Ruang-Putar')} alt={'Kepemilikan Ruang Putar thumb'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Kepemilikan-Ruang-Putar-thumb'))} alt={'Kepemilikan Ruang Putar thumb'} noBorder />
-    </Lightbox>
-    <p className="caption">Seturut dengan modal finansial yang minim,
-      ketersediaan ruang fisik menjadi tantangan
-      bagi komunitas film. Hanya 26% dari total
-      responden yang mengaku punya tempat.
-      Sebagian komunitas ‘beruntung’ lantaran
-      tak perlu merogoh kantong sendiri untuk
-      membuat kegiatan pemutaran. Namun,
-      sepertiga (32%) lainnya perlu mencadangkan
-      uang untuk menyewa tempat. Sementara,
-      11% komunitas film lainnya bereksperimen
-      dengan pemutaran secara daring.</p>
-  </GridItemLeftContent>
-  <GridItem>
-
-    ### Sinergi dalam Keterbatasan
+    <h5>Sinergi dalam Keterbatasan</h5>
 
     Perkembangan teknologi internet yang pesat serta semakin murahnya alat
     produksi film menjadikan semakin banyaknya komunitas film yang lahir dengan
@@ -423,18 +380,9 @@ import ImagePlay from '../components/ImagePlay';
     dan melakukan forum diskusi. Selebihnya lebih tepat dikatakan sebagai kegiatan
     segelintir partisipan KoFi Sumut untuk memeriahkan momen-momen tertentu,
     seperti hari Film Nasional atau Hari jadi Kota Medan.
-    
 
-  </GridItem>
-</GridContainer>
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'medan-3')} alt={'Salah satu proses kegiatan produksi film oleh RKI Docs'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'medan-3'))} alt={'Salah satu proses kegiatan produksi film oleh RKI Docs'} noBorder />
-    </Lightbox>
-    <p className="caption">Salah satu proses kegiatan produksi film oleh RKI Docs</p>
-  </GridItemLeftContent>
-  <GridItem>
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'n.d_RKI Docs_SyutingBW'))} alt="Salah satu proses kegiatan produksi film oleh RKI Docs"  />
+    <Text className="caption" mb="50px !important">Salah satu proses kegiatan produksi film oleh RKI Docs</Text>
 
     Yang awalnya masih berupa komunitas yang lebih banyak melakukan kegiatan
     produksi dan apresiasi film, akhirnya terbentuklah beberapa perkumpulan yang
@@ -446,9 +394,7 @@ import ImagePlay from '../components/ImagePlay';
     review atau kritik film juga marak melibatkan beberapa nama seperti dr. Daniel
     Irawan dan Amir Syarif Siregar.
 
-    <hr />
-
-    ### Perkembangan dari Pengalaman
+    <h5>Perkembangan dari Pengalaman</h5>
 
     Seiring dengan perkembangan selanjutnya, gerakan komunitas film di Kota
     Medan ini semakin berevolusi dengan tetap membawa semangat untuk
@@ -502,9 +448,7 @@ import ImagePlay from '../components/ImagePlay';
     tengah persaingan yang sengit antara komunitas film di Medan dan Sumatera
     Utara ini.
 
-    <hr />
-
-    ### Catatan tentang Ketahanan
+    <h5>Catatan tentang Ketahanan</h5>
 
     Tujuan besar dari kehadiran semua komunitas film ini sebenarnya tidak jauh
     dari mempertahankan eksistensi, sambil berupaya mendapatkan popularitas
@@ -533,39 +477,24 @@ import ImagePlay from '../components/ImagePlay';
 
 <hr />
 
-<Text as="h3" mt={["40px", null, "60px"]} mb={["20px !important", null, "32px !important"]}> Karya-karya pilihan Kota Medan </Text>
+<Text mb="0px !important" fontSize="12.25px">Karya-karya pilihan kota</Text>
+<Text as="h3" mb={["20px !important", null, "32px !important"]} textTransform="uppercase" fontWeight="400 !important"> Medan </Text>
 
-<SimpleGrid columns={[1, null, 2]} spacingX={34} spacingY={10}>
-  <ImagePlay href="https://rangkai.id/?browse=293">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'anak-danau-thumbnail-master'))}
-      alt={'angkara-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=300">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'Bekal-Fisabilillah-Production'))}
-      alt={'bukan-kupu-kupu-malam'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=298">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'Didekatmu-Fisabilillah-Production'))}
-      alt={'kambing-hitam-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=299">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'Setelah-Akad-IqbalFahlevi'))}
-      alt={'kayon-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
+<SimpleGrid columns={[1, null, 3]} spacingX={34} spacingY={10}>
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'anak-danau-thumbnail-masterBW'))}
+    alt={'anak-danau-thumbnail-masterBW'}
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'Bekal_ISI_1920-1080 - Fisabilillah ProductionBW'))}
+    alt={'Bekal_ISI_1920-1080 - Fisabilillah ProductionBW'}
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'Didekatmu_ISI_1920-1080 - Fisabilillah ProductionBW'))}
+    alt={'Didekatmu_ISI_1920-1080 - Fisabilillah ProductionBW'}
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'Setelah Akad_ISI_1920-1280 - Iqbal FahleviBW'))}
+    alt={'Setelah Akad_ISI_1920-1280 - Iqbal FahleviBW'}
+  />
 </SimpleGrid>

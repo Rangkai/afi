@@ -1,14 +1,23 @@
 ---
 title: Bandung
-slug: city-bandung
+slug: kota-bandung
 desc: Kota kreatif, anak muda penuh inisiatif.
+headline: Menelusuri Ketakterhubungan dan Ketaksinambungan dalam Komunitas Film Bandung
+author: Gorivana Ageza
 banner: '../images/cities/bandung/banner.jpg'
 thumb: '../images/cities/bandung/thumb.jpg'
 galleryDir: 'cities/bandung'
+graphFile: 'bandung.pdf'
 position: {
   left: 26.7%,
-  bottom: 18.5%
+  bottom: 24.5%
 }
+info: {
+  community: 15,
+  filmProduction: 75,
+  filmExhibition: 27
+}
+year: 2022
 ---
 
 import { GridItem, Text, Box, SimpleGrid } from '@chakra-ui/react';
@@ -21,11 +30,9 @@ import ImagePlay from '../components/ImagePlay';
 <GridContainer>
   <GridItemLeftContent />
   <GridItem>
-    ## Menelusuri Ketakterhubungan dan Ketaksinambungan dalam Komunitas Film Bandung
+  
 
-    <p className="caption">Gorivana Ageza</p>
-
-    Waktu menunjukkan pukul 19.12, dan Kedai Cas kian disesaki pengunjung. 
+    <p className="highlight">Waktu menunjukkan pukul 19.12, dan Kedai Cas kian disesaki pengunjung. 
     Santos-Bandung Film Festival (SBFF) memasuki sesi terakhir dalam rangkaian 
     acaranya yang berlangsung selama 20-22 Oktober 2017. SBFF adalah festival 
     yang diinisiasi oleh United Nations Educational, Scientific and Cultural 
@@ -33,7 +40,7 @@ import ImagePlay from '../components/ImagePlay';
     film dan Bandung sebagai kota desain untuk melakukan kolaborasi pemutaran 
     dengan saling bertukar film asal kota masing-masing. Kedai Cas menjadi lokasi 
     terakhir penyelenggaraan SBFF, setelah sesi-sesi pemutaran sebelumnya 
-    dilakukan di tiga tempat berbeda.
+    dilakukan di tiga tempat berbeda.</p>
 
     Kedai Cas sendiri merupakan kedai kopi milik dua sineas Bandung yang terletak 
     di gang seputaran Jalan Dipati Ukur. Bermula dari kerja sama program antara 
@@ -53,9 +60,7 @@ import ImagePlay from '../components/ImagePlay';
     menyadari dan memahami dirinya sendiri. Sayangnya, keterhubungan di 
     kalangan komunitas film di Bandung masih jauh panggang dari api.
 
-    <hr />
-
-    ### Ruang Pemutaran, Ruang Pertemuan
+    <h5>Ruang Pemutaran, Ruang Pertemuan</h5>
 
     Bersamaan dengan berhentinya program Nonton Film di Gang pada 2018, 
     “kemesraan” para pegiat antarkomunitas perlahan luntur. Deden M. Sahid, salah 
@@ -80,17 +85,10 @@ import ImagePlay from '../components/ImagePlay';
     Mahasiswa (LFM) ITB adalah contoh lain dari komunitas berbasis kampus yang 
     beraktivitas di semua lini perfilman, mulai dari produksi hingga apresiasi dan 
     kajian.
-  </GridItem>
-</GridContainer>
 
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'AFI_Ekosistem Bandung Indicinema Bandung')} alt={'AFI_Ekosistem Bandung Indicinema Bandung'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'AFI_Ekosistem Bandung Indicinema Bandung')} alt={'AFI_Ekosistem Bandung Indicinema Bandung'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Indicinema Bandung<br/>(Obrolan Minggu 1 Perempuan dan Dirinya)</p>
-  </GridItemLeftContent>
-  <GridItem>
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === '2019-Indicinema Bandung-Obrolan Minggu 1 Perempuan dan DirinyaBW'))} alt="2019-Indicinema Bandung-Obrolan Minggu 1 Perempuan dan DirinyaBW" filter="grayscale(100%)" />
+    <Text className="caption" mb="50px !important">Indicinema Bandung. (Obrolan Minggu 1 Perempuan dan Dirinya)</Text>
+
     Komunitas ekshibisi sendiri di Bandung dapat dibedakan berdasarkan film-film yang diputarkannya. Pertama, ekshibisi yang berfokus pada film-film lokal 
     Bandung. Sebagai contoh, Ruang Film Bandung lewat program Klinik Film 
     dan pemutaran bulanan Cinemora Open House oleh Cinemora. Berdasarkan 
@@ -166,18 +164,10 @@ import ImagePlay from '../components/ImagePlay';
     hadirnya ruang fisik dan momen, dimungkinkan pula terjalinnya keterhubungan 
     dan kebersamaan.
 
-    <hr />
-  </GridItem>
-</GridContainer>
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'AFI_Ekosistem Bandung Sebs Cine Club')} alt={'AFI_Ekosistem Bandung Sebs Cine Club'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'AFI_Ekosistem Bandung Sebs Cine Club')} alt={'AFI_Ekosistem Bandung Sebs Cine Club'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Sebs Cine Club<br/>(Shooting Maybe Someday Another Day But Not Today)</p>
-  </GridItemLeftContent>
-  <GridItem>
-    ### Tak Ada (Menara) Gading yang Tak Retak
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === '2020-Sebs Cine Club-Shooting Maybe Someday Another Day But Not Today 1BW'))} alt="2020-Sebs Cine Club-Shooting Maybe Someday Another Day But Not Today 1BW" filter="grayscale(100%)" />
+    <Text className="caption" mb="50px !important">Sebs Cine Club (Shooting Maybe Someday Another Day But Not Today)</Text>
+
+    <h5>Tak Ada (Menara) Gading yang Tak Retak</h5>
 
     Januari 2022 lalu, Coffie (Coordination for Film Festival in Indonesia) memulai 
     rangkaian diskusi publik yang mempertemukan penyelenggara berbagai festival 
@@ -208,17 +198,10 @@ import ImagePlay from '../components/ImagePlay';
     atas keberlangsungan komunitas sehingga secara kelembagaan komunitas-komunitas ini cenderung beroperasi sendiri-sendiri. Kendatipun ada kerja sama 
     antarkomunitas, sebagian bersifat pendek dan hanya bagian kecil dalam satu 
     acara, alih-alih kemitraan strategis jangka panjang.
-  </GridItem>
-</GridContainer>
 
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'AFI_Ekosistem Bandung Cinemora')} alt={'AFI_Ekosistem Bandung Cinemora'} mb="16px">
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'AFI_Ekosistem Bandung Cinemora')} alt={'AFI_Ekosistem Bandung Cinemora'} />
-    </Lightbox>
-    <p className="caption">Cinemora<br/>Shooting The Boy With Moving Image</p>
-  </GridItemLeftContent>
-  <GridItem>
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === '2021-Cinemora-Shooting The Boy With Moving ImageBW'))} alt="2021-Cinemora-Shooting The Boy With Moving ImageBW" filter="grayscale(100%)" />
+    <Text className="caption" mb="50px !important">Cinemora - Shooting The Boy With Moving Image</Text>
+
     Lebih lanjut, komunitas produksi asal Bandung juga amat minim melakukan 
     kerjasama dengan komunitas dari daerah lain. Seperti yang dikatakan Yustinus, 
     kerjasama yang ada bersifat personal yang mana didasarkan pada portofolio 
@@ -271,9 +254,7 @@ import ImagePlay from '../components/ImagePlay';
     bahwa pengetahuan yang diperoleh di bangku perkuliahan tidaklah cukup jika 
     tidak disertai pengalaman riil belajar secara langsung “lapangan”.
 
-    <hr />
-
-    ### Eksistensi dalam Dunia yang Diisolasi
+    <h5>Eksistensi dalam Dunia yang Diisolasi</h5>
 
     Dari sebuah kotak dus muncullah seorang anak laki-laki. Seiring waktu ia mulai 
     bertanya-tanya meratapi eksistensinya “…mengapa aku harus seperti mereka? 
@@ -351,17 +332,10 @@ import ImagePlay from '../components/ImagePlay';
     anggapan yang bersifat dualistik, yakni antara sesuatu yang “seru dan ringan 
     populer” dengan sesuatu yang "serius, mikir dalem, dan rumit”. Oposisi ini analog 
     dengan gambaran yang ditunjukkan oleh film _“Whispering Box”_
-  </GridItem>
-</GridContainer>
 
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'AFI_Ekosistem Bandung 4 GA Production')} alt={'AFI_Ekosistem Bandung 4 GA Production'} mb="16px">
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'AFI_Ekosistem Bandung 4 GA Production')} alt={'AFI_Ekosistem Bandung 4 GA Production'} />
-    </Lightbox>
-    <p className="caption">4 GA Production<br/>(Shooting Words)</p>
-  </GridItemLeftContent>
-  <GridItem>
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === '2020-4 GA Production-Shooting Words 2BW'))} alt="2020-4 GA Production-Shooting Words 2BW" filter="grayscale(100%)" />
+    <Text className="caption" mb="50px !important">4 GA Production - (Shooting Words)</Text>
+
     Dalam pengamatannya pada film-film pendek komunitas Bandung yang dirilis 
     pada tahun 2019-2020, Damar mencatat ada empat corak cerita yang dominan: 
     (1) horor, (2) elemen imajiner yang menginterupsi realitas, (3) konflik domestik 
@@ -392,9 +366,7 @@ import ImagePlay from '../components/ImagePlay';
     komunitasnya sendiri, pola tersebut masih tetap menggejala di skena komunitas 
     film Bandung.
 
-    <hr />
-
-    ### Semangat Membara, Minim Rencana
+    <h5>Semangat Membara, Minim Rencana</h5> 
 
     Kesamaan minat pada film merupakan alasan utama dari terbentuknya 
     komunitas-komunitas ini. Di samping itu, adapun alasan profesional, misalnya 
@@ -426,27 +398,7 @@ import ImagePlay from '../components/ImagePlay';
     antarkomunitas) karena lembaga sendiri tidak memiliki pendanaan dan 
     pengurusnya tidak bisa total mencurahkan waktu dan fokus lantaran “… masih 
     sibuk dengan periuk nasi nasing-masing”.
-  </GridItem>
-</GridContainer>
 
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Rentang Mitra<br/>Ekshibisi / Festival</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Rentang-Mitra-full')} alt={'Rentang-Mitra-full'} mb="16px">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Rentang-Mitra-thumb'))} alt={'Rentang-Mitra-thumb'} noBorder />
-    </Lightbox>
-    <p className="caption">Dari 10 kota, survei menemukan komunitas 
-      yang berfokus pada aktivitas ekshibisi 
-      berhasil menggaet beragam institusi di 
-      luar lingkaran komunitas film. Perusahaan 
-      atau institusi swasta adalah mayoritas 
-      kolaborator bagi komunitas penyelenggara 
-      pemutaran festival dan non-festival. 
-      Pemerintah ada di peringkat kedua, 
-      yang kemudian disusul oleh komunitas 
-      akar rumput.</p>
-  </GridItemLeftContent>
-  <GridItem>
     Berdasarkan pengamatannya, Malikkul berusaha menjabarkan “kekeliruan 
     manajerial” yang kerap terjadi dalam pengelolaan komunitas. BFC pun bukan 
     pengecualian. Manajemen komunitas terlalu bertumpu pada “passion” dan 
@@ -493,24 +445,7 @@ import ImagePlay from '../components/ImagePlay';
     menimbulkan “kesalahpahaman”. Pemerintah dianggap “mesra” dengan 
     komunitas-komunitas tertentu saja.
 
-    <hr />
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Strategi Komunikasi</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Strategi-Komunikasi-full')} alt={'Strategi-Komunikasi-full'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Strategi-Komunikasi-thumb'))} alt={'Strategi-Komunikasi-thumb'} noBorder />
-    </Lightbox>
-    <p className="caption">Seiring dengan tingginya penetrasi media 
-      digital di Indonesia dalam kehidupan sehari-hari, media sosial dan aplikasi pesan singkat 
-      menjadi dua medium utama yang digunakan 
-      dalam memasarkan acara pemutaran 
-      mereka.</p>
-  </GridItemLeftContent>
-  <GridItem>
-    ### Pandemi Memisahkan, Internet Menyatukan
+    <h5>Pandemi Memisahkan, Internet Menyatukan</h5>
 
     Pandemi COVID-19 telah mengubah kondisi skena komunitas film di Bandung. 
     Berbagai komunitas, terutama komunitas berbasis kampus, memindahkan 
@@ -544,52 +479,34 @@ import ImagePlay from '../components/ImagePlay';
     kesinambungan, kemampuan untuk melihat relevansi mutlak diperlukan dalam 
     berkomunitas maupun berkarya; bahwasanya berbagai hal saling terhubung, 
     memengaruhi, dan berdampak.
+
   </GridItem>
 </GridContainer>
 
 <hr />
+<Text mb="0px !important" fontSize="12.25px">Karya-karya pilihan kota</Text>
+<Text as="h3" mb={["20px !important", null, "32px !important"]} textTransform="uppercase" fontWeight="400 !important"> Bandung </Text>
 
-<Text as="h3" mt={["40px", null, "60px"]} mb={["20px !important", null, "32px !important"]}> Karya-karya pilihan Kota Bandung </Text>
-
-<SimpleGrid columns={[1, null, 2]} spacingX={34} spacingY={10}>
-  <ImagePlay href="https://rangkai.id/?browse=279">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ai-kamu-ai-aku-thumbnail-master'))}
-      alt={'ai-kamu-ai-aku-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=290">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ronda-thumbnail-master'))}
-      alt={'ronda-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=292">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'sang-penyulut-api-thumbnail-master'))}
-      alt={'sang-penyulut-api-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=276">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'the-sun-never-set-thumbnail-master'))}
-      alt={'the-sun-never-set-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=273">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'A Matter of Time_ISI_1920-1280 - Roufy Nasution'))}
-      alt={'A Matter of Time_ISI_1920-1280 - Roufy Nasution'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
+<SimpleGrid columns={[1, null, 3]} spacingX={34} spacingY={10}>
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ai-kamu-ai-aku-thumbnail-master'))}
+    alt={'ai-kamu-ai-aku-thumbnail-master'}
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ronda-thumbnail-master'))}
+    alt={'ronda-thumbnail-master'}
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'sang-penyulut-api-thumbnail-master'))}
+    alt={'sang-penyulut-api-thumbnail-master'}
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'the-sun-never-set-thumbnail-master'))}
+    alt={'the-sun-never-set-thumbnail-master'}
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'A Matter of Time_ISI_1920-1280 - Roufy Nasution'))}
+    alt={'A Matter of Time_ISI_1920-1280 - Roufy Nasution'}
+  />
 </SimpleGrid>
+

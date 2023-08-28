@@ -1,14 +1,23 @@
 ---
 title: Purbalingga
-slug: city-purbalingga
+slug: kota-purbalingga
 desc: Bermodal pengetahuan, berbuah tontonan.
+headline: Di Balik Langgengnya Film Purbalingga
+author: Muhammad Taufiqurrohman
 banner: '../images/cities/purbalingga/banner.jpg'
 thumb: '../images/cities/purbalingga/thumb.jpg'
 galleryDir: 'cities/purbalingga'
+graphFile: 'purbalingga.pdf'
 position: {
   left: 30%,
-  bottom: 16%
+  bottom: 22%
 }
+info: {
+  community: 5,
+  filmProduction: 25,
+  filmExhibition: 3
+}
+year: 2022
 ---
 
 import { GridItem, Text, Box, SimpleGrid } from '@chakra-ui/react';
@@ -21,11 +30,7 @@ import ImagePlay from '../components/ImagePlay';
 <GridContainer>
   <GridItemLeftContent />
   <GridItem>
-    ## Di Balik Langgengnya Film Purbalingga
-
-    <p className="caption">Muhammad Taufiqurrohman</p>
-
-    Film Purbalingga menjadi bagian dari gelombang film-film independen yang
+    <p className="highlight">Film Purbalingga menjadi bagian dari gelombang film-film independen yang
     tumbuh bagai jamur setelah Orde Baru tumbang. Khrisna Sen dalam _Sinema
     dan Kuasa_ (2009) mengemukakan bahwa film Indonesia pada masa Orde
     Baru kental dengan ideologi developmentalisme yang mendorong urbanisasi
@@ -42,7 +47,7 @@ import ImagePlay from '../components/ImagePlay';
     historiografi Orde Baru. Hal tersebut menunjukkan kekhasan film Purbalingga
     yang kental dengan kritik sosial terhadap dua warisan utama Orde Baru, yaitu
     developmentalisme dan militerisme. Tulisan ini berupaya merefleksikan apa yang
-    membuat dunia perfilman Purbalingga berdaya dan bertahan.
+    membuat dunia perfilman Purbalingga berdaya dan bertahan.</p>
 
     Film Purbalingga tidak bisa dilepaskan dari konteks perkembangan film di area
     Banyumas Raya. Sebagai informasi, Banyumas Raya meliputi lima kabupaten
@@ -89,38 +94,6 @@ import ImagePlay from '../components/ImagePlay';
     JKFB melakukan roadshow nonton dan diskusi film di sekolah-sekolah, lalu diikuti
     dengan lokakarya perfilman dan kegiatan mentoring produksi film, dari praproduksi hingga pasca-produksi.
 
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Harga Tiket</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Harga-Tiket')} alt={'Harga-Tiket'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Harga-Tiket-thumb'))} alt={'Harga-Tiket-thumb'} />
-    </Lightbox>
-    <p className="caption">Kontras dengan penayangan film yang
-      bersifat komersial oleh jaringan bioskop,
-      hampir seluruh kegiatan ekshibisi yang
-      diselenggarakan komunitas tidak
-      memungut tiket berbayar, terutama
-      pemutaran berskala kecil. Di satu sisi,
-      temuan ini mendemonstrasikan betapa
-      kehadiran komunitas berperan besar
-      dalam menyediakan akses alternatif bagi
-      publik untuk menikmati film. Di sisi lain,
-      hal ini mengindikasikan bahwa komunitas
-      film masih berstrategi menghimpun dan
-      memobilisasi sumber daya material dan
-      non-material demi keberlangsungan
-      program mereka. Namun, bertumpu pada
-      kesukarelaan, semangat kolektif dan jejaring
-      sosial, yang berulang kali disebut sebagai
-      pegangan dan modal sosial yang vital
-      dalam serangkaian wawancara dalam riset
-      ini, bisa menjadi pisau bermata dua terkait
-      keberlanjutan komunitas film.</p>
-  </GridItemLeftContent>
-  <GridItem>
     Film Purbalingga yang pertama diproduksi adalah _Orang Buta dan Penuntunnya_
     (Bowo Leksono, 2004). Film ini merupakan adaptasi dari cerita pendek Ahmad
     Tohari, _Mata yang Enak Dipandang_, berkisah tentang kehidupan seorang buta
@@ -174,9 +147,7 @@ import ImagePlay from '../components/ImagePlay';
     penuh dengan karya audio-visual yang relatif dibuat secara instan, apa resep
     dibalik sukses dan langgengnya produksi film Purbalingga?
 
-    <hr />
-
-    ### Menggarap yang dekat: tema sosial
+    <h5>Menggarap yang dekat: tema sosial</h5>
 
     Salah satu resep utama langgengnya film Purbalingga adalah pilihan untuk
     mengangkat tema-tema sosial yang dekat dengan keseharian para sineasnya.
@@ -254,21 +225,11 @@ import ImagePlay from '../components/ImagePlay';
     Rakyat_, yang terinspirasi dari fenomena bantuan beras busuk untuk masyarakat
     di sekitarnya.
 
-    <hr />
+    <h5>Menciptakan regenerasi</h5>
 
-    ### Menciptakan regenerasi
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'Foto bts-Izinkan Saya Menikahinya-2BW'))} alt="Foto bts-Izinkan Saya Menikahinya-2BW"  />
+    <Text className="caption" mb="50px !important">Foto bts-Izinkan Saya Menikahinya-2BW</Text>
 
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Izinkan Saya Menikahinya')} alt={'Izinkan Saya Menikahinya'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'Izinkan Saya Menikahinya')} alt={'Izinkan Saya Menikahinya'} mb="16px" />
-    </Lightbox>
-    <p className="caption">Izinkan Saya Menikahinya</p>
-  </GridItemLeftContent>
-  <GridItem>
     Resep lain langgengnya film Purbalingga adalah regenerasi yang berkelanjutan.
     Firman Fajar Wiguna, sebagai salah satu sineas muda Purbalingga yang sedang
     bersinar, bercerita tentang pertemuan pertamanya dengan film Purbalingga.
@@ -321,37 +282,7 @@ import ImagePlay from '../components/ImagePlay';
     dimana Sekber '65 dan juga guru pembimbing ekskul film memainkan peran
     yang sangat penting dalam mendampingi para siswa dalam melakukan
     pendekatan terhadap subyek film, Mbah Darsan.
-  </GridItem>
-</GridContainer>
 
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Rentang Budget <br /> Per Penyelenggaraan</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Rentang-Bujet')} alt={'Rentang-Bujet'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Rentang-Bujet-thumb'))} alt={'Rentang-Bujet-thumb'} />
-    </Lightbox>
-    <p className="caption">Sebagian besar kegiatan ekshibisi oleh
-      komunitas film berskala mikro, tetapi
-      tidak berarti jumlah kebutuhan dana
-      tidak menjadi soal. Sekitar 68% dari total
-      responden menyebutkan rentang dana
-      satu kegiatan pemutaran dapat mencapai
-      angka Rp 10 juta. Ini bukan jumlah yang
-      kecil. Sementara, festival-festival film yang
-      berskala nasional dan internasional, seperti
-      Festival Film Bandung oleh Rumah Film
-      Bandung, Festival Film Purbalingga oleh CLC
-      Purbalingga dan Lake Toba Film Festival
-      oleh RKI Docs di bawah naungan Rumah
-      Karya Indonesia, membutuhkan dana lebih
-      dari Rp 100 juta. Namun, seturut dengan
-      keragaman program non-pemutaran, jenisjenis film yang ditayangkan, dan jangkauan
-      penonton yang lebih luas, festival-festival
-      tersebut punya daya tawar lebih untuk
-      mendapatkan pendanaan, meliputi
-      pemerintah dan perusahaan.</p>
-  </GridItemLeftContent>
-  <GridItem>
     Tentu saja faktor Bowo Leksono dan CLC Purbalingga memainkan peran yang
     signifikan sebagai penghubung para sineas pelajar dengan Sekber 65. Sebagai
     informasi, Bowo Leksono merupakan pegiat senior dalam komunitas Gusdurian
@@ -438,21 +369,12 @@ import ImagePlay from '../components/ImagePlay';
     dan dibentuk sesuai standard CLC Purbalingga selaku mentor karena bak kertas
     kosong mereka belum memiliki referensi film yang lebih variatif.
 
-    <hr />
+    <h5>Menghidupkan jejaring</h5>
 
-    ### Menghidupkan jejaring
+    
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'DSC06662BW'))} alt="2019_CLC Purbalingga_Festival Film Purbalingga"  />
+    <Text className="caption" mb="50px !important">2019_CLC Purbalingga_Festival Film Purbalingga</Text>
 
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'To consequid ut aut aliquam adi quae')} alt={'To consequid ut aut aliquam adi quae'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'To consequid ut aut aliquam adi quae')} alt={'To consequid ut aut aliquam adi quae'} mb="16px" />
-    </Lightbox>
-    <p className="caption">2019_CLC Purbalingga_Festival Film Purbalingga</p>
-  </GridItemLeftContent>
-  <GridItem>
     Resep terakhir yang tak kalah penting adalah merawat dan menghidupkan
     jejaring. Bowo Leksono menuturkan bagaimana awal mula CLC Purbalingga
     dan JKFB akhirnya memilih menekuni pendampingan produksi film pelajar
@@ -513,24 +435,7 @@ import ImagePlay from '../components/ImagePlay';
     pendanaan, untuk waktu yang lama sejak tahun 2007 hingga 2015, FFP didanai
     secara swadaya oleh CLC Purbalingga dan JKFB. Sejak tahun 2016, pemerintah
     daerah memberikan bantuan lima puluh juta rupiah dalam pelaksanaan FFP.
-  </GridItem>
-</GridContainer>
 
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Jenis Film Ekshibisi</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Jenis-Film-Ekshibisi')} alt={'Jenis-Film-Ekshibisi'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Jenis-Film-Ekshibisi-thumb'))} alt={'Jenis-Film-Ekshibisi-thumb'} />
-    </Lightbox>
-    <p className="caption">Seiring dengan jenis-jenis film yang
-      diproduksi yang tercatat di survei ini,
-      jenis film fiksi adalah pilihan populer
-      di kegiatan ekshibisi oleh komunitas.
-      Hal ini lumrah mengingat film-film yang
-      ditayangkan di kalangan komunitas berasal
-      dari sesama komunitas.</p>
-  </GridItemLeftContent>
-  <GridItem>
     Selain bekerja sama dengan berbagai kalangan dari masyarakat sipil, para pegiat
     komunitas film Purbalingga kini juga mendapatkan dukungan pemerintah, baik
     pusat maupun daerah. Dalam penuturan Kurniawan Hery S., pihak sekolahnya
@@ -582,3 +487,23 @@ import ImagePlay from '../components/ImagePlay';
 
   </GridItem>
 </GridContainer>
+
+<hr />
+
+<Text mb="0px !important" fontSize="12.25px">Karya-karya pilihan kota</Text>
+<Text as="h3" mb={["20px !important", null, "32px !important"]} textTransform="uppercase" fontWeight="400 !important"> Purbalingga </Text>
+
+<SimpleGrid columns={[1, null, 3]} spacingX={34} spacingY={10}>
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'gugat-pegat-thumbnail-masterBW'))}
+    alt={'gugat-pegat-thumbnail-masterBW'}
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'izinkan-saya-menikahinya-thumbnail-masterBW'))}
+    alt={'izinkan-saya-menikahinya-thumbnail-masterBW'}
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'kami-hanya-menjalankan-perintah-jenderal-thumbnail-masterBW'))}
+    alt={'kami-hanya-menjalankan-perintah-jenderal-thumbnail-masterBW'}
+  />
+</SimpleGrid>

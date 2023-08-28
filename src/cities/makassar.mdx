@@ -1,14 +1,23 @@
 ---
 title: Makassar
-slug: city-makassar
+slug: kota-makassar
 desc: Mengelola peluang sampai ujung pandang.
+headline: Layar Berlayar
+author: Alghifahri Jasin
 banner: '../images/cities/makassar/banner.jpg'
 thumb: '../images/cities/makassar/thumb.jpg'
 galleryDir: 'cities/makassar'
+graphFile: 'makassar.pdf'
 position: {
   left: 52.5%,
-  bottom: 31%
+  bottom: 36%
 }
+info: {
+  community: 8,
+  filmProduction: 40,
+  filmExhibition: 6
+}
+year: 2022
 ---
 
 import { GridItem, Text, Box, SimpleGrid } from '@chakra-ui/react';
@@ -19,45 +28,16 @@ import Lightbox from '../components/Lightbox';
 import ImagePlay from '../components/ImagePlay';
 
 <GridContainer>
-  <GridItemLeftContent />
-  <GridItem>
-    ## Layar Berlayar
-
-    <p className="caption">Alghifahri Jasin</p>
-
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Produksi Karya Komunitas Film</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Jenis-Karya')} alt={'Jenis-Karya'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Jenis-Karya-thumb'))} alt={'Jenis-Karya-thumb'} noBorder />
-    </Lightbox>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Rentang-Mitra')} alt={'Rentang-Mitra'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Rentang-Mitra-thumb'))} alt={'Rentang-Mitra-thumb'} noBorder />
-    </Lightbox>
-    <p className="caption">Sejak 2019, komunitas film dari 10 penjuru
-      kota memproduksi dalam jumlah yang
-      mengesankan yakni 244 film. Lebih dari 25%
-      karya berupa film fiksi pendek, diikuti dengan
-      film dokumenter pendek sebanyak 13 karya.
-      Sebagian besar produksi film-film ini adalah
-      hasil kolaborasi dengan beragam mitra.
-      Mulai dari perusahaan, institusi Pendidikan,
-      lembaga swadaya masyarakat, pemerintah
-      hingga komunitas akar rumput.</p>
-  </GridItemLeftContent>
   <GridItem>
 
-    Layar-layar kapal ramai terkembang berabad-abad lalu di laut Makassar. Semasa
+    <p className="highlight">Layar-layar kapal ramai terkembang berabad-abad lalu di laut Makassar. Semasa
     Sultan Hasanuddin menjabat sebagai Raja Gowa ke-16, ia memiliki satu tokoh
     Panglima Angkatan Laut yang begitu ditakuti yakni Karaeng Bontomarannu.
     Kepingan cerita tentang Karaeng Bontomarannu yang pernah memimpin
     penyerangan ke Buton, sebanyak 700 buah kapal dan 20.000 prajurit ia kerahkan
     untuk menyerang Kerajaan Buton yang saat itu berafiliasi dengan Belanda.
     Fragmen kisah Karaeng Bontomarannu tersebut masih terus hidup dalam
-    memori kolektif masyarakat Makassar.
+    memori kolektif masyarakat Makassar.</p>
 
     Kini layar-layar yang terbentang adalah layar-layar gambar bergerak. Sinema
     beserta sineasnya tumbuh beriringan setiap tahun di Makassar. Kawan-kawan
@@ -110,30 +90,6 @@ import ImagePlay from '../components/ImagePlay';
     yang sama, _Jejak-jejak Kecil_ yang digarap oleh mahasiswa IKM berkerja sama
     dengan Dinas Pariwisata Kota Makassar diproduksi dalam bentuk DVD dan
     sebanyak 2.500 keping habis terjual.
-
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Budget dan Sumber Dana</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Rentang-Budget')} alt={'Rentang-Budget'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Rentang-Budget-thumb'))} alt={'Rentang-Budget-thumb'} noBorder />
-    </Lightbox>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Sumber-Dana-Produksi-Karya')} alt={'Sumber-Dana-Produksi-Karya'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Sumber-Dana-Produksi-Karya-thumb'))} alt={'Sumber-Dana-Produksi-Karya-thumb'} noBorder />
-    </Lightbox>
-    <p className="caption">Mayoritas film-film yang diproduksi
-      komunitas film bermodalkan tak lebih dari
-      10 juta per karya. Hal ini bisa dimaklumi
-      mengingat sumber daya yang terbatas.
-      Sumber pendanaan adalah hasil subsidi dari
-      beragam ‘kantong’, mulai dari uang pribadi,
-      iuran anggota, donasi, usaha periklanan,
-      video kawinan hingga kerjasama dengan
-      pemerintah, LSM dan lembaga donor.</p>
-  </GridItemLeftContent>
-  <GridItem>
 
     Siklus perfilman Makassar semakin ramai berkat kesadaran berbagi pengetahuan
     ƒdan tumbuh bersama. Berpijak dari dua kesadaran tersebut, pada tahun 2008,
@@ -204,21 +160,11 @@ import ImagePlay from '../components/ImagePlay';
     sesuatu yang universal, sehingga penonton di luar Makassar bisa merasa film itu
     relevan.”
 
-    <hr />
+    <h5>Kelompok Film Makassar</h5>
 
-    ### Kelompok Film Makassar
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'Basri _ Salmah_BTS DAY 2_1 (23 of 99)BW'))} alt="2022_Hore Pictures_Basri & Salmah_BTS DAY"  />
+    <Text className="caption" mb="50px !important">2022_Hore Pictures_Basri & Salmah_BTS DAY</Text>
 
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'makassar1')} alt={'Makassar 1'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'makassar1')} alt={'Makassar 1'} mb="16px" />
-    </Lightbox>
-    <p className="caption">2022_Hore Pictures_Basri & Salmah_BTS DAY</p>
-  </GridItemLeftContent>
-  <GridItem>
     Kebutuhan berjejaring dan berkumpul mempertemukan sejumlah komunitas.
     Pertemuan antar komunitas melalui rangkaian ekshibisi bisa dilihat sebagai
     ruang bertukar pengetahuan. Tahun 2016 Cinema Aprisiator Makassar, sekarang
@@ -282,26 +228,6 @@ import ImagePlay from '../components/ImagePlay';
     arahan Rachmat Mustamin membicarakan _lipa_ (sarung) sebagai warisan tradisi
     Sulawesi Selatan.
 
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <p className="info">Distribusi Karya</p>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'Distribusi-Karya')} alt={'Distribusi-Karya'} mb="16px" size="2xl">
-      <GatsbyImage image={getImage(props.data.gallery.nodes.find(item => item.name === 'Distribusi-Karya-thumb'))} alt={'Distribusi-Karya-thumb'} noBorder />
-    </Lightbox>
-    <p className="caption">Keberagaman ekosistem yang kerap
-      dianggap pinggiran membuka jalurjalur komunitas film untuk menemui
-      penonton karya mereka. Selain pemutaran
-      konvensional seperti pemutaran film oleh
-      komunitas ekshibisi dan festival film, terlihat
-      jelas dalam survei bahwa kehadiran medium
-      digital menciptakan layar-layar daring yang
-      membantu distribusi film.</p>
-  </GridItemLeftContent>
-  <GridItem>
-
     Kelompok film lainnya bermunculan dari kampus ISBI Sulsel. Dari mahasiswa
     TV & Media lahir dua kelompok film yaitu Kamar Senyap (2017) dan Tobaine
     Project (2018). Kedua kelompok ini punya motif yang berbeda. Kamar Senyap
@@ -354,20 +280,10 @@ import ImagePlay from '../components/ImagePlay';
     rakyat di tengah-tengah masyarakat adalah bentuk mengembalikan kembali film
     tersebut ke tempatnya.
 
-    <hr />
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === 'bts 3BW'))} alt="2022_Hore Pictures_Basri & Salmah_BTS DAY"  />
+    <Text className="caption" mb="50px !important">n.d_Kamar Senyap_Syuting</Text>
 
-  </GridItem>
-</GridContainer>
-
-<GridContainer>
-  <GridItemLeftContent>
-    <Lightbox image={props.data.gallery.nodes.find(item => item.name === 'makassar2')} alt={'Makassar 2'}>
-      <SquareImage image={props.data.gallery.nodes.find(item => item.name === 'makassar2')} alt={'Makassar 2'} mb="16px" />
-    </Lightbox>
-    <p className="caption">n.d_Kamar Senyap_Syuting</p>
-  </GridItemLeftContent>
-  <GridItem>
-    ### Siasat Badai Pandemi dan Yang Bertahan dari Badai
+    <h5>Siasat Badai Pandemi dan Yang Bertahan dari Badai</h5>
 
     Tidak lama setelah Presiden Jokowi Widodo mengumumkan Indonesia darurat
     pandemi COVID-19 pada tanggal 2 Maret 2020, tagar diRumahAja berterbaran di
@@ -423,31 +339,16 @@ import ImagePlay from '../components/ImagePlay';
 
 <hr />
 
-<Text as="h3" mt={["40px", null, "60px"]} mb={["20px !important", null, "32px !important"]}> Karya-karya pilihan Kota Makassar </Text>
+<Text mb="0px !important" fontSize="12.25px">Karya-karya pilihan kota</Text>
+<Text as="h3" mb={["20px !important", null, "32px !important"]} textTransform="uppercase" fontWeight="400 !important"> Makassar </Text>
 
-<SimpleGrid columns={[1, null, 2]} spacingX={34} spacingY={10}>
-  <ImagePlay href="https://rangkai.id/?browse=296">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'stay-strong-thumbnail-master'))}
-      alt={'stay-strong-thumbnail-master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=278">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'the-netral-thumbnail master'))}
-      alt={'the-netral-thumbnail master'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
-  <ImagePlay href="https://rangkai.id/?browse=277">
-    <Box 
-      as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'Candu_ISI_1920-1280 - Haediqal'))}
-      alt={'Candu_ISI_1920-1280 - Haediqal'}
-      border="2px solid"
-      borderColor="brandRed.500"
-    />
-  </ImagePlay>
+<SimpleGrid columns={[1, null, 3]} spacingX={34} spacingY={10}>
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'Candu_ISI_1920-1280 - HaediqalBW'))}
+    alt={'Candu_ISI_1920-1280 - HaediqalBW'}
+  />
+  <Box 
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'the-netral-thumbnail masterBW'))}
+    alt={'the-netral-thumbnail masterBW'}
+  />
 </SimpleGrid>
