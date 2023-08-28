@@ -155,7 +155,7 @@ function EcosystemDetail({ data, children }) {
                 fontSize="14px"
                 mb="5px"
               >
-                Author
+                Penulis
               </Text>
               <Heading
                 as="h3"

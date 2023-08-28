@@ -274,6 +274,8 @@ import ButtonLink from '../components/ButtonLink';
     komunitas film di Kupang bisa terus hidup dan berkembang karena satu sama
     lain.
 
+    <hr />
+
     <b>AFI 2023 menindaklanjuti hasil penelitian di tiga kota, salah satunya Kota Kupang.
       Pemilihan kota tersebut berdasarkan riset terkait potensi pengembangan ekosistem perfilman dan keterlibatan
       dukungan pemerintah daerah pada kegiatan komunitas. Program Tindak Lanjut disesuaikan dengan riset dan kebutuhan setiap kota.
@@ -302,15 +304,16 @@ import ButtonLink from '../components/ButtonLink';
 <hr />
 
 <Text mb="0px !important" fontSize="12.25px">Karya-karya pilihan kota</Text>
-<Text as="h3" mb={["20px !important", null, "32px !important"]} textTransform="uppercase" fontWeight="400 !important"> Kupang </Text>
+<Text mb={["10px !important", null, "0px !important"]} as="h3" textTransform="uppercase" fontWeight="400 !important"> Kupang </Text>
+<Text mb={["30px !important", null, "32px !important"]} fontSize="12.25px" lineHeight="20px !important">Film tidak lagi dapat diakses karena telah ditayangkan pada Apresiasi Film Indonesia periode tahun 2022.</Text>
 
 <SimpleGrid columns={[1, null, 3]} spacingX={34} spacingY={10}>
   <Box 
-    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ada-apa-dengan-ibu-thumbnail-master'))}
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ada-apa-dengan-ibu-thumbnail-masterBW'))}
     alt={'ada-apa-dengan-ibu-thumbnail-master'}
   />
   <Box 
-    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'doa-perantau-thumbnail-master'))}
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'doa-perantau-thumbnail-masterBW'))}
     alt={'doa-perantau-thumbnail-master'}
   />
 </SimpleGrid>
