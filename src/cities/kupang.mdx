@@ -7,7 +7,7 @@ author: Nurhildayati
 banner: '../images/cities/kupang/banner.jpg'
 thumb: '../images/cities/kupang/thumb.jpg'
 galleryDir: 'cities/kupang'
-graphFile: 'kupang.pdf'
+graphFile: 'GrafikData_Kupang.pdf'
 position: {
   left: 62.5%,
   bottom: 7.5%
@@ -45,7 +45,7 @@ import ButtonLink from '../components/ButtonLink';
     suatu kerutinan pertemuan, yang pada prosesnya menjadi cikal bakal kegiatan
     komunitas film di Kota Kupang.</p>
 
-    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === '2020_PRODUKSI FILM OE LO_LIF_Komunitas Film KupangBW'))} alt="2020_PRODUKSI FILM OE LO_LIF_Komunitas Film KupangBW" filter="grayscale(100%)" />
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === '2020_PRODUKSI FILM OE LO_LIF_Komunitas Film KupangBW'))} alt="2020_PRODUKSI FILM OE LO_LIF_Komunitas Film KupangBW"  />
     <Text className="caption" mb="50px !important">Produksi film OE LO'LIF (2020) oleh Komunitas Film Kupang</Text>
 
     Komunitas film memungkinkan perluasan partisipasi masyarakat di perfilman.
@@ -81,7 +81,7 @@ import ButtonLink from '../components/ButtonLink';
 
     <h5>Titik Mula KFK dan Beginner</h5>
 
-    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === '2022_Komunitas Film Kupang_Flobamora Film FestivalBW'))} alt="2020_PRODUKSI FILM OE LO_LIF_Komunitas Film KupangBW" filter="grayscale(100%)" />
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === '2022_Komunitas Film Kupang_Flobamora Film FestivalBW'))} alt="2020_PRODUKSI FILM OE LO_LIF_Komunitas Film KupangBW"  />
     <Text className="caption" mb="50px !important">Pelaksanaan kegiatan Flobamora Film Festival (2022) oleh Komunitas Film Kupang</Text>
 
     Sejumlah film nasional berbiaya besar telah dibuat dengan mengambil cerita
@@ -143,7 +143,7 @@ import ButtonLink from '../components/ButtonLink';
     Layar Merdeka, dan Screening for Healing (untuk korban badai di Pulau Timor
     dan NTT pada 2019).
 
-    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === '2020_PRODUKSI FILM OE LO_LIF_Komunitas Film Kupang(1)BW'))} alt="2020_PRODUKSI FILM OE LO_LIF_Komunitas Film KupangBW" filter="grayscale(100%)" />
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === '2020_PRODUKSI FILM OE LO_LIF_Komunitas Film Kupang(1)BW'))} alt="2020_PRODUKSI FILM OE LO_LIF_Komunitas Film KupangBW"  />
     <Text className="caption" mb="50px !important">Pelaksanaan kegiatan Flobamora Film Festival (2022) oleh Komunitas Film Kupang</Text>
 
     Kegiatan-kegiatan ini pada prosesnya mengundang banyak keterlibatan publik,
@@ -221,7 +221,7 @@ import ButtonLink from '../components/ButtonLink';
     menarik dan tidak membosankan. Ada yang dipelajari dari banyak kesalahan
     yang membuat saya semakin ingin berbenah dan berkembang,” ungkap Ken.
 
-    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === '2020_PRODUKSI FILM OE LO_LIF_Komunitas Film Kupang(2)BW'))} alt="2020_PRODUKSI FILM OE LO_LIF_Komunitas Film KupangBW" filter="grayscale(100%)" />
+    <Box as={GatsbyImage} mb="8px" mt="10px" image={getImage(props.data.gallery.nodes.find(item => item.name === '2020_PRODUKSI FILM OE LO_LIF_Komunitas Film Kupang(2)BW'))} alt="2020_PRODUKSI FILM OE LO_LIF_Komunitas Film KupangBW"  />
     <Text className="caption" mb="50px !important">Produksi film OE LO'LIF (2020) oleh Komunitas Film Kupang</Text>
 
     Kerja komunitas film di Indonesia banyak yang bersifat sukarela dan Kupang
@@ -274,6 +274,8 @@ import ButtonLink from '../components/ButtonLink';
     komunitas film di Kupang bisa terus hidup dan berkembang karena satu sama
     lain.
 
+    <hr />
+
     <b>AFI 2023 menindaklanjuti hasil penelitian di tiga kota, salah satunya Kota Kupang.
       Pemilihan kota tersebut berdasarkan riset terkait potensi pengembangan ekosistem perfilman dan keterlibatan
       dukungan pemerintah daerah pada kegiatan komunitas. Program Tindak Lanjut disesuaikan dengan riset dan kebutuhan setiap kota.
@@ -302,15 +304,16 @@ import ButtonLink from '../components/ButtonLink';
 <hr />
 
 <Text mb="0px !important" fontSize="12.25px">Karya-karya pilihan kota</Text>
-<Text as="h3" mb={["20px !important", null, "32px !important"]} textTransform="uppercase" fontWeight="400 !important"> Kupang </Text>
+<Text mb={["10px !important", null, "0px !important"]} as="h3" textTransform="uppercase" fontWeight="400 !important"> Kupang </Text>
+<Text mb={["30px !important", null, "32px !important"]} fontSize="12.25px" lineHeight="20px !important">Film tidak lagi dapat diakses karena telah ditayangkan pada Apresiasi Film Indonesia periode tahun 2022.</Text>
 
 <SimpleGrid columns={[1, null, 3]} spacingX={34} spacingY={10}>
   <Box 
-    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ada-apa-dengan-ibu-thumbnail-master'))}
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'ada-apa-dengan-ibu-thumbnail-masterBW'))}
     alt={'ada-apa-dengan-ibu-thumbnail-master'}
   />
   <Box 
-    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'doa-perantau-thumbnail-master'))}
+    as={GatsbyImage} image={getImage(props.data.gallery.nodes.find(item => item.name === 'doa-perantau-thumbnail-masterBW'))}
     alt={'doa-perantau-thumbnail-master'}
   />
 </SimpleGrid>

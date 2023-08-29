@@ -384,8 +384,8 @@ export default function Home({ data }) {
           <Box
             as={GatsbyImage}
             display={['none', null, 'block']}
-            w="100vw"
-            h="auto"
+            w="100%"
+            h="380px"
             image={karyaPilihan}
             alt="Karya karya Pilihan"
             quality={100}
