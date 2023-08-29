@@ -242,86 +242,7 @@ const teams2023 = [
 function Apa({ data }) {
   const whatBanner = getImage(data.file);
   const marlianaTalks = getImage(data.marlianaTalks);
-  const images = data.allFile.nodes;
   const { getCol } = useLayout();
-
-  const people = [
-    {
-      image: getImage(images.find((image) => image.name === 'AFI_Apa Hilmar')),
-      name: 'Hilmar Farid',
-      division: 'Dirjen Kebudayaan',
-    },
-    {
-      image: getImage(images.find((image) => image.name === 'AFI_Apa Ahmad')),
-      name: 'Ahmad Mahendra',
-      division: 'Direktur Perfilman, Musik dan Media Baru',
-    },
-    {
-      image: getImage(images.find((image) => image.name === 'AFI_Apa Marlina')),
-      name: 'Marlina Yulianty Machfud',
-      division: 'Pamong Budaya Bidang Perfilman',
-    },
-    {
-      image: getImage(images.find((image) => image.name === 'AFI_Apa Pandu')),
-      name: 'Pandu Pradana',
-      division: 'Kasubag Tata Usaha/Pamong Budaya Bidang Perfilman',
-    },
-    {
-      image: getImage(images.find((image) => image.name === 'AFI_Apa Sastha')),
-      name: 'Sastha Sunu',
-      division: 'Research Advisor',
-    },
-    {
-      image: getImage(images.find((image) => image.name === 'AFI_Apa Muhammad')),
-      name: 'Muhammad Abraham',
-      division: 'Tech & Data Advisor',
-    },
-    {
-      image: getImage(images.find((image) => image.name === 'AFI_Apa Adrian')),
-      name: 'Adrian Jonathan Pasaribu',
-      division: 'Research Director',
-    },
-    {
-      image: getImage(images.find((image) => image.name === 'AFI_Apa Redemptus')),
-      name: 'Redemptus Rangga Raditya',
-      division: 'Program Director',
-    },
-    {
-      image: getImage(images.find((image) => image.name === 'AFI_Apa Adinda')),
-      name: 'Adinda Zakiah',
-      division: 'Research Coordinator',
-    },
-    {
-      image: getImage(images.find((image) => image.name === 'AFI_Apa Levri')),
-      name: 'Levriana Yustriani',
-      division: 'Editor',
-    },
-    {
-      image: getImage(images.find((image) => image.name === 'AFI_Apa Mazda')),
-      name: 'Mazda Radita Roromari',
-      division: 'Screening Director & Researcher',
-    },
-    {
-      image: getImage(images.find((image) => image.name === 'AFI_Apa Alex')),
-      name: 'Alexander Mathius',
-      division: 'Film Curator',
-    },
-    {
-      image: getImage(images.find((image) => image.name === 'AFI_Apa Dwi')),
-      name: 'Dwi Arieska',
-      division: 'Researcher',
-    },
-    {
-      image: getImage(images.find((image) => image.name === 'AFI_Apa Ardhi')),
-      name: 'Ardhi Yudho',
-      division: 'Web & Design',
-    },
-    {
-      image: getImage(images.find((image) => image.name === 'AFI_Apa Roeliman')),
-      name: 'Nurul Iman',
-      division: 'Web & Design',
-    },
-  ];
 
   return (
     <Layout>
@@ -560,14 +481,6 @@ export const query = graphql`
       name
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED)
-      }
-    }
-    allFile(filter: {relativeDirectory: {eq: "what"}}) {
-      nodes {
-        name
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
       }
     }
   }
