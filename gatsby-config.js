@@ -66,6 +66,6 @@ module.exports = {
   ],
   siteMetadata: {
     title: 'AFI - Apresiasi Film Indonesia',
-    description: 'Untuk mengapresiasi film Indonesia seluas-luasnya, perlu diusahakan berbagai cara untuk memperkenalkan keragamannya. APRESIASI FILM INDONESIA 2022 adalah upaya untuk menelusuri akar dan ranting budaya perfilman di Indonesia melalui kolaborasi pendataan dan kuratorial. Program ini dirintis oleh Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi dan dikelola oleh Cinema Poetica dan Rangkai.',
+    description: 'APRESIASI FILM INDONESIA adalah upaya untuk menelusuri akar dan ranting budaya perfilman di Indonesia melalui kolaborasi pendataan, kuratorial disertai dengan tindak lanjut berdasarkan hasil riset kuantitatif & kualitatif. Program ini dirintis oleh Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi dan dikelola oleh Cinema Poetica dan Rangkai.',
   },
 };

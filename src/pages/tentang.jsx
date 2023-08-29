@@ -263,7 +263,7 @@ export function Head() {
 
 export const query = graphql`
   query AboutPageQuery {
-    file(relativePath: {eq: "about/tentang.png"}) {
+    file(relativePath: {eq: "about/tentang.jpg"}) {
       name
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)

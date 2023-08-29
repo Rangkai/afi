@@ -21,14 +21,13 @@ function Kontak() {
               fontSize={['30px', '25px', null, null, '28px']}
               mb="24px"
             >
-              CONTACT US AT APRESIASI FILM INDONESIA
+              KONTAK KAMI, APRESIASI FILM INDONESIA
             </Heading>
             <Box pr={['0', null, '208px']}>
               <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
-                If you have any questions or comments, please don&apos;t hesitate to reach out to
-                us using the button below. For general enquiries, you can also send us a message
-                using the button on the left side of this page. Our team is happy to assist
-                you - we look forward to hearing from you!
+                Kami terbuka untuk segala pesan, pertanyaan, kritik, juga saran dari Anda.
+                Sila kontak kami dengan mengisi formulir di bawah. Informasi lanjutan
+                terkait AFI juga bisa diakses melalui laman sosial media kami.
               </Text>
             </Box>
             <Box

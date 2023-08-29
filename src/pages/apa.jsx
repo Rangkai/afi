@@ -544,7 +544,7 @@ export function Head() {
 
 export const query = graphql`
   query WhatPageQuery {
-    file(relativePath: {eq: "what/apa-header.jpg"}) {
+    file(relativePath: {eq: "what/ApaSiapaBW.jpg"}) {
       name
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)

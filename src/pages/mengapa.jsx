@@ -452,7 +452,7 @@ export function Head() {
 
 export const query = graphql`
   query HowPageQuery {
-    file(relativePath: {eq: "how/mengapa-header.jpg"}) {
+    file(relativePath: {eq: "how/MengapaBW.jpg"}) {
       name
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
