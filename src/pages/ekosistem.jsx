@@ -246,7 +246,7 @@ export function Head() {
 
 export const query = graphql`
   query EcosystemPageQuery {
-    file(relativePath: {eq: "ecosystem/ecosystem_banner.jpg"}) {
+    file(relativePath: {eq: "ecosystem/EkosistemBW.jpg"}) {
       name
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)

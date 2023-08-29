@@ -478,7 +478,7 @@ export function Head() {
 
 export const query = graphql`
   query TindakLanjutQuery {
-    file(relativePath: {eq: "follows/follows-header.jpg"}) {
+    file(relativePath: {eq: "follows/TindakBW.jpg"}) {
       name
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
