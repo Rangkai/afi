@@ -357,11 +357,10 @@ export default function Home({ data }) {
         <Box
           as={GatsbyImage}
           display={['none', null, 'block']}
-          w="100%"
-          h="380px"
+          w="100vw"
+          h="calc(100vw / 4)"
           image={karyaPilihan}
           alt="Karya karya Pilihan"
-          quality={100}
         />
         <Box
           as={GatsbyImage}
