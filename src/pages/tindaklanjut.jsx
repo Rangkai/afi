@@ -18,7 +18,7 @@ const citiesData = [
     label: 'Balikpapan',
     content: (images) => (
       <>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Kegiatan implementasi tindak lanjut Apresiasi Film Indonesia
           di Kota Balikpapan yang diadakan pada Sabtu,15 April 2023,
           di Senyiur Meeting Room, Swiss-Belhotel Balikpapan. Acara yang berlangsung
@@ -26,7 +26,7 @@ const citiesData = [
           pembicara dan peserta dengan tujuan menggali potensi serta
           mengembangkan sumber daya, khususnya di bidang perfilman.
         </Text>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Pembicara yang hadir dalam acara ini antara lain,
           Marlina Yulianti –Pamong Budaya Perfilman di Direktorat Perfilman,
           Musik dan Media Kementerian Kebudayaan, Pendidikan, Riset dan Teknologi,
@@ -35,14 +35,14 @@ const citiesData = [
           Masing-masing pembicara membantu memberikan pemahaman tentang program Kemdikbud,
           pengelolaan festival, dan penulisan naskah film secara mendalam.
         </Text>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Acara ini dihadiri oleh 18 peserta yang terdiri dari para
           pelaku perfilman baik yang mewakili komunitas maupun individu
           dan para pegiat film di Balikpapan. Dalam kegiatan ini, Lintang Aulia
           selaku manajer proyek Tindak Lanjut dan Redemptus Rangga Raditya selaku direktur program
           Apresiasi Film Indonesia bertindak sebagai pelaksana program.
         </Text>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Salah satu sorotan penting dalam acara ini adalah perbincangan
           mengenai penyelenggaraan Balikpapan Film Festival (BFF) dan
           tantangan yang dihadapi oleh penyelenggara.
@@ -73,7 +73,7 @@ const citiesData = [
           Marlina Yulianty Machfud (Pamong Budaya Bidang Perfilman)
           memberi tanggapan terhadap paparan hasil riset
         </Text>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Namun, dengan infrastruktur yang memadai, pembicara juga
           menggambarkan kendala yang dihadapi oleh para pelaku film di Balikpapan.
           Minimnya pengetahuan tentang eksibisi atau pengelolaan festival
@@ -82,7 +82,7 @@ const citiesData = [
           berpendapat bahwa pelatihan dalam bidang ini dapat meningkatkan
           kualitas pelaksanaan BFF serta menghasilkan program film yang lebih berkualitas.
         </Text>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Di sisi lain, pelatihan skenario juga dibahas secara mendalam
           dalam acara ini oleh Angkasa Ramadhan. Meskipun kebanyakan diskusi
           terfokus pada teknis penulisan naskah, pembicara menyoroti kurangnya
@@ -113,13 +113,13 @@ const citiesData = [
           Marlina Yulianty Machfud (Pamong Budaya Bidang Perfilman)
           memberi tanggapan terhadap paparan hasil riset
         </Text>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Dalam perbandingan dengan kota Palangkaraya, pembicara menunjukkan bahwa
           cerita film pendek di Balikpapan masih memiliki ruang untuk pertumbuhan
           yang lebih besar dan menarik. Ini menjadi tantangan bagi komunitas film
           untuk terus berinovasi dalam pengembangan karya-karya berkualitas.
         </Text>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Kegiatan Tindak Lanjut yang dilakukan Apresiasi Film Indonesia adalah
           bentuk upaya jangka pendek untuk pengembangan sumber daya dan pengetahuan
           pelaku perfilman. Di Balikpapan, melalui serangkaian dialog dan pelatihan,
@@ -137,7 +137,7 @@ const citiesData = [
     label: 'Banda Aceh',
     content: (images) => (
       <>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Pada 3 Juni 2023, di kota Banda Aceh, acara Tindak Lanjut
           yang merupakan salah satu program dari Apresiasi
           Film Indonesia 2023ditangani oleh tiga orang dari tim AFI,
@@ -147,21 +147,21 @@ const citiesData = [
           Kegiatan ini berlangsung dari pukul 09.00 hingga 18.00 WIB,
           bertempat di Rasamala Hotel, Kota Banda Aceh.
         </Text>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Dua pembicara yang hadir sebagai narasumber adalah
           Alex Sihar–Staf Khusus Direktorat Jenderal Kebudayaan
           dan Ifan Adriansyah Ismail–seorang penulis naskah film panjang.
           Kedua narasumber ini akan berbagi pengalaman dan
           pengetahuan terkait bidang perfilman.
         </Text>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Sejumlah 25 peserta yang hadir dalam acara ini.
           Para peserta adalah pelaku kegiatan perfilman di Aceh
           yang hadir secara pribadi maupun mewakili komunitas,
           seperti Aceh Documentary, Trieng, Fisuar Film, dan
           sejumlah komunitas lain.
         </Text>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Sosialisasi Dana Indonesia oleh Alex Sihar,
           diharap mampu memberikan informasi mendalam
           terkait dukungan pemerintah untuk kegiatan kebudayaan
@@ -174,7 +174,7 @@ const citiesData = [
           pendanaan untuk memperkuat keterlibatan publik dalam
           ekosistem pemajuan kebudayaan yang berkelanjutan.
         </Text>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Dengan dana yang disediakan oleh Dana Indonesiana untuk
           perfilman, para sineas, pembuat film, sutradara, penulis
           skenario, dan kru produksi dapat mengakses sumber daya
@@ -204,7 +204,7 @@ const citiesData = [
           Marlina Yulianty Machfud (Pamong Budaya Bidang Perfilman)
           memberi tanggapan terhadap paparan hasil riset
         </Text>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Untuk pelatihan penulisan naskah, sebelumnya komunitas Aceh
           Documentary telah melaksanakan kegiatan pelatihan penulisan
           reguler secara mandiri. Menyambut kegiatan tersebut, tim AFI
@@ -214,7 +214,7 @@ const citiesData = [
           Hal ini tentu menarik untuk dibedah dan didiskusikan bersama
           dengan tujuan pengembangan dan penajaman cerita dari peserta.
         </Text>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Dalam sesi diskusi pada pelatihan, para peserta berpartisipasi aktif.
           Ifan menyoroti beberapa cerita yang memiliki potensi untuk diproduksi.
           Yang menarik pula dalam cerita para peserta, ditemukan kesamaan yang
@@ -242,7 +242,7 @@ const citiesData = [
           Marlina Yulianty Machfud (Pamong Budaya Bidang Perfilman)
           memberi tanggapan terhadap paparan hasil riset
         </Text>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Aceh Documentary menyambut akhir pelatihan ini dengan harapan tinggi.
           Mereka berkomitmen untuk terus mendukung pengembangan film khususnya
           di wilayah Banda Aceh. Dengan adanya program pelatihan ini diharapkan
@@ -259,7 +259,7 @@ const citiesData = [
     label: 'Kupang',
     content: (images) => (
       <>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Kegiatan implementasi tindak lanjut Apresiasi Film Indonesia di Kota
           Kupang diselenggarakan pada Rabu, 22 Juni 2023 bertempat di ruang
           pertemuan Palacio 2 - Aston Kupang Hotel & Convention Center. Acara
@@ -267,7 +267,7 @@ const citiesData = [
           dengan Pemerintah Pusat, Pemerintah Daerah, dan Komunitas film di Kota
           Kupang untuk memperkuat ekosistem perfilman Indonesia.
         </Text>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Dalam upaya memperkuat sinergi antara pemerintah dan komunitas di Kupang,
           AFI 2023 mengadakan focus group discussion (FGD) dengan tema `&quot;`Sinergitas
           Kegiatan Perfilman Kupang`&quot;`. Acara ini mendapat dukungan dari Penjabat
@@ -297,7 +297,7 @@ const citiesData = [
           Marlina Yulianty Machfud (Pamong Budaya Bidang Perfilman)
           memberi tanggapan terhadap paparan hasil riset
         </Text>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Komunitas Film Kupang (KFK) telah berperan aktif dalam membangun ekosistem
           film di Kota Kupang sejak 2011. Mereka merilis film dokumenter berjudul
           Nokas pada 2016, dan mendapat pengakuan di festival-festival internasional,
@@ -307,7 +307,7 @@ const citiesData = [
           dan pertemuan antara penonton, pembuat film, dan komunitas film. Festival
           ini dikelola oleh KFK dengan dukungan Kemdikbudristek RI.
         </Text>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Dalam konteks ini, pemerintah daerah dapat memberikan dukungan berupa
           fasilitas dan program penguatan untuk memperkuat ekosistem perfilman.
           Beberapa fasilitas yang telah disediakan oleh pemerintah, seperti Bioskop
@@ -316,7 +316,7 @@ const citiesData = [
           Daerah Provinsi NTT, serta ruang pertunjukan indoor dan outdoor dari
           UPT Taman Budaya Gerson Poyk, yang dapat diakses oleh komunitas film.
         </Text>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Dalam diskusi, Dinas Pendidikan dan Kebudayaan Provinsi NTT dan Dinas
           Pendidikan dan Kebudayaan Kota Kupang juga menyatakan bahwa mereka
           memiliki dana khusus (specific grant) dari Menteri Dalam Negeri
@@ -324,7 +324,7 @@ const citiesData = [
           untuk kegiatan lomba paduan suara, bimbingan teknis guru seni budaya,
           dan kajian terkait cagar budaya.
         </Text>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Selain itu, komunitas juga mengungkapkan kebutuhan akan intervensi
           pemerintah di bidang edukasi. KFK menyoroti pentingnya intervensi
           pemerintah dalam memberikan pelatihan dan pembinaan kepada siswa SMA/SMK,
@@ -350,7 +350,7 @@ const citiesData = [
           Marlina Yulianty Machfud (Pamong Budaya Bidang Perfilman)
           memberi tanggapan terhadap paparan hasil riset
         </Text>
-        <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+        <Text lineHeight="36px" fontSize="16px" mb="16px">
           Forum diskusi ini merupakan awal pertemuan antara pemerintah daerah
           dan komunitas film di Kupang. Komunitas mengusulkan adanya forum
           akhir tahun untuk memperkuat komunikasi dan kerjasama antara semua

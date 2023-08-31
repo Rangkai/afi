@@ -55,7 +55,7 @@ function SekilasTentangAFILayout({ data }) {
       <Text fontWeight="600" fontSize="18px" mb="12px">
         Berbeda-Beda Bersama Dalam Sinema
       </Text>
-      <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+      <Text lineHeight="36px" fontSize="16px" mb="16px">
         Film Indonesia rupa-rupa wajahnya, rupa-rupa pula rasanya. Untuk mengapresiasi film
         Indonesia seluas-luasnya, perlu berbagai cara untuk membahasakan keragamannya.
         APRESIASI FILM INDONESIA adalah upaya untuk menelusuri akar dan ranting budaya
@@ -85,7 +85,7 @@ function SekilasTentangAFILayout({ data }) {
       <Text fontWeight="600" fontSize="18px" mb="12px">
         Pertanyaan Penelitian
       </Text>
-      <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+      <Text lineHeight="36px" fontSize="16px" mb="16px">
         Peneliti menformulasikan pertanyaan-pertanyaan utama yang nantinya
         diturunkan menjadi pertanyaan survei dan wawancara pendalam:
       </Text>
