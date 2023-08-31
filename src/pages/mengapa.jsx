@@ -88,7 +88,7 @@ function Mengapa({ data }) {
               >
                 KOLABORASI PENDATAAN DAN PENAYANGAN
               </Heading>
-              <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+              <Text lineHeight="36px" fontSize="16px" mb="16px">
                 Pertanyaan tentang cakupan sinema Indonesia seringnya terbentur pada ketersediaan
                 informasi. Selama satu dekade terakhir, hadir sejumlah inisiatif untuk menghimpun
                 data tentang perfilman Indonesia. Tantangan utamanya adalah merangkai berbagai
@@ -110,7 +110,7 @@ function Mengapa({ data }) {
               >
                 Landasan Program
               </Heading>
-              <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+              <Text lineHeight="36px" fontSize="16px" mb="16px">
                 Objek penelitiannya: komunitas film. Dengan rupa-rupa dinamika sosial yang ada
                 di Indonesia, istilah ‘komunitas’ tentunya bisa dimaknai dalam berbagai bentuk.
                 Sebuah komunitas bisa berwujud kumpulan informal, bisa juga suatu organisasi dengan
@@ -120,7 +120,7 @@ function Mengapa({ data }) {
                 hobi, grup studi, himpunan penonton, hingga kolaborasi suami-istri. Keragaman
                 bentuk ini yang coba ditelusuri dalam penelitian Apresiasi Film Indonesia.
               </Text>
-              <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+              <Text lineHeight="36px" fontSize="16px" mb="16px">
                 Kerangka penelitannya: realitas material. Program ini menerjemahkan kegiatan
                 komunitas film dalam serangakaian variabel yang bisa diukur terkait status legal,
                 pengelolaan dana, keterlibatan anggota, pemanfaatan ruang, pemakaian peralatan,
@@ -131,7 +131,7 @@ function Mengapa({ data }) {
                 sebagai acuan bagi pemerintah, pelaku perfilman, dan berbagai pemangku kepentingan
                 untuk berpartisipasi dalam pemajuan budaya sinema di Indonesia.
               </Text>
-              <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+              <Text lineHeight="36px" fontSize="16px" mb="16px">
                 Penelitian AFI secara spesifik menargetkan komunitas yang aktif berkegiatan
                 produksi dan/ atau ekshibisi film. Kedua kegiatan ini kami tempatkan sebagai
                 pondasi budaya sinema. Selama ada sekumpulan orang yang membuat dan menonton
@@ -150,7 +150,7 @@ function Mengapa({ data }) {
               >
                 Kolaborasi Pendataan dan Penayangan
               </Heading>
-              <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+              <Text lineHeight="36px" fontSize="16px" mb="16px">
                 Penelitian AFI berlaku secara kuantitatif dan kualitatif. Kerangka, rencana, dan
                 dokumen kerja riset dirumuskan melalui focus group discussion di Jakarta pada
                 11-13 Juli 2022. Tim program mengundang sepuluh pelaku perfilman dari sepuluh kota,
@@ -162,7 +162,7 @@ function Mengapa({ data }) {
                 dengan pembaharuan di sejumlah variabel, kembali digunakan untuk AFI 2023, yang
                 proses penghimpunan dan pengolahan datanya merentang dari April hingga Agustus 2023.
               </Text>
-              <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+              <Text lineHeight="36px" fontSize="16px" mb="16px">
                 Pendataan kuantitatif menggunakan metode purposive sampling. Berkolaborasi dengan
                 pegiat komunitas di setiap kota, tim riset menyebarkan kuesioner untuk diisi oleh
                 komunitas yang berkegiatan produksi dan/atau ekshibisi film. Sampel dibatasi pada
@@ -170,13 +170,13 @@ function Mengapa({ data }) {
                 pendataan ini kemudian diolah sebagai bahan untuk infografis dan tulisan panorama
                 perfilman setiap kota.
               </Text>
-              <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+              <Text lineHeight="36px" fontSize="16px" mb="16px">
                 Pendataan kualitatif melibatkan pegiat komunitas di setiap kota. Tim riset
                 berkolaborasi dengan penulis lokal untuk mewawancarai lima narasumber dari setiap
                 kota, untuk menggali wawasan mengenai keberdayaan komunitas terkait sumber daya,
                 rentang kegiatan, peningkatan kapasitas, hingga pengelolaan risiko.
               </Text>
-              <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+              <Text lineHeight="36px" fontSize="16px" mb="16px">
                 Selama proses pendataan, tim riset turut menghimpun arsip foto dan karya film.
                 Materi arsip dipilah untuk pendamping tulisan hasil pendataan kualitatif,
                 sementara karya film dikurasi dan diurus perizinannya untuk tayang publik secara
@@ -193,7 +193,7 @@ function Mengapa({ data }) {
               >
                 Penguatan Pelaku dan Jaringan Perfilman
               </Heading>
-              <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+              <Text lineHeight="36px" fontSize="16px" mb="16px">
                 Hasil riset berperan sebagai acuan bagi Kementerian Pendidikan, Kebudayaan, Riset,
                 dan Teknologi untuk turut berkontribusi dalam penguatan pelaku dan jaringan
                 perfilman. Dalam rencana kerja AFI, upaya penguatan tersebut diberi tajuk Tindak

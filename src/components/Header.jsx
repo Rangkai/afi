@@ -217,7 +217,7 @@ function Header() {
     {
       id: 5,
       text: 'Semesta Data',
-      link: '/',
+      link: '/semesta-data',
     },
     {
       id: 6,
