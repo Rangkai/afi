@@ -1,22 +1,11 @@
 import {
   Box, Heading, Text,
 } from '@chakra-ui/react';
-import { graphql, useStaticQuery } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 
-function CakupanRiset() {
-  const data = useStaticQuery(graphql`
-    query CakupanRisetSectionQuery {
-      file(relativePath: {eq: "semesta-data/Picture 1_Salah satu kegiatan Malang Film Festival 2018 yang diselenggarakan oleh Kine Klub Universitas Muhammadiyah Malang (UMM)BW.jpg"}) {
-        name
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
-        }
-      }
-    }
-  `);
-
+function CakupanRisetLayout({ data }) {
   const malangFilmFestival = getImage(data.file);
 
   return (
@@ -134,6 +123,24 @@ function CakupanRiset() {
         Universitas Muhammadiyah Malang (UMM)
       </Text>
     </Box>
+  );
+}
+
+function CakupanRiset(props) {
+  return (
+    <StaticQuery
+      query={graphql`
+        query CakupanRisetSectionQuery {
+          file(relativePath: {eq: "semesta-data/Picture 1_Salah satu kegiatan Malang Film Festival 2018 yang diselenggarakan oleh Kine Klub Universitas Muhammadiyah Malang (UMM)BW.jpg"}) {
+            name
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+            }
+          }
+        }
+      `}
+      render={(data) => <CakupanRisetLayout data={data} {...props} />}
+    />
   );
 }
 
