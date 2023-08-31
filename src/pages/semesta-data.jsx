@@ -42,9 +42,8 @@ function SemestaData({ data }) {
                 SEMESTA DATA
               </Heading>
               <Text>
-                Ectaturis er ferch ilitati atiorep ellibus. Nonet, ne iur
-                maiostrum facerunti ium solorenimus endae millum
-                que sit a nonsequis esectur molor restibusam.
+                Menerjemahkan sinema beserta jaringan kegiatan
+                di setiap kota dalam bentuk angka dan wacana.
               </Text>
             </Flex>
           </Box>

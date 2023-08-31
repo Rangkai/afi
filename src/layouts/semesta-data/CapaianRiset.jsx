@@ -47,7 +47,7 @@ function CapaianRiset() {
         CAPAIAN RISET AFI 2022-2023
       </Heading>
 
-      <Text lineHeight="36px" fontSize="16px" mb="24px" textAlign="justify">
+      <Text lineHeight="36px" fontSize="16px" mb="24px">
         Selama dua tahun melakukan riset di 15 kota, AFI telah mengumpulkan:
       </Text>
 

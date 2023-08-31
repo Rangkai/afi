@@ -316,7 +316,7 @@ function Apa({ data }) {
             >
               APRESIASI FILM INDONESIA
             </Heading>
-            <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+            <Text lineHeight="36px" fontSize="16px" mb="16px">
               Sinema, layaknya sejarah, tidak pernah tunggal. Kehadirannya tidak terbatas di
               karpet merah dan panggung para pemenang sebagaimana yang populer diberitakan.
               Ia turut hidup di sekolah, pojok desa, bioskop tua, layar-layar sederhana, dan
@@ -325,7 +325,7 @@ function Apa({ data }) {
               melebur. Melalui keragaman sinema di akar rumput, terbuka pintu bagi keterlibatan
               publik yang lebih luas dalam perfilman Indonesia.
             </Text>
-            <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+            <Text lineHeight="36px" fontSize="16px" mb="16px">
               Kekayaan bentuk dan pengalaman sinema inilah yang menjadi sasaran
               {' '}
               <b>Apresiasi Film Indonesia</b>
@@ -336,7 +336,7 @@ function Apa({ data }) {
               suatu tim kerja untuk memetakan dan menghubungkan berbagai sumber daya yang
               dibutuhkan.
             </Text>
-            <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+            <Text lineHeight="36px" fontSize="16px" mb="16px">
               Ada dua capaian yang diharapkan. Pertama, melalui kolaborasi penelitian, program
               ini menyajikan himpunan wawasan perihal kegiatan produksi dan ekshibisi di tingkat
               lokal, yang seringnya terjadi di luar lingkup bioskop dan industri. Kedua, melalui
@@ -344,7 +344,7 @@ function Apa({ data }) {
               bagi film-film komunitas, yang umumnya hanya terwadahi lewat festival film dan
               inisiatif layar mandiri.
             </Text>
-            <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+            <Text lineHeight="36px" fontSize="16px" mb="16px">
               Pada 2022, ada sepuluh kota yang menjadi sasaran penelitian: Banda Aceh, Bandung,
               Balikpapan, Denpasar, Kupang Makassar, Medan, Purbalingga, Semarang, dan Surabaya.
               Kota-kota ini dipilih dengan pertimbangan atas rekam jejak kegiatan yang bisa
@@ -371,7 +371,7 @@ function Apa({ data }) {
               Marlina Yulianty Machfud (Pamong Budaya Bidang Perfilman)
               memberi tanggapan terhadap paparan hasil riset
             </Text>
-            <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+            <Text lineHeight="36px" fontSize="16px" mb="16px">
               Pada 2023, Apresiasi Film Indonesia memperluas cakupan kerjanya. Lini kerja
               pendataan dan penayangan tetap dijalankan, yang lanjut bergerak ke lima kota lain:
               Jambi, Malang, Palu, Singkawang, dan Sumbawa. Bersamaan dengan itu, tim program
@@ -383,7 +383,7 @@ function Apa({ data }) {
               Program yang dilaksanakan bersifat jangka pendek, dengan diskusi dan proyeksi
               untuk kepentingan jangka panjang.
             </Text>
-            <Text lineHeight="36px" fontSize="16px" mb="16px" textAlign="justify">
+            <Text lineHeight="36px" fontSize="16px" mb="16px">
               Hasil penelitian serta laporan kegiatan Apresiasi Film Indonesia bisa diakses
               publik di website komunitasfilm.id, sementara film-film pilihan dari kolaborasi
               kuratorial bisa disaksikan gratis di rangkai.id.
