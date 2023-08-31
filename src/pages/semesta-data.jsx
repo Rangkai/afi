@@ -42,8 +42,11 @@ function SemestaData({ data }) {
                 SEMESTA DATA
               </Heading>
               <Text>
-                Menerjemahkan sinema beserta jaringan kegiatan
-                di setiap kota dalam bentuk angka dan wacana.
+                Menerjemahkan sinema beserta jaringan kegiatan di
+                setiap kota dalam bentuk angka dan wacana.
+                Data dan teks di laman ini akan terus diperbaharui
+                secara bertahap.
+
               </Text>
             </Flex>
           </Box>
