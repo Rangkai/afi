@@ -1,19 +1,21 @@
 import {
-  Box, Button, Container, Divider, Flex,
-  Heading, Image, Link, LinkBox, List, ListItem, Modal, ModalBody, ModalCloseButton,
-  ModalContent, ModalOverlay, SimpleGrid, Text, useDisclosure, useMediaQuery,
+  Box,
+  Container, Divider, Flex,
+  Heading, Image,
+  LinkBox, List, ListItem,
+  Text,
 } from '@chakra-ui/react';
-import { graphql, Link as LinkGatsby } from 'gatsby';
-import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
+import { Link as LinkGatsby, graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React, { useRef, useState } from 'react';
 import Slider from 'react-slick';
+import Arrow from '../components/Arrow';
+import ButtonLink from '../components/ButtonLink';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import useLayoutFormatter from '../hooks/useLayout';
 import logoBlue from '../images/logo-blue.svg';
 import mapNew from '../images/map_new.svg';
-import ButtonLink from '../components/ButtonLink';
-import Arrow from '../components/Arrow';
 
 export default function Home({ data }) {
   const [selectedMapIdx, setSelectedMapIdx] = useState(0);
@@ -212,6 +214,7 @@ export default function Home({ data }) {
           />
           {cities.map((item) => (
             <Box
+              key={item.key}
               position="absolute"
               left={item.left}
               bottom={item.bottom}

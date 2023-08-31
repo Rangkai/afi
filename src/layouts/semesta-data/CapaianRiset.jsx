@@ -1,7 +1,7 @@
 import {
   Box, Heading, Table, Text, Tr,
 } from '@chakra-ui/react';
-import { graphql, useStaticQuery } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 
@@ -23,18 +23,7 @@ const achievements = [
   },
 ];
 
-function CapaianRiset() {
-  const data = useStaticQuery(graphql`
-    query CapaianRisetSectionQuery {
-      file(relativePath: {eq: "semesta-data/Capaian.png"}) {
-        name
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
-        }
-      }
-    }
-  `);
-
+function CapaianRisetLayout({ data }) {
   const achievementImage = getImage(data.file);
 
   return (
@@ -52,12 +41,14 @@ function CapaianRiset() {
       </Text>
 
       <Table w="220px">
-        {achievements.map((item) => (
-          <Tr key={item.id} fontFamily="'Azeret Mono', monospace" fontSize="20px">
-            <td>{item.total}</td>
-            <td>{item.label}</td>
-          </Tr>
-        ))}
+        <tbody>
+          {achievements.map((item) => (
+            <Tr key={item.id} fontFamily="'Azeret Mono', monospace" fontSize="20px">
+              <td>{item.total}</td>
+              <td>{item.label}</td>
+            </Tr>
+          ))}
+        </tbody>
       </Table>
 
       <Box
@@ -71,6 +62,24 @@ function CapaianRiset() {
         }}
       />
     </Box>
+  );
+}
+
+function CapaianRiset(props) {
+  return (
+    <StaticQuery
+      query={graphql`
+        query CapaianRisetSectionQuery {
+          file(relativePath: {eq: "semesta-data/Capaian.png"}) {
+            name
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+            }
+          }
+        }
+      `}
+      render={(data) => <CapaianRisetLayout data={data} {...props} />}
+    />
   );
 }
 

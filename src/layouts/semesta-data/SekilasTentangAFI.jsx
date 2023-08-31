@@ -1,7 +1,7 @@
 import {
   Box, Heading, List, ListItem, Text,
 } from '@chakra-ui/react';
-import { graphql, useStaticQuery } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 
@@ -39,18 +39,7 @@ const researchObjectives = [
   },
 ];
 
-function SekilasTentangAFI() {
-  const data = useStaticQuery(graphql`
-    query SekilasSectionQuery {
-      file(relativePath: {eq: "semesta-data/bts 3BW.jpg"}) {
-        name
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
-        }
-      }
-    }
-  `);
-
+function SekilasTentangAFILayout({ data }) {
   const bts3BW = getImage(data.file);
 
   return (
@@ -120,6 +109,24 @@ function SekilasTentangAFI() {
         ))}
       </List>
     </Box>
+  );
+}
+
+function SekilasTentangAFI(props) {
+  return (
+    <StaticQuery
+      query={graphql`
+        query SekilasSectionQuery {
+          file(relativePath: {eq: "semesta-data/bts 3BW.jpg"}) {
+            name
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+            }
+          }
+        }
+      `}
+      render={(data) => <SekilasTentangAFILayout data={data} {...props} />}
+    />
   );
 }
 
