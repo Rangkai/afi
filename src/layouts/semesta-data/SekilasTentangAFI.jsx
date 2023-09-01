@@ -117,7 +117,7 @@ function SekilasTentangAFI(props) {
     <StaticQuery
       query={graphql`
         query SekilasSectionQuery {
-          file(relativePath: {eq: "semesta-data/bts 3BW.jpg"}) {
+          file(relativePath: {eq: "semesta-data/semesta-pic-1.jpg"}) {
             name
             childImageSharp {
               gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
