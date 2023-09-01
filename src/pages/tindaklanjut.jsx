@@ -58,8 +58,8 @@ const citiesData = [
           as={GatsbyImage}
           mb="8px"
           mt="20px"
-          image={getImage(images.find((item) => item.name === 'balikpapan1'))}
-          alt="Marlina Yulianty Machfud (Pamong Budaya Bidang Perfilman) memberi tanggapan terhadap paparan hasil riset"
+          image={getImage(images.find((item) => item.name === 'balikpapan-PHOTO-2023-04-15-12-08-24 BW'))}
+          alt="Nauval menjelaskan soal tata kelola festival film"
           _hover={{
             opacity: '.9',
           }}
@@ -70,8 +70,7 @@ const citiesData = [
           lineHeight="18.375px"
           mb="50px"
         >
-          Marlina Yulianty Machfud (Pamong Budaya Bidang Perfilman)
-          memberi tanggapan terhadap paparan hasil riset
+          Nauval menjelaskan soal tata kelola festival film
         </Text>
         <Text lineHeight="36px" fontSize="16px" mb="16px">
           Namun, dengan infrastruktur yang memadai, pembicara juga
@@ -98,8 +97,8 @@ const citiesData = [
           as={GatsbyImage}
           mb="8px"
           mt="20px"
-          image={getImage(images.find((item) => item.name === 'balikpapan1'))}
-          alt="Marlina Yulianty Machfud (Pamong Budaya Bidang Perfilman) memberi tanggapan terhadap paparan hasil riset"
+          image={getImage(images.find((item) => item.name === 'balikpapan-PHOTO-2023-04-15-14-18-20 BW'))}
+          alt="Angkasa memberi materi penulisan naskah film pendek"
           _hover={{
             opacity: '.9',
           }}
@@ -110,8 +109,7 @@ const citiesData = [
           lineHeight="18.375px"
           mb="50px"
         >
-          Marlina Yulianty Machfud (Pamong Budaya Bidang Perfilman)
-          memberi tanggapan terhadap paparan hasil riset
+          Angkasa memberi materi penulisan naskah film pendek
         </Text>
         <Text lineHeight="36px" fontSize="16px" mb="16px">
           Dalam perbandingan dengan kota Palangkaraya, pembicara menunjukkan bahwa
@@ -189,8 +187,8 @@ const citiesData = [
           as={GatsbyImage}
           mb="8px"
           mt="20px"
-          image={getImage(images.find((item) => item.name === 'balikpapan1'))}
-          alt="Marlina Yulianty Machfud (Pamong Budaya Bidang Perfilman) memberi tanggapan terhadap paparan hasil riset"
+          image={getImage(images.find((item) => item.name === 'aceh-IMG_3214BW3'))}
+          alt="Ifan memberi pelatihan penulisan naskah film panjangBW"
           _hover={{
             opacity: '.9',
           }}
@@ -201,8 +199,7 @@ const citiesData = [
           lineHeight="18.375px"
           mb="50px"
         >
-          Marlina Yulianty Machfud (Pamong Budaya Bidang Perfilman)
-          memberi tanggapan terhadap paparan hasil riset
+          Ifan memberi pelatihan penulisan naskah film panjang
         </Text>
         <Text lineHeight="36px" fontSize="16px" mb="16px">
           Untuk pelatihan penulisan naskah, sebelumnya komunitas Aceh
@@ -227,8 +224,8 @@ const citiesData = [
           as={GatsbyImage}
           mb="8px"
           mt="20px"
-          image={getImage(images.find((item) => item.name === 'balikpapan1'))}
-          alt="Marlina Yulianty Machfud (Pamong Budaya Bidang Perfilman) memberi tanggapan terhadap paparan hasil riset"
+          image={getImage(images.find((item) => item.name === 'aceh-IMG_3179BW3'))}
+          alt="Foto bersama pembicara, peserta, juga Tim AFIBW"
           _hover={{
             opacity: '.9',
           }}
@@ -239,8 +236,7 @@ const citiesData = [
           lineHeight="18.375px"
           mb="50px"
         >
-          Marlina Yulianty Machfud (Pamong Budaya Bidang Perfilman)
-          memberi tanggapan terhadap paparan hasil riset
+          Foto bersama pembicara, peserta, juga Tim AFIBW
         </Text>
         <Text lineHeight="36px" fontSize="16px" mb="16px">
           Aceh Documentary menyambut akhir pelatihan ini dengan harapan tinggi.
@@ -282,8 +278,8 @@ const citiesData = [
           as={GatsbyImage}
           mb="8px"
           mt="20px"
-          image={getImage(images.find((item) => item.name === 'balikpapan1'))}
-          alt="Marlina Yulianty Machfud (Pamong Budaya Bidang Perfilman) memberi tanggapan terhadap paparan hasil riset"
+          image={getImage(images.find((item) => item.name === 'kupang-RTL-1'))}
+          alt="Penjabat Wali Kota Kupang, George M. Hadjoh, memberikan sambutan"
           _hover={{
             opacity: '.9',
           }}
@@ -294,8 +290,7 @@ const citiesData = [
           lineHeight="18.375px"
           mb="50px"
         >
-          Marlina Yulianty Machfud (Pamong Budaya Bidang Perfilman)
-          memberi tanggapan terhadap paparan hasil riset
+          Penjabat Wali Kota Kupang, George M. Hadjoh, memberikan sambutan
         </Text>
         <Text lineHeight="36px" fontSize="16px" mb="16px">
           Komunitas Film Kupang (KFK) telah berperan aktif dalam membangun ekosistem
@@ -335,8 +330,8 @@ const citiesData = [
           as={GatsbyImage}
           mb="8px"
           mt="20px"
-          image={getImage(images.find((item) => item.name === 'balikpapan1'))}
-          alt="Marlina Yulianty Machfud (Pamong Budaya Bidang Perfilman) memberi tanggapan terhadap paparan hasil riset"
+          image={getImage(images.find((item) => item.name === 'kupang-RTL-2'))}
+          alt="Foto bersama para pembicara, undangan, dan TIM AFI"
           _hover={{
             opacity: '.9',
           }}
@@ -347,8 +342,7 @@ const citiesData = [
           lineHeight="18.375px"
           mb="50px"
         >
-          Marlina Yulianty Machfud (Pamong Budaya Bidang Perfilman)
-          memberi tanggapan terhadap paparan hasil riset
+          Foto bersama para pembicara, undangan, dan TIM AFI
         </Text>
         <Text lineHeight="36px" fontSize="16px" mb="16px">
           Forum diskusi ini merupakan awal pertemuan antara pemerintah daerah

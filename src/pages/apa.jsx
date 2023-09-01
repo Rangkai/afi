@@ -206,7 +206,7 @@ const teams2023 = [
   {
     division: 'Jambi',
     people: [
-      'Anton Oktaviano',
+      'Anton Oktavianto',
       'Melda Ria Sinambela',
     ],
   },
