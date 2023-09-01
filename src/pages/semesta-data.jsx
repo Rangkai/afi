@@ -46,7 +46,6 @@ function SemestaData({ data }) {
                 setiap kota dalam bentuk angka dan wacana.
                 Data dan teks di laman ini akan terus diperbaharui
                 secara bertahap.
-
               </Text>
             </Flex>
           </Box>
@@ -91,7 +90,7 @@ export function Head() {
 
 export const query = graphql`
   query SemestaDataPageQuery {
-    file(relativePath: {eq: "semesta-data/semesta-data-header.jpg"}) {
+    file(relativePath: {eq: "semesta-data/SemestaBW.jpg"}) {
       name
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
