@@ -25,6 +25,7 @@ const achievements = [
 
 function CapaianRisetLayout({ data }) {
   const achievementImage = getImage(data.file);
+  const SebaranCapaian = getImage(data.SebaranCapaian);
 
   return (
     <Box borderTop="2px solid #000000" pt="20px">
@@ -61,6 +62,16 @@ function CapaianRisetLayout({ data }) {
           opacity: '.9',
         }}
       />
+      <Box
+        as={GatsbyImage}
+        mb="8px"
+        mt="50px"
+        image={SebaranCapaian}
+        alt="Capaian Riset"
+        _hover={{
+          opacity: '.9',
+        }}
+      />
     </Box>
   );
 }
@@ -74,6 +85,12 @@ function CapaianRiset(props) {
             name
             childImageSharp {
               gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+            }
+          }
+          SebaranCapaian: file(relativePath: {eq: "semesta-data/Capaian-2.png"}) {
+            name
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
             }
           }
         }
