@@ -21,6 +21,8 @@ function SEO({
       <meta property="og:title" content={seo.title} />
       <meta property="og:type" content="website" />
       <meta property="og:image" content={`${location?.origin || 'https://afi2022epicnewversion.gatsbyjs.io'}/afi-2023.jpg`} />
+      <meta property="og:image:width" content="300" />
+      <meta property="og:image:height" content="300" />
       <link
         rel="stylesheet"
         type="text/css"
