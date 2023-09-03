@@ -1,7 +1,6 @@
 import React from 'react';
 import { useLocation } from '@reach/router';
 import useMetadataDefault from '../hooks/useMetadataDefault';
-import afi2023Logo from '../images/afi-2023.jpg';
 
 function SEO({
   title, description, children,
@@ -21,7 +20,7 @@ function SEO({
       <meta name="description" content={seo.description} />
       <meta property="og:title" content={seo.title} />
       <meta property="og:type" content="website" />
-      <meta property="og:image" content={`${location?.origin || 'https://komunitasfilm.id/'}/${afi2023Logo}`} />
+      <meta property="og:image" content={`${location?.origin || 'https://komunitasfilm.id/'}/afi-2023.jpg`} />
       <link
         rel="stylesheet"
         type="text/css"
