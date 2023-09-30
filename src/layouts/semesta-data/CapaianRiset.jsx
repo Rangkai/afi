@@ -1,30 +1,11 @@
 import {
-  Box, Heading, Table, Text, Tr,
+  Box, Heading,
 } from '@chakra-ui/react';
 import { StaticQuery, graphql } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { LightgalleryItem, LightgalleryProvider } from 'react-lightgallery';
 import Slider from 'react-slick';
 import ButtonLink from '../../components/ButtonLink';
-
-const achievements = [
-  {
-    id: 1,
-    total: 107,
-    label: 'Komunitas',
-  },
-  {
-    id: 2,
-    total: 314,
-    label: 'Karya',
-  },
-  {
-    id: 3,
-    total: 86,
-    label: 'Eksibisi',
-  },
-];
 
 const settings = {
   dots: false,
@@ -70,20 +51,6 @@ function CapaianRisetLayout({ data }) {
           Download Capaian Riset
         </ButtonLink>
       </Box>
-      {/* <Text lineHeight="36px" fontSize="16px" mb="24px">
-        Selama dua tahun melakukan riset di 15 kota, AFI telah mengumpulkan:
-      </Text>
-
-      <Table w="220px">
-        <tbody>
-          {achievements.map((item) => (
-            <Tr key={item.id} fontFamily="'Azeret Mono', monospace" fontSize="20px">
-              <td>{item.total}</td>
-              <td>{item.label}</td>
-            </Tr>
-          ))}
-        </tbody>
-      </Table> */}
       <LightgalleryProvider>
         <Slider
           className="custom-slick custom-slick--images"
@@ -114,7 +81,7 @@ function CapaianRiset(props) {
               }
             }
           }
-          pdf: file(relativePath: { eq: "GrafikData_Balikpapan.pdf" }) {
+          pdf: file(relativePath: { eq: "Komunitas 26 v4.pdf" }) {
             name
             extension
             publicURL
