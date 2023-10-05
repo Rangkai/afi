@@ -16,11 +16,11 @@ const CustomTab = React.forwardRef((props, ref) => {
       fontSize="20px"
       width="100%"
       justifyContent="flex-start"
-      bg="telorAsin.400"
+      bg="fossil.400"
       color="#000000"
       marginBottom="0"
       borderBottom="0"
-      _selected={{ color: 'white', bg: 'blueOcean.500' }}
+      _selected={{ color: 'white', bg: 'fossil.500' }}
       {...tabProps}
     >
       {tabProps.children}

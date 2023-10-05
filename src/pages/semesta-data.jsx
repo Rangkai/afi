@@ -15,6 +15,17 @@ import CustomTab from '../components/CustomTab';
 
 const tabsList = [
   {
+    value: 'semua',
+    label: 'Semua',
+    component: () => (
+      <>
+        <SekilasTentangAFI />
+        <CakupanRiset />
+        <CapaianRiset />
+      </>
+    ),
+  },
+  {
     value: 'sekilas-tentang-afi',
     label: 'Sekilas Tentang AFI',
     component: SekilasTentangAFI,
@@ -29,21 +40,10 @@ const tabsList = [
     label: 'Capaian Riset',
     component: CapaianRiset,
   },
-  {
-    value: 'semua',
-    label: 'Semua',
-    component: () => (
-      <>
-        <SekilasTentangAFI />
-        <CakupanRiset />
-        <CapaianRiset />
-      </>
-    ),
-  },
 ];
 
 function SemestaData({ data }) {
-  const [selectedTab, setSelectedTab] = useState('sekilas-tentang-afi');
+  const [selectedTab, setSelectedTab] = useState('semua');
   const semestaBanner = getImage(data.file);
   const { getCol } = useLayout();
 
