@@ -70,7 +70,10 @@ function CapaianRiset(props) {
     <StaticQuery
       query={graphql`
         query CapaianRisetSectionQuery {
-          allFile(filter: {relativeDirectory: {eq: "semesta-data/capaian"}}) {
+          allFile(
+            filter: {relativeDirectory: {eq: "semesta-data/capaian"}}
+            sort: {fields: name, order: ASC}
+          ) {
             nodes {
               id
               name
