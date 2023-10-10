@@ -249,7 +249,7 @@ export default function Home({ data }) {
         </Box>
         <Box>
           <Slider
-            className="custom-slick"
+            className="custom-slick custom-slick--cities"
             {...settings}
             ref={sliderRef}
           >

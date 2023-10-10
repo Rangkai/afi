@@ -34,6 +34,7 @@ const theme = {
       700: '#d9dcc9',
     },
     fossil: {
+      400: '#b9b8b2',
       500: '#6d6b5f',
     },
     knit: {

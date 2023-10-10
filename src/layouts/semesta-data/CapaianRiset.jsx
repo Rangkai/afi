@@ -1,31 +1,30 @@
 import {
-  Box, Heading, Table, Text, Tr,
+  Box, Heading,
 } from '@chakra-ui/react';
 import { StaticQuery, graphql } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
+import { LightgalleryItem, LightgalleryProvider } from 'react-lightgallery';
+import Slider from 'react-slick';
+import ButtonLink from '../../components/ButtonLink';
 
-const achievements = [
-  {
-    id: 1,
-    total: 107,
-    label: 'Komunitas',
-  },
-  {
-    id: 2,
-    total: 314,
-    label: 'Karya',
-  },
-  {
-    id: 3,
-    total: 86,
-    label: 'Eksibisi',
-  },
-];
+const settings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
+
+function PhotoItem({ image, thumb, group }) {
+  return (
+    <LightgalleryItem group={group} src={image} thumb={thumb}>
+      <img src={image} alt="test" style={{ width: '100%' }} />
+    </LightgalleryItem>
+  );
+}
 
 function CapaianRisetLayout({ data }) {
-  const achievementImage = getImage(data.file);
-  const SebaranCapaian = getImage(data.SebaranCapaian);
+  const images = data.allFile?.nodes;
 
   return (
     <Box borderTop="2px solid #000000" pt="20px">
@@ -36,42 +35,32 @@ function CapaianRisetLayout({ data }) {
       >
         CAPAIAN RISET AFI 2022-2023
       </Heading>
-
-      <Text lineHeight="36px" fontSize="16px" mb="24px">
-        Selama dua tahun melakukan riset di 15 kota, AFI telah mengumpulkan:
-      </Text>
-
-      <Table w="220px">
-        <tbody>
-          {achievements.map((item) => (
-            <Tr key={item.id} fontFamily="'Azeret Mono', monospace" fontSize="20px">
-              <td>{item.total}</td>
-              <td>{item.label}</td>
-            </Tr>
+      <Box
+        borderY="2px solid #000000"
+        background="garlic.500"
+        px={['8px', null, '48px']}
+        py={['8px', null, '16px']}
+        w="100%"
+        my="48px"
+      >
+        <ButtonLink
+          h="100%"
+          to={data.pdf?.publicURL}
+          isExternal
+        >
+          Download Capaian Riset
+        </ButtonLink>
+      </Box>
+      <LightgalleryProvider>
+        <Slider
+          className="custom-slick custom-slick--images"
+          {...settings}
+        >
+          {images?.map((p) => (
+            <PhotoItem key={p.id} image={p.childImageSharp?.original?.src} group="group2" />
           ))}
-        </tbody>
-      </Table>
-
-      <Box
-        as={GatsbyImage}
-        mb="8px"
-        mt="50px"
-        image={achievementImage}
-        alt="Capaian Riset"
-        _hover={{
-          opacity: '.9',
-        }}
-      />
-      <Box
-        as={GatsbyImage}
-        mb="8px"
-        mt="50px"
-        image={SebaranCapaian}
-        alt="Capaian Riset"
-        _hover={{
-          opacity: '.9',
-        }}
-      />
+        </Slider>
+      </LightgalleryProvider>
     </Box>
   );
 }
@@ -81,17 +70,24 @@ function CapaianRiset(props) {
     <StaticQuery
       query={graphql`
         query CapaianRisetSectionQuery {
-          file(relativePath: {eq: "semesta-data/Capaian.png"}) {
-            name
-            childImageSharp {
-              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+          allFile(
+            filter: {relativeDirectory: {eq: "semesta-data/capaian"}}
+            sort: {fields: name, order: ASC}
+          ) {
+            nodes {
+              id
+              name
+              childImageSharp {
+                original {
+                  src
+                }
+              }
             }
           }
-          SebaranCapaian: file(relativePath: {eq: "semesta-data/Capaian-2.png"}) {
+          pdf: file(relativePath: { eq: "Komunitas 26 v4.pdf" }) {
             name
-            childImageSharp {
-              gatsbyImageData(placeholder: BLURRED)
-            }
+            extension
+            publicURL
           }
         }
       `}

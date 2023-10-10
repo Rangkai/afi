@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
-  Box, Container, Flex, Heading, Image, Text,
+  Box, Container, Flex, Heading, Image, Select, TabList, TabPanel, TabPanels, Tabs, Text,
 } from '@chakra-ui/react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { graphql } from 'gatsby';
@@ -11,8 +11,39 @@ import SEO from '../components/SEO';
 import SekilasTentangAFI from '../layouts/semesta-data/SekilasTentangAFI';
 import CakupanRiset from '../layouts/semesta-data/CakupanRiset';
 import CapaianRiset from '../layouts/semesta-data/CapaianRiset';
+import CustomTab from '../components/CustomTab';
+
+const tabsList = [
+  {
+    value: 'semua',
+    label: 'Semua',
+    component: () => (
+      <>
+        <SekilasTentangAFI />
+        <CakupanRiset />
+        <CapaianRiset />
+      </>
+    ),
+  },
+  {
+    value: 'sekilas-tentang-afi',
+    label: 'Sekilas Tentang AFI',
+    component: SekilasTentangAFI,
+  },
+  {
+    value: 'cakupan-riset',
+    label: 'Cakupan Riset',
+    component: CakupanRiset,
+  },
+  {
+    value: 'capaian-riset',
+    label: 'Capaian Riset',
+    component: CapaianRiset,
+  },
+];
 
 function SemestaData({ data }) {
+  const [selectedTab, setSelectedTab] = useState('semua');
   const semestaBanner = getImage(data.file);
   const { getCol } = useLayout();
 
@@ -70,13 +101,62 @@ function SemestaData({ data }) {
             />
           </Box>
         </Flex>
-        <Flex justifyContent="center">
-          <Box w={['100%', null, getCol(8)]} pt="100px">
-            <SekilasTentangAFI />
-            <CakupanRiset />
-            <CapaianRiset />
+        <Tabs
+          variant="unstyled"
+          index={tabsList.findIndex((item) => item.value === selectedTab)}
+        >
+          <Flex justifyContent="center">
+            <Box w={getCol(4)} display={['none', null, 'block']} pt="116px" pr="24px">
+              <TabList position="sticky" top="0" borderY="2px solid #000000" display="flex" flexDir="column">
+                {tabsList.map((item) => (
+                  <CustomTab
+                    key={item.value}
+                    textAlign="left"
+                    p={{ md: '20px 10px', lg: '20px 40px' }}
+                    fontSize={{ md: '16px', lg: '20px' }}
+                    onClick={() => {
+                      setSelectedTab(item.value);
+                    }}
+                  >
+                    {item.label}
+                  </CustomTab>
+                ))}
+              </TabList>
+            </Box>
+            <Box w={['100%', null, getCol(8)]} pt="100px">
+              <TabPanels>
+                {tabsList.map((item) => (
+                  <TabPanel key={item.value}>
+                    {item.component()}
+                  </TabPanel>
+                ))}
+              </TabPanels>
+            </Box>
+          </Flex>
+          <Box
+            p="16px"
+            position="fixed"
+            display={['block', null, 'none']}
+            bottom="0"
+            left="0"
+            w="100vw"
+            bg="white"
+            zIndex="1"
+            boxShadow="-5px -2px 10px -6px rgba(0, 0, 0, 0.2)"
+          >
+            <Select
+              onChange={(e) => setSelectedTab(e.target.value)}
+              defaultValue={selectedTab}
+              value={selectedTab}
+            >
+              {tabsList.map((item) => (
+                <option key={item.value} value={item.value}>
+                  {item.label}
+                </option>
+              ))}
+            </Select>
           </Box>
-        </Flex>
+        </Tabs>
       </Container>
     </Layout>
   );
