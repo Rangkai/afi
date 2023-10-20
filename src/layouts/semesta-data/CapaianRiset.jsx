@@ -84,7 +84,7 @@ function CapaianRiset(props) {
               }
             }
           }
-          pdf: file(relativePath: { eq: "Komunitas 26 v4.pdf" }) {
+          pdf: file(relativePath: { eq: "Komunitas 26 v5.pdf" }) {
             name
             extension
             publicURL
