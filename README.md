@@ -1,4 +1,6 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8c439cd9-a9df-42f3-ae3e-ed5a1b8d6db8/deploy-status)](https://app.netlify.com/sites/apresiasifilmindonesia/deploys)
+
 <p align="center">
   <a href="https://www.gatsbyjs.com">
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
